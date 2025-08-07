@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: " 生活记录",
   description: " 个人学习总结记录，有很多错误，现阶段也就这样了",
-  base: '/front-end/',
+  base: '/yoran-secret/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
