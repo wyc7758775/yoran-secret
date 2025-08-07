@@ -29,7 +29,7 @@
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 .home {
   padding-top: 120px;
   animation: fadeIn 1s ease-in;
@@ -81,7 +81,7 @@
 }
 
 .highlight {
-  @apply text-primary-300;
+  font-weight: bold;
 }
 
 @keyframes fadeIn {
