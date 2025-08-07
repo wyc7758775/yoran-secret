@@ -2,14 +2,17 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: " 生活记录",
+  title: " Yoran秘密空间",
   description: " 个人学习总结记录，有很多错误，现阶段也就这样了",
-  base: '/yoran-secret/',
+  base: "/",
+  head: [
+    ['link', { rel: 'icon', type: 'image/png', href: '/assets/profile.svg' }]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '首页', link: '/' },
-      { text: ' 架构师', link: '/markdown-examples' }
+      { text: 'Yoran', link: '/' },
+      { text: ' Posts', link: '/markdown-examples' }
     ],
 
     sidebar: [

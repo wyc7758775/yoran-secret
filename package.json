@@ -8,6 +8,11 @@
     "docs:build": "pnpm run -C packages/docs docs:build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "element-plus": "^2.9.6",
+    "vue": "^3.5.13"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
