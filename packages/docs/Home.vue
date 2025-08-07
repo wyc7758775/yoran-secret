@@ -29,7 +29,7 @@
     </div>
   </div>
 </template>
-<style scoped>
+<style>
 .home {
   padding-top: 120px;
   animation: fadeIn 1s ease-in;
