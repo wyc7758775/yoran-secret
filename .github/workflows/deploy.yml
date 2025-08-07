@@ -15,10 +15,10 @@ jobs:
       - name: Set up pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8.0.0 # 使用与生成锁文件相同的版本
+          version: 9.2.0
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 24.3.0
           cache: pnpm
       - name: Install dependencies
         run: pnpm install
