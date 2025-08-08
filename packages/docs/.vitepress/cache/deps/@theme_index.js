@@ -6,44 +6,44 @@ import {
   shallowRef
 } from "./chunk-3GAPVBTG.js";
 
-// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/index.js
-import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
+// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/index.js
+import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
 
-// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/without-fonts.js
-import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/vars.css";
-import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/base.css";
-import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/icons.css";
-import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/utils.css";
-import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/components/custom-block.css";
-import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code.css";
-import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code-group.css";
-import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-doc.css";
-import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
-import VPBadge from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
-import Layout from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/Layout.vue";
-import { default as default2 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
-import { default as default3 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPButton.vue";
-import { default as default4 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPDocAsideSponsors.vue";
-import { default as default5 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPFeatures.vue";
-import { default as default6 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeContent.vue";
-import { default as default7 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeFeatures.vue";
-import { default as default8 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeHero.vue";
-import { default as default9 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeSponsors.vue";
-import { default as default10 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPImage.vue";
-import { default as default11 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPLink.vue";
-import { default as default12 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPNavBarSearch.vue";
-import { default as default13 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPSocialLink.vue";
-import { default as default14 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPSocialLinks.vue";
-import { default as default15 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPSponsors.vue";
-import { default as default16 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamMembers.vue";
-import { default as default17 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamPage.vue";
-import { default as default18 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageSection.vue";
-import { default as default19 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageTitle.vue";
+// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/without-fonts.js
+import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/vars.css";
+import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/base.css";
+import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/icons.css";
+import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/utils.css";
+import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/components/custom-block.css";
+import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code.css";
+import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code-group.css";
+import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-doc.css";
+import "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
+import VPBadge from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
+import Layout from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/Layout.vue";
+import { default as default2 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
+import { default as default3 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPButton.vue";
+import { default as default4 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPDocAsideSponsors.vue";
+import { default as default5 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPFeatures.vue";
+import { default as default6 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeContent.vue";
+import { default as default7 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeFeatures.vue";
+import { default as default8 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeHero.vue";
+import { default as default9 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeSponsors.vue";
+import { default as default10 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPImage.vue";
+import { default as default11 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPLink.vue";
+import { default as default12 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPNavBarSearch.vue";
+import { default as default13 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPSocialLink.vue";
+import { default as default14 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPSocialLinks.vue";
+import { default as default15 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPSponsors.vue";
+import { default as default16 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamMembers.vue";
+import { default as default17 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamPage.vue";
+import { default as default18 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageSection.vue";
+import { default as default19 } from "/Users/wuyucun/programmer/font-end/node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageTitle.vue";
 
-// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/composables/layout.js
+// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/composables/layout.js
 import { inBrowser, onContentUpdated, useRoute } from "vitepress";
 
-// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/shared.js
+// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/shared.js
 var UnpackStackView = Symbol("stack-view:unpack");
 function stackView(..._layers) {
   const layers = _layers.filter((layer) => isObject(layer));
@@ -83,14 +83,14 @@ function isObject(value) {
   return Object.prototype.toString.call(value) === "[object Object]";
 }
 
-// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/support/utils.js
+// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/support/utils.js
 import { withBase } from "vitepress";
 
-// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/composables/data.js
+// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/composables/data.js
 import { useData as useData$ } from "vitepress";
 var useData = useData$;
 
-// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/support/sidebar.js
+// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/support/sidebar.js
 function getSidebarGroups(sidebar2) {
   const groups = [];
   let lastGroupIndex = 0;
@@ -108,13 +108,13 @@ function getSidebarGroups(sidebar2) {
   return groups;
 }
 
-// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/composables/outline.js
+// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/composables/outline.js
 import { getScrollOffset } from "vitepress";
 
-// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/composables/sidebar.js
+// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/composables/sidebar.js
 var isOpen = ref(false);
 
-// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/composables/layout.js
+// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/composables/layout.js
 var headers = shallowRef([]);
 var sidebar = shallowRef([]);
 var is960 = shallowRef(false);
@@ -158,7 +158,7 @@ function useLayout() {
   };
 }
 
-// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/without-fonts.js
+// ../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/without-fonts.js
 var theme = {
   Layout,
   enhanceApp: ({ app }) => {

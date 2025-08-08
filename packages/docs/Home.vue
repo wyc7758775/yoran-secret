@@ -10,6 +10,8 @@
       </div>
 
       <div class="profile-bio">
+        <div class="text-red-500 font-bold">This is red and bold text</div>
+
         <p class="text">
           I am a software engineer based in ShenZheng. I am currently working at
           OPPO, having 8 years of font-end development experience.
@@ -17,8 +19,9 @@
         <p class="text">
           This website is my humble abode on the internet, where I pen my
           musings in
-          <span class="higshlight">here</span> about software development,
-          specifically JavaScript, TypeScript and web technologies in general.
+          <span class="highlight link-btn hover:bg-red-500">here</span> about
+          software development, specifically JavaScript, TypeScript and web
+          technologies in general.
         </p>
         <h3 style="padding-top: 3rem">Contact</h3>
         <p class="text">
@@ -81,7 +84,9 @@
 }
 
 .highlight {
-  font-weight: bold;
+  border-radius: 0.225rem;
+  background-color: #d1e8f3ed;
+  padding: 0 0.25rem;
 }
 
 @keyframes fadeIn {

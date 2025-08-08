@@ -1,4 +1,6 @@
 import { defineConfig } from 'vitepress'
+import UnoCSS from 'unocss/vite'
+import documentsRouter from './router/documentsRouter.json'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -9,23 +11,19 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/png', href: '/assets/profile.svg' }]
   ],
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Yoran', link: '/' },
       { text: ' Posts', link: '/markdown-examples' }
     ],
 
-    sidebar: [
-      {
-        text: 'JavaScript Core',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar:documentsRouter,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/wyc7758775' }
+    ]
+  },
+  vite: {
+    plugins: [
+      UnoCSS() as any
     ]
   }
 })

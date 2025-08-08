@@ -1,31 +1,31 @@
 {
-  "hash": "756cdab5",
-  "configHash": "4d0a65a4",
-  "lockfileHash": "05fbc997",
-  "browserHash": "b31cf864",
+  "hash": "3b493c8b",
+  "configHash": "c4a62336",
+  "lockfileHash": "71770ede",
+  "browserHash": "7bedf83e",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.5.18_typescript@5.7.3/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "3898ead5",
+      "fileHash": "77c90eae",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../../node_modules/.pnpm/@vue+devtools-api@7.7.7/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "98af5bc7",
+      "fileHash": "a7c27f1f",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../../node_modules/.pnpm/@vueuse+core@13.6.0_vue@3.5.18_typescript@5.7.3_/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "3af2a6c0",
+      "fileHash": "456249e6",
       "needsInterop": false
     },
     "@theme/index": {
-      "src": "../../../../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/index.js",
+      "src": "../../../../../node_modules/.pnpm/vitepress@2.0.0-alpha.9_@types+node@24.2.0_async-validator@4.2.5_jiti@2.5.1_postcss@8.5.6_typescript@5.7.3/node_modules/vitepress/dist/client/theme-default/index.js",
       "file": "@theme_index.js",
-      "fileHash": "8edc4872",
+      "fileHash": "321122c4",
       "needsInterop": false
     }
   },

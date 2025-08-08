@@ -10,7 +10,6 @@ import { ElButton } from "element-plus";
 const count = ref(0);
 const addCount = () => {
   count.value++;
-  count++;
 };
 
 onUpdated(() => {

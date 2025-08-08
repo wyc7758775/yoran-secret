@@ -6,14 +6,20 @@
   "scripts": {
     "docs:dev": "pnpm run -C packages/docs docs:dev",
     "docs:build": "pnpm run -C packages/docs docs:build",
+    "vs:dev": "pnpm run -C packages/vue-study dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
+    "@unocss/reset": "^66.4.1",
     "element-plus": "^2.9.6",
     "vue": "^3.5.13"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@unocss/preset-uno": "^66.4.1",
+    "unocss": "^66.4.1"
+  }
 }
