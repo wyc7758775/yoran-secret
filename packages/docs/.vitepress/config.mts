@@ -13,10 +13,11 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Yoran', link: '/' },
-      { text: ' Posts', link: '/markdown-examples' }
+      { text: 'Posts', link: documentsRouter[0].items[0].link },
+      { text: 'Gallery', link: '/gallery' }
     ],
 
-    sidebar:documentsRouter,
+    sidebar: documentsRouter,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/wyc7758775' }
     ]

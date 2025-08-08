@@ -11,7 +11,7 @@ const outPutBasePath = () => path.resolve(__dirname, '../.vitepress/router')
 const mdFilePath = '/JSCore'
 const excludeDir = 'temp'
 
-const getComponentsSideBar = async (filePath) => {
+const getComponentsSideBar = async () => {
   const resolvePath = documentsPath() 
 
   let dirArr = await fsPromises.readdir(resolvePath)
