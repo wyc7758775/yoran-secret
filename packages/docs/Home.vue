@@ -6,7 +6,7 @@
       <p class="profile-pronunciation">My name is pronounced as /dʒɛn'haʊ/</p>
 
       <div class="profile-image-container">
-        <img src="./assets/handsome.jpg" alt="Zhenghao" class="profile-image" />
+        <img src="/assets/handsome.jpg" alt="Zhenghao" class="profile-image" />
       </div>
 
       <div class="profile-bio">
