@@ -32,7 +32,7 @@
 </template>
 <style scoped>
 .home {
-  padding-top: 5rem;
+  padding-top: 2rem;
   animation: fadeIn 1s ease-in;
   font-family: "monospace";
   display: flex;

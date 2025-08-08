@@ -27,19 +27,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 import getGallery from "../.vitepress/router/gallery.json";
 
 // 图片数据 - 实际使用时会从assets/gallery目录加载
-const images = ref(
-  getGallery
-    .filter((item) => item !== null)
-    .map((item) => ({
-      ...item,
-      createTime: new Date(item.createTime),
-    }))
-    .sort((a, b) => b.createTime.getTime() - a.createTime.getTime())
-);
+const images = getGallery
+  .filter((item) => item !== null)
+  .map((item) => ({
+    ...item,
+    createTime: new Date(item.createTime),
+  }))
+  .sort((a, b) => b.createTime.getTime() - a.createTime.getTime());
 
 const currentImage = ref({ src: "", caption: "" });
 const scale = ref(1);
@@ -49,10 +47,4 @@ const showPreview = (index: number) => {
   currentImage.value = images.value[index];
   scale.value = 1;
 };
-
-// 组件挂载时加载图片
-onMounted(() => {
-  // 实际项目中可以通过API或动态导入加载图片
-  console.log("画廊组件已挂载");
-});
 </script>
