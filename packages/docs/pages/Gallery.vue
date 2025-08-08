@@ -35,6 +35,7 @@ const images = getGallery
   .filter((item) => item !== null)
   .map((item) => ({
     ...item,
+    src: item.src.replace("./", "/"),
     createTime: new Date(item.createTime),
   }))
   .sort((a, b) => b.createTime.getTime() - a.createTime.getTime());
@@ -44,7 +45,7 @@ const scale = ref(1);
 
 // 显示预览
 const showPreview = (index: number) => {
-  currentImage.value = images.value[index];
+  currentImage.value = images[index];
   scale.value = 1;
 };
 </script>

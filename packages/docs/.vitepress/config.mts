@@ -25,6 +25,15 @@ export default defineConfig({
   vite: {
     plugins: [
       UnoCSS() as any
-    ]
+    ],
+    // 添加以下配置，确保assets/gallery目录被正确处理
+    assetsInclude: ['**/assets/gallery/**'],
+    build: {
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[name]-[hash][extname]'
+        }
+      }
+    }
   }
 })
