@@ -39,7 +39,7 @@ const getGalleryItems = async (filePath) => {
         // 获取文件创建时间
         const createTime = stat.birthtime.toISOString()
         return {
-          src: `/assets/gallery/${dirItemPath}`,
+          src: `/gallery/${dirItemPath}`,
           caption,
           createTime
         }
