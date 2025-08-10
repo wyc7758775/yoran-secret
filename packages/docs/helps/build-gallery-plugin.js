@@ -39,7 +39,7 @@ const getGalleryItems = async (filePath) => {
         // 获取文件创建时间
         const createTime = stat.birthtime.toISOString()
         return {
-          src: `/assets/gallery/${dirItemPath}`,
+          src: `assets/gallery/${dirItemPath}`,
           caption,
           createTime
         }
@@ -51,11 +51,11 @@ const getGalleryItems = async (filePath) => {
 
 async function init() {
   const sideBarArr = await getGalleryItems(mdFilePath)
-  const outPutFile = `${outPutBasePath()}/gallery.json`
+  const outPutFile = `${outPutBasePath()}/gallery.js`
   const outPutDir = path.dirname(outPutFile)
   await fsPromises.mkdir(outPutDir, { recursive: true })
 
-  await fsPromises.writeFile(outPutFile, JSON.stringify(sideBarArr), {
+  await fsPromises.writeFile(outPutFile, `export default ${JSON.stringify(sideBarArr)}`, {
     encoding: 'utf-8'
   })
 }

@@ -31,7 +31,7 @@ export default defineConfig({
     // 指定public目录，VitePress会自动复制该目录下的文件到dist
     resolve: {
       alias: {
-        '@assets': '/Users/wuyucun/programmer/font-end/packages/docs/assets'
+        '@assets': '../assets'
       }
     },
     build: {

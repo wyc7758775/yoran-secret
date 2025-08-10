@@ -28,14 +28,13 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import getGallery from "../.vitepress/router/gallery.json";
+import getGallery from "../.vitepress/router/gallery";
 
 // 图片数据 - 实际使用时会从assets/gallery目录加载
 const images = getGallery
   .filter((item) => item !== null)
   .map((item) => ({
     ...item,
-    src: `/yoran-secret/assets/gallery/${item.src.split("/").pop()}`,
     createTime: new Date(item.createTime),
   }))
   .sort((a, b) => b.createTime.getTime() - a.createTime.getTime());
