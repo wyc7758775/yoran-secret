@@ -29,7 +29,11 @@ export default defineConfig({
      // 修改assetsInclude配置，确保正确匹配gallery目录
     assetsInclude: ['assets/gallery/**/*'],
     // 指定public目录，VitePress会自动复制该目录下的文件到dist
-    publicDir: 'assets',
+    resolve: {
+      alias: {
+        '@assets': '/Users/wuyucun/programmer/font-end/packages/docs/assets'
+      }
+    },
     build: {
       rollupOptions: {
         output: {

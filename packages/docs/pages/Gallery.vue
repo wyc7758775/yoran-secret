@@ -35,7 +35,7 @@ const images = getGallery
   .filter((item) => item !== null)
   .map((item) => ({
     ...item,
-    src: item.src.replace("./assets", "/assets"),
+    src: `/yoran-secret/assets/gallery/${item.src.split("/").pop()}`,
     createTime: new Date(item.createTime),
   }))
   .sort((a, b) => b.createTime.getTime() - a.createTime.getTime());
