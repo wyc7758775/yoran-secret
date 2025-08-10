@@ -35,7 +35,7 @@ const images = getGallery
   .filter((item) => item !== null)
   .map((item) => ({
     ...item,
-    src: item.src.replace("./", "/"),
+    src: item.src.replace("./assets", "/assets"),
     createTime: new Date(item.createTime),
   }))
   .sort((a, b) => b.createTime.getTime() - a.createTime.getTime());

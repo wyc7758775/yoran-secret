@@ -26,8 +26,10 @@ export default defineConfig({
     plugins: [
       UnoCSS() as any
     ],
-    // 添加以下配置，确保assets/gallery目录被正确处理
-    assetsInclude: ['**/assets/gallery/**'],
+     // 修改assetsInclude配置，确保正确匹配gallery目录
+    assetsInclude: ['assets/gallery/**/*'],
+    // 指定public目录，VitePress会自动复制该目录下的文件到dist
+    publicDir: 'assets',
     build: {
       rollupOptions: {
         output: {
