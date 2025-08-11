@@ -1,7 +1,12 @@
 <template>
   <div class="p-5 max-w-7xl mx-auto">
     <p>
-      <img src="/assets/gallery/bg3.jpg" alt="Zhenghao" class="profile-image" />
+      <img :src="testImage" alt="Zhenghao" class="profile-image" />
+      <img
+        src="/assets/gallery/bg1.jpeg"
+        alt="Zhenghao"
+        class="profile-image"
+      />
     </p>
     <div
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
@@ -33,6 +38,7 @@
 import { ref } from "vue";
 import getGallery from "../.vitepress/router/gallery";
 
+const testImage = "/assets/gallery/bg3.jpg";
 // 图片数据 - 实际使用时会从assets/gallery目录加载
 const images = getGallery
   .filter((item) => item !== null)
