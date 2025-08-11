@@ -2,13 +2,21 @@ import { defineConfig } from 'vitepress'
 import UnoCSS from 'unocss/vite'
 import documentsRouter from './router/documentsRouter.json'
 
+import icon from '../assets/profile.svg';
+
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: " Yoran秘密空间",
   description: " 个人学习总结记录，有很多错误，现阶段也就这样了",
   base: "/yoran-secret/",
-  head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/yoran-secret/assets/profile.svg' }]
+    head: [
+    // 使用动态路径
+    ['link', {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      href: new URL(icon, import.meta.url).href
+    }]
   ],
   themeConfig: {
     nav: [
