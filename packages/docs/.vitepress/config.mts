@@ -2,9 +2,6 @@ import { defineConfig } from 'vitepress'
 import UnoCSS from 'unocss/vite'
 import documentsRouter from './router/documentsRouter.json'
 
-import icon from '../assets/profile.svg';
-
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: " Yoran秘密空间",
@@ -15,7 +12,7 @@ export default defineConfig({
     ['link', {
       rel: 'icon',
       type: 'image/svg+xml',
-      href: new URL(icon, import.meta.url).href
+      href: '/yoran-secret/assets/profile.svg'
     }]
   ],
   themeConfig: {
