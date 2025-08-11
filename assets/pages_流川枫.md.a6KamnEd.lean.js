@@ -1,1 +1,0 @@
-import{_ as e,c as l,o as i,b0 as r}from"./chunks/framework.DLeuaP0p.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"pages/流川枫.md","filePath":"pages/流川枫.md"}'),n={name:"pages/流川枫.md"};function o(s,t,a,g,d,h){return i(),l("div",null,t[0]||(t[0]=[r("",16)]))}const u=e(n,[["render",o]]);export{p as __pageData,u as default};
