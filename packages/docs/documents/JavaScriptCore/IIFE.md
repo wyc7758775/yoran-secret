@@ -1,11 +1,7 @@
 ---
-author: 橘子哥
-createTime: 2022-01-30 22:00
-modificationDate: 星期日 30日 一月 2022 22:00:35
-description: 立即执行函数
-category: Web
-smallClass: JavaScript
-key: artitle
+title: 你麻痹 # 必须存在
+date: 2025-08-10 # 必须存在
+description: 摘要 # 推荐添加
 ---
 
 # IIFE

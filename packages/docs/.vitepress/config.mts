@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import UnoCSS from 'unocss/vite'
 import documentsRouter from './router/documentsRouter.json'
 
-// https://vitepress.dev/reference/site-config
+
 export default defineConfig({
   title: " Yoran秘密空间",
   description: " 个人学习总结记录，有很多错误，现阶段也就这样了",
@@ -29,7 +29,9 @@ export default defineConfig({
   },
   vite: {
     plugins: [
-      UnoCSS() as any
+      UnoCSS({
+        configFile: '../../../unocss.config.ts'
+      }) as any
     ],
     assetsInclude: ['**/assets/gallery/**'],
     resolve: {
@@ -38,6 +40,7 @@ export default defineConfig({
       },
     },
     build: {
+      sourcemap: false,
       rollupOptions: {
         output: {
           assetFileNames: 'assets/[name]-[hash][extname]'
