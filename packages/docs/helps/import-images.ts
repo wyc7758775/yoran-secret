@@ -12,7 +12,7 @@ export const galleryImages = {
  * @returns 图片URL
  */
 export function getImageUrl(filename: string): string {
-  const image = galleryImages[`/assets/gallery/${filename.globEager}`];
+  const image = galleryImages[`${filename}`];
   if (image) {
     return image.default;
   }
