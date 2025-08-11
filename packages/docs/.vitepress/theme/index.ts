@@ -1,9 +1,6 @@
 import { App } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import 'element-plus/dist/index.css'
-// import 'element-plus/theme-chalk/dark/css-vars.css'
-
-// import 'vitepress-theme-demoblock/dist/theme/styles/index.css'
 import ElementPlus from 'element-plus'
 import * as icons from '@element-plus/icons-vue'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'

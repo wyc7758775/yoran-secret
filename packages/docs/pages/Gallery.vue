@@ -1,12 +1,7 @@
 <template>
   <div class="p-5 max-w-7xl mx-auto">
     <p>
-      <img :src="testImage" alt="Zhenghao" class="profile-image" />
-      <img
-        src="/assets/gallery/bg1.jpeg"
-        alt="Zhenghao"
-        class="profile-image"
-      />
+      <el-image :src="imgSrc1" alt="Zhenghao" class="profile-image" />
     </p>
     <div
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
@@ -17,8 +12,8 @@
         class="rounded-lg overflow-hidden shadow-md hover:-translate-y-2 transition-transform duration-300 bg-white"
       >
         <el-image
-          :src="getImageUrl(image.src)"
-          :preview-src-list="[getImageUrl(image.src)]"
+          :src="image.src"
+          :preview-src-list="[image.src]"
           fit="cover"
           class="w-full h-48 cursor-pointer"
           lazy
@@ -38,32 +33,28 @@
 import { ref } from "vue";
 import getGallery from "../.vitepress/router/gallery";
 
-const testImage = "/assets/gallery/bg3.jpg";
+const imgSrc1 = new URL("/assets/gallery/bg3.jpg", import.meta.url).href;
 // 图片数据 - 实际使用时会从assets/gallery目录加载
 const images = getGallery
   .filter((item) => item !== null)
   .map((item) => ({
     ...item,
+    // 手动添加base路径
+    src: `${import.meta.env.BASE_URL}${
+      item.src.startsWith("/") ? item.src.slice(1) : item.src
+    }`,
     createTime: new Date(item.createTime),
   }))
   .sort((a, b) => b.createTime.getTime() - a.createTime.getTime());
+console.log({ imgSrc1, images });
 
 const currentImage = ref({ src: "", caption: "" });
 const scale = ref(1);
-
-// 处理图片路径，确保构建后能正确访问
-const getImageUrl = (src: string) => {
-  // 如果路径已经以/assets开头，则直接使用
-  if (src.startsWith("/assets")) return src;
-  // 如果是相对路径，则添加base路径
-  return `/yoran-secret/${src}`;
-};
-
 // 显示预览
 const showPreview = (index: number) => {
   currentImage.value = {
     ...images[index],
-    src: getImageUrl(images[index].src),
+    src: images[index].src,
   };
   scale.value = 1;
 };
