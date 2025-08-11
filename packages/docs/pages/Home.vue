@@ -58,7 +58,7 @@
   opacity: 0.8;
 }
 .profile-image-container {
-  width: 400px;
+  max-width: 400px;
   margin: 0 auto 2rem;
   overflow: hidden;
   border: 4px solid #333;
