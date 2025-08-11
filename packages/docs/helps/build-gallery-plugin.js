@@ -8,15 +8,13 @@ const dev = "dev";
 const galleryPath = () => path.resolve(__dirname, "../assets/gallery");
 const outPutBasePath = () => path.resolve(__dirname, "../.vitepress/router");
 
-const mdFilePath = "/JSCore";
 const excludeDir = "temp";
 
-const getGalleryItems = async (filePath) => {
+const getGalleryItems = async () => {
   const resolvePath = galleryPath();
-
   let dirArr = await fsPromises.readdir(resolvePath);
 
-  // dev 环境有一些目录是不需要生产路由的
+  // 过滤掉不需要的目录
   if (argv[2] !== dev) {
     dirArr = dirArr.filter((item) => item !== excludeDir);
   }
@@ -41,34 +39,36 @@ const getGalleryItems = async (filePath) => {
       if (!stat.isFile() || !imageExtensions.includes(ext)) {
         return null;
       }
-      if (stat.isFile()) {
-        // 获取文件名（不包含扩展名）作为 caption
-        const caption = path.parse(dirItemPath).name;
-        // 获取文件创建时间
-        const createTime = stat.birthtime.toISOString();
-        return {
-          src: `/assets/gallery/${dirItemPath}`,
-          caption,
-          createTime,
-        };
-      }
-      return null;
+
+      // 获取文件名（不包含扩展名）作为 caption
+      const caption = path.parse(dirItemPath).name;
+      // 获取文件创建时间
+      const createTime = stat.birthtime.toISOString();
+      return {
+        src: dirItemPath, // 只保留文件名
+        caption,
+        createTime,
+      };
     })
   );
 };
 
 async function init() {
-  const sideBarArr = await getGalleryItems(mdFilePath);
+  const galleryItems = await getGalleryItems();
   const outPutFile = `${outPutBasePath()}/gallery.js`;
   const outPutDir = path.dirname(outPutFile);
   await fsPromises.mkdir(outPutDir, { recursive: true });
 
-  await fsPromises.writeFile(
-    outPutFile,
-    `export default ${JSON.stringify(sideBarArr)}`,
-    {
-      encoding: "utf-8",
-    }
-  );
+  // 生成导入语句和数据
+  const content = `// 自动生成的图片数据
+// 此文件由build-gallery-plugin.js生成
+
+export default ${JSON.stringify(galleryItems)};
+`;
+
+  await fsPromises.writeFile(outPutFile, content, {
+    encoding: "utf-8",
+  });
+  console.log("gallery数据生成成功!");
 }
 init();

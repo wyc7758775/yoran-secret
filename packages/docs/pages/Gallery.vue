@@ -31,18 +31,18 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+// import { resolveImageUrl } from "../helps/resolve-image-url";
 import getGallery from "../.vitepress/router/gallery";
+import { getImageUrl } from "../helps/import-images";
 
-const imgSrc1 = new URL("/assets/gallery/bg3.jpg", import.meta.url).href;
+const imgSrc1 = getImageUrl("/assets/gallery/bg3.jpg");
 // 图片数据 - 实际使用时会从assets/gallery目录加载
 const images = getGallery
   .filter((item) => item !== null)
   .map((item) => ({
     ...item,
     // 手动添加base路径
-    src: `${import.meta.env.BASE_URL}${
-      item.src.startsWith("/") ? item.src.slice(1) : item.src
-    }`,
+    src: getImageUrl(item.src),
     createTime: new Date(item.createTime),
   }))
   .sort((a, b) => b.createTime.getTime() - a.createTime.getTime());

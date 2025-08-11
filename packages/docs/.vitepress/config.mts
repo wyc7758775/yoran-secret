@@ -26,7 +26,6 @@ export default defineConfig({
     plugins: [
       UnoCSS() as any
     ],
-        // 添加以下配置
     assetsInclude: ['**/assets/gallery/**'],
     resolve: {
       alias: {
