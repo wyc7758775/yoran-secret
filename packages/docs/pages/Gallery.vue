@@ -1,8 +1,5 @@
 <template>
   <div class="p-5 max-w-7xl mx-auto">
-    <p>
-      <el-image :src="imgSrc1" alt="Zhenghao" class="profile-image" />
-    </p>
     <div
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
     >
@@ -31,11 +28,9 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-// import { resolveImageUrl } from "../helps/resolve-image-url";
 import getGallery from "../.vitepress/router/gallery";
 import { getImageUrl } from "../helps/import-images";
 
-const imgSrc1 = getImageUrl("/assets/gallery/bg3.jpg");
 // 图片数据 - 实际使用时会从assets/gallery目录加载
 const images = getGallery
   .filter((item) => item !== null)
@@ -46,7 +41,6 @@ const images = getGallery
     createTime: new Date(item.createTime),
   }))
   .sort((a, b) => b.createTime.getTime() - a.createTime.getTime());
-console.log({ imgSrc1, images });
 
 const currentImage = ref({ src: "", caption: "" });
 const scale = ref(1);

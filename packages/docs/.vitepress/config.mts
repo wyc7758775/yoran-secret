@@ -8,7 +8,7 @@ export default defineConfig({
   description: " 个人学习总结记录，有很多错误，现阶段也就这样了",
   base: "/yoran-secret/",
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/assets/profile.svg' }]
+    ['link', { rel: 'icon', type: 'image/png', href: '/yoran-secret/assets/profile.svg' }]
   ],
   themeConfig: {
     nav: [
