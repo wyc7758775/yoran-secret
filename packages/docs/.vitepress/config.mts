@@ -30,7 +30,7 @@ export default defineConfig({
   vite: {
     plugins: [
       UnoCSS({
-        configFile: '../../../unocss.config.ts'
+        configFile: './unocss.config.ts'
       }) as any
     ],
     assetsInclude: ['**/assets/gallery/**'],
