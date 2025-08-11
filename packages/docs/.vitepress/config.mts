@@ -26,13 +26,12 @@ export default defineConfig({
     plugins: [
       UnoCSS() as any
     ],
-     // 修改assetsInclude配置，确保正确匹配gallery目录
-    assetsInclude: ['assets/gallery/**/*'],
-    // 指定public目录，VitePress会自动复制该目录下的文件到dist
+        // 添加以下配置
+    assetsInclude: ['**/assets/gallery/**'],
     resolve: {
       alias: {
-        '@assets': '../assets'
-      }
+        '@assets': '/Users/wuyucun/programmer/font-end/packages/docs/assets'
+      },
     },
     build: {
       rollupOptions: {
