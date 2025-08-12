@@ -42,7 +42,7 @@ export default defineConfig({
             "opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible",
           // 封装箭头样式
           "tooltip-arrow":
-            "after:content-['*'] after:absolute after:top-full after:left-1/2 after:-ml-[5px] after:border-[5px] after:border-solid after:border-t-white after:border-r-transparent after:border-b-transparent after:border-l-transparent",
+            "after:content-[''] after:absolute after:top-full after:left-1/2 after:-ml-[5px] after:border-[5px] after:border-solid after:border-t-white after:border-r-transparent after:border-b-transparent after:border-l-transparent",
         },
       }) as any,
     ],
