@@ -1,0 +1,22 @@
+{
+  "name": "yoran-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "router": "node helps/build-nav-plugin.js",
+    "gallery": "node helps/build-gallery-plugin.js",
+    "plugin:all": "npm run docs:router && npm run docs:gallery"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "vitepress": "^2.0.0-alpha.9"
+  }
+}

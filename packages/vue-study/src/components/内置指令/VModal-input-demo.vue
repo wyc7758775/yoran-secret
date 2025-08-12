@@ -10,8 +10,8 @@ const props = defineProps({
     default: "",
   },
 });
-const emit = defineEmits(["你麻痹"]);
+const emit = defineEmits(["笑嘻嘻"]);
 const handleClick = () => {
-  emit("你麻痹", "子级点击了按钮");
+  emit("笑嘻嘻", "子级点击了按钮");
 };
 </script>

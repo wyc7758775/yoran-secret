@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "pnpm run -C packages/docs docs:dev",
-    "docs:build": "pnpm run -C packages/docs docs:build",
+    "blog:dev": "pnpm run -C packages/blog dev",
+    "blog:build": "pnpm run -C packages/blog build",
+    "blog:gallery": "pnpm run -C packages/blog gallery",
+    "blog:router": "pnpm run -C packages/blog router",
     "vs:dev": "pnpm run -C packages/vue-study dev",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:gallery": "pnpm run -C packages/docs docs:gallery",
-    "docs:router": "pnpm run -C packages/docs docs:router"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
