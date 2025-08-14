@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <div class="home">
+  <div class="home" v-once>
     <div class="box">
       <h1 class="text-[2.5rem] font-bold mb-[0.5rem]">Hey, I'm Yoran</h1>
       <p class="text-[1rem] opacity-80 mb-[2rem]">
@@ -31,6 +31,12 @@
           >
           about software development, specifically JavaScript, TypeScript and
           web technologies in general.
+        </p>
+        <p class="text">
+          My motto is:
+          <span class="text-[1.2rem] font-bold">
+            "How you spend every day is how you spend your life."</span
+          >
         </p>
         <h3 style="padding-top: 3rem">Contact</h3>
         <p class="text">

@@ -23,11 +23,23 @@ import LifecycleDemo from "./生命周期钩子 API.vue";
 import provide from "./依赖注入/provide.vue";
 import injectChild from "./依赖注入/injectChild.vue";
 import VModalDemo from "./内置指令/VModal-demo.vue";
+import VIfElesDemo from "./内置指令/v-if-eles.demo.vue";
+import VHtmlXssDemo from "./内置指令/v-html-xss-demo.vue";
+import VSlotDemo from "./内置指令/v-slot-demo.vue";
+import VOnceDemo from "./内置指令/v-once-demo.vue";
+import VMemoDemo from "./内置指令/v-meno-demo.vue";
+import vMemoBusinessDemo from "./内置指令/v-memo-business-demo.vue";
+import VTextDemo from "./内置指令/v-text-demo.vue";
+// 内置组件
+import TransitionDemo from "./内置组件/transition-demo.vue";
+import KeepAliveDemo from "./内置组件/keepAlive-demo.vue";
+import TeleportDemo from "./内置组件/teleport-demo.vue";
 
 const activeName = ref("first");
 </script>
 <template>
   <h1>Vue3 API 学习示例</h1>
+  <div id="body"></div>
   <el-tabs v-model="activeName">
     <el-tab-pane label="进阶性API" name="first">
       <el-collapse>
@@ -150,6 +162,70 @@ const activeName = ref("first");
             <h1>16. 自定义组件</h1>
           </template>
           <VModalDemo />
+        </el-collapse-item>
+        <el-collapse-item name="17">
+          <template #title>
+            <h1>17. v-if-else</h1>
+          </template>
+          <VIfElesDemo />
+        </el-collapse-item>
+        <el-collapse-item name="18">
+          <template #title>
+            <h1>18. v-html</h1>
+          </template>
+          <VHtmlXssDemo />
+        </el-collapse-item>
+        <el-collapse-item name="19">
+          <template #title>
+            <h1>19. v-slot</h1>
+          </template>
+          <VSlotDemo />
+        </el-collapse-item>
+        <el-collapse-item name="20">
+          <template #title>
+            <h1>20. v-once</h1>
+          </template>
+          <VOnceDemo />
+        </el-collapse-item>
+        <el-collapse-item name="21">
+          <template #title>
+            <h1>21. v-mono</h1>
+          </template>
+          <VMemoDemo />
+        </el-collapse-item>
+        <el-collapse-item name="22">
+          <template #title>
+            <h1>22. v-memo</h1>
+          </template>
+          <vMemoBusinessDemo />
+        </el-collapse-item>
+        <el-collapse-item name="23">
+          <template #title>
+            <h1>23. v-text</h1>
+          </template>
+          <VTextDemo />
+        </el-collapse-item>
+      </el-collapse>
+    </el-tab-pane>
+    <el-tab-pane label="内置组件" name="seventh">
+      <el-collapse>
+        <el-collapse-item name="24">
+          <template #title>
+            <h1>24. transition</h1>
+          </template>
+          <TransitionDemo />
+        </el-collapse-item>
+        <el-collapse-item name="25">
+          <template #title>
+            <h1>25. KeepAliveDemo</h1>
+          </template>
+          <KeepAliveDemo />
+        </el-collapse-item>
+        <el-collapse-item name="26">
+          <template #title>
+            <h1>26. TeleportDemo</h1>
+          </template>
+          <TeleportDemo />
         </el-collapse-item>
       </el-collapse>
     </el-tab-pane>
