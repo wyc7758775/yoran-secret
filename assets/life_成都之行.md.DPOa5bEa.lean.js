@@ -1,1 +1,0 @@
-import{_ as s,c as e,o as t,be as p}from"./chunks/framework.BhXXfD0-.js";const l=JSON.parse('{"title":"成都之行","description":"","frontmatter":{},"headers":[],"relativePath":"life/成都之行.md","filePath":"life/成都之行.md"}'),c={name:"life/成都之行.md"};function o(i,a,m,_,r,d){return t(),e("div",null,a[0]||(a[0]=[p("",96)]))}const b=s(c,[["render",o]]);export{l as __pageData,b as default};
