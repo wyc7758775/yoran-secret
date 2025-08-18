@@ -1,0 +1,1 @@
+import{_ as a,c as i,o as l,be as t}from"./chunks/framework.BhXXfD0-.js";const d=JSON.parse('{"title":"写作指南","description":"","frontmatter":{},"headers":[],"relativePath":"life/写作指南.md","filePath":"life/写作指南.md"}'),r={name:"life/写作指南.md"};function p(o,e,n,h,s,c){return l(),i("div",null,e[0]||(e[0]=[t("",75)]))}const b=a(r,[["render",p]]);export{d as __pageData,b as default};
