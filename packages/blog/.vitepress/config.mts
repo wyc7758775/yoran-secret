@@ -17,6 +17,14 @@ export default defineConfig({
         href: "/yoran-secret/assets/profile.svg",
       },
     ],
+     // 添加referrer meta标签以解决图片403问题
+    [
+      "meta",
+      {
+        name: "referrer",
+        content: "no-referrer"
+      }
+    ]
   ],
   themeConfig: {
     nav: [
