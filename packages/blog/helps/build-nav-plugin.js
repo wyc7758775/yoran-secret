@@ -45,7 +45,7 @@ const getComponentsSideBar = async () => {
   );
 };
 
-async function init() {
+async function writeSidebarData() {
   const sideBarArr = await getComponentsSideBar(mdFilePath);
   const outPutFile = `${outPutBasePath()}/documentsRouter.json`;
   const outPutDir = path.dirname(outPutFile);
@@ -55,7 +55,7 @@ async function init() {
     encoding: "utf-8",
   });
 }
-init();
+writeSidebarData();
 
 // TODO: buildStart这个钩子会出现无限重启服务器的问题
 // export default function sideBarPlugin() {
