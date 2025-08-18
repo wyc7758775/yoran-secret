@@ -377,9 +377,9 @@ button.textContent = 'count is 1';
 
 痛苦不会消失，只是会转移，Vapor 将耗时的逻辑从运行时转移到了编译时。但是优化编译时的逻辑，所以实现了总体性能的极大提升的同时，总的痛苦也减少了很多。
 
-# 当前版本注意事项
+## 当前版本注意事项
 
-## 官方的话:
+### 官方的话:
 
 - 适用场景：
 
@@ -393,7 +393,7 @@ button.textContent = 'count is 1';
   - ❌ 暂勿依赖高级功能（如 SSR 激活、异步组件）
   - ❌ 大量依赖第三方 VDOM 组件库（兼容性存在边界问题）；
 
-## 不使用的具体 API
+### 不使用的具体 API
 
 defineAsyncComponent、`<KeepAlive>`、`<Teleport>`、`<Suspense>`都没有支持，计划中。
 

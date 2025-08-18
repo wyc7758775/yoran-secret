@@ -1,6 +1,9 @@
-ts 可以解决[Top 10 JavaScript errors from 1000+ projects (and how to avoid them)](https://rollbar.com/blog/top-10-javascript-errors-from-1000-projects-and-how-to-avoid-them/) 这样的问题。再加上对象提示🔔
+# TS 入门
+
+ts 可以解决[Top 10 JavaScript errors from 1000+ projects (and how to avoid them)](https://rollbar.com/blog/top-10-javascript-errors-from-1000-projects-and-how-to-avoid-them/) 这样的问题。再加上对象提示 🔔
 
 ## 一、 TS 基础
+
 ```typescript
 // 1.对象和函数 interface
 interface IPerson {
@@ -240,61 +243,64 @@ type Greet2 = SayHello<599>; // "Hello 599"
 const meName = "yoran";
 type TMeName = typeof meName;
 const meName1: TMeName = "yoran";
-
 ```
 
 TS 解决的问题:[https://rollbar.com/blog/top-10-javascript-errors-from-1000-projects-and-how-to-avoid-them/](https://rollbar.com/blog/top-10-javascript-errors-from-1000-projects-and-how-to-avoid-them/)
 
 ## 二、 TS 相关疑问
-+ type和interface的区别？
+
+- type 和 interface 的区别？
 
 :::tips
-1. type 可以指定基础类型，并且给基础类型编程，比如type TPerson = string | number | boolean。
-2. 在定义对象类型时，两者并没有什么不同。type 可以用来定义所有类型，interface 只能用来定义对象类型,type 和interface在使用场景上二者应该是包含与被包含的关系。
+
+1. type 可以指定基础类型，并且给基础类型编程，比如 type TPerson = string | number | boolean。
+2. 在定义对象类型时，两者并没有什么不同。type 可以用来定义所有类型，interface 只能用来定义对象类型,type 和 interface 在使用场景上二者应该是包含与被包含的关系。
 
 :::
 
-+ 字面量类型
+- 字面量类型
 
 :::tips
+
 1. 更加细致的限制开发输入的类型
 
 :::
 
-+ 范型是什么
+- 范型是什么
 
 :::tips
+
 1. 类型编程中的参数。`type TPerson<T, D> = T | D | 'yoran' | '柳生'`
 
 :::
 
-+ 范型的难点？
-    - 主动赋值
-    - 自动推导
+- 范型的难点？
 
+  - 主动赋值
+  - 自动推导
 
-
-+ <font style="color:rgb(37, 41, 51);">类型声明的概念</font>
+- <font style="color:rgb(37, 41, 51);">类型声明的概念</font>
 
 :::tips
+
 1. 专门指 `xxxx.d.ts`这样的文件
 
 :::
 
 ### 团队使用 TS 是否会增加人力成本？
 
-
 ## 三、 JS 迁移 TS
-+ 不要对逻辑进行重构，最多写一个 TODO。即便你看这一部分再不顺眼也是这样。
-+ <font style="color:rgb(37, 41, 51);">更加不要发生技术栈的替换，只做类型包的补充。</font>
+
+- 不要对逻辑进行重构，最多写一个 TODO。即便你看这一部分再不顺眼也是这样。
+- <font style="color:rgb(37, 41, 51);">更加不要发生技术栈的替换，只做类型包的补充。</font>
 
 > <font style="color:rgb(37, 41, 51);">在迁移过程中的一个大忌就是，你明明只应该补充下类型，却觉得原来的逻辑不顺眼直接顺手改掉了，或者感觉使用的 npm 包太老，顺手替换了个更潮流的包。千万不要这么做！否则如果迁移过程中哪里出现了问题，为了定位问题根源，大概率你又要将它们回退回去，甚至包括一些无辜的类型代码...，简直就是在给你自己增加工作量了。</font>
->
 
 ## 四、 TypeScript 是如何运作的？
+
 为什么说 TS 是一个单独的语言？又为什么说 TS 可以最大限度的兼容 JS？
 
-在深入学习之前，我有一个认知，TS 只是 JS 的一个辅助工具一样的东西，它依托于 webpack 之类的构建工具工作。这样的认知是错误的。TS就是一个单独的语言，但是它为了能够最大限度地降低用户的使用门槛，在 JS 语言规范的基础上，扩展出了类型检查。这也是说 TS 是 JS 超集的由来。
+在深入学习之前，我有一个认知，TS 只是 JS 的一个辅助工具一样的东西，它依托于 webpack 之类的构建工具工作。这样的认知是错误的。TS 就是一个单独的语言，但是它为了能够最大限度地降低用户的使用门槛，在 JS 语言规范的基础上，扩展出了类型检查。这也是说 TS 是 JS 超集的由来。
 
 ![](https://cdn.nlark.com/yuque/0/2024/png/654315/1707976483587-c71a7066-83ef-4199-9fe1-c7708a74403a.png)
 
@@ -317,7 +323,9 @@ npm i @types/lodash
 如果一开始就是使用 TS 写的项目，也只不过是把 `xx.d.ts`放到了依赖包之中。
 
 ## 五、类型断言如何正确的使用
-###  5.1 为将来补全类型做好准备
+
+### 5.1 为将来补全类型做好准备
+
 unknown 和类型断言结合使用
 
 ```typescript
@@ -332,48 +340,45 @@ function myFunc(param: unknown) {
     element = (element as number) + 1;
   });
 }
-
 ```
 
 这样做的目的是什么呢？提醒开发，你使用的这个变量还是不知道的类型，要小心为好哦。
 
-+ 类型断言的意义存在
-+ unkown 结合类型断言可以强制开发明确它的类型，一步步的完善它最终的类型
-
-
+- 类型断言的意义存在
+- unkown 结合类型断言可以强制开发明确它的类型，一步步的完善它最终的类型
 
 而 any 结合类型断言也是可以到达同样的目的。但是他们还是有一个很大的差别的，如下
 
 ```typescript
-let a: any = {}
-console.log(a.b.foo()) // 不会报错
+let a: any = {};
+console.log(a.b.foo()); // 不会报错
 
-let b: unknow = {}
-console.log(b.a.foo()) //  会找错，提示a为unknow
+let b: unknow = {};
+console.log(b.a.foo()); //  会找错，提示a为unknow
 ```
 
 **any 在使用的时候不会报错，容易被忽略**
 
-### 5.2 弥补TS的错误
+### 5.2 弥补 TS 的错误
+
 ```typescript
 interface IName {
-  boo: string
+  boo: string;
 }
 interface IHuman {
-  base: IName
-  height: number
+  base: IName;
+  height: number;
 }
 
 const yoran: IHuman = {
   height: 12,
   base: {
-    boo: '吃饭咩'
-  }
-}
-const { height, base = {} } = yoran
-console.log(height)
-console.log(base.boo) // 类型"{}"上面不存在属性"boo"
-
+    boo: "吃饭咩",
+  },
+};
+const { height, base = {} } = yoran;
+console.log(height);
+console.log(base.boo); // 类型"{}"上面不存在属性"boo"
 ```
 
 类型明明都已经给了，但是在使用的时候，给他弄一个默认值，它的类型就改变了，读取不到 boo 这个属性了。
@@ -381,7 +386,6 @@ console.log(base.boo) // 类型"{}"上面不存在属性"boo"
 这个时候我们就需要使用到类型断言去解决这个问题。如下：
 
 ```typescript
-const { height, base = {} as IHuman } = yoran
-console.log(base.boo) // 不报错。完美哦
+const { height, base = {} as IHuman } = yoran;
+console.log(base.boo); // 不报错。完美哦
 ```
-

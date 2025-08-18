@@ -4,6 +4,7 @@
     "collapsible": true,
     "collapsed": false,
     "items": [
+      { "text": "", "link": "/posts/Java/" },
       {
         "text": "Java 学习路线-前端功利性",
         "link": "/posts/Java/Java 学习路线-前端功利性"
@@ -94,23 +95,23 @@
       },
       { "text": "VsCode中使用vim", "link": "/posts/最佳实践/VsCode中使用vim" },
       {
-        "text": "\\使用composition api实践经验",
-        "link": "/posts/最佳实践/\\使用composition api实践经验"
-      },
-      {
         "text": "vue的业务开发如何进行组件的拆分",
         "link": "/posts/最佳实践/vue的业务开发如何进行组件的拆分"
       },
       { "text": "《重构》导读", "link": "/posts/最佳实践/《重构》导读" },
       {
-        "text": "产品经理不靠谱怎么办_",
-        "link": "/posts/最佳实践/产品经理不靠谱怎么办_"
+        "text": "产品经理不靠谱怎么办",
+        "link": "/posts/最佳实践/产品经理不靠谱怎么办"
       },
       {
         "text": "代码审查常见问题",
         "link": "/posts/最佳实践/代码审查常见问题"
       },
-      { "text": "前端已死_", "link": "/posts/最佳实践/前端已死_" },
+      {
+        "text": "使用composition api实践经验",
+        "link": "/posts/最佳实践/使用composition api实践经验"
+      },
+      { "text": "前端已死", "link": "/posts/最佳实践/前端已死" },
       { "text": "如何设计组件？", "link": "/posts/最佳实践/如何设计组件？" },
       { "text": "如何阅读源码", "link": "/posts/最佳实践/如何阅读源码" },
       {
