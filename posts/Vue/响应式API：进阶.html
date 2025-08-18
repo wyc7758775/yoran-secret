@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>响应式 API：进阶 |  Yoran秘密空间</title>
+    <meta name="description" content=" 个人学习总结记录，有很多错误，现阶段也就这样了">
+    <meta name="generator" content="VitePress v2.0.0-alpha.9">
+    <link rel="preload stylesheet" href="/yoran-secret/assets/style-BNX4pDd4.css" as="style">
+    <link rel="preload stylesheet" href="/yoran-secret/vp-icons.css" as="style">
+    
+    <script type="module" src="/yoran-secret/assets/app.lbze4AuF.js"></script>
+    <link rel="modulepreload" href="/yoran-secret/assets/chunks/theme.BFV8bYuh.js">
+    <link rel="modulepreload" href="/yoran-secret/assets/chunks/framework.Bc3g4bdh.js">
+    <link rel="modulepreload" href="/yoran-secret/assets/posts_Vue_响应式API：进阶.md.gYKyD5MR.lean.js">
+    <link rel="icon" type="image/svg+xml" href="/yoran-secret/assets/profile.svg">
+    <meta name="referrer" content="no-referrer">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-da3eba87><!--[--><!--]--><!--[--><span tabindex="-1" data-v-13f704f2></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-13f704f2>Skip to content</a><!--]--><!----><header class="VPNav" data-v-da3eba87 data-v-974c650f><div class="VPNavBar" data-v-974c650f data-v-d1ae037f><div class="wrapper" data-v-d1ae037f><div class="container" data-v-d1ae037f><div class="title" data-v-d1ae037f><div class="VPNavBarTitle has-sidebar" data-v-d1ae037f data-v-ed3fcbe8><a class="title" href="/yoran-secret/" data-v-ed3fcbe8><!--[--><!--]--><!----><span data-v-ed3fcbe8> Yoran秘密空间</span><!--[--><!--]--></a></div></div><div class="content" data-v-d1ae037f><div class="content-body" data-v-d1ae037f><!--[--><!--]--><div class="VPNavBarSearch search" data-v-d1ae037f><!----></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-d1ae037f data-v-e7fcac3e><span id="main-nav-aria-label" class="visually-hidden" data-v-e7fcac3e> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/yoran-secret/" tabindex="0" data-v-e7fcac3e data-v-e60e53e4><!--[--><span data-v-e60e53e4>Yoran</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/yoran-secret/posts/Java/Java%20%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF-%E5%89%8D%E7%AB%AF%E5%8A%9F%E5%88%A9%E6%80%A7.html" tabindex="0" data-v-e7fcac3e data-v-e60e53e4><!--[--><span data-v-e60e53e4>Posts</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/yoran-secret/gallery.html" tabindex="0" data-v-e7fcac3e data-v-e60e53e4><!--[--><span data-v-e60e53e4>Gallery</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-d1ae037f data-v-61a1a7ee><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-61a1a7ee data-v-ff9e6b19 data-v-a56565ab><span class="check" data-v-a56565ab><span class="icon" data-v-a56565ab><!--[--><span class="vpi-sun sun" data-v-ff9e6b19></span><span class="vpi-moon moon" data-v-ff9e6b19></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-d1ae037f data-v-6242e5d7 data-v-923a8e73><!--[--><a class="VPSocialLink no-icon" href="https://github.com/wyc7758775" aria-label="github" target="_blank" rel="noopener" data-v-923a8e73 data-v-10fe7583><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-d1ae037f data-v-0fc0b885 data-v-1d602ded><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-1d602ded><span class="vpi-more-horizontal icon" data-v-1d602ded></span></button><div class="menu" data-v-1d602ded><div class="VPMenu" data-v-1d602ded data-v-b69a8002><!----><!--[--><!--[--><!----><div class="group" data-v-0fc0b885><div class="item appearance" data-v-0fc0b885><p class="label" data-v-0fc0b885>Appearance</p><div class="appearance-action" data-v-0fc0b885><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-0fc0b885 data-v-ff9e6b19 data-v-a56565ab><span class="check" data-v-a56565ab><span class="icon" data-v-a56565ab><!--[--><span class="vpi-sun sun" data-v-ff9e6b19></span><span class="vpi-moon moon" data-v-ff9e6b19></span><!--]--></span></span></button></div></div></div><div class="group" data-v-0fc0b885><div class="item social-links" data-v-0fc0b885><div class="VPSocialLinks social-links-list" data-v-0fc0b885 data-v-923a8e73><!--[--><a class="VPSocialLink no-icon" href="https://github.com/wyc7758775" aria-label="github" target="_blank" rel="noopener" data-v-923a8e73 data-v-10fe7583><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-d1ae037f data-v-1e67cfd8><span class="container" data-v-1e67cfd8><span class="top" data-v-1e67cfd8></span><span class="middle" data-v-1e67cfd8></span><span class="bottom" data-v-1e67cfd8></span></span></button></div></div></div></div><div class="divider" data-v-d1ae037f><div class="divider-line" data-v-d1ae037f></div></div></div><!----></header><div class="VPLocalNav has-sidebar empty" data-v-da3eba87 data-v-ec958438><div class="container" data-v-ec958438><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-ec958438><span class="vpi-align-left menu-icon" data-v-ec958438></span><span class="menu-text" data-v-ec958438>Menu</span></button><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-ec958438 data-v-27984a1a><button data-v-27984a1a>Return to top</button><!----></div></div></div><aside class="VPSidebar" data-v-da3eba87 data-v-90886cb9><div class="curtain" data-v-90886cb9></div><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-90886cb9><span class="visually-hidden" id="sidebar-aria-label" data-v-90886cb9> Sidebar Navigation </span><!--[--><!--]--><!--[--><div class="no-transition group" data-v-77ac0c5d><section class="VPSidebarItem level-0 collapsible" data-v-77ac0c5d data-v-6215fabc><div class="item" role="button" tabindex="0" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><h2 class="text" data-v-6215fabc>Java</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-6215fabc><span class="vpi-chevron-right caret-icon" data-v-6215fabc></span></div></div><div class="items" data-v-6215fabc><!--[--><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/Java/Java%20%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF-%E5%89%8D%E7%AB%AF%E5%8A%9F%E5%88%A9%E6%80%A7.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>Java 学习路线-前端功利性</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-77ac0c5d><section class="VPSidebarItem level-0 collapsible" data-v-77ac0c5d data-v-6215fabc><div class="item" role="button" tabindex="0" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><h2 class="text" data-v-6215fabc>JavaScriptCore</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-6215fabc><span class="vpi-chevron-right caret-icon" data-v-6215fabc></span></div></div><div class="items" data-v-6215fabc><!--[--><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/IIFE.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>IIFE</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/JavaScript%E4%B8%AD%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>JavaScript中运算符优先级</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/generator%E5%92%8Citerator.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>generator和iterator</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/js%E8%AE%A9%E4%BA%BA%E8%AF%9F%E7%97%85%E7%9A%84%E8%BF%99%E4%BA%9Bfeature.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>js让人诟病的这些feature</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/parseInt%201.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>parseInt 1</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/parseInt.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>parseInt</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/prototype.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>prototype</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%88%E9%93%BE%EF%BC%89%E3%80%81%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E3%80%81%E9%97%AD%E5%8C%85.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>作用域（链）、执行上下文、闭包</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E5%86%8D%E6%AC%A1%E7%90%86%E8%A7%A3%E9%97%AD%E5%8C%85.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>再次理解闭包</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%B5%8C%E5%A5%97%E3%80%81let%E3%80%81%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>块级作用域与嵌套、let、暂时性死区</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E7%AC%A6.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>对象的属性描述符</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%AE%BF%E9%97%AE%E5%99%A8%E5%B1%9E%E6%80%A7.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>对象的访问器属性</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E5%AF%B9%E8%B1%A1%E7%BB%A7%E6%89%BF.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>对象继承</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E6%95%B0%E7%BB%84API.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>数组API</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E6%AD%A3%E5%88%99%E5%9F%BA%E7%A1%80.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>正则基础</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>立即执行函数</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E7%B1%BB%E6%95%B0%E7%BB%84.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>类数组</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E8%AE%A9%20a%20==%201%20&amp;&amp;%20a%20==%202%20&amp;&amp;%20a%20==%203%20%E6%88%90%E7%AB%8B.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>让 a == 1 && a == 2 && a == 3 成立</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E8%BD%AC%E4%B9%89%E7%AC%A6.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>转义符</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>运算符的优先级</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>错误信息</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E9%97%AD%E5%8C%85.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>闭包</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/JavaScriptCore/%E9%9A%90%E5%BC%8F%E8%BD%AC%E5%8C%96%E9%97%AE%E9%A2%98.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>隐式转化问题</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-77ac0c5d><section class="VPSidebarItem level-0 collapsible has-active" data-v-77ac0c5d data-v-6215fabc><div class="item" role="button" tabindex="0" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><h2 class="text" data-v-6215fabc>Vue</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-6215fabc><span class="vpi-chevron-right caret-icon" data-v-6215fabc></span></div></div><div class="items" data-v-6215fabc><!--[--><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/Vue/vapor.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>vapor</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/Vue/%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>内置指令</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/Vue/%E5%86%85%E7%BD%AE%E7%BB%84%E4%BB%B6.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>内置组件</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/Vue/%E5%93%8D%E5%BA%94%E5%BC%8FAPI%EF%BC%9A%E5%9F%BA%E7%A1%80.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>响应式API：基础</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/Vue/%E5%93%8D%E5%BA%94%E5%BC%8FAPI%EF%BC%9A%E5%B7%A5%E5%85%B7.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>响应式API：工具</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/Vue/%E5%93%8D%E5%BA%94%E5%BC%8FAPI%EF%BC%9A%E8%BF%9B%E9%98%B6.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>响应式API：进阶</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/Vue/%E7%BB%84%E5%90%88%E5%BC%8FAPI%EF%BC%9A%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>组合式API：依赖注入</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-77ac0c5d><section class="VPSidebarItem level-0 collapsible" data-v-77ac0c5d data-v-6215fabc><div class="item" role="button" tabindex="0" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><h2 class="text" data-v-6215fabc>最佳实践</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-6215fabc><span class="vpi-chevron-right caret-icon" data-v-6215fabc></span></div></div><div class="items" data-v-6215fabc><!--[--><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/CodeReview%E7%A4%BC%E4%BB%AA.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>CodeReview礼仪</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/Code%E8%AF%84%E5%AE%A1%E6%A8%A1%E6%9D%BF%E5%92%8C%E7%A4%BC%E4%BB%AA.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>Code评审模板和礼仪</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/React%E4%B8%AD%E5%A6%82%E4%BD%95%E5%88%86%E7%BB%84%E4%BB%B6.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>React中如何分组件</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/TS%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>TS入门教程学习总结</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/VsCode%E4%B8%AD%E4%BD%BF%E7%94%A8vim.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>VsCode中使用vim</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/vue%E7%9A%84%E4%B8%9A%E5%8A%A1%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%BB%84%E4%BB%B6%E7%9A%84%E6%8B%86%E5%88%86.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>vue的业务开发如何进行组件的拆分</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/%E3%80%8A%E9%87%8D%E6%9E%84%E3%80%8B%E5%AF%BC%E8%AF%BB.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>《重构》导读</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E4%B8%8D%E9%9D%A0%E8%B0%B1%E6%80%8E%E4%B9%88%E5%8A%9E.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>产品经理不靠谱怎么办</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>代码审查常见问题</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/%E4%BD%BF%E7%94%A8composition%20api%E5%AE%9E%E8%B7%B5%E7%BB%8F%E9%AA%8C.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>使用composition api实践经验</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/%E5%89%8D%E7%AB%AF%E5%B7%B2%E6%AD%BB.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>前端已死</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%BB%84%E4%BB%B6%EF%BC%9F.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>如何设计组件？</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E6%BA%90%E7%A0%81.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>如何阅读源码</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-6215fabc data-v-6215fabc><div class="item" data-v-6215fabc><div class="indicator" data-v-6215fabc></div><a class="VPLink link link" href="/yoran-secret/posts/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/%E5%AF%8C%E6%96%87%E6%9C%AC%E6%97%A0%E6%B3%95%E6%B8%B2%E6%9F%93%E5%A4%9A%E4%B8%AA%E7%A9%BA%E6%A0%BC.html" data-v-6215fabc><!--[--><p class="text" data-v-6215fabc>富文本无法渲染多个空格</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-da3eba87 data-v-cd83dd5d><div class="VPDoc has-sidebar has-aside" data-v-cd83dd5d data-v-b6a0eafc><!--[--><!--]--><div class="container" data-v-b6a0eafc><div class="aside" data-v-b6a0eafc><div class="aside-curtain" data-v-b6a0eafc></div><div class="aside-container" data-v-b6a0eafc><div class="aside-content" data-v-b6a0eafc><div class="VPDocAside" data-v-b6a0eafc data-v-0266964b><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-0266964b data-v-beb4c240><div class="content" data-v-beb4c240><div class="outline-marker" data-v-beb4c240></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-beb4c240>On this page</div><ul class="VPDocOutlineItem root" data-v-beb4c240 data-v-423aa589><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-0266964b></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-b6a0eafc><div class="content-container" data-v-b6a0eafc><!--[--><!--]--><main class="main" data-v-b6a0eafc><div style="position:relative;" class="vp-doc _yoran-secret_posts_Vue_%E5%93%8D%E5%BA%94%E5%BC%8FAPI%EF%BC%9A%E8%BF%9B%E9%98%B6" data-v-b6a0eafc><div><h1 id="响应式-api-进阶" tabindex="-1">响应式 API：进阶 <a class="header-anchor" href="#响应式-api-进阶" aria-label="Permalink to “响应式 API：进阶”">​</a></h1><h2 id="参考资料-vue3-官网" tabindex="-1">参考资料(vue3 官网) <a class="header-anchor" href="#参考资料-vue3-官网" aria-label="Permalink to “参考资料(vue3 官网)”">​</a></h2><ul><li><a href="https://cn.vuejs.org/api/reactivity-advanced.html#shallowref" target="_blank" rel="noreferrer">shallowRef()</a></li><li><a href="https://cn.vuejs.org/api/reactivity-advanced.html#triggerref" target="_blank" rel="noreferrer">triggerRef()</a></li><li><a href="https://cn.vuejs.org/api/reactivity-advanced.html#customref" target="_blank" rel="noreferrer">customRef()</a></li><li><a href="https://cn.vuejs.org/api/reactivity-advanced.html#shallowreactive" target="_blank" rel="noreferrer">shallowReactive()</a></li><li><a href="https://cn.vuejs.org/api/reactivity-advanced.html#shallowreadonly" target="_blank" rel="noreferrer">shallowReadonly()</a></li><li><a href="https://cn.vuejs.org/api/reactivity-advanced.html#toraw" target="_blank" rel="noreferrer">toRaw()</a></li><li><a href="https://cn.vuejs.org/api/reactivity-advanced.html#markraw" target="_blank" rel="noreferrer">markRaw()</a></li><li><a href="https://cn.vuejs.org/api/reactivity-advanced.html#effectscope" target="_blank" rel="noreferrer">effectScope()</a></li><li><a href="https://cn.vuejs.org/api/reactivity-advanced.html#getcurrentscope" target="_blank" rel="noreferrer">getCurrentScope()</a></li><li><a href="https://cn.vuejs.org/api/reactivity-advanced.html#onscopedispose" target="_blank" rel="noreferrer">onScopeDispose()</a></li></ul><h2 id="前言" tabindex="-1">前言 <a class="header-anchor" href="#前言" aria-label="Permalink to “前言”">​</a></h2><p>官方已经很好的写出了这些 API 是如何使用的，但是没有结合实践的业务场景来说明运用的场景，这个对于我们实际的开发非常的重要，而且在现在离不开大模型的情况下，对于我这种业务开发员来说，广度可能比深度更加的重要。</p><h2 id="_1-shallowref" tabindex="-1">1. ShallowRef <a class="header-anchor" href="#_1-shallowref" aria-label="Permalink to “1. ShallowRef”">​</a></h2><p>shallow 翻译为浅的，读音：ˈʃæləʊ/，这里的 shallowRef 是浅的引用。</p><h3 id="_1-1-基础使用" tabindex="-1">1.1 基础使用 <a class="header-anchor" href="#_1-1-基础使用" aria-label="Permalink to “1.1 基础使用”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;p&gt;多层级 shallowRef: {{ objShallow.count }}&lt;/p&gt;</span></span>
+<span class="line"><span>  &lt;p&gt;shallowRef: {{ count }}&lt;/p&gt;</span></span>
+<span class="line"><span>  &lt;button @click=&#39;addShallowRefCount1&#39;&gt;&lt;/button&gt;</span></span>
+<span class="line"><span>  &lt;button @click=&#39;addShallowRefCount2&#39;&gt;&lt;/button&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>  const objShallow = shallowRef({</span></span>
+<span class="line"><span>    count: 0,</span></span>
+<span class="line"><span>  });</span></span>
+<span class="line"><span>  const count = shallowRef(0)</span></span>
+<span class="line"><span>  const addShallowRefCount1 = () =&gt; {</span></span>
+<span class="line"><span>    objShallow.value.count++ // 界面没有变化</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>  const addShallowRefCount2 = () =&gt; {</span></span>
+<span class="line"><span>    count.value++ // 界面实时改变</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><p>也就是说 <code>shallowRef</code>它只收集 root 层级的数据变化，所以 <code>objShallow.value.count++</code>在界面没有响应。<strong>换一句话说，就是只监听.value 这个层级的变化</strong>。只是进行依赖收集，而不会监听.value 之后的层级的属性的变化。可以通过如下的方法让它可以在界面渲染：</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>const addShallowRefCount1 = () =&gt; {</span></span>
+<span class="line"><span>  objShallow.value.count++ // 和下面的 count.value 在一起就界面就会改变了</span></span>
+<span class="line"><span>  count.value++</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>const addShallowRefCount3 = () =&gt; {</span></span>
+<span class="line"><span>  objShallow.value = {</span></span>
+<span class="line"><span>    count: ++objeShallow.value.count</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><p>Diff 算法用于比较新旧虚拟 DOM 树的差异,发现有变化了就重新更新整个组件</p><p>上面的两种方式本质都是触发了组件的重新渲染。<code>addShallowRefCount3</code>不用多说，第一个方法是更加的让人错愕。当触发 count.value++的时候会执行 diff 算法，然后 diff 算法发现了差异之后，会重新更新**整个组件。**这个时候 <code>objShallow.value.count</code>会渲染最新的值。</p><p>对象如此，数组也一样：</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;button @click=&quot;pushShallowRef&quot;&gt;push shallowRef&lt;/button&gt;</span></span>
+<span class="line"><span>  &lt;p&gt;shallowRef: {{ refShallow }}&lt;/p&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>const refShallow = shallowRef([1, 2, 3]);</span></span>
+<span class="line"><span>const pushShallowRef = () =&gt; {</span></span>
+<span class="line"><span>  refShallow.value[1] = 4444; // ❌</span></span>
+<span class="line"><span>  refShallow.value.push(4); // ❌</span></span>
+<span class="line"><span>};</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><h3 id="_1-2-业务使用场景" tabindex="-1">1.2 业务使用场景 <a class="header-anchor" href="#_1-2-业务使用场景" aria-label="Permalink to “1.2 业务使用场景”">​</a></h3><h4 id="_1-21-一次性处理大批量的数据" tabindex="-1">1.21 一次性处理大批量的数据 <a class="header-anchor" href="#_1-21-一次性处理大批量的数据" aria-label="Permalink to “1.21 一次性处理大批量的数据”">​</a></h4><p>添加下数据</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>const originArray = () =&gt; {</span></span>
+<span class="line"><span>  return { items: [{ count: 0 }] }</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>const arrayShallow = shallowRef(originArray())</span></span>
+<span class="line"><span>const addArrayShallow = () =&gt; {</span></span>
+<span class="line"><span>  // 插入 1000 个元素到 arrayShallow</span></span>
+<span class="line"><span>  for (let i = 0; i &lt; 1000; i++) {</span></span>
+<span class="line"><span>    arrayShallow.value.items.push({ count: i })</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>  triggerRef(arrayShallow) // 仅一次更新</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const arrayRef = ref(originArray());</span></span>
+<span class="line"><span>const addArrayRef = () =&gt; {</span></span>
+<span class="line"><span>  let template = { items: [{ count: 0 }] }</span></span>
+<span class="line"><span>  for (let i = 0; i &lt; 1000; i++) {</span></span>
+<span class="line"><span>    template.items.push({ count: i })</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>  arrayRef.value = template</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><p>使用 <code>originArray</code>函数封装原始数据，是为了之后可能存在初始化的可能性。s</p><p><img src="https://cdn.nlark.com/yuque/0/2025/png/654315/1754306966587-4647f582-3d60-49ad-9737-60543246b9a7.png" alt=""></p><p>这个是两个函数的运行时间，并没太大的差别，虽然理论上说 ref 会个嵌套每一个属性添加响应式代理，这样无疑会导致运行时间增加，但是实际的测试等于没有差别，即便数据量添加到 1 万。shallowRef 的优势在于 uptate 的时候，如下代码片段。</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;script&gt;</span></span>
+<span class="line"><span>const changeArrayShallow = () =&gt; {</span></span>
+<span class="line"><span>  const start = performance.now();</span></span>
+<span class="line"><span>  // 高频修改内部属性</span></span>
+<span class="line"><span>  for (let i = 0; i &lt; 10000; i++) {</span></span>
+<span class="line"><span>    arrayShallow.value.items[i].count =</span></span>
+<span class="line"><span>      arrayShallow.value.items[i].count + 1000; // 无响应式开销</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>  triggerRef(arrayShallow); // 仅一次更新</span></span>
+<span class="line"><span>  const end = performance.now();</span></span>
+<span class="line"><span>  console.log(&quot;changeArrayShallow 运行时间: &quot;, end - start);</span></span>
+<span class="line"><span>};</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const changeArrayRef = () =&gt; {</span></span>
+<span class="line"><span>  for (let i = 0; i &lt; 10000; i++) {</span></span>
+<span class="line"><span>    arrayRef.value.items[i].count = arrayRef.value.items[i].count + 1000; // 无响应式开销</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>};</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><p>运行的结果如下：</p><p><img src="https://cdn.nlark.com/yuque/0/2025/png/654315/1754313858262-123f7b4b-e552-4267-93f5-7e2f54de49ba.png" alt=""></p><p>使用 Ref 的 更改数据的用时是 25ms，而使用 ShallowRef 的是 0.7。应该它只更新一次数据，而 Ref 触发了 10000 次的。<strong>本质创建 10000 个响应式代理与创建 1 个响应式代理的性能差异巨大。</strong></p><p>但是 只使用 ref 不可以实现 shallowRef 一样的性能效果吗？它性能提升的主要是 shallowRef 在数据改变之后，再进行一次的响应式触发，所以我们只需要讲 ref 也改为响应式触发就可以了。</p><p>具体如下：</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;script&gt;</span></span>
+<span class="line"><span>  const changeArrayRefOptimized2 = () =&gt; {</span></span>
+<span class="line"><span>  const start = performance.now();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  // 获取原始对象</span></span>
+<span class="line"><span>  const rawData = toRaw(arrayRef.value);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  // 直接修改原始对象（无响应式开销）</span></span>
+<span class="line"><span>  for (let i = 0; i &lt; 1000; i++) {</span></span>
+<span class="line"><span>    rawData.items[i].count += 1000;</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  // 手动触发更新</span></span>
+<span class="line"><span>  arrayRef.value = { ...rawData };</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  const end = performance.now();</span></span>
+<span class="line"><span>  console.log(&quot;changeArrayRefOptimized 运行时间: &quot;, end - start);</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><p>运行的耗时如下：</p><p><img src="https://cdn.nlark.com/yuque/0/2025/png/654315/1754319412934-a1cb9376-14a7-4127-9e4c-69b404e7fa20.png" alt=""></p><p>只是 ref 一样可以到底性能优化的目的。只是 shallowRef 会更加的方便，不需要通过 <code>toRaw</code>将响应式数据转化为原始对象，非响应式的。如果数据量多了，多创建一个大数据依旧会增加内存的占用的。</p><p>ref 加 toRaw 是 &quot;绕过响应式&quot; 的临时解决方案，而 shallowRef 是 Vue 为 &quot;浅层响应式需求&quot; 设计的原生 API，在初始化性能、内存占用、引用追踪的简洁性和第三方库集成方面，具有 ref 无法替代的优势。</p><h4 id="_1-22-大表单有优化-ref-和-shallowref-极致的性能优化" tabindex="-1">1.22 大表单有优化： ref 和 shallowRef 极致的性能优化 <a class="header-anchor" href="#_1-22-大表单有优化-ref-和-shallowref-极致的性能优化" aria-label="Permalink to “1.22 大表单有优化： ref 和 shallowRef 极致的性能优化”">​</a></h4><p>总体思路是 shallowRef 负责大数据的渲染，ref 负责单个表单元素的实时渲染。</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;table&gt;</span></span>
+<span class="line"><span>  &lt;tr v-for=&quot;row in bigData.rows&quot; :key=&quot;row.id&quot;&gt;</span></span>
+<span class="line"><span>    &lt;td&gt;</span></span>
+<span class="line"><span>      &lt;!-- 绑定到 currentEditRow，确保输入时实时反馈 --&gt;</span></span>
+<span class="line"><span>      &lt;input</span></span>
+<span class="line"><span>        v-model=&quot;currentEditRow[row.id].value&quot;</span></span>
+<span class="line"><span>        @focus=&quot;startEdit(row)&quot;</span></span>
+<span class="line"><span>        @blur=&quot;saveEdit(row)&quot;</span></span>
+<span class="line"><span>      /&gt;</span></span>
+<span class="line"><span>    &lt;/td&gt;</span></span>
+<span class="line"><span>  &lt;/tr&gt;</span></span>
+<span class="line"><span>&lt;/table&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>  const bigOriginData = () =&gt; {</span></span>
+<span class="line"><span>  // 模拟大数据</span></span>
+<span class="line"><span>  const rows = [];</span></span>
+<span class="line"><span>  for (let i = 0; i &lt; 1000; i++) {</span></span>
+<span class="line"><span>    rows.push({</span></span>
+<span class="line"><span>      id: i,</span></span>
+<span class="line"><span>      value: `第${i}行`,</span></span>
+<span class="line"><span>    });</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>  return { rows }</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>const bigData = shallowRef(bigOriginData())</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 当前正在编辑的行用 ref（保证实时反馈）</span></span>
+<span class="line"><span>const currentEditRow = ref(bigOriginData().rows)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 开始编辑时：将行数据复制到 currentEditRow</span></span>
+<span class="line"><span>const startEdit = (row) =&gt; {</span></span>
+<span class="line"><span>  currentEditRow.value[row.id] = { ...row }</span></span>
+<span class="line"><span>};</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 失去焦点时：同步修改到大数据，并触发更新</span></span>
+<span class="line"><span>// 每一次都是改变一次引用</span></span>
+<span class="line"><span>const saveEdit = (row) =&gt; {</span></span>
+<span class="line"><span>  // 将修改同步到大数据</span></span>
+<span class="line"><span>  const target = bigData.value.rows.find((r) =&gt; r.id === row.id)</span></span>
+<span class="line"><span>  Object.assign(target, currentEditRow.value[row.id])</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  // 手动触发大数据更新（界面刷新）</span></span>
+<span class="line"><span>  bigData.value = { ...bigData.value }</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><p>本质还是为了降低响应式处理的耗时，正如上面代码片段描述的一样，每一次更多只是改变一次响应式的变化，而且还能够帮助界面的实时改变。</p><h2 id="_2-customref" tabindex="-1">2. CustomRef <a class="header-anchor" href="#_2-customref" aria-label="Permalink to “2. CustomRef”">​</a></h2><p>这是一个非常典型符合元编程范式的 API，和 <code>Proxy</code>api 一样。不仅仅局限于业务的逻辑，可以从修改程序本身。</p><p>元编程的最大特点就是操作程序自身</p><p><code>customRef</code>相比 <code>ref</code>而言，白盒子和黑盒子的对比，它提供了 ref 内部的 track 和 trigger 方法，可以直接操作 <code>ref</code>内部不暴露的依赖收集和响应式的方法。而这两个方法就等于程序自身，而 <code>customRef</code>可以操作这个程序，也就论证了可以操作程序自身，所以 <code>customRef</code>符合元编程范式。</p><h3 id="_2-1-基础使用" tabindex="-1">2.1. 基础使用 <a class="header-anchor" href="#_2-1-基础使用" aria-label="Permalink to “2.1. 基础使用”">​</a></h3><p>customRef 将依赖收集和响应式变化的调用时机完全交给开发者。</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>import { customRef, ref } from &quot;vue&quot;</span></span>
+<span class="line"><span>const testCount = customRef((track, trigger) =&gt; {</span></span>
+<span class="line"><span>  let value = 0 // 值的初始化</span></span>
+<span class="line"><span>  return {</span></span>
+<span class="line"><span>    get() {</span></span>
+<span class="line"><span>      track()</span></span>
+<span class="line"><span>      return value</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>    set(newValue) {</span></span>
+<span class="line"><span>      value = newValue;</span></span>
+<span class="line"><span>      trigger()</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span>const addTestCount = () =&gt; {</span></span>
+<span class="line"><span>  testCount.value++</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><h3 id="_2-2-业务使用场景" tabindex="-1">2.2. 业务使用场景 <a class="header-anchor" href="#_2-2-业务使用场景" aria-label="Permalink to “2.2. 业务使用场景”">​</a></h3><h4 id="_2-2-1-防抖" tabindex="-1">2.2.1. 防抖 <a class="header-anchor" href="#_2-2-1-防抖" aria-label="Permalink to “2.2.1. 防抖”">​</a></h4><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;button @click=&quot;addCount&quot;&gt;count++&lt;/button&gt;</span></span>
+<span class="line"><span>  &lt;p&gt;count: {{ count }}&lt;/p&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>const useDebouncedRef = (value, delay = 200) =&gt; {</span></span>
+<span class="line"><span>  let timeout</span></span>
+<span class="line"><span>  return customRef((track, trigger) =&gt; {</span></span>
+<span class="line"><span>    return {</span></span>
+<span class="line"><span>      get() {</span></span>
+<span class="line"><span>        track();</span></span>
+<span class="line"><span>        return value;</span></span>
+<span class="line"><span>      },</span></span>
+<span class="line"><span>      set(newValue) {</span></span>
+<span class="line"><span>        clearTimeout(timeout);</span></span>
+<span class="line"><span>        timeout = setTimeout(() =&gt; {</span></span>
+<span class="line"><span>          value = newValue;</span></span>
+<span class="line"><span>          trigger();</span></span>
+<span class="line"><span>        }, delay);</span></span>
+<span class="line"><span>      },</span></span>
+<span class="line"><span>    };</span></span>
+<span class="line"><span>  });</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>const count = useDebouncedRef(0);</span></span>
+<span class="line"><span>const addCount = () =&gt; {</span></span>
+<span class="line"><span>  count.value++</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><h4 id="_2-2-2-验证" tabindex="-1">2.2.2. 验证 <a class="header-anchor" href="#_2-2-2-验证" aria-label="Permalink to “2.2.2. 验证”">​</a></h4><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;input v-model=&quot;emailValue&quot; /&gt;</span></span>
+<span class="line"><span>  &lt;p style=&quot;color: red&quot;&gt;{{ errorText }}&lt;/p&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>const errorText = ref(&quot;&quot;)</span></span>
+<span class="line"><span>const emailValue = customRef((track, trigger) =&gt; {</span></span>
+<span class="line"><span>  let value = &quot;&quot;</span></span>
+<span class="line"><span>  return {</span></span>
+<span class="line"><span>    get() {</span></span>
+<span class="line"><span>      track()</span></span>
+<span class="line"><span>      return value</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>    set(newValue, oldValue) {</span></span>
+<span class="line"><span>      value = newValue;</span></span>
+<span class="line"><span>      if (newValue.trim() === &quot;&quot;) {</span></span>
+<span class="line"><span>        errorText.value = &quot;请输入邮箱&quot;</span></span>
+<span class="line"><span>        return</span></span>
+<span class="line"><span>      }</span></span>
+<span class="line"><span>      if (newValue.includes(&quot;66&quot;)) {</span></span>
+<span class="line"><span>        errorText.value = &quot;你够 6&quot;</span></span>
+<span class="line"><span>        trigger()</span></span>
+<span class="line"><span>        return</span></span>
+<span class="line"><span>      }</span></span>
+<span class="line"><span>      errorText.value = &quot;&quot;</span></span>
+<span class="line"><span>      trigger()</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><h4 id="_2-2-3-数据持久化" tabindex="-1">2.2.3. 数据持久化 <a class="header-anchor" href="#_2-2-3-数据持久化" aria-label="Permalink to “2.2.3. 数据持久化”">​</a></h4><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>const valueLocal = customRef((track, grigger) =&gt; {</span></span>
+<span class="line"><span>  return {</span></span>
+<span class="line"><span>    get() {</span></span>
+<span class="line"><span>      track();</span></span>
+<span class="line"><span>      return localStorage.getItem(&quot;valueLocal&quot;) || &quot;light&quot;</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>    set(newValue) {</span></span>
+<span class="line"><span>      localStorage.setItem(&quot;valueLocal&quot;, newValue)</span></span>
+<span class="line"><span>      grigger();</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span>const changeTheme = () =&gt; {</span></span>
+<span class="line"><span>  valueLocal.value = valueLocal.value === &quot;dark&quot; ? &quot;light&quot; : &quot;dark&quot;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><h2 id="_3-shallowreactive" tabindex="-1">3. ShallowReactive <a class="header-anchor" href="#_3-shallowreactive" aria-label="Permalink to “3. ShallowReactive”">​</a></h2><h3 id="_3-1-基本使用" tabindex="-1">3.1. 基本使用 <a class="header-anchor" href="#_3-1-基本使用" aria-label="Permalink to “3.1. 基本使用”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;button @click=&quot;addShallowReactiveCount&quot;&gt;addShallowReactiveCount&lt;/button&gt;</span></span>
+<span class="line"><span>  &lt;button @click=&quot;addShallowReactiveCount2&quot;&gt;addShallowReactiveCount2&lt;/button&gt;</span></span>
+<span class="line"><span>  &lt;p&gt;</span></span>
+<span class="line"><span>    shallowReactive: {{ objShallow.count }}; 多层级 shallowReactive:</span></span>
+<span class="line"><span>    {{ objShallow.obj.count }}</span></span>
+<span class="line"><span>  &lt;/p&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>const objShallow = shallowReactive({</span></span>
+<span class="line"><span>  count: 0,</span></span>
+<span class="line"><span>  obj: {</span></span>
+<span class="line"><span>    count: 0,</span></span>
+<span class="line"><span>  },</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span>const addShallowReactiveCount = () =&gt; {</span></span>
+<span class="line"><span>  objShallow.count++</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>const addShallowReactiveCount2 = () =&gt; {</span></span>
+<span class="line"><span>  objShallow.obj.count++</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><p>和 <code>shallowRef</code>基本是一致的，只是面试操作的类型不一样。和 ref 之于 reactive 的一样。</p><h3 id="_3-2-业务使用场景" tabindex="-1">3.2. 业务使用场景 <a class="header-anchor" href="#_3-2-业务使用场景" aria-label="Permalink to “3.2. 业务使用场景”">​</a></h3><p>同 <code>shallowRef</code>。</p><h2 id="_4-shallowreadonly" tabindex="-1">4. ShallowReadonly <a class="header-anchor" href="#_4-shallowreadonly" aria-label="Permalink to “4. ShallowReadonly”">​</a></h2><p>主要是和一些 API 进行比较，本身的使用还是很简单的。</p><h3 id="_4-1-基本使用" tabindex="-1">4.1. 基本使用 <a class="header-anchor" href="#_4-1-基本使用" aria-label="Permalink to “4.1. 基本使用”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>const shallowReactiveObject = shallowReadonly({</span></span>
+<span class="line"><span>  foo: 42,</span></span>
+<span class="line"><span>  obj: {</span></span>
+<span class="line"><span>    too: 11,</span></span>
+<span class="line"><span>  },</span></span>
+<span class="line"><span>});</span></span>
+<span class="line"><span>shallowReactiveObject.foo = 33; // ❌ 改</span></span>
+<span class="line"><span>shallowReactiveObject.bar = 11; // ❌ 增</span></span>
+<span class="line"><span>delete shallowReactiveObject.foo; // ❌ 删</span></span>
+<span class="line"><span>shallowReactiveObject.obj.too = 22; // ✅ 改</span></span>
+<span class="line"><span>shallowReactiveObject.obj.bar = 11; // ✅ 增</span></span>
+<span class="line"><span>delete shallowReactiveObject.obj.too; // ✅ 删</span></span>
+<span class="line"><span>console.log(&quot;shallowReactiveObject.foo:&quot;, shallowReactiveObject); // Expected output: 42</span></span></code></pre></div><p>第一层数据和 <code>readonly</code>的一致，第二层就和操作普通的对象一样的，增删改查的都可以了。</p><h4 id="_4-1-1-readonly" tabindex="-1">4.1.1. readonly <a class="header-anchor" href="#_4-1-1-readonly" aria-label="Permalink to “4.1.1. readonly”">​</a></h4><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * readonly() 方法可以创建一个只读的对象，对象的属性不能被修改。</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>const readonlyObject = readonly({</span></span>
+<span class="line"><span>  foo: 42,</span></span>
+<span class="line"><span>  obj: {</span></span>
+<span class="line"><span>    too: 11,</span></span>
+<span class="line"><span>  },</span></span>
+<span class="line"><span>});</span></span>
+<span class="line"><span>readonlyObject.foo = 33; // ❌ 改</span></span>
+<span class="line"><span>readonlyObject.bar = 11; // ❌ 增</span></span>
+<span class="line"><span>delete readonlyObject.foo; // ❌ 删</span></span>
+<span class="line"><span>readonlyObject.obj.too = 22; // ❌ 改</span></span>
+<span class="line"><span>readonlyObject.obj.bar = 11; // ❌ 增</span></span>
+<span class="line"><span>console.log(&quot;readonlyObject.foo:&quot;, readonlyObject); // Expected output: 42</span></span></code></pre></div><h4 id="_4-1-2-object-seal" tabindex="-1">4.1.2. Object.seal <a class="header-anchor" href="#_4-1-2-object-seal" aria-label="Permalink to “4.1.2. Object.seal”">​</a></h4><p>从此开始下面都是原生底层的 API，不是上面的 vue3 框架提供的 API。这些方法直接修改对象的 内部属性描述符 （如 [[Extensible]] 、 [[Writable]] 、 [[Configurable]]）。</p><p>seal() 方法可以防止新属性的添加和已有属性的删除，但是可以修改已有属性的值。</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>const object = {</span></span>
+<span class="line"><span>  foo: 42,</span></span>
+<span class="line"><span>};</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Object.seal(object);</span></span>
+<span class="line"><span>object.foo = 33;</span></span>
+<span class="line"><span>console.log(object.foo); // Expected output: 33</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>delete object.foo; // Cannot delete when sealed</span></span>
+<span class="line"><span>console.log(&quot;seal() delete object.foo:&quot;, object.foo); // Expected output: 33</span></span>
+<span class="line"><span>object.foo = 11; // ✅</span></span>
+<span class="line"><span>object.bar = 11; // ✅</span></span>
+<span class="line"><span>console.log(&quot;seal() object.foo:&quot;, object.foo); // Expected output: 33</span></span></code></pre></div><h4 id="_4-1-3-object-freeze" tabindex="-1">4.1.3. Object.freeze <a class="header-anchor" href="#_4-1-3-object-freeze" aria-label="Permalink to “4.1.3. Object.freeze”">​</a></h4><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>const object2 = {</span></span>
+<span class="line"><span>  foo: 42,</span></span>
+<span class="line"><span>};</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Object.freeze(object2);</span></span>
+<span class="line"><span>object2.foo = 33; // ❌</span></span>
+<span class="line"><span>object2.bar = 11; // ❌</span></span>
+<span class="line"><span>delete object2.foo; // ❌</span></span>
+<span class="line"><span>console.log(&quot;freeze() object2.foo:&quot;, object2.foo); // Expected output: 42</span></span></code></pre></div><p>只可以读取，其他任何的操作都会直接报错，阻塞 JS 主线程的运行。</p><p><img src="https://cdn.nlark.com/yuque/0/2025/png/654315/1754328281285-67f3d43d-0d56-4706-ac5c-ddb3c4011355.png" alt=""></p><h4 id="_4-1-4-object-preventextensions" tabindex="-1">4.1.4. Object.preventExtensions <a class="header-anchor" href="#_4-1-4-object-preventextensions" aria-label="Permalink to “4.1.4. Object.preventExtensions”">​</a></h4><p>preventExtensions() 方法可以防止新属性的添加，但是可以修改已有属性的值。</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>const object3 = {</span></span>
+<span class="line"><span>  foo: 42,</span></span>
+<span class="line"><span>};</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Object.preventExtensions(object3);</span></span>
+<span class="line"><span>object3.foo = 33; // ✅</span></span>
+<span class="line"><span>object3.bar = 11; // ❌</span></span>
+<span class="line"><span>delete object3.foo; // ✅</span></span>
+<span class="line"><span>object3.foo = 11; // ❌</span></span>
+<span class="line"><span>console.log(&quot;preventExtensions() object3.foo:&quot;, object3.foo); // Expected output: 42</span></span></code></pre></div><h4 id="_4-1-5-校验是否被以上-api-修改对象的数据属性的方式" tabindex="-1">4.1.5. 校验是否被以上 API 修改对象的数据属性的方式 <a class="header-anchor" href="#_4-1-5-校验是否被以上-api-修改对象的数据属性的方式" aria-label="Permalink to “4.1.5. 校验是否被以上 API 修改对象的数据属性的方式”">​</a></h4><p><code>Object.isFrozen</code>、<code>Object.isSealed</code>、<code>Object.isExtensible</code>。</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 4. Object.isFrozen() 方法</span></span>
+<span class="line"><span> * isFrozen() 方法可以判断一个对象是否被冻结。</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>console.log(&quot;------------Object.isFrozen() 方法分割线--------------&quot;);</span></span>
+<span class="line"><span>console.log(&quot;Object.preventExtensions()&quot;, Object.isFrozen(object3)); // 空对象了，才是true</span></span>
+<span class="line"><span>console.log(&quot;Object.freeze()&quot;, Object.isFrozen(object2)); // true</span></span>
+<span class="line"><span>console.log(&quot;Object.seal()&quot;, Object.isFrozen(object)); // false</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/**</span></span>
+<span class="line"><span> * 5. Object.isSealed() 方法</span></span>
+<span class="line"><span> * isSealed() 方法可以判断一个对象是否被密封。</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>console.log(&quot;------------Object.isSealed() 方法分割线--------------&quot;);</span></span>
+<span class="line"><span>console.log(&quot;Object.seal()&quot;, Object.isSealed(object)); // true</span></span>
+<span class="line"><span>console.log(&quot;Object.freeze()&quot;, Object.isSealed(object2)); // true</span></span>
+<span class="line"><span>console.log(&quot;Object.preventExtensions()&quot;, Object.isSealed(object3)); // false</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/**</span></span>
+<span class="line"><span> * 6. Object.isExtensible() 方法</span></span>
+<span class="line"><span> * isExtensible() 方法可以判断一个对象是否是可扩展的。</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>console.log(&quot;------------Object.isExtensible() 方法分割线--------------&quot;);</span></span>
+<span class="line"><span>console.log(&quot;Object.preventExtensions()&quot;, Object.isExtensible(object3)); // false</span></span>
+<span class="line"><span>console.log(&quot;Object.freeze()&quot;, Object.isExtensible(object2)); // false</span></span>
+<span class="line"><span>console.log(&quot;Object.seal()&quot;, Object.isExtensible(object)); // false</span></span></code></pre></div><p>-Object.isExtensible() 对应的判断对象的数据属性中的 [[Extensible]] 为 false。</p><p>所以想要通过判断对象被那个方法处理了，需要用这三个结合判断。如下：</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>// 假设 object3 已被某种方法处理</span></span>
+<span class="line"><span>const isPrevented = !Object.isExtensible(object3) &amp;&amp; !Object.isSealed(object3) &amp;&amp; !Object.isFrozen(object3);</span></span>
+<span class="line"><span>const isSealed = !Object.isExtensible(object3) &amp;&amp; Object.isSealed(object3) &amp;&amp; !Object.isFrozen(object3);</span></span>
+<span class="line"><span>const isFrozen = !Object.isExtensible(object3) &amp;&amp; Object.isSealed(object3) &amp;&amp; Object.isFrozen(object3);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>console.log(&#39;被 preventExtensions 处理:&#39;, isPrevented);</span></span>
+<span class="line"><span>console.log(&#39;被 seal 处理:&#39;, isSealed);</span></span>
+<span class="line"><span>console.log(&#39;被 freeze 处理:&#39;, isFrozen);</span></span></code></pre></div><h2 id="_5-toraw" tabindex="-1">5. toRaw <a class="header-anchor" href="#_5-toraw" aria-label="Permalink to “5. toRaw”">​</a></h2><p><img src="https://cdn.nlark.com/yuque/0/2025/png/654315/1754330006417-d6b88f62-d1cd-4b69-99fa-012038f8ebbf.png" alt=""></p><p>toRaw() 可以返回由 reactive()、readonly()、shallowReactive() 或者 shallowReadonly() 创建的代理对应的原始对象。</p><p>在前面说到 shallowRef 部分已经提到了这个 API 的作用了，可以配合 ref 实现接近 shallowRef 的性能。</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;button @click=&quot;changeName&quot;&gt;changeName&lt;/button&gt;</span></span>
+<span class="line"><span>  &lt;button @click=&quot;changeRaw&quot;&gt;changeRaw&lt;/button&gt;</span></span>
+<span class="line"><span>  &lt;p&gt;{{ data.name }}&lt;/p&gt;</span></span>
+<span class="line"><span>  &lt;p&gt;{{ data.age }}&lt;/p&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>  const data = reactive({</span></span>
+<span class="line"><span>  name: &quot;张三&quot;,</span></span>
+<span class="line"><span>  age: 18,</span></span>
+<span class="line"><span>});</span></span>
+<span class="line"><span>const raw = toRaw(data);</span></span>
+<span class="line"><span>const changeName = () =&gt; {</span></span>
+<span class="line"><span>  data.name = data.name === &quot;李四&quot; ? &quot;张三&quot; : &quot;李四&quot;;</span></span>
+<span class="line"><span>  data.age++;</span></span>
+<span class="line"><span>};</span></span>
+<span class="line"><span>const changeRaw = () =&gt; {</span></span>
+<span class="line"><span>  raw.name = raw.name === &quot;李四&quot; ? &quot;张三&quot; : &quot;李四&quot;;</span></span>
+<span class="line"><span>  raw.age++;</span></span>
+<span class="line"><span>};</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><p><code>changeRaw</code>方法没有反应，视图不会更新，说明 raw 已经是原对象了，非响应式了。但是修改 raw 依旧会影响到 <code>data</code>这个响应式对象。</p><p>修改 toRaw()返回的对象，删除以及修改都会影响到原始的响应式对象。它们两个都是引向同一个内存地址，只是一个用 Proxy 进行了再加个，另外一个没有。</p><h2 id="_6-markraw" tabindex="-1">6. markRaw <a class="header-anchor" href="#_6-markraw" aria-label="Permalink to “6. markRaw”">​</a></h2><p>它的效果和 <code>toRaw</code>有一定相似的。都是让某一个对象更改为非响应式的。但是 markRaw 可以直接用在依旧被定义过的响应式对象中，如下：</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;p&gt;</span></span>
+<span class="line"><span>    标记为非响应式的对象，不会触发视图更新,但是初始化的时候依旧会改变，点击</span></span>
+<span class="line"><span>    changeMarked 按钮，就不会改变视图</span></span>
+<span class="line"><span>  &lt;/p&gt;</span></span>
+<span class="line"><span>  &lt;button @click=&quot;changeMarked&quot;&gt;changeMarked&lt;/button&gt;</span></span>
+<span class="line"><span>  &lt;p&gt;{{ state.config.name }}&lt;/p&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>const rawObject = { name: &quot;静态数据&quot; };</span></span>
+<span class="line"><span>const markedObject = markRaw(rawObject); // 标记为非响应式</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 即使放入响应式对象中，markedObject 仍保持原始状态</span></span>
+<span class="line"><span>const state = reactive({</span></span>
+<span class="line"><span>  config: markedObject, // 不会被代理</span></span>
+<span class="line"><span>});</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>state.config.name = &quot;修改&quot;; // ❌ 无效（非响应式，视图不更新）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const changeMarked = () =&gt; {</span></span>
+<span class="line"><span>  state.config.name = state.config.name === &quot;静态数据&quot; ? &quot;修改&quot; : &quot;静态数据&quot;;</span></span>
+<span class="line"><span>};</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><p>我们初始化的时候依旧是“修改”，那是因为 vue3 收集依赖是在 <code>onMounted</code>生命周期之前。</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>setup() → 初始化响应式数据</span></span>
+<span class="line"><span>  ↓</span></span>
+<span class="line"><span>onBeforeMount() → 渲染前准备</span></span>
+<span class="line"><span>  ↓</span></span>
+<span class="line"><span>渲染 DOM → 访问响应式数据，触发依赖收集</span></span>
+<span class="line"><span>  ↓</span></span>
+<span class="line"><span>onMounted() → 组件挂载完成</span></span></code></pre></div><ul><li>依赖收集发生在 渲染 DOM 的过程中 ，介于 onBeforeMount 和 onMounted 之间</li><li>这就是为什么界面显示的是「修改」而非「静态数据」的关键</li></ul><p>而当我使用 <code>setTimout</code>来包裹住 <code>state.config.name</code>的时候，初始化的指就是&#39;静态数据&#39;了。</p><h2 id="_7-effectscope" tabindex="-1">7. effectScope <a class="header-anchor" href="#_7-effectscope" aria-label="Permalink to “7. effectScope”">​</a></h2><h3 id="_7-1-基本使用" tabindex="-1">7.1. 基本使用 <a class="header-anchor" href="#_7-1-基本使用" aria-label="Permalink to “7.1. 基本使用”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>   &lt;el-button @click=&quot;counter++&quot;&gt;增加&lt;/el-button&gt;</span></span>
+<span class="line"><span>  &lt;el-button @click=&quot;startEffects&quot;&gt;启动&lt;/el-button&gt;</span></span>
+<span class="line"><span>  &lt;el-button @click=&quot;stopEffect&quot;&gt;停止&lt;/el-button&gt;</span></span>
+<span class="line"><span>  &lt;el-button @click=&quot;runEffect&quot;&gt;重新运行&lt;/el-button&gt;</span></span>
+<span class="line"><span>  &lt;p&gt;计算结果：{{ counter }} 计算结果：{{ doubled }}&lt;/p&gt;</span></span>
+<span class="line"><span>  &lt;p&gt;条件性启用和禁用作用域&lt;/p&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>const counter = ref(0)</span></span>
+<span class="line"><span>const doubled = computed(() =&gt; counter.value * 2)</span></span>
+<span class="line"><span>const scope = effectScope()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const startEffects = () =&gt; {</span></span>
+<span class="line"><span>  scope.run(() =&gt; {</span></span>
+<span class="line"><span>    watch(doubled, () =&gt; console.log(doubled.value));</span></span>
+<span class="line"><span>    watchEffect(() =&gt; console.log(&quot;Count: &quot;, doubled.value));</span></span>
+<span class="line"><span>  });</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>const stopEffect = () =&gt; {</span></span>
+<span class="line"><span>  scope.stop()</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>const runEffect = () =&gt; {</span></span>
+<span class="line"><span>  scope.run()</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><h3 id="_7-2-业务使用场景-全局响应式变量" tabindex="-1">7.2. 业务使用场景：全局响应式变量 <a class="header-anchor" href="#_7-2-业务使用场景-全局响应式变量" aria-label="Permalink to “7.2. 业务使用场景：全局响应式变量”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>import { effectScope, type EffectScope } from &#39;vue&#39;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 创建全局状态的工厂函数</span></span>
+<span class="line"><span>export const createGlobalState = &lt;T&gt;(stateFactory: () =&gt; T) =&gt; {</span></span>
+<span class="line"><span>  // 用于存储全局作用域</span></span>
+<span class="line"><span>  let global: T</span></span>
+<span class="line"><span>  // 用于存储effect作用域</span></span>
+<span class="line"><span>  let scope: EffectScope</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  // 返回一个函数，该函数用于获取或创建全局状态</span></span>
+<span class="line"><span>  return () =&gt; {</span></span>
+<span class="line"><span>    // 如果全局状态已存在，直接返回</span></span>
+<span class="line"><span>    if (global) return global</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    // 如果全局状态不存在，创建一个新的effect作用域</span></span>
+<span class="line"><span>    scope = effectScope(true)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    // 在作用域内运行状态工厂函数，创建全局状态</span></span>
+<span class="line"><span>    global = scope.run(() =&gt; stateFactory())!</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    return global</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span></code></pre></div><p>使用的时候</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>import { createGlobalState } from &#39;../../hooks/globalScope&#39;</span></span>
+<span class="line"><span>import { ref } from &#39;vue&#39;</span></span>
+<span class="line"><span>export const useGlobalCount = createGlobalState(() =&gt; {</span></span>
+<span class="line"><span>  const count = ref&lt;number&gt;(222)</span></span>
+<span class="line"><span>  const increment = () =&gt; count.value++</span></span>
+<span class="line"><span>  return { count, increment }</span></span>
+<span class="line"><span>})</span></span></code></pre></div><p>在组件中使用，可以跨组件：</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;div class=&quot;container&quot;&gt;</span></span>
+<span class="line"><span>    &lt;!-- 页面内容区域 --&gt;</span></span>
+<span class="line"><span>    &lt;h2&gt;{{ count }}&lt;/h2&gt;</span></span>
+<span class="line"><span>  &lt;/div&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>import { useGlobalCount } from &quot;./global-count&quot;;</span></span>
+<span class="line"><span>const { count } = useGlobalCount();</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre></div><p><code>count</code>可以在多个组件中同时使用。这个也是 vueuse 中 createGlobalState 的实现原理。利用的就是 effectScope 可以控制副作用的清除和重启的方法。</p></div></div></main><footer class="VPDocFooter" data-v-b6a0eafc data-v-b9f2b981><!--[--><!--]--><!----><nav class="prev-next" aria-labelledby="doc-footer-aria-label" data-v-b9f2b981><span class="visually-hidden" id="doc-footer-aria-label" data-v-b9f2b981>Pager</span><div class="pager" data-v-b9f2b981><a class="VPLink link pager-link prev" href="/yoran-secret/posts/Vue/%E5%93%8D%E5%BA%94%E5%BC%8FAPI%EF%BC%9A%E5%B7%A5%E5%85%B7.html" data-v-b9f2b981><!--[--><span class="desc" data-v-b9f2b981>Previous page</span><span class="title" data-v-b9f2b981>响应式API：工具</span><!--]--></a></div><div class="pager" data-v-b9f2b981><a class="VPLink link pager-link next" href="/yoran-secret/posts/Vue/%E7%BB%84%E5%90%88%E5%BC%8FAPI%EF%BC%9A%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5.html" data-v-b9f2b981><!--[--><span class="desc" data-v-b9f2b981>Next page</span><span class="title" data-v-b9f2b981>组合式API：依赖注入</span><!--]--></a></div></nav></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><!--]--></div></div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"gallery.md\":\"B3Q1o8bh\",\"index.md\":\"CMUcfTSL\",\"posts_java_java 学习路线-前端功利性.md\":\"BAAIrK9-\",\"posts_javascriptcore_generator和iterator.md\":\"Hksl-Crj\",\"posts_javascriptcore_iife.md\":\"Dk2c5lW8\",\"posts_javascriptcore_javascript中运算符优先级.md\":\"DHzDvkEy\",\"posts_javascriptcore_js让人诟病的这些feature.md\":\"keg_23Mv\",\"posts_javascriptcore_parseint 1.md\":\"C_ByKd9u\",\"posts_javascriptcore_parseint.md\":\"DNXcR7KQ\",\"posts_javascriptcore_prototype.md\":\"Dt3Rm5ql\",\"posts_javascriptcore_作用域（链）、执行上下文、闭包.md\":\"Dd1xe145\",\"posts_javascriptcore_再次理解闭包.md\":\"AL9RjVn3\",\"posts_javascriptcore_块级作用域与嵌套、let、暂时性死区.md\":\"DgsCBa2q\",\"posts_javascriptcore_对象的属性描述符.md\":\"CFhbTKQl\",\"posts_javascriptcore_对象的访问器属性.md\":\"D2oCsZ7J\",\"posts_javascriptcore_对象继承.md\":\"CLhupO_s\",\"posts_javascriptcore_数组api.md\":\"cKJXg5PY\",\"posts_javascriptcore_正则基础.md\":\"DmfbzSqG\",\"posts_javascriptcore_立即执行函数.md\":\"A8WwvC9h\",\"posts_javascriptcore_类数组.md\":\"DA2p9l-V\",\"posts_javascriptcore_让 a __ 1 __ a __ 2 __ a __ 3 成立.md\":\"H9ABmreh\",\"posts_javascriptcore_转义符.md\":\"BZC0tsel\",\"posts_javascriptcore_运算符的优先级.md\":\"CsyjbW7p\",\"posts_javascriptcore_错误信息.md\":\"N7XJkPky\",\"posts_javascriptcore_闭包.md\":\"DKuyrKzd\",\"posts_javascriptcore_隐式转化问题.md\":\"Cv6eS70o\",\"posts_vue_vapor.md\":\"05Vsgqzj\",\"posts_vue_内置指令.md\":\"B9V0FbLH\",\"posts_vue_内置组件.md\":\"6f5PyjE4\",\"posts_vue_响应式api：基础.md\":\"BXBn6Sn4\",\"posts_vue_响应式api：工具.md\":\"BIByltXJ\",\"posts_vue_响应式api：进阶.md\":\"gYKyD5MR\",\"posts_vue_组合式api：依赖注入.md\":\"CL4-nSh6\",\"posts_最佳实践_codereview礼仪.md\":\"PjC0l8zs\",\"posts_最佳实践_code评审模板和礼仪.md\":\"Mk7smr6h\",\"posts_最佳实践_react中如何分组件.md\":\"DowuhdGH\",\"posts_最佳实践_ts入门教程学习总结.md\":\"BVCuEeYE\",\"posts_最佳实践_vscode中使用vim.md\":\"BK00TKtv\",\"posts_最佳实践_vue的业务开发如何进行组件的拆分.md\":\"UlAHrxDX\",\"posts_最佳实践_《重构》导读.md\":\"2cC4BsbT\",\"posts_最佳实践_产品经理不靠谱怎么办.md\":\"CF6iqOE3\",\"posts_最佳实践_代码审查常见问题.md\":\"BBiLAhAM\",\"posts_最佳实践_使用composition api实践经验.md\":\"CgZXoezp\",\"posts_最佳实践_前端已死.md\":\"DJniqsJY\",\"posts_最佳实践_如何设计组件？.md\":\"C6y0FtCZ\",\"posts_最佳实践_如何阅读源码.md\":\"XoAnWoRX\",\"posts_最佳实践_富文本无法渲染多个空格.md\":\"CA54Qb_k\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"en-US\",\"dir\":\"ltr\",\"title\":\" Yoran秘密空间\",\"description\":\" 个人学习总结记录，有很多错误，现阶段也就这样了\",\"base\":\"/yoran-secret/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"nav\":[{\"text\":\"Yoran\",\"link\":\"/\"},{\"text\":\"Posts\",\"link\":\"/posts/Java/Java 学习路线-前端功利性\"},{\"text\":\"Gallery\",\"link\":\"/gallery\"}],\"sidebar\":[{\"text\":\"Java\",\"collapsible\":true,\"collapsed\":false,\"items\":[{\"text\":\"Java 学习路线-前端功利性\",\"link\":\"/posts/Java/Java 学习路线-前端功利性\"}]},{\"text\":\"JavaScriptCore\",\"collapsible\":true,\"collapsed\":false,\"items\":[{\"text\":\"IIFE\",\"link\":\"/posts/JavaScriptCore/IIFE\"},{\"text\":\"JavaScript中运算符优先级\",\"link\":\"/posts/JavaScriptCore/JavaScript中运算符优先级\"},{\"text\":\"generator和iterator\",\"link\":\"/posts/JavaScriptCore/generator和iterator\"},{\"text\":\"js让人诟病的这些feature\",\"link\":\"/posts/JavaScriptCore/js让人诟病的这些feature\"},{\"text\":\"parseInt 1\",\"link\":\"/posts/JavaScriptCore/parseInt 1\"},{\"text\":\"parseInt\",\"link\":\"/posts/JavaScriptCore/parseInt\"},{\"text\":\"prototype\",\"link\":\"/posts/JavaScriptCore/prototype\"},{\"text\":\"作用域（链）、执行上下文、闭包\",\"link\":\"/posts/JavaScriptCore/作用域（链）、执行上下文、闭包\"},{\"text\":\"再次理解闭包\",\"link\":\"/posts/JavaScriptCore/再次理解闭包\"},{\"text\":\"块级作用域与嵌套、let、暂时性死区\",\"link\":\"/posts/JavaScriptCore/块级作用域与嵌套、let、暂时性死区\"},{\"text\":\"对象的属性描述符\",\"link\":\"/posts/JavaScriptCore/对象的属性描述符\"},{\"text\":\"对象的访问器属性\",\"link\":\"/posts/JavaScriptCore/对象的访问器属性\"},{\"text\":\"对象继承\",\"link\":\"/posts/JavaScriptCore/对象继承\"},{\"text\":\"数组API\",\"link\":\"/posts/JavaScriptCore/数组API\"},{\"text\":\"正则基础\",\"link\":\"/posts/JavaScriptCore/正则基础\"},{\"text\":\"立即执行函数\",\"link\":\"/posts/JavaScriptCore/立即执行函数\"},{\"text\":\"类数组\",\"link\":\"/posts/JavaScriptCore/类数组\"},{\"text\":\"让 a == 1 && a == 2 && a == 3 成立\",\"link\":\"/posts/JavaScriptCore/让 a == 1 && a == 2 && a == 3 成立\"},{\"text\":\"转义符\",\"link\":\"/posts/JavaScriptCore/转义符\"},{\"text\":\"运算符的优先级\",\"link\":\"/posts/JavaScriptCore/运算符的优先级\"},{\"text\":\"错误信息\",\"link\":\"/posts/JavaScriptCore/错误信息\"},{\"text\":\"闭包\",\"link\":\"/posts/JavaScriptCore/闭包\"},{\"text\":\"隐式转化问题\",\"link\":\"/posts/JavaScriptCore/隐式转化问题\"}]},{\"text\":\"Vue\",\"collapsible\":true,\"collapsed\":false,\"items\":[{\"text\":\"vapor\",\"link\":\"/posts/Vue/vapor\"},{\"text\":\"内置指令\",\"link\":\"/posts/Vue/内置指令\"},{\"text\":\"内置组件\",\"link\":\"/posts/Vue/内置组件\"},{\"text\":\"响应式API：基础\",\"link\":\"/posts/Vue/响应式API：基础\"},{\"text\":\"响应式API：工具\",\"link\":\"/posts/Vue/响应式API：工具\"},{\"text\":\"响应式API：进阶\",\"link\":\"/posts/Vue/响应式API：进阶\"},{\"text\":\"组合式API：依赖注入\",\"link\":\"/posts/Vue/组合式API：依赖注入\"}]},{\"text\":\"最佳实践\",\"collapsible\":true,\"collapsed\":false,\"items\":[{\"text\":\"CodeReview礼仪\",\"link\":\"/posts/最佳实践/CodeReview礼仪\"},{\"text\":\"Code评审模板和礼仪\",\"link\":\"/posts/最佳实践/Code评审模板和礼仪\"},{\"text\":\"React中如何分组件\",\"link\":\"/posts/最佳实践/React中如何分组件\"},{\"text\":\"TS入门教程学习总结\",\"link\":\"/posts/最佳实践/TS入门教程学习总结\"},{\"text\":\"VsCode中使用vim\",\"link\":\"/posts/最佳实践/VsCode中使用vim\"},{\"text\":\"vue的业务开发如何进行组件的拆分\",\"link\":\"/posts/最佳实践/vue的业务开发如何进行组件的拆分\"},{\"text\":\"《重构》导读\",\"link\":\"/posts/最佳实践/《重构》导读\"},{\"text\":\"产品经理不靠谱怎么办\",\"link\":\"/posts/最佳实践/产品经理不靠谱怎么办\"},{\"text\":\"代码审查常见问题\",\"link\":\"/posts/最佳实践/代码审查常见问题\"},{\"text\":\"使用composition api实践经验\",\"link\":\"/posts/最佳实践/使用composition api实践经验\"},{\"text\":\"前端已死\",\"link\":\"/posts/最佳实践/前端已死\"},{\"text\":\"如何设计组件？\",\"link\":\"/posts/最佳实践/如何设计组件？\"},{\"text\":\"如何阅读源码\",\"link\":\"/posts/最佳实践/如何阅读源码\"},{\"text\":\"富文本无法渲染多个空格\",\"link\":\"/posts/最佳实践/富文本无法渲染多个空格\"}]}],\"socialLinks\":[{\"icon\":\"github\",\"link\":\"https://github.com/wyc7758775\"}]},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":false,\"additionalConfig\":{}}");</script>
+    
+  </body>
+</html>
