@@ -25,7 +25,8 @@ const getComponentsSideBar = async () => {
   return Promise.all(
     dirArr.map(async (dirItemPath) => {
       const dirPath = `${resolvePath}/${dirItemPath}`;
-      const fileArr = await fsPromises.readdir(dirPath);
+      let fileArr = await fsPromises.readdir(dirPath);
+      fileArr = fileArr.filter((item) => item !== ".DS_Store");
       return {
         text: dirItemPath,
         collapsible: true,

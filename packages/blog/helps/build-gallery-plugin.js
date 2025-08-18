@@ -3,7 +3,7 @@ const path = require("path");
 const fsPromises = require("fs/promises");
 
 const argv = process.argv;
-const dev = "dev";
+const DEV = "dev";
 
 const galleryPath = () => path.resolve(__dirname, "../assets/gallery");
 const outPutBasePath = () => path.resolve(__dirname, "../.vitepress/router");
@@ -11,13 +11,13 @@ const outPutBasePath = () => path.resolve(__dirname, "../.vitepress/router");
 const mdFilePath = "/JSCore";
 const excludeDir = "temp";
 
-const getGalleryItems = async (filePath) => {
+const getGalleryItems = async () => {
   const resolvePath = galleryPath();
 
   let dirArr = await fsPromises.readdir(resolvePath);
 
-  // dev 环境有一些目录是不需要生产路由的
-  if (argv[2] !== dev) {
+  // DEV 环境有一些目录是不需要生产路由的
+  if (argv[2] !== DEV) {
     dirArr = dirArr.filter((item) => item !== excludeDir);
   }
 
