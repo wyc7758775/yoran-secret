@@ -1,4 +1,6 @@
-const n=`# 写作指南
+const n=`![](https://substackcdn.com/image/fetch/$s_!-3Sx!,w_600,h_400,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faff9b7f9-5995-41e7-9bd4-c8c063ac2dec_1600x900.png)
+
+# 写作指南
 
 ## 资料
 
