@@ -1,16 +1,12 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import path from "path";
-import fsPromises from "fs/promises";
-import process from "process";
+const path = require("path");
+const fsPromises = require("fs/promises");
 
 const argv = process.argv;
 const dev = "dev";
 
-const documentsPath = () =>
-  path.resolve(new URL(".", import.meta.url).pathname, "../posts");
-const outPutBasePath = () =>
-  path.resolve(new URL(".", import.meta.url).pathname, "../.vitepress/router");
-const sidebarOutputPath = () => path.resolve(outPutBasePath(), "sidebar.json");
+const documentsPath = () => path.resolve(__dirname, "../posts");
+const outPutBasePath = () => path.resolve(__dirname, "../.vitepress/router");
 
 const mdFilePath = "/JSCore";
 const excludeDir = "temp";
@@ -51,16 +47,12 @@ const getComponentsSideBar = async () => {
 
 async function writeSidebarData() {
   const sideBarArr = await getComponentsSideBar(mdFilePath);
-  const outPutFile = sidebarOutputPath();
+  const outPutFile = `${outPutBasePath()}/sidebar.json`;
   const outPutDir = path.dirname(outPutFile);
-
-  // 确保目录存在
   await fsPromises.mkdir(outPutDir, { recursive: true });
 
-  // 写入文件
   await fsPromises.writeFile(outPutFile, JSON.stringify(sideBarArr), {
     encoding: "utf-8",
   });
 }
-
 writeSidebarData();

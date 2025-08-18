@@ -1,31 +1,67 @@
 {
-  "hash": "e6034334",
-  "configHash": "bcfeff86",
-  "lockfileHash": "46918e44",
-  "browserHash": "908fed52",
+  "hash": "c0ebc923",
+  "configHash": "c8d548c4",
+  "lockfileHash": "6da1071a",
+  "browserHash": "0c307043",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.5.18_typescript@5.7.3/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "95886680",
+      "fileHash": "d7aa827b",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../../node_modules/.pnpm/@vue+devtools-api@7.7.7/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "279bfdec",
+      "fileHash": "6fef054c",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../../node_modules/.pnpm/@vueuse+core@13.6.0_vue@3.5.18_typescript@5.7.3_/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "ef950724",
+      "fileHash": "e2de79b1",
+      "needsInterop": false
+    },
+    "element-plus": {
+      "src": "../../../../../node_modules/.pnpm/element-plus@2.10.5_vue@3.5.18_typescript@5.7.3_/node_modules/element-plus/es/index.mjs",
+      "file": "element-plus.js",
+      "fileHash": "6cf935c3",
+      "needsInterop": false
+    },
+    "@element-plus/icons-vue": {
+      "src": "../../../../../node_modules/.pnpm/@element-plus+icons-vue@2.3.2_vue@3.5.18_typescript@5.7.3_/node_modules/@element-plus/icons-vue/dist/index.js",
+      "file": "@element-plus_icons-vue.js",
+      "fileHash": "ef6ccf4a",
+      "needsInterop": false
+    },
+    "element-plus/es/locale/lang/zh-cn": {
+      "src": "../../../../../node_modules/.pnpm/element-plus@2.10.5_vue@3.5.18_typescript@5.7.3_/node_modules/element-plus/es/locale/lang/zh-cn.mjs",
+      "file": "element-plus_es_locale_lang_zh-cn.js",
+      "fileHash": "45a29ff2",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "src": "../../../../../node_modules/.pnpm/vue-router@4.5.1_vue@3.5.18_typescript@5.7.3_/node_modules/vue-router/dist/vue-router.mjs",
+      "file": "vue-router.js",
+      "fileHash": "30812f39",
+      "needsInterop": false
+    },
+    "marked": {
+      "src": "../../../../../node_modules/.pnpm/marked@16.2.0/node_modules/marked/lib/marked.esm.js",
+      "file": "marked.js",
+      "fileHash": "b859f52a",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-3GAPVBTG": {
-      "file": "chunk-3GAPVBTG.js"
+    "chunk-ILNDYC6I": {
+      "file": "chunk-ILNDYC6I.js"
+    },
+    "chunk-PVDJIKU6": {
+      "file": "chunk-PVDJIKU6.js"
+    },
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
     }
   }
 }

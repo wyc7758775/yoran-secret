@@ -8,7 +8,6 @@ const DEV = "dev";
 const galleryPath = () => path.resolve(__dirname, "../assets/gallery");
 const outPutBasePath = () => path.resolve(__dirname, "../.vitepress/router");
 
-const mdFilePath = "/JSCore";
 const excludeDir = "temp";
 
 const getGalleryItems = async () => {
@@ -58,7 +57,7 @@ const getGalleryItems = async () => {
 };
 
 async function init() {
-  const sideBarArr = await getGalleryItems(mdFilePath);
+  const sideBarArr = await getGalleryItems();
   const outPutFile = `${outPutBasePath()}/gallery.js`;
   const outPutDir = path.dirname(outPutFile);
   await fsPromises.mkdir(outPutDir, { recursive: true });

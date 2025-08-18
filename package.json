@@ -8,6 +8,7 @@
     "blog:build": "pnpm run -C packages/blog build",
     "blog:gallery": "pnpm run -C packages/blog gallery",
     "blog:router": "pnpm run -C packages/blog router",
+    "blog:life": "pnpm run -C packages/blog life",
     "vs:dev": "pnpm run -C packages/vue-study dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +16,9 @@
     "@element-plus/icons-vue": "^2.3.1",
     "@unocss/reset": "^66.4.1",
     "element-plus": "^2.10.5",
-    "vue": "^3.5.13"
+    "marked": "^16.2.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
   },
   "keywords": [],
   "author": "",
