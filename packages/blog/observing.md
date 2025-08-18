@@ -2,8 +2,8 @@
 layout: home
 ---
 
-<Life  />
+<Observing  />
 <script setup>
 import 'virtual:uno.css'
-import Life from './pages/Life.vue'
+import Observing from './pages/Observing.vue'
 </script>

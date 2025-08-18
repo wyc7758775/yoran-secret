@@ -30,7 +30,7 @@ export default defineConfig({
     nav: [
       { text: "Yoran", link: "/" },
       { text: "Posts", link: sidebar[0].items[0].link },
-      { text: "Life", link: "/life" },
+      { text: "Observing", link: "/observing" },
       { text: "Gallery", link: "/gallery" },
     ],
     sidebar: sidebar,
