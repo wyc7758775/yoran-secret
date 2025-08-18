@@ -5,8 +5,11 @@
         返回 Life
       </button>
     </div>
-    <div class="container mx-auto mt-6">
-      <div class="prose max-w-none" v-html="renderedContent"></div>
+    <div class="container mx-auto mt-6 px-4 sm:px-6 lg:px-8">
+      <div
+        class="prose max-w-none prose-sm sm:prose base:text-sm sm:text-base md:text-lg leading-relaxed"
+        v-html="renderedContent"
+      ></div>
     </div>
   </div>
 </template>
