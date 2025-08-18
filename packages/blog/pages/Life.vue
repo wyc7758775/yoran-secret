@@ -102,7 +102,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from "vue";
 import LifeDetail from "./LifeDetail.vue";
 import LifeData from "../.vitepress/router/life.js";
@@ -110,9 +110,9 @@ import LifeData from "../.vitepress/router/life.js";
 const showDetail = ref(false);
 const currentArticleSrc = ref("");
 // 路由跳转函数
-const navigateToDetail = (articleId: string | number) => {
+const navigateToDetail = (article) => {
   showDetail.value = !showDetail.value;
-  currentArticleSrc.value = articleId.src;
+  currentArticleSrc.value = article.src;
 };
 
 const defaultImage = "https://picsum.photos/id/1033/1200/800";
