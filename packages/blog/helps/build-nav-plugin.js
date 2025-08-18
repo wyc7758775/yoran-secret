@@ -55,18 +55,69 @@ async function writeSidebarData() {
     encoding: "utf-8",
   });
 }
-writeSidebarData();
+// writeSidebarData();
 
-// TODO: buildStart这个钩子会出现无限重启服务器的问题
-// export default function sideBarPlugin() {
-//   return {
-//     buildStart: async () => {
-//       const sideBarArr = await getComponentsSideBar(mdFilePath)
-//       const outPutFile = `${outPutBasePath()}\\componentsSideBar.json`
-//       console.log({ sideBarArr, outPutFile })
-//       await fsPromises.writeFile(outPutFile, JSON.stringify(sideBarArr), {
-//         encoding: 'utf-8'
-//       })
-//     }
-//   }
-// }
+// 导出VitePress插件
+module.exports = function sideBarPlugin() {
+  let watcher = null;
+  let lastWriteTime = 0;
+  const DEBOUNCE_TIME = 1000; // 防抖时间，避免频繁更新
+
+  return {
+    name: "build-nav-plugin",
+    async buildStart() {
+      // 首次构建时生成侧边栏
+      await writeSidebarData();
+    },
+
+    configureServer(server) {
+      // 开发服务器启动时设置文件监听
+      if (server && server.watcher) {
+        watcher = server.watcher;
+
+        // 监听posts目录下的所有变化
+        watcher.add(documentsPath());
+
+        // 监听文件变化事件
+        watcher.on("add", (path) => handleFileChange(path));
+        watcher.on("change", (path) => handleFileChange(path));
+        watcher.on("unlink", (path) => handleFileChange(path));
+      }
+    },
+
+    closeBundle() {
+      // 构建完成时再次更新侧边栏
+      if (!watcher) {
+        writeSidebarData();
+      }
+    },
+  };
+
+  // 处理文件变化的防抖函数
+  function handleFileChange(path) {
+    const now = Date.now();
+    // 只处理posts目录下的md文件和目录变化
+    if (
+      path.includes("/posts/") &&
+      (path.endsWith(".md") || isDirectoryPath(path))
+    ) {
+      if (now - lastWriteTime > DEBOUNCE_TIME) {
+        lastWriteTime = now;
+        setTimeout(() => {
+          console.log(`检测到变化: ${path}`);
+          writeSidebarData();
+        }, DEBOUNCE_TIME);
+      }
+    }
+  }
+
+  // 判断路径是否可能是目录（简化判断）
+  function isDirectoryPath(path) {
+    return !path.includes(".") || path.endsWith("/");
+  }
+};
+
+// 允许直接运行该脚本
+if (require.main === module) {
+  writeSidebarData();
+}
