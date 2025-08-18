@@ -20,6 +20,8 @@ const getComponentsSideBar = async () => {
     dirArr = dirArr.filter((item) => item !== excludeDir);
   }
 
+  dirArr = dirArr.filter((item) => item !== ".DS_Store");
+
   return Promise.all(
     dirArr.map(async (dirItemPath) => {
       const dirPath = `${resolvePath}/${dirItemPath}`;
