@@ -47,7 +47,7 @@ const getComponentsSideBar = async () => {
 
 async function writeSidebarData() {
   const sideBarArr = await getComponentsSideBar(mdFilePath);
-  const outPutFile = `${outPutBasePath()}/documentsRouter.json`;
+  const outPutFile = `${outPutBasePath()}/sidebar.json`;
   const outPutDir = path.dirname(outPutFile);
   await fsPromises.mkdir(outPutDir, { recursive: true });
 

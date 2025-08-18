@@ -8,7 +8,7 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
-    "router": "node helps/build-nav-plugin.js",
+    "router": "node helps/build-sidebar-plugin.js",
     "gallery": "node helps/build-gallery-plugin.js",
     "plugin:all": "npm run docs:router && npm run docs:gallery"
   },

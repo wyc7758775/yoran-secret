@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 import UnoCSS from "unocss/vite";
-import sidebar from "./router/documentsRouter.json";
+import sidebar from "./router/sidebar.json";
 import unocssConfig from "./unocss.config.ts";
 
 export default defineConfig({
@@ -32,7 +32,6 @@ export default defineConfig({
       { text: "Posts", link: sidebar[0].items[0].link },
       { text: "Gallery", link: "/gallery" },
     ],
-
     sidebar: sidebar,
     socialLinks: [{ icon: "github", link: "https://github.com/wyc7758775" }],
   },
