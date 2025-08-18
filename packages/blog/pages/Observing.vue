@@ -13,11 +13,12 @@
             @click="navigateToDetail(hostArticle())"
           >
             <div class="group">
-              <div class="relative overflow-hidden rounded-lg mb-4">
-                <img
+              <div class="relative overflow-hidden rounded-lg">
+                <el-image
                   :src="hostArticle().firstImage"
                   alt="出错啰"
-                  class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
+                  lazy
+                  class="w-full rounded-lg h-[400px] transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div
@@ -45,10 +46,11 @@
               >
                 <div class="sm:w-1/3">
                   <div class="relative overflow-hidden rounded-lg">
-                    <img
+                    <el-image
                       :src="value.firstImage"
                       alt="404"
-                      class="w-full h-[120px] sm:h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      lazy
+                      class="w-full rounded-lg h-[120px] sm:h-full transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                 </div>
@@ -75,17 +77,19 @@
               @click="navigateToDetail(value)"
             >
               <div class="relative overflow-hidden rounded-lg mb-2">
-                <img
+                <el-image
                   :src="value.firstImage"
                   :alt="value.caption"
-                  class="w-full h-[100px] object-cover transition-transform duration-300 group-hover:scale-105"
+                  fit="cover"
+                  lazy
+                  class="w-full rounded-lg h-[100px] transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <h3
+              <div
                 class="text-sm font-medium group-hover:text-blue-600 transition-colors"
               >
                 {{ value.caption }}
-              </h3>
+              </div>
               <div class="text-gray-500 text-xs mt-1">
                 {{ value.createTime }}
               </div>
@@ -104,6 +108,7 @@
 
 <script setup>
 import { ref } from "vue";
+import { ElImage } from "element-plus";
 import LifeDetail from "./LifeDetail.vue";
 import LifeData from "../.vitepress/router/life.js";
 
