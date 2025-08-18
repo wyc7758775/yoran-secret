@@ -37,7 +37,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
-      UnoCSS(unocssConfig),
+      UnoCSS(unocssConfig)
     ],
     assetsInclude: ["**/assets/gallery/**"],
     resolve: {

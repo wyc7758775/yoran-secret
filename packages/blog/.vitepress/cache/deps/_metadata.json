@@ -1,55 +1,31 @@
 {
-  "hash": "ebb11262",
-  "configHash": "c8d548c4",
+  "hash": "e6034334",
+  "configHash": "bcfeff86",
   "lockfileHash": "46918e44",
-  "browserHash": "be4cb4bb",
+  "browserHash": "908fed52",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.5.18_typescript@5.7.3/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "d5b09581",
+      "fileHash": "95886680",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../../node_modules/.pnpm/@vue+devtools-api@7.7.7/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "6b8070a8",
+      "fileHash": "279bfdec",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../../node_modules/.pnpm/@vueuse+core@13.6.0_vue@3.5.18_typescript@5.7.3_/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "5317297c",
-      "needsInterop": false
-    },
-    "element-plus": {
-      "src": "../../../../../node_modules/.pnpm/element-plus@2.10.5_vue@3.5.18_typescript@5.7.3_/node_modules/element-plus/es/index.mjs",
-      "file": "element-plus.js",
-      "fileHash": "06ae73f1",
-      "needsInterop": false
-    },
-    "@element-plus/icons-vue": {
-      "src": "../../../../../node_modules/.pnpm/@element-plus+icons-vue@2.3.2_vue@3.5.18_typescript@5.7.3_/node_modules/@element-plus/icons-vue/dist/index.js",
-      "file": "@element-plus_icons-vue.js",
-      "fileHash": "83f2ed8f",
-      "needsInterop": false
-    },
-    "element-plus/es/locale/lang/zh-cn": {
-      "src": "../../../../../node_modules/.pnpm/element-plus@2.10.5_vue@3.5.18_typescript@5.7.3_/node_modules/element-plus/es/locale/lang/zh-cn.mjs",
-      "file": "element-plus_es_locale_lang_zh-cn.js",
-      "fileHash": "88708b1a",
+      "fileHash": "ef950724",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-ILNDYC6I": {
-      "file": "chunk-ILNDYC6I.js"
-    },
-    "chunk-PVDJIKU6": {
-      "file": "chunk-PVDJIKU6.js"
-    },
-    "chunk-5WRI5ZAA": {
-      "file": "chunk-5WRI5ZAA.js"
+    "chunk-3GAPVBTG": {
+      "file": "chunk-3GAPVBTG.js"
     }
   }
 }

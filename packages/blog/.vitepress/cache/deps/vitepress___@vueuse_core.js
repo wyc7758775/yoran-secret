@@ -36,8 +36,7 @@ import {
   unref,
   watch,
   watchEffect
-} from "./chunk-PVDJIKU6.js";
-import "./chunk-5WRI5ZAA.js";
+} from "./chunk-3GAPVBTG.js";
 
 // ../../node_modules/.pnpm/@vueuse+shared@13.6.0_vue@3.5.18_typescript@5.7.3_/node_modules/@vueuse/shared/index.mjs
 function computedEager(fn, options) {
