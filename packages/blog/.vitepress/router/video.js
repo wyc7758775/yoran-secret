@@ -1,5 +1,5 @@
 // 手动添加视频路径地址
-export default [
+module.exports = [
   {
     src: "https://www.bilibili.com/video/BV1FYgYzKE1k/?share_source=copy_web&vd_source=c94e30b83e5927afe40585b65a73117e",
     caption: "什么是拖延症？如何正确看待拖延症",

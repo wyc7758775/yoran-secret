@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-const https = require("https"); // 使用Node.js内置的https模块发起请求
+const https = require("https");
+const videoSource = require("../.vitepress/router/video.js");
 
 /**
  * 从B站视频URL中提取BV号
@@ -20,6 +21,7 @@ function getBilibiliCoverUrlByApi(bv) {
     // 从BV号中提取ID部分（去掉开头的"BV"）
     const bvId = bv.replace("BV", "");
 
+    // 使用正确的参数格式：type=bv&id=xxx&client=2.6.0
     const apiUrl = `https://apiv2.magecorn.com/bilicover/get?type=bv&id=${bvId}&client=2.6.0`;
 
     https
@@ -62,7 +64,7 @@ function getBilibiliCoverUrlByApi(bv) {
  * @param {Array} videoSource - 视频源数据
  * @returns {Promise<Array>} - 处理后的视频数据
  */
-async function processVideoData(videoSource) {
+async function processVideoData() {
   const processedVideos = [];
 
   // 逐个处理视频，确保API调用完成
@@ -111,37 +113,12 @@ export default ${JSON.stringify(processedData, null, 2)};
 }
 
 /**
- * 读取并解析video.js文件内容
- */
-function readVideoSource() {
-  const videoJsPath = path.resolve(__dirname, "../.vitepress/router/video.js");
-
-  try {
-    const fileContent = fs.readFileSync(videoJsPath, "utf-8");
-
-    // 更稳健的解析方法：移除export default语句，使用Function构造函数安全评估
-    const arrayContent = fileContent.replace(/^export\s+default\s+/, "");
-
-    // 使用Function构造函数安全地评估JavaScript数组
-    const videoData = Function(`return ${arrayContent}`)();
-
-    return videoData;
-  } catch (error) {
-    console.error("读取video.js文件时出错:", error);
-    throw error;
-  }
-}
-
-/**
  * 主函数：读取视频数据、处理并生成封面数据文件
  */
 async function main() {
   try {
-    // 读取video.js文件内容
-    const videoSource = readVideoSource();
-
     // 处理视频数据，添加封面URL（异步处理）
-    const processedData = await processVideoData(videoSource);
+    const processedData = await processVideoData();
 
     // 写入到video-cover.js文件
     writeVideoCoverFile(processedData);
@@ -162,5 +139,4 @@ module.exports = {
   getBilibiliCoverUrlByApi,
   processVideoData,
   writeVideoCoverFile,
-  readVideoSource,
 };
