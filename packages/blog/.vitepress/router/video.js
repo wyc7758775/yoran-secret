@@ -5,8 +5,20 @@ module.exports = [
     caption: "什么是拖延症？如何正确看待拖延症",
   },
   {
+    src: "https://www.bilibili.com/video/BV1p5gLzsEgG/?spm_id_from=333.1387.homepage.video_card.click&vd_source=8eab6b072d07c5fa01ee99a1c737e086",
+    caption: "拖延症的动力",
+  },
+  {
+    src: "https://www.bilibili.com/video/BV1kXgszJEX3/?spm_id_from=333.1387.homepage.video_card.click&vd_source=8eab6b072d07c5fa01ee99a1c737e086",
+    caption: "《红宝书》基础类型",
+  },
+  {
     src: "https://www.bilibili.com/video/BV13v3JznEPw/?spm_id_from=333.1387.homepage.video_card.click",
     caption: "视前端已死 & composition api 代码组织",
+  },
+  {
+    src: "https://www.bilibili.com/video/BV1mcgiz9EVU/?spm_id_from=333.1387.homepage.video_card.click&vd_source=8eab6b072d07c5fa01ee99a1c737e086",
+    caption: "《红宝书》第二第三章",
   },
   {
     src: "https://www.bilibili.com/video/BV1qkbnzjEZn/?t=7&spm_id_from=333.1007.tianma.3-1-7.click",
