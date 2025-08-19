@@ -9,7 +9,7 @@
         <div class="flex flex-col lg:flex-row gap-8">
           <!-- 左侧大封面文章 -->
           <div
-            class="lg:w-2/3 cursor-pointer"
+            class="lg:w-2/3 cursor-pointer pr-4"
             @click="navigateToDetail(hostArticle())"
           >
             <div class="group">
@@ -41,7 +41,7 @@
               <!-- 文章项1 -->
               <article
                 v-for="value in otherHostArticle()"
-                class="group flex flex-col sm:flex-row gap-4"
+                class="group flex flex-col sm:flex-row gap-4 p-1 rounded-lg"
                 @click="navigateToDetail(value)"
               >
                 <div class="sm:w-1/3">
@@ -49,6 +49,7 @@
                     <el-image
                       :src="value.firstImage"
                       alt="404"
+                      fit="cover"
                       lazy
                       class="w-full rounded-lg h-[120px] sm:h-full transition-transform duration-500 group-hover:scale-105"
                     />

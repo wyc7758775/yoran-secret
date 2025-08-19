@@ -1,14 +1,12 @@
 <template>
   <div class="p-5 max-w-7xl mx-auto">
-    <div class="flex justify-start">
-      <div
-        class="fixed cursor-pointer w-6 h-6 rounded-full bg-black/20 dark:bg-white/20 flex items-center justify-center"
-        @click="close"
-      >
-        <ElIcon>
-          <ArrowLeft />
-        </ElIcon>
-      </div>
+    <div
+      class="fixed cursor-pointer w-10 h-10 rounded-full bg-black/20 dark:bg-white/20 flex items-center justify-center shadow-lg bottom-4 right-4 md:top-auto md:left-auto md:bottom-auto md:right-auto md:w-6 md:h-6 md:shadow-none"
+      @click="close"
+    >
+      <ElIcon>
+        <ArrowLeft />
+      </ElIcon>
     </div>
     <div class="container mx-auto mt-6 px-4 sm:px-6 lg:px-8">
       <div
@@ -87,7 +85,9 @@ const loadAndRenderMarkdown = async () => {
 
     console.log(`尝试加载文章: ${fileName}`);
 
-    const markdownFiles = import.meta.glob("../life/*.md", { as: "raw" });
+    const markdownFiles = (import.meta as any).glob("../life/*.md", {
+      as: "raw",
+    });
     const fileKey = getFileKey(markdownFiles);
 
     console.log(`找到文件: ${fileKey}`);
@@ -124,7 +124,19 @@ watch(
 }
 @media (max-width: 768px) {
   .markdown-body {
-    padding: 20px 15px 15px;
+    padding: 10px 10px 15px; /* 减少移动端的内边距 */
+  }
+}
+/* 增加更小屏幕的适配 */
+@media (max-width: 480px) {
+  .markdown-body {
+    padding: 0.5rem;
+  }
+  .p-5 {
+    padding: 0 !important;
+  }
+  .container {
+    padding: 0 !important;
   }
 }
 </style>
