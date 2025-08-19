@@ -28,6 +28,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { ElImage } from "element-plus";
 import getGallery from "../.vitepress/router/gallery";
 import { getImageUrl } from "../helps/import-images";
 
