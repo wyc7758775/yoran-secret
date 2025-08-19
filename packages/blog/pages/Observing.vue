@@ -1,10 +1,12 @@
 <template>
-  <ObservingList v-show="!showDetail" @open="navigateToDetail" />
-  <ObservingDetail
-    v-show="showDetail"
-    @close="showDetail = false"
-    :src="currentArticleSrc"
-  ></ObservingDetail>
+  <div>
+    <ObservingList v-show="!showDetail" @open="navigateToDetail" />
+    <ObservingDetail
+      v-show="showDetail"
+      @close="showDetail = false"
+      :src="currentArticleSrc"
+    ></ObservingDetail>
+  </div>
 </template>
 
 <script setup>

@@ -1,55 +1,55 @@
 {
-  "hash": "58e3f82f",
+  "hash": "09946dd7",
   "configHash": "c8d548c4",
-  "lockfileHash": "cb856ee4",
-  "browserHash": "dbeccf09",
+  "lockfileHash": "2f28568f",
+  "browserHash": "1f7a0680",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.5.18_typescript@5.7.3/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "d21736ee",
+      "fileHash": "99a682c4",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../../node_modules/.pnpm/@vue+devtools-api@7.7.7/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "7b377ab4",
+      "fileHash": "22f7a3da",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../../node_modules/.pnpm/@vueuse+core@13.6.0_vue@3.5.18_typescript@5.7.3_/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "f7dfd88e",
+      "fileHash": "765f292f",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../../node_modules/.pnpm/element-plus@2.10.5_vue@3.5.18_typescript@5.7.3_/node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "8ff9939d",
+      "fileHash": "9d5176ff",
       "needsInterop": false
     },
     "@element-plus/icons-vue": {
       "src": "../../../../../node_modules/.pnpm/@element-plus+icons-vue@2.3.2_vue@3.5.18_typescript@5.7.3_/node_modules/@element-plus/icons-vue/dist/index.js",
       "file": "@element-plus_icons-vue.js",
-      "fileHash": "e4393300",
+      "fileHash": "daaab1f8",
       "needsInterop": false
     },
     "element-plus/es/locale/lang/zh-cn": {
       "src": "../../../../../node_modules/.pnpm/element-plus@2.10.5_vue@3.5.18_typescript@5.7.3_/node_modules/element-plus/es/locale/lang/zh-cn.mjs",
       "file": "element-plus_es_locale_lang_zh-cn.js",
-      "fileHash": "b6b38816",
+      "fileHash": "4d34218a",
       "needsInterop": false
     },
     "markdown-it": {
       "src": "../../../../../node_modules/.pnpm/markdown-it@14.1.0/node_modules/markdown-it/index.mjs",
       "file": "markdown-it.js",
-      "fileHash": "b2b60ced",
+      "fileHash": "fa5128c1",
       "needsInterop": false
     },
     "markdown-it-highlightjs": {
       "src": "../../../../../node_modules/.pnpm/markdown-it-highlightjs@4.2.0/node_modules/markdown-it-highlightjs/index.js",
       "file": "markdown-it-highlightjs.js",
-      "fileHash": "c34fafad",
+      "fileHash": "7dd621f7",
       "needsInterop": true
     }
   },

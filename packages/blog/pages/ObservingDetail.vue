@@ -20,7 +20,8 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
 
-import useMdRender from "./use-md-render";
+// 修改这行导入语句，添加.ts扩展名
+import useMdRender from "./use-md-render.ts";
 import { defineProps, defineEmits } from "vue";
 import { ArrowLeft } from "@element-plus/icons-vue";
 import { ElIcon } from "element-plus";

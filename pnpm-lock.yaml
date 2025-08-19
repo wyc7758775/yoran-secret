@@ -29,9 +29,6 @@ importers:
       markdown-it-highlightjs:
         specifier: ^4.2.0
         version: 4.2.0
-      marked:
-        specifier: ^16.2.0
-        version: 16.2.0
       vue:
         specifier: ^3.5.13
         version: 3.5.18(typescript@5.7.3)
@@ -1613,11 +1610,6 @@ packages:
 
   markdown-it@14.1.0:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
-    hasBin: true
-
-  marked@16.2.0:
-    resolution: {integrity: sha512-LbbTuye+0dWRz2TS9KJ7wsnD4KAtpj0MVkWc90XvBa6AslXsT0hTBVH5k32pcSyHH1fst9XEFJunXHktVy0zlg==}
-    engines: {node: '>= 20'}
     hasBin: true
 
   mdast-util-to-hast@13.2.0:
@@ -3821,8 +3813,6 @@ snapshots:
       mdurl: 2.0.0
       punycode.js: 2.3.1
       uc.micro: 2.1.0
-
-  marked@16.2.0: {}
 
   mdast-util-to-hast@13.2.0:
     dependencies:
