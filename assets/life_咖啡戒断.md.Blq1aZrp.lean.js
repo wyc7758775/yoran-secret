@@ -1,1 +1,0 @@
-import{_ as e,c as a,o as i,be as p}from"./chunks/framework.ohYmeG42.js";const m=JSON.parse('{"title":"咖啡戒断","description":"","frontmatter":{},"headers":[],"relativePath":"life/咖啡戒断.md","filePath":"life/咖啡戒断.md"}'),r={name:"life/咖啡戒断.md"};function t(n,l,s,o,A,h){return i(),a("div",null,l[0]||(l[0]=[p("",44)]))}const f=e(r,[["render",t]]);export{m as __pageData,f as default};

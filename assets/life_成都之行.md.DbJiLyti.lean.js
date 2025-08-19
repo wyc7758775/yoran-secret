@@ -1,1 +1,0 @@
-import{_ as t,c as s,o as e,be as i}from"./chunks/framework.ohYmeG42.js";const r=JSON.parse('{"title":"成都之行","description":"","frontmatter":{},"headers":[],"relativePath":"life/成都之行.md","filePath":"life/成都之行.md"}'),p={name:"life/成都之行.md"};function o(c,a,h,m,d,_){return e(),s("div",null,a[0]||(a[0]=[i("",91)]))}const g=t(p,[["render",o]]);export{r as __pageData,g as default};
