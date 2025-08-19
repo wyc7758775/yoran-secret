@@ -1,12 +1,6 @@
-# All-In-One 中的 one
+<img src="https://obsidian.md/images/changelog/1.9-bases-table-light.png" />
 
-```js
-const count = 1;
-const addCount = () => {
-  count++;
-};
-addCount();
-```
+# All-In-One 中的 one
 
 One 是一个平台，一个能完成「采集-处理-输出」（Input-Process-Output，IPO）全过程的平台。
 

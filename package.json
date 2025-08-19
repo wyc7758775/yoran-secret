@@ -9,6 +9,7 @@
     "blog:gallery": "pnpm run -C packages/blog gallery",
     "blog:router": "pnpm run -C packages/blog router",
     "blog:life": "pnpm run -C packages/blog life",
+    "blog:plugin": "pnpm run -C packages/blog plugin:all",
     "vs:dev": "pnpm run -C packages/vue-study dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

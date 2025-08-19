@@ -11,7 +11,7 @@
     "router": "node helps/build-sidebar-plugin.js",
     "gallery": "node helps/build-gallery-plugin.js",
     "life": "node helps/build-life-plugin.js",
-    "plugin:all": "npm run docs:router && npm run docs:gallery && npm run docs:life "
+    "plugin:all": "npm run router && npm run gallery && npm run life "
   },
   "keywords": [],
   "author": "",

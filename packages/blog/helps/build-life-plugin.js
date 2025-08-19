@@ -13,9 +13,14 @@ const excludeDir = "temp";
 const getFirstImage = async (filePath) => {
   if (filePath.endsWith(".md")) {
     const fileContent = await fsPromises.readFile(filePath, "utf-8");
-    const firstImageMatch = fileContent.match(/!\[.*?\]\((.*?)\)/);
+    // 匹配 Markdown 图片语法和 HTML img 标签的 src 属性
+    const firstImageMatch = fileContent.match(
+      /!\[.*?\]\((.*?)\)|<img.*?src=["'](.*?)["']/
+    );
+
     if (firstImageMatch) {
-      return firstImageMatch[1];
+      // 优先返回 Markdown 图片语法匹配结果，若为空则返回 HTML img 标签匹配结果
+      return firstImageMatch[1] || firstImageMatch[2];
     }
   }
   return null;
@@ -71,7 +76,7 @@ const getLifePosts = async () => {
 
         return {
           src: `/life/${dirItemPath}`,
-          firstImage,
+          firstImage: firstImage ?? "",
           postSummary,
           caption,
           createTime,

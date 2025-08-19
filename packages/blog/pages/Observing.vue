@@ -41,7 +41,7 @@
               <!-- 文章项1 -->
               <article
                 v-for="value in otherHostArticle()"
-                class="group flex flex-col sm:flex-row gap-4 p-1 rounded-lg"
+                class="group flex flex-col sm:flex-row gap-4 p-1 rounded-lg cursor-pointer"
                 @click="navigateToDetail(value)"
               >
                 <div class="sm:w-1/3">
@@ -74,7 +74,7 @@
             <!-- 热门文章1 -->
             <div
               v-for="value in otherArticle()"
-              class="group"
+              class="group cursor-pointer"
               @click="navigateToDetail(value)"
             >
               <div class="relative overflow-hidden rounded-lg mb-2">
