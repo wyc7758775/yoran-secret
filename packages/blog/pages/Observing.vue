@@ -98,19 +98,19 @@
         </div>
       </div>
     </div>
-    <LifeDetail
+    <ObservingDetail
       v-show="showDetail"
       @close="showDetail = false"
       :src="currentArticleSrc"
-    ></LifeDetail>
+    ></ObservingDetail>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
 import { ElImage } from "element-plus";
-import LifeDetail from "./LifeDetail.vue";
-import LifeData from "../.vitepress/router/life.js";
+import ObservingDetail from "./ObservingDetail.vue";
+import ObservingData from "../.vitepress/router/life.js";
 
 const showDetail = ref(false);
 const currentArticleSrc = ref("");
@@ -123,13 +123,13 @@ const navigateToDetail = (article) => {
 const defaultImage = "https://picsum.photos/id/1033/1200/800";
 const hostArticle = () => {
   return {
-    ...LifeData[0],
-    firstImage: LifeData[0].firstImage ?? defaultImage,
+    ...ObservingData[0],
+    firstImage: ObservingData[0].firstImage ?? defaultImage,
   };
 };
-// 其他热门文章，拿 LifeData 前四个
+// 其他热门文章，拿 ObservingData 前四个
 const otherHostArticle = () => {
-  return LifeData.slice(1, 5).map((item) => ({
+  return ObservingData.slice(1, 5).map((item) => ({
     ...item,
     firstImage:
       item.firstImage ??
@@ -139,7 +139,7 @@ const otherHostArticle = () => {
 
 // 剩下的文章
 const otherArticle = () => {
-  return LifeData.slice(5).map((item) => ({
+  return ObservingData.slice(5).map((item) => ({
     ...item,
     firstImage:
       item.firstImage ??
