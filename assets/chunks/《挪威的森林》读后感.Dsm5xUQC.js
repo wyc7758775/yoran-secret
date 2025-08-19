@@ -1,4 +1,4 @@
-const n=`<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2Fb98d6fc3-3349-421b-8f6d-69d6f1547a09%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1758187405&t=4d04f9ba14b543ac2da80956ededf23b" />
+const n=`<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2Fb98d6fc3-3349-421b-8f6d-69d6f1547a09%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1758187405&t=4d04f9ba14b543ac2da80956ededf23b" width="50%" />
 
 # 📖《挪威的森林》读后感
 
