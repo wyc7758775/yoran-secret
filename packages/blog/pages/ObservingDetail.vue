@@ -11,7 +11,7 @@
     <div class="container mx-auto mt-6 px-4 sm:px-6 lg:px-8">
       <div
         v-loading="loading"
-        class="prose max-w-none prose-sm sm:prose base:text-sm sm:text-base md:text-lg leading-relaxed md-content markdown-body"
+        class="prose max-w-none prose-sm sm:prose base:text-sm sm:text-base md:text-lg leading-relaxed md-content rendered-body"
         v-html="renderedContent"
       ></div>
     </div>
@@ -118,19 +118,22 @@ watch(
 );
 </script>
 <style scoped>
-.markdown-body {
+.md-content {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.rendered-body {
   box-sizing: border-box;
   min-height: 100vh;
   padding: 45px 30px 30px;
 }
 @media (max-width: 768px) {
-  .markdown-body {
+  .rendered-body {
     padding: 10px 10px 15px; /* 减少移动端的内边距 */
   }
 }
 /* 增加更小屏幕的适配 */
 @media (max-width: 480px) {
-  .markdown-body {
+  .rendered-body {
     padding: 0.5rem;
   }
   .p-5 {

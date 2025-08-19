@@ -19,8 +19,7 @@ const md = new MarkdownIt({
   },
 }).use(hljs);
 
-export default function useMdRender() {// md 配置
-
+export default function useMdRender() {
   const mdRender = (markdownContent: string) => {
     return (md as any).render(markdownContent);
   }
