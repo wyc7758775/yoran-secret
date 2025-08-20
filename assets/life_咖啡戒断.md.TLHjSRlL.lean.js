@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as i,bh as p}from"./chunks/framework.CnSDJcCf.js";const m=JSON.parse('{"title":"咖啡戒断","description":"","frontmatter":{},"headers":[],"relativePath":"life/咖啡戒断.md","filePath":"life/咖啡戒断.md"}'),r={name:"life/咖啡戒断.md"};function t(n,l,s,o,A,h){return i(),e("div",null,l[0]||(l[0]=[p("",44)]))}const f=a(r,[["render",t]]);export{m as __pageData,f as default};
