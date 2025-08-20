@@ -2,17 +2,6 @@
 
 # All-In-One 中的 one
 
-```js
-const a = 1;
-const addCount = () => {
-  a++;
-};
-
-console.log(a); // 1
-addCount();
-console.log(a); // 2
-```
-
 One 是一个平台，一个能完成「采集-处理-输出」（Input-Process-Output，IPO）全过程的平台。
 
 - **Input（输入）**：将信息快速捕捉，可能是灵感、截图、笔记、语音、PDF 片段。

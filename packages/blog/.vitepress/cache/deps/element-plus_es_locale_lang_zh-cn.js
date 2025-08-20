@@ -1,4 +1,4 @@
-import "./chunk-G3PMV62Z.js";
+import "./chunk-5WRI5ZAA.js";
 
 // ../../node_modules/.pnpm/element-plus@2.10.5_vue@3.5.18_typescript@5.7.3_/node_modules/element-plus/es/locale/lang/zh-cn.mjs
 var zhCn = {
