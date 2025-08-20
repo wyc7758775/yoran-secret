@@ -16,6 +16,7 @@
               <el-image
                 :src="hostArticle().firstImage"
                 alt="出错啰"
+                fit="contain"
                 lazy
                 class="w-full rounded-lg h-[400px] transition-transform duration-500 group-hover:scale-105"
               />

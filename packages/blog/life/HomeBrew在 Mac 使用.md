@@ -1,3 +1,5 @@
+![](https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/homebrew.png)
+
 # HomeBrew 在 Mac 上的安装
 
 HomeBrew 是 Mac 上的一个包管理工具，类似与 ubuntu 上的 apt 或者 centos 上的 yum。推荐即便不是程序员也应该使用的功能。
