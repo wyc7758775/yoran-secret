@@ -11,7 +11,7 @@
         class="max-w-[400px] mx-auto mb-[2rem] overflow-hidden border-4 border-solid border-[#333] dark:border-primary-50"
       >
         <img
-          src="/assets/handsome.jpg"
+          src="https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/handsome.jpg"
           alt="Zhenghao"
           class="w-full h-full object-cover"
         />
@@ -50,7 +50,7 @@
             <!-- 支付宝收款码悬浮框 -->
             <span class="tooltip-base tooltip-visibility tooltip-arrow">
               <img
-                src="/assets/alipay-qrcode.jpg"
+                src="https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/alipay-qrcode.jpg"
                 alt="支付宝收款码"
                 class="w-[200px] h-[200px] object-contain"
               />
