@@ -1,1 +1,1 @@
-export default [null]
+export default [null,{"src":"/assets/gallery/厨房新装.jpg","caption":"厨房新装","createTime":"2025-05-26T12:46:37.636Z"}]
