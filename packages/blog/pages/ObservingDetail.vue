@@ -11,7 +11,7 @@
     <div class="container mx-auto mt-6 px-4 sm:px-6 lg:px-8">
       <div
         v-loading="loading"
-        class="prose max-w-none prose-sm sm:prose base:text-sm sm:text-base md:text-lg leading-relaxed md-content rendered-body"
+        class="prose max-w-none prose-sm sm:prose base:text-sm sm:text-base md:text-lg leading-relaxed rendered-content rendered-body"
         v-html="renderedContent"
       ></div>
     </div>
@@ -118,7 +118,7 @@ watch(
 );
 </script>
 <style scoped>
-.md-content {
+.rendered-content {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .rendered-body {

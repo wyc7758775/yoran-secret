@@ -14,7 +14,7 @@ export default defineConfig({
       {
         rel: "icon",
         type: "image/svg+xml",
-        href: "/yoran-secret/assets/profile.svg",
+        href: "/assets/profile.svg",
       },
     ],
      // 添加referrer meta标签以解决图片403问题
@@ -40,7 +40,7 @@ export default defineConfig({
     plugins: [
       UnoCSS(unocssConfig)
     ],
-    assetsInclude: ["**/assets/gallery/**"],
+    assetsInclude: ["**/assets/**"],
     resolve: {
       alias: {
         "@assets": "/Users/wuyucun/programmer/font-end/packages/docs/assets",
