@@ -1,4 +1,4 @@
-const n=`<img src="https://obsidian.md/images/changelog/1.9-bases-table-light.png" />
+const n=`<img src="https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/1.9-bases-table-light.png" />
 
 # All-In-One 中的 one
 
