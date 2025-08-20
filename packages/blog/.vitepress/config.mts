@@ -3,7 +3,7 @@ import UnoCSS from "unocss/vite";
 import sidebar from "./router/sidebar.json";
 import unocssConfig from "./unocss.config.ts";
 
-const isProduction = process.env.NODE_ENV === 'production';
+const isDevelopment = process.env.NODE_ENV === 'development';
 export default defineConfig({
   title: " Yoran秘密空间",
   description: " 个人学习总结记录，有很多错误，现阶段也就这样了",
@@ -15,7 +15,7 @@ export default defineConfig({
       {
         rel: "icon",
         type: "image/svg+xml",
-        href:  !isProduction ? "/yoran-secret/profile.svg" : "/profile.svg",
+        href:  isDevelopment ? "/yoran-secret/profile.svg" : "/profile.svg",
       },
     ],
      // 添加referrer meta标签以解决图片403问题
