@@ -30,18 +30,21 @@
 import { ref } from "vue";
 import { ElImage } from "element-plus";
 import getGallery from "../.vitepress/router/gallery";
+import picture from "../.vitepress/router/picture";
 import { getImageUrl } from "../helps/import-images";
 
 // 图片数据 - 实际使用时会从assets/gallery目录加载
-const images = getGallery
-  .filter((item) => item !== null)
-  .map((item) => ({
-    ...item,
-    // 手动添加base路径
-    src: getImageUrl(item.src),
-    createTime: new Date(item.createTime),
-  }))
-  .sort((a, b) => b.createTime.getTime() - a.createTime.getTime());
+const images = [
+  ...getGallery
+    .filter((item) => item !== null)
+    .map((item) => ({
+      ...item,
+      // 手动添加base路径
+      src: getImageUrl(item.src),
+      createTime: new Date(item.createTime),
+    })),
+  ...picture,
+];
 
 const currentImage = ref({ src: "", caption: "" });
 const scale = ref(1);
