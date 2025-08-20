@@ -1,25 +1,23 @@
 import { App } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import 'element-plus/dist/index.css'
-// 只导入实际使用的组件
-import { ElImage, ElIcon, ElDialog, vLoading } from 'element-plus'
-// 只导入实际使用的图标
-import { ArrowLeft } from '@element-plus/icons-vue'
+import ElementPlus from 'element-plus'
+import * as icons from '@element-plus/icons-vue'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import './main.css'
 
 const useElementPlusComps = (app: App) => {
-  // 注册实际使用的组件
-  app.use(ElImage)
-  app.use(ElIcon)
-  app.use(ElDialog)
-  // 注册v-loading指令
-  app.use(vLoading.directive)
-  // 注册v-loading指令的组件
-  app.component('v-loading', vLoading)
-  // 注册实际使用的图标
-  app.component('ArrowLeft', ArrowLeft)
-}
+  // element-plus 图标
+  let k: keyof typeof icons
+  for (k in icons) {
+    app.component(k, icons[k])
+  }
 
+  // element-plus 组件
+  app.use(ElementPlus, {
+    locale: zhCn
+  })
+}
 export default {
   ...DefaultTheme,
   async enhanceApp(ctx: any) {
