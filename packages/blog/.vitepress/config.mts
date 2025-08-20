@@ -15,7 +15,7 @@ export default defineConfig({
       {
         rel: "icon",
         type: "image/svg+xml",
-        href:  isDevelopment ? "/yoran-secret/profile.svg" : "/profile.svg",
+        href:  "/yoran-secret/profile.svg",
       },
     ],
      // 添加referrer meta标签以解决图片403问题
