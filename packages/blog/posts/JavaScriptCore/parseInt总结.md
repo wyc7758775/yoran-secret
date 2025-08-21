@@ -1,4 +1,4 @@
-# parseInt
+# parseInt 使用总结
 
 **parseInt('012', 16)和 parseInt(012, 16)相等吗？**
 
