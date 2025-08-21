@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <div class="home" v-once>
+  <div class="slide-fade" v-once>
     <div class="box">
       <h1 class="text-[2.5rem] font-bold mb-[0.5rem]">Hey, I'm Yoran</h1>
       <p class="text-[1rem] opacity-80 mb-[2rem]">
@@ -67,7 +67,6 @@
 <style scoped>
 .home {
   padding-top: 2rem;
-  animation: fadeIn 1s ease-in;
   font-family: "monospace";
   display: flex;
   flex-direction: wrap;
@@ -90,14 +89,5 @@
 
 .profile-bio p {
   margin-bottom: 1rem;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 </style>

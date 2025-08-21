@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="slide-fade">
     <ObservingList v-show="!showDetail" @open="navigateToDetail" />
     <ObservingDetail
       v-show="showDetail"
