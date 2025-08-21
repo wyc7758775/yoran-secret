@@ -1,27 +1,12 @@
-import { App } from 'vue'
 import DefaultTheme from 'vitepress/theme'
-import 'element-plus/dist/index.css'
-import ElementPlus from 'element-plus'
-import * as icons from '@element-plus/icons-vue'
-import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import './main.css'
 
-const useElementPlusComps = (app: App) => {
-  // element-plus 图标
-  let k: keyof typeof icons
-  for (k in icons) {
-    app.component(k, icons[k])
-  }
+// 只保留必要的自定义 CSS，移除 Element Plus 相关配置
 
-  // element-plus 组件
-  app.use(ElementPlus, {
-    locale: zhCn
-  })
-}
 export default {
   ...DefaultTheme,
   async enhanceApp(ctx: any) {
     DefaultTheme.enhanceApp(ctx)
-    useElementPlusComps(ctx.app)
+    // 移除 Element Plus 组件和图标的注册
   }
 }

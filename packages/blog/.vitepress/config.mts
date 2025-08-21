@@ -14,17 +14,43 @@ export default defineConfig({
       {
         rel: "icon",
         type: "image/svg+xml",
-        href:  "/yoran-secret/profile.svg",
+        href: "/yoran-secret/profile.svg",
       },
     ],
-     // 添加referrer meta标签以解决图片403问题
+    [
+      "link",
+      {
+        rel: "dns-prefetch preload",
+        href: "//cdn.jsdelivr.net",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "//cdn.jsdelivr.net/npm/element-plus/dist/index.css",
+      },
+    ],
+    [
+      "script",
+      {
+        src: "//cdn.jsdelivr.net/npm/element-plus",
+      },
+    ],
+    [
+      "script",
+      {
+        src: "//unpkg.com/@element-plus/icons-vue",
+      },
+    ],
+    // 添加referrer meta标签以解决图片403问题
     [
       "meta",
       {
         name: "referrer",
-        content: "no-referrer"
-      }
-    ]
+        content: "no-referrer",
+      },
+    ],
   ],
   themeConfig: {
     nav: [
@@ -37,9 +63,7 @@ export default defineConfig({
     socialLinks: [{ icon: "github", link: "https://github.com/wyc7758775" }],
   },
   vite: {
-    plugins: [
-      UnoCSS(unocssConfig)
-    ],
+    plugins: [UnoCSS(unocssConfig)],
     assetsInclude: ["**/assets/**"],
     resolve: {
       alias: {

@@ -9,8 +9,11 @@
       </ElIcon>
     </div>
     <div class="container mx-auto mt-6 px-4 sm:px-6 lg:px-8">
+      <div class="min-h-[60vh] flex justify-center items-center" v-if="loading">
+        <el-icon class="rotate-icon"><Loading /></el-icon>
+      </div>
       <div
-        v-loading="loading"
+        v-else
         class="prose max-w-none prose-sm sm:prose base:text-sm sm:text-base md:text-lg leading-relaxed rendered-content rendered-body"
         v-html="renderedContent"
       ></div>
@@ -18,12 +21,12 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { ref, watch, Transition } from "vue";
 
 // 修改这行导入语句，添加.ts扩展名
 import useMdRender from "./use-md-render.ts";
 import { defineProps, defineEmits } from "vue";
-import { ArrowLeft } from "@element-plus/icons-vue";
+import { ArrowLeft, Loading } from "@element-plus/icons-vue";
 import { ElIcon } from "element-plus";
 
 const props = defineProps({
@@ -118,29 +121,17 @@ watch(
 );
 </script>
 <style scoped>
-.rendered-content {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* 替换为持续旋转的CSS动画 */
+.rotate-icon {
+  animation: rotate 2s linear infinite;
 }
-.rendered-body {
-  box-sizing: border-box;
-  min-height: 100vh;
-  padding: 45px 30px 30px;
-}
-@media (max-width: 768px) {
-  .rendered-body {
-    padding: 10px 10px 15px; /* 减少移动端的内边距 */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-}
-/* 增加更小屏幕的适配 */
-@media (max-width: 480px) {
-  .rendered-body {
-    padding: 0.5rem;
-  }
-  .p-5 {
-    padding: 0 !important;
-  }
-  .container {
-    padding: 0 !important;
+  to {
+    transform: rotate(360deg);
   }
 }
 </style>
