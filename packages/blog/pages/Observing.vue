@@ -3,7 +3,7 @@
     <ObservingList v-show="!showDetail" @open="navigateToDetail" />
     <ObservingDetail
       v-show="showDetail"
-      @close="showDetail = false"
+      @close="handleClose"
       :src="currentArticleSrc"
     ></ObservingDetail>
   </div>
@@ -16,9 +16,26 @@ import ObservingList from "./ObservingList.vue";
 
 const showDetail = ref(false);
 const currentArticleSrc = ref("");
-// 路由跳转函数
+const listScrollPosition = ref(0);
+
+const saveListScrollPosition = () => {
+  listScrollPosition.value = window.scrollY;
+};
+
+// 恢复列表页滚动位置
+const restoreListScrollPosition = () => {
+  window.scrollTo({ top: listScrollPosition.value, behavior: "instant" });
+};
+
 const navigateToDetail = (article) => {
-  showDetail.value = !showDetail.value;
+  saveListScrollPosition();
+
+  showDetail.value = true;
   currentArticleSrc.value = article.src;
+};
+
+const handleClose = () => {
+  showDetail.value = false;
+  restoreListScrollPosition();
 };
 </script>
