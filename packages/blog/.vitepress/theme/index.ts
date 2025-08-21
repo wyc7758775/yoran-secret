@@ -7,6 +7,5 @@ export default {
   ...DefaultTheme,
   async enhanceApp(ctx: any) {
     DefaultTheme.enhanceApp(ctx)
-    // 移除 Element Plus 组件和图标的注册
   }
 }

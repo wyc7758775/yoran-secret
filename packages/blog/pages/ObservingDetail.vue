@@ -21,9 +21,8 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ref, watch, Transition } from "vue";
+import { ref, watch } from "vue";
 
-// 修改这行导入语句，添加.ts扩展名
 import useMdRender from "./use-md-render.ts";
 import { defineProps, defineEmits } from "vue";
 import { ArrowLeft, Loading } from "@element-plus/icons-vue";
@@ -121,7 +120,6 @@ watch(
 );
 </script>
 <style scoped>
-/* 替换为持续旋转的CSS动画 */
 .rotate-icon {
   animation: rotate 2s linear infinite;
 }
