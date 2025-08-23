@@ -30,8 +30,8 @@
     :title="currentVideo.title"
     v-model="dialogFormVisible"
     :close-on-click-modal="false"
-    width="60%"
     destroy-on-close
+    width="80%"
     draggable
     @close="closeDialog"
   >
@@ -39,7 +39,7 @@
       <iframe
         :src="getEmbedUrl(currentVideo.bv, currentVideo.src)"
         controls
-        class="w-full min-h-[500px]"
+        class="w-full h-50vh"
         frameborder="0"
         allowfullscreen
         sandbox="allow-same-origin allow-scripts allow-popups"

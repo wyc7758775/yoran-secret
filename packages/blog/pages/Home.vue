@@ -1,18 +1,17 @@
-<script setup></script>
 <template>
   <div class="slide-fade" v-once>
-    <div class="box">
-      <h1 class="text-[2.5rem] font-bold mb-[0.5rem]">Hey, I'm Yoran</h1>
-      <p class="text-[1rem] opacity-80 mb-[2rem]">
+    <div class="flex flex-col justify-center items-start">
+      <div class="text-[2.5rem] font-bold w-650px mx-auto">Hey, I'm Yoran</div>
+      <div class="text-[1rem] opacity-80 mb-[2rem] mt-[1rem] w-650px mx-auto">
         My name is pronounced as /dʒɛn'haʊ/
-      </p>
+      </div>
 
       <div
         class="max-w-[400px] mx-auto mb-[2rem] overflow-hidden border-4 border-solid border-[#333] dark:border-primary-50"
       >
         <img
           src="https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/handsome.jpg"
-          alt="Zhenghao"
+          alt="Yoran"
           class="w-full h-full object-cover"
         />
       </div>

@@ -1,39 +1,22 @@
-/* 全局样式文件 - 只针对light主题 */
-
-/* 优化后的主题样式 - 确保dark主题下不应用自定义背景 */
-
-/* 当html没有dark类时应用light主题样式 */
-:root:not(.dark) {
-  --vp-c-bg: rgb(248, 246, 244);
-  --vp-c-bg-alt: rgb(240, 238, 236);
-}
-
-/* 应用到body */
-:root:not(.dark) body {
-  background-color: rgb(248, 246, 244);
-}
-
-/* 确保主要内容区域也使用相同的背景色 */
-:root:not(.dark) .vp-doc {
-  background-color: rgb(248, 246, 244);
-}
-
-/* 可选：添加平滑过渡效果 */
 body,
 .vp-doc {
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 .slide-fade {
-  animation: slide 0.5s ease-in;
+  animation: slide 0.2s ease-in;
 }
 @keyframes slide {
   from {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateY(0px);
   }
+}
+
+:root {
+  font-size: 15px;;
 }

@@ -169,4 +169,9 @@ const otherArticle = () => {
     font-size: 1.25rem !important;
   }
 }
+a {
+  user-select: none;
+  text-decoration: none;
+  color: inherit;
+}
 </style>

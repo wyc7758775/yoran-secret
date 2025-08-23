@@ -2,56 +2,13 @@ import { defineConfig } from "vitepress";
 import UnoCSS from "unocss/vite";
 import sidebar from "./router/sidebar.json";
 import unocssConfig from "./unocss.config.ts";
+import configHead from './configHead.ts'
 
 export default defineConfig({
-  title: " Yoran wu",
-  description: " 个人学习总结记录，有很多错误，现阶段也就这样了",
+  title: " Yoran Wu",
+  description: " 个人学习总结记录",
   base: "/yoran-secret/",
-  head: [
-    // 使用动态路径
-    [
-      "link",
-      {
-        rel: "icon",
-        type: "image/svg+xml",
-        href: "/yoran-secret/profile.svg",
-      },
-    ],
-    [
-      "link",
-      {
-        rel: "dns-prefetch preload",
-        href: "//cdn.jsdelivr.net",
-      },
-    ],
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href: "//cdn.jsdelivr.net/npm/element-plus/dist/index.css",
-      },
-    ],
-    [
-      "script",
-      {
-        src: "//cdn.jsdelivr.net/npm/element-plus",
-      },
-    ],
-    [
-      "script",
-      {
-        src: "//unpkg.com/@element-plus/icons-vue",
-      },
-    ],
-    // 添加referrer meta标签以解决图片403问题
-    [
-      "meta",
-      {
-        name: "referrer",
-        content: "no-referrer",
-      },
-    ],
-  ],
+  head: configHead as any,
   themeConfig: {
     nav: [
       { text: "Yoran", link: "/" },
