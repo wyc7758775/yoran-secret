@@ -1,9 +1,11 @@
 <template>
   <div class="slide-fade" v-once>
     <div class="flex flex-col justify-center items-start">
-      <div class="text-[2.5rem] font-bold w-650px mx-auto">Hey, I'm Yoran</div>
-      <div class="text-[1rem] opacity-80 mb-[2rem] mt-[1rem] w-650px mx-auto">
-        My name is pronounced as /dʒɛn'haʊ/
+      <div class="flex flex-col justify-center items-start mx-auto">
+        <div class="text-[2.5rem] font-bold">Hey, I'm Yoran</div>
+        <span class="text-[1rem] opacity-80 mb-[2rem] mt-[1rem]">
+          My name is pronounced as /dʒɛn'haʊ/
+        </span>
       </div>
 
       <div
