@@ -51,10 +51,7 @@ export default [
   {
     "src": "https://www.bilibili.com/video/BV1krYbzXEi6/?spm_id_from=333.1007.tianma.6-4-22.click",
     "caption": "在波伏娃墓前痛哭的中女",
-    "bv": "BV1krYbzXEi6",
-    "cover": "http://i1.hdslb.com/bfs/archive/987bdb7993330746443438bbb93e0fb95beb11d7.jpg",
-    "title": "在波伏娃墓前痛哭的中女",
-    "desc": "-"
+    "bv": "BV1krYbzXEi6"
   },
   {
     "src": "https://www.bilibili.com/video/BV1yNtozWEYE/?spm_id_from=333.1007.tianma.9-1-31.click&vd_source=8eab6b072d07c5fa01ee99a1c737e086",

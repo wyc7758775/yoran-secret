@@ -127,5 +127,5 @@ const formatDate = (date) => {
   const year = d.getFullYear();
 
   // 格式化为：DEC 25, 2024 · MARVIX
-  return `${month} ${day}, ${year} · MARVIX`;
+  return `${month} ${day}, ${year} · Yoran`;
 };

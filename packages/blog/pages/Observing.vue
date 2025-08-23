@@ -65,7 +65,12 @@
                     >
                       {{ value.caption }}
                     </div>
-                    <p class="text-gray-500 text-xs">{{ value.createTime }}</p>
+                    <div class="mt-1 mb-1 text-gray-600 line-clamp-2">
+                      {{ value.postSummary }}
+                    </div>
+                    <div class="text-gray-500 text-xs">
+                      {{ value.createTime }}
+                    </div>
                   </div>
                 </article>
               </a>
