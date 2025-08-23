@@ -4,7 +4,7 @@ import sidebar from "./router/sidebar.json";
 import unocssConfig from "./unocss.config.ts";
 
 export default defineConfig({
-  title: " Yoran秘密空间",
+  title: " Yoran wu",
   description: " 个人学习总结记录，有很多错误，现阶段也就这样了",
   base: "/yoran-secret/",
   head: [
@@ -56,7 +56,7 @@ export default defineConfig({
     nav: [
       { text: "Yoran", link: "/" },
       { text: "Posts", link: sidebar[0].items[0].link },
-      { text: "Observing", link: "/observing" },
+      { text: "Observer", link: "/observing" },
       { text: "Gallery", link: "/gallery" },
     ],
     sidebar: sidebar,

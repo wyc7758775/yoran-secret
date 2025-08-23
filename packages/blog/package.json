@@ -19,6 +19,6 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "vitepress": "^2.0.0-alpha.9"
+    "vitepress": "^2.0.0-alpha.12"
   }
 }
