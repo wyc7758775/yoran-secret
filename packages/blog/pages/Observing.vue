@@ -82,23 +82,28 @@
               class="group cursor-pointer"
               @click="navigateToDetail(value)"
             >
-              <div class="relative overflow-hidden rounded-lg mb-2">
-                <el-image
-                  :src="value.firstImage"
-                  :alt="value.caption"
-                  fit="cover"
-                  lazy
-                  class="w-full rounded-lg h-[100px] transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div
-                class="text-sm font-medium group-hover:text-blue-600 transition-colors"
+              <a
+                :href="`/yoran-secret/observer-detail?src=${value.src}`"
+                class="block"
               >
-                {{ value.caption }}
-              </div>
-              <div class="text-gray-500 text-xs mt-1">
-                {{ value.createTime }}
-              </div>
+                <div class="relative overflow-hidden rounded-lg mb-2">
+                  <el-image
+                    :src="value.firstImage"
+                    :alt="value.caption"
+                    fit="cover"
+                    lazy
+                    class="w-full rounded-lg h-[100px] transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div
+                  class="text-sm font-medium group-hover:text-blue-600 transition-colors"
+                >
+                  {{ value.caption }}
+                </div>
+                <div class="text-gray-500 text-xs mt-1">
+                  {{ value.createTime }}
+                </div>
+              </a>
             </div>
           </div>
         </div>
