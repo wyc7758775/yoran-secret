@@ -1,6 +1,6 @@
 <template>
   <div class="slide-fade">
-    <div class="p-5 max-w-7xl mx-auto">
+    <div class="max-w-7xl mx-auto">
       <div class="container mx-auto mb-10">
         <!-- 页面标题 -->
         <h1 class="text-4xl font-bold mb-8">Life</h1>

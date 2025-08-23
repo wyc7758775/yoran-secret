@@ -20,3 +20,33 @@ body,
 :root {
   font-size: 15px;;
 }
+
+:root:not(.dark) {
+  --vp-c-bg: rgb(248, 246, 244);
+  --vp-c-bg-alt: rgb(240, 238, 236);
+}
+
+/* 应用到body */
+:root:not(.dark) body {
+  background-color: rgb(248, 246, 244);
+}
+
+/* 确保主要内容区域也使用相同的背景色 */
+:root:not(.dark) .vp-doc {
+  background-color: rgb(248, 246, 244);
+}
+
+:root.dark {
+  --vp-c-bg: #01242e;
+  --vp-c-bg-alt: #01242e;
+}
+
+/* 应用到body */
+:root.dark body {
+  background-color: #01242e;
+}
+
+/* 确保主要内容区域也使用相同的背景色 */
+:root.dark .vp-doc {
+  background-color: #01242e;
+}

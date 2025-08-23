@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5 max-w-7xl mx-auto">
+  <div class="max-w-7xl mx-auto">
     <div
       class="flex flex-col md:flex-row justify-center items-start mx-auto mt-6 sm:px-6 lg:px-8 w-full"
     >
@@ -11,7 +11,7 @@
       </div>
       <div
         v-else
-        class="md-prose max-w-none prose-sm sm:prose base:text-sm sm:text-base md:text-lg w-full md:w-7.5/10 prose-img:center"
+        class="md-prose max-w-none prose-sm sm:prose base:text-sm sm:text-base md:text-lg w-full md:w-7/10 prose-img:center"
         v-html="renderedContent"
       ></div>
     </div>
