@@ -5,7 +5,7 @@
     v-show="!isHidden && tocItems.length > 0"
   >
     <div
-      class="pl-[10px] transition-opacity duration-500 ease-in-out text-black-50"
+      class="pl-[10px] pb-[10px] transition-opacity duration-500 ease-in-out text-black-50"
       :style="{ opacity: isVisibleToc ? '1' : '0.5' }"
     >
       <svg
