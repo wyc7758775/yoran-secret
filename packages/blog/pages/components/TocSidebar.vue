@@ -41,7 +41,7 @@
           </span>
         </li>
       </ul>
-      <p v-else class="text-center py-4 text-sm text-gray-400">没有目录数据</p>
+      <p v-else class="text-center py-1 text-sm text-gray-400">没有目录数据</p>
     </div>
   </div>
 </template>
@@ -69,9 +69,6 @@ const props = defineProps({
 // 响应式数据
 const tocItems = ref<TocItem[]>([]);
 const isVisible = ref(true);
-const isDarkMode = computed(() => {
-  return document.documentElement.classList.contains("dark");
-});
 
 const querySelectors = () => {
   let querySelectors = "";
@@ -89,7 +86,11 @@ const collectTocItems = (content: string) => {
   tocItems.value = [];
 
   try {
-    if (content) {
+    if (
+      content &&
+      typeof window !== "undefined" &&
+      typeof DOMParser !== "undefined"
+    ) {
       // 首先解析HTML字符串获取标题信息
       const parser = new DOMParser();
       const doc = parser.parseFromString(content, "text/html");
@@ -113,25 +114,6 @@ const collectTocItems = (content: string) => {
   }
 };
 
-// 滚动到指定章节
-const scrollToSection = (item: TocItem, event: MouseEvent) => {
-  event.preventDefault();
-
-  const headers = document.querySelectorAll(querySelectors());
-  let actualElement = Array.from(headers).find(
-    (header) => header.textContent?.trim() === item.title.trim()
-  ) as HTMLElement | null;
-
-  if (actualElement) {
-    window.scrollTo({
-      top: actualElement.offsetTop - 80,
-      behavior: "smooth",
-    });
-    return;
-  }
-  console.warn(`未找到元素: ${item.title}`);
-};
-
 watch(
   () => props.content,
   () => {
@@ -152,14 +134,18 @@ const handleMouseEnter = () => {
 };
 
 onMounted(() => {
-  document.addEventListener("mouseleave", handleMouseLeave);
-  document.addEventListener("mouseenter", handleMouseEnter);
+  if (typeof window !== "undefined" && typeof document !== "undefined") {
+    document.addEventListener("mouseleave", handleMouseLeave);
+    document.addEventListener("mouseenter", handleMouseEnter);
+  }
   window.addEventListener("resize", handleResize);
 });
 onUnmounted(() => {
   // 使用相同的函数引用移除事件监听器
-  document.removeEventListener("mouseleave", handleMouseLeave);
-  document.removeEventListener("mouseenter", handleMouseEnter);
+  if (typeof window !== "undefined" && typeof document !== "undefined") {
+    document.removeEventListener("mouseleave", handleMouseLeave);
+    document.removeEventListener("mouseenter", handleMouseEnter);
+  }
   window.removeEventListener("resize", handleResize);
 });
 
@@ -170,6 +156,35 @@ const handleResize = () => {
     isHidden.value = true;
   } else {
     isHidden.value = false;
+  }
+};
+
+// 更新 isDarkMode 计算属性，添加环境检查
+const isDarkMode = computed(() => {
+  if (typeof window !== "undefined" && typeof document !== "undefined") {
+    return document.documentElement.classList.contains("dark");
+  }
+  return false;
+});
+
+// 更新 scrollToSection 函数，添加环境检查
+const scrollToSection = (item: TocItem, event: MouseEvent) => {
+  if (typeof window !== "undefined" && typeof document !== "undefined") {
+    event.preventDefault();
+
+    const headers = document.querySelectorAll(querySelectors());
+    let actualElement = Array.from(headers).find(
+      (header) => header.textContent?.trim() === item.title.trim()
+    ) as HTMLElement | null;
+
+    if (actualElement) {
+      window.scrollTo({
+        top: actualElement.offsetTop - 80,
+        behavior: "smooth",
+      });
+      return;
+    }
+    console.warn(`未找到元素: ${item.title}`);
   }
 };
 </script>
