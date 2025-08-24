@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as i,ah as r}from"./chunks/framework.DtW_Ew-G.js";const m=JSON.parse('{"title":"咖啡戒断","description":"","frontmatter":{},"headers":[],"relativePath":"life/咖啡戒断.md","filePath":"life/咖啡戒断.md"}'),p={name:"life/咖啡戒断.md"};function t(n,l,s,o,A,h){return i(),e("div",null,l[0]||(l[0]=[r("",42)]))}const f=a(p,[["render",t]]);export{m as __pageData,f as default};
