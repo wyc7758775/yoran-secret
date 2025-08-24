@@ -4,7 +4,7 @@
         <title>Yoran Wu 的博客</title>
         <link>https://wyc7758775.github.io/yoran-secret/</link>
         <description>个人学习总结记录</description>
-        <lastBuildDate>Sun, 24 Aug 2025 18:11:15 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 24 Aug 2025 18:16:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -18,7 +18,7 @@
             <title><![CDATA[如何设计组件？]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/如何设计组件？</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/如何设计组件？</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[如何设计组件？ 要讨论标题这个问题，我们首先要了解这个问题包含哪一些内容。如下图： ![](https://cdn.nlark.com/yuque/0/2025/png/654315/1753365280885-1b743f18-a034-4fd9-a599-5fe7e836a471.png) 图上面需要注意的是业务组件和基础组件的关系，它们虽然是并列的关系，但是大多数人都应该知道业务组件里面是由很多基础组件构成的。所以给它们都添加了一个备注，里面涉及两个概念：特性逻辑和共性逻辑。 顾名思义，共性逻辑或者交互代表的是多个业务组件，多个模块中一样的逻辑。而特性逻辑/交互是只存在在特定的组件当中，...]]></description>
             <content:encoded><![CDATA[# 如何设计组件？
 
@@ -556,7 +556,7 @@ function stopDrag() {
             <title><![CDATA[如何阅读源码]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/如何阅读源码</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/如何阅读源码</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[如何阅读源码？  一、为什么有这一篇阅读源码的文章？ 想要提升自己的编码水平，阅读优秀的开源项目是一个重要的手段。掘金网站上面有很多解析各种框架源码的文章，还有更多教你如何组织好代码的文章。 比如说，红皮书、绿皮书、黄皮书告诉了我们 JS 是什么？而《重构》、《代码整洁之道》告诉了我们如何组织好 JS。 唯独阅读源码的文章却很少。这就让我在一开始阅读源码的时候无所适从。打开 github，搜索 vue3 的源码，看到如下的界面： !image.png !image.png 和我们平时做的业务项目结构基本不对应。不知道从哪里看起，应该看什么？想来是一些技巧和方法是我没有掌握的。 所以我开始认为，...]]></description>
             <content:encoded><![CDATA[# 如何阅读源码？
 
@@ -985,7 +985,7 @@ return this.buildIdealTree(bitOpt)
             <title><![CDATA[富文本无法渲染多个空格]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/富文本无法渲染多个空格</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/富文本无法渲染多个空格</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[富文本无法渲染多个空格  事情的起因 添加空格之后，上传给后台之后，回显的时候，没有正确的处理空格，不管多少个空格都只显示一个空格。 输入空格之前： ![](https://cdn.nlark.com/yuque/0/2023/png/654315/1688789869845-b90b3a51-ce8b-457e-b3fc-8008b433e33f.png) 输入之后： ![](https://cdn.nlark.com/yuque/0/2023/png/654315/1688789944441-cb02c067-63eb-49da-bf5f-89769486ab16.png)  问题盘查 将...]]></description>
             <content:encoded><![CDATA[# 富文本无法渲染多个空格
 
@@ -1121,7 +1121,7 @@ editor.commands.setContent(xxxxx, false, {
             <title><![CDATA[webpack 基础]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/构架工具/webpack 基础</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/构架工具/webpack 基础</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[webpack 基础  一、功能总览 - 能够节写 CommonJs 和 ES module 的语法. 自动合并这些模块的代码. - 默认是只能识别 js 和 json,所以为了适应 web 前端开发的工程.需要额外配置一些解析器.这些解析器放在 loader 配置属性当中 - css 使用 style-loader 和 cs-loader, 图片在 4.0 版本可以使用 file-loader 或者 url-loader 来解析. - 为了自动把把生成好的 js 文件自动引入到 html 当中.需要使用 htmlWebpackPlugins 的插件进行配置.还能使用默认的模版 - 如果要使用...]]></description>
             <content:encoded><![CDATA[# webpack 基础
 
@@ -1596,7 +1596,7 @@ output: {
             <title><![CDATA[使用composition api实践经验]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/使用composition api实践经验</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/使用composition api实践经验</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[使用 Composition API 实战经验 ![](https://cdn.nlark.com/yuque/0/2023/png/654315/1704006140571-694fd4fa-87b2-45b6-90d8-7b70304141c8.png) <font style="color:rgb(0, 0, 0);">Composition api 出来之后，我们除了要学习它的 API 之后，更加要学习他为什么要这样设计。</font>  <font style="color:rgb(0, 0, 0);">一、为什么组件越开发越难维护</font> <font style="color...]]></description>
             <content:encoded><![CDATA[# 使用 Composition API 实战经验
 
@@ -2113,7 +2113,7 @@ preview: 'preview',
             <title><![CDATA[先做人后做事，先学规范后写代码]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/先做人后做事，先学规范后写代码</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/先做人后做事，先学规范后写代码</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[先做人后做事，先学规范后写代码  1. 前言 JS 的使用规范旨在统一团队的代码风格，容易被团队中的任意一人理解，提升被维护性。对于我们这种已经成型的软件而言，是一个提升工作效率瓶颈成本最低，收益最高的方式，没有之一了。 一个良好的代码规范对于应用程序的功能没有直接的影响，但是对于改善源代码的理解是有帮助的。养成一个良好的系统对于软件的开发和维护都是有益的，不仅自己维护起来更加方便，也会让其他读者觉得赏心悦目。 短期可能会比之前花多一点时间，但是长期来看效率肯定是提升的。节省自己的时间，节省沟通的成本，每一位新入职的新员工都应该先 > 本文档很多都是基于百度 WEB 前端开发文档，或者阿里前端...]]></description>
             <content:encoded><![CDATA[# 先做人后做事，先学规范后写代码
 
@@ -3619,7 +3619,7 @@ todo-list-button.vue
             <title><![CDATA[前端已死]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/前端已死</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/前端已死</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[前端已死  <font style="color:rgb(0, 0, 0);">一、为什么要分享这么一个主题</font> <font style="color:rgb(0, 0, 0);">这个话题非常的重要，前端都死了，还学这些 vue3、hook、函数式有蛋用？岗位都没有了？你学得再好有什么用？更不用说，一群 985/211 的小孩要出来了，学历高，基础好，还年轻，最重要还便宜，我拿什么和他们拼？有什么优势和它们拼？</font> <font style="color:rgb(0, 0, 0);">所以我在准备 hook 材料的时候，一直不得劲，如果只是为了完成 KPI，毫无意义。</f...]]></description>
             <content:encoded><![CDATA[# 前端已死
 
@@ -3810,487 +3810,10 @@ _**<font style="color:rgb(0, 0, 0);">前端已死、后端已亡、测试被开�
             <author>295563358@qq.com (Yoran Wu)</author>
         </item>
         <item>
-            <title><![CDATA[《重构》导读]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/《重构》导读</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/《重构》导读</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
-            <description><![CDATA[《重构》导读  零、导读 > 这篇文章是对《重构》这本经典书籍的一个导读。或者说是对于这本书第一章的读书笔记。 有这么一句话，高质量代码是重构出来的。想要理解这句话，我们先来了解一下，开发工作期间，在摸鱼之外的时间分配。《奔跑吧，程序员》这个书正好有这样的饼状图： ![](https://cdn.nlark.com/yuque/mermaidv3/41220a262ddc314a2e1a6298cceb4b98.svg) 从这个表可以清楚的看到，开发直接面对代码的时间为百分之 50，而这百分之 50 中，却有百分之 45.5%的时间是在阅读代码，基本可以说，写代码的时候，程序员基本都是在看代码...]]></description>
-            <content:encoded><![CDATA[# 《重构》导读
-
-## 零、导读
-
-> 这篇文章是对《重构》这本经典书籍的一个导读。或者说是对于这本书第一章的读书笔记。
-
-有这么一句话，**高质量代码是重构出来的**。想要理解这句话，我们先来了解一下，开发工作期间，在摸鱼之外的时间分配。《奔跑吧，程序员》这个书正好有这样的饼状图：
-
-![](https://cdn.nlark.com/yuque/__mermaid_v3/41220a262ddc314a2e1a6298cceb4b98.svg)
-
-从这个表可以清楚的看到，开发直接面对代码的时间为百分之 50，而这百分之 50 中，却有百分之 45.5%的时间是在阅读代码，基本可以说，写代码的时候，程序员基本都是在看代码。
-
-如果这时候一直在看的是低质量的代码，不仅仅会拉长阅读代码的时间，还会影响自己的心情，心情不好的好，活也干不好，晚上还有可能睡得晚，睡得晚就会影响自己的健康，这是一种折寿的事情。也就是说：
-
-![image](https://cdn.nlark.com/yuque/__latex/153f1d3a23929cc2eca6aead7b82de1c.svg)
-
-所以我们希望看到的是高质量的代码，而高质量的代码是由重构出来的。可想而知**重构**是多么的重要‼️
-
-每次成功的重构一段代码，看着这出自自己手的优雅代码，成就感油然而生。工作也没有那么糟心了，晚上睡眠质量也高了。重构直接的提高了自己的生活质量。
-
-下面有我总结一下《重构》这本书第一章的内容，希望能够让大家感受到重构的魅力。
-
-## 一、重构目标
-
-这串代码要实现的业务很简单。
-
-"有一家按摩店，它提供的一些服务，会根据服务的类型和服务的时长来计算客户的消费情况。除此之外，还会根据用户的消费，给予用户的一定的积分。"
-
-> 积分,一种营销手段，类似于办会员卡，积分达到一定分数可以打折等。
-
-而下面的代码是一个刘姓开发对于这个需求的实现，目标是打印出某个用户的发票:
-
-```javascript
-// 按摩店当前的收费项目
-const plays = {
-  Thai: { name: "Thai", type: "massage back" },
-  Chinese: { name: "Chinese", type: "pinch the foot" },
-  American: { name: "American", type: "massage back" },
-};
-
-// 某个用户单词消费类目
-const invoices = {
-  customer: "刘冠荣",
-  performances: [
-    {
-      playID: "Thai",
-      time: 55,
-    },
-    {
-      playID: "Chinese",
-      time: 35,
-    },
-    {
-      playID: "American",
-      time: 40,
-    },
-  ],
-};
-
-function statement(invoice, plays) {
-  let totalAmount = 0;
-  let volumeCredits = 0;
-  let result = `${invoice.customer}的账单:\n`;
-  // 数字转化成RMB
-  const format = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "RMB",
-    minimumFractionDigits: 0,
-  }).format;
-
-  for (let perf of invoice.performances) {
-    const play = plays[perf.playID];
-    let thisAmount = 0;
-    switch (play.type) {
-      case "message back":
-        thisAmount = 40000;
-        if (perf.time > 30) {
-          thisAmount += 1000 * (perf.time - 30);
-        }
-        break;
-      case "pinch the foot":
-        thisAmount = 30000;
-        if (perf.time > 20) {
-          thisAmount += 10000 + 500 * (perf.time - 20);
-        }
-        thisAmount += 300 * perf.time;
-        break;
-      default:
-        throw new Error(`没有这个项目，去别的店吧: ${play.type}`);
-    }
-    volumeCredits += Math.max(perf.time - 30, 0);
-    if ("comedy" === play.type) volumeCredits += Math.floor(perf.time / 5);
-    result += ` ${play.name}: ${format(thisAmount / 100)} (${
-      perf.time
-    } 分钟)\n`;
-    totalAmount += thisAmount;
-  }
-
-  result += `总共花费 ${format(totalAmount / 100)}\n`;
-  result += `您获得 ${volumeCredits} 积分\n`;
-  return result;
-}
-
-const statementLog = statement(invoices, plays);
-console.log(statementLog);
-```
-
-打印的结果如下是：
-
-![](https://cdn.nlark.com/yuque/0/2025/png/654315/1754332950402-1bd9f101-46ba-417d-be3c-8f0601df8047.png)![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f8670452cf92489fb6837181a04a5634~tplv-k3u1fbpfcp-watermark.image?)
-
-咋看一下，这段代码没啥问题，又不长，逻辑也不多。也没有什么嵌套的 if else。
-
-但是，此时 **产品** 她不单单你打印出字符串直接渲染到界面了。她想要你拼接成`html`。那我们是不是要复制一份下来，然后在每一个`result`相关逻辑上修改，还需要修改标签拼接的逻辑。
-
-当我们好不容易写完，产品这时候又要求修改积分计算的算法。我们是不是需要在两个地方修改两遍？
-
-而且，我们每添加修改一个功能，都需要从头到尾再看一次这一片代码。自己写的代码尚且过了几个星期都不认识，更不用说在团队的合作当中了。
-
-当然，如果只是一次性开发的东西，以后不用再维护了，怎么样都无所谓。但是如果是长期的项目,这样必然是有隐患的。所以我们就需要重构它!
-
-> 为了更好的修改代码，我们遵守诸如函数单一原则，封闭原则等，这是解决问题的道，而重构就是术。重构详细的解释了每种情况应该怎么应对。
-
-## 二、提炼函数 & switch
-
-看到最显眼的就是 switch 那一串代码。那么我们就把它给先提出来单独构成一个函数。
-
-拆分一个函数最大的问题，不是拆分这些逻辑，而是拆分那些变量。更准确的说，是要改变**作用域**。
-
-它有这些变量 **thisAmout、play、perf**
-
-thisAmout 是一个临时变量，先不用搭理它。
-
-play 和 perf 都是可以外边传进来的，所以有了如下的拆分结果：
-
-```javascript
-function statement （....） {
-
-    // 顶层作用域 的code
-
-   function amountFor((perf, play) {
-    let thisAmount = 0
-    switch (play.type) {
-      case 'message back':
-        thisAmount = 40000
-        if (perf.time > 30) {
-          thisAmount += 1000 * (perf.time - 30)
-        }
-        break
-      case 'pinch the foot':
-        thisAmount = 30000
-        if (perf.time > 20) {
-          thisAmount += 10000 + 500 * (perf.time - 20)
-        }
-        thisAmount += 300 * perf.time
-        break
-      default:
-        throw new Error(`没有这个项目，去别的店吧: ${play.type}`)
-    }
-
-
-    return thisAmount
-  }
-}
-```
-
-## 三、修改变量名 & 内联变量 & 消减变量
-
-:::color1
-**好代码应能清楚地表明它在做什么，而变量命名是更是代码清晰的关键**
-
-:::
-
-**thisAmout:** 是需要 return 回去，而且函数名也很直白的表述清楚这个函数要输出的东西是什么。所以它可以改为 result
-
-**perf:** 由于是在循环中返回的，所以为了语义化更加的明确，可以加一个冠词在前面，变成 aPerf
-
-**play:** 我们回到原本的语境当中，可以知道.play 由顶级作用域的变量以及 perf 构成临时变量. 我们要消灭它。
-
-我们项目中经常出现这样的一个场景：
-
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6346483598e54caaaa857ab284e9d93c~tplv-k3u1fbpfcp-watermark.image?)![](https://cdn.nlark.com/yuque/0/2025/png/654315/1754332987170-ca996b98-42bc-4ba6-a0fb-ddda5f935a7b.png)
-
-图并没有截完。
-
-作为一个经常使用 vue2.0 的开发者，截图应该是我们经常看到这样的。我不知道你们看到这样的场景是什么感受，反正我是头皮发麻的。更不要说要在这个上面进行修改了。
-
-我们在修改命名之后, 还需要结合内敛变量手法以及消减变量手法，尽可能的**减少不必要的变量。**
-
-**整理如下：**
-
-```javascript
-function statement(invoice, plays) {
-  // .....
-  function amountFor(aPerf) {
-    let result = 0;
-    switch (playFor(aPerf).type) {
-      case "message back":
-        result = 40000;
-        if (aPerf.time > 30) {
-          result += 1000 * (aPerf.time - 30);
-        }
-        break;
-      case "pinch the foot":
-        result = 30000;
-        if (aPerf.time > 20) {
-          result += 10000 + 500 * (aPerf.time - 20);
-        }
-        result += 300 * aPerf.time;
-        break;
-      default:
-        throw new Error(`没有这个项目，去别的店吧: ${playFor(aPerf).type}`);
-    }
-
-    return result;
-  }
-
-  function playFor(perf) {
-    return plays[perf.playID];
-  }
-}
-```
-
-回到循环当中，在顶级作用域中 thisAmout 既然也是临时变量，那么也可以使用内联变量手法去消除它
-
-```javascript
-for (let perf of invoice.performances) {
-  volumeCredits += Math.max(perf.time - 30, 0);
-
-  if ("comedy" === playFor(perf).type)
-    volumeCredits += Math.floor(perf.time / 5);
-
-  result += ` ${playFor(perf).name}: ${format(thisAmount / 100)} (${
-    perf.time
-  } 分钟)\n`;
-  totalAmount += amountFor(perf);
-}
-```
-
-此时再回到循环当中。可以明显看到，它既然做了两件事情，一个是计算 刘冠荣 消费的金额，另外一个是计算他所得的积分。所以我们自然要对循环进行进一步的处理。
-
-## 四、拆分循环 & 提取积分计算
-
-```javascript
-for (let perf of invoice.performances) {
-  volumeCredits = volumeCreditsFor(perf);
-
-  result += ` ${playFor(perf).name}: ${format(thisAmount / 100)} (${
-    perf.time
-  } 分钟)\n`;
-
-  totalAmount += amountFor(perf);
-}
-
-function volumeCreditsFor(aPerf) {
-  let result = 0;
-  result += Math.max(aPerf.time - 30, 0);
-  if ("comedy" === playFor(aPerf).type) result += Math.floor(aPerf.time / 5);
-
-  return result;
-}
-```
-
-**即便如此，这个循环当中，依旧干了两件事情！！！！**
-
-```javascript
-for (let perf of invoice.performances) {
-  result += ` ${playFor(perf).name}: ${format(thisAmount / 100)} (${
-    perf.time
-  } 分钟)\n`;
-  totalAmount += amountFor(perf);
-}
-
-for (let perf of invoice.performances) {
-  volumeCredits = volumeCreditsFor(perf);
-}
-```
-
-循环了两遍。或许会引起对于性能的担忧。但是起码在这样的场景下面，对于性能的影响其实可以忽略不计的。而且很多我们以为的性能问题，其实对于现代的浏览器而言都不是问题，我们小看开发浏览器的那群人了。
-
-不过，情况自然也是有例外。
-
-就算真的有了性能问题，我们也应该在重构之后在考虑。重构之后，我们的代码结构更加的干净，整洁，对于性能的调优自然是更加的直观明确的，也更加的有助于你分析性能的瓶颈出在哪里.
-
-在《重构》这本书就明确的表述了：
-
-_**大多数情况下可以忽略它。如果重构引起了性能损耗，先完成重构，再做性能优化**_
-
-> 很多我们以为的性能问题，其实对于现代的浏览器而言都不是问题
-
-## 五、唯一性命名 & 提取 format
-
-```javascript
-function rmb(aNumber) {
-  return new Intl.NumberFormat("en-US", {
-    style: "currensy",
-    currency: "RMB",
-    minimumFractionDigits: 0,
-  }).format(aNumber / 100);
-}
-```
-
-- 进一步消减了临时变量
-
-## 六、移动语句
-
-- 把相关联的变量和语句结合在一起
-- react 的代码规范
-
-```javascript
-function statement(invoice, plays) {
-  let result = `${invoice.customer}的账单:\n`;
-
-  let totalAmount = 0;
-  for (let perf of invoice.performances) {
-    result += ` ${playFor(perf).name}: ${rmb(amountFor(perf))} (${
-      perf.time
-    } 分钟)\n`;
-    totalAmount += amountFor(perf);
-  }
-
-  let volumeCredits = 0;
-  for (let perf of invoice.performances) {
-    volumeCredits = volumeCreditsFor(perf);
-  }
-
-  result += `总共花费 ${rmb(totalAmount)}\n`;
-  result += `您获得 ${volumeCredits} 积分\n`;
-  return result;
-
-  // ......
-  // ......
-}
-```
-
-**组合式 API**
-
-这张图就很好的解释了 vue3 退出 COmpostionAPI 的一个动机，能够让相关代码集中起来，方便之后更好的复用和拆分。
-
-> 我们重构的目的不是为了让函数可以复用，而是让函数更加的容易读
-
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a286890b20854ba0a41a2a442919858b~tplv-k3u1fbpfcp-watermark.image?)![](https://cdn.nlark.com/yuque/0/2025/png/654315/1754333010630-050fa575-7826-441b-8e9a-874e24694127.png)
-
-- 为下一步 更进一步 提炼函数 提供直观的帮助
-
-## 七、提炼函数 & 消除变量
-
-上一步的移动语句，就是为了更好的提炼函数做准备的。我们把积分和费用的循环逻辑进一步封装。
-
-```javascript
-function totalVolumeCredits() {
-  let volumeCredits = 0;
-  for (let perf of invoice.performances) {
-    volumeCredits = volumeCreditsFor(perf);
-  }
-  return volumeCredits;
-}
-
-function totalAmount() {
-  let result = 0;
-  for (let perf of invoice.performances) {
-    totalAmount += amountFor(perf);
-  }
-  return result;
-}
-```
-
-在结合我们的内联变量，消除临时变量。
-
-此时看看现在代码的全貌，将函数都给折叠起来：
-
-![](https://cdn.nlark.com/yuque/0/2025/png/654315/1754333027520-97080531-fc55-4c7b-97b3-c801a1aade9d.png)
-
-有上图可以明显看出来。核心代码位于第一个红框之中。是不是比一开始的干净得太多?通过合理的命名和简洁的代码，可以更加的看出来这串代码是做什么用的。如果需要知道具体的变量是怎么来，只需要展开对应的函数即可。
-
-当需要进行修改什么逻辑的时候，可以直接定位到对应的函数中。**焦点可以聚集在对应函数当中，不会受到其他代码的干扰。**
-
-下面是完整的代码：
-
-```javascript
-function statement(invoice, plays, type) {
-  let result = `${invoice.customer}的账单:\n`;
-  for (let perf of invoice.performances) {
-    result += ` ${playFor(perf).name}: ${rmb(amountFor(perf))} (${
-      perf.time
-    } 分钟)\n`;
-  }
-
-  result += `总共花费 ${rmb(totalAmount())}\n`;
-  result += `您获得 ${totalVolumeCredits()} 积分\n`;
-  return result;
-
-  function amountFor(aPerf) {
-    let thisAmount = 0;
-    switch (playFor(aPerf).type) {
-      case "message back":
-        thisAmount = 40000;
-        if (aPerf.time > 30) {
-          thisAmount += 1000 * (aPerf.time - 30);
-        }
-        break;
-      case "pinch the foot":
-        thisAmount = 30000;
-        if (aPerf.time > 20) {
-          thisAmount += 10000 + 500 * (aPerf.time - 20);
-        }
-        thisAmount += 300 * aPerf.time;
-        break;
-      default:
-        throw new Error(`没有这个项目，去别的店吧: ${playFor(aPerf).type}`);
-    }
-    return thisAmount;
-  }
-
-  function playFor(aPerf) {
-    return plays[aPerf.playID];
-  }
-
-  function volumeCreditsFor(aPerf) {
-    let result = 0;
-    result += Math.max(aPerf.time - 30, 0);
-    if ("comedy" === playFor(aPerf).type) result += Math.floor(aPerf.time / 5);
-
-    return result;
-  }
-
-  function rmb(aNumber) {
-    return new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "RMB",
-      minimumFractionDigits: 0,
-    }).format(aNumber / 100);
-  }
-
-  function totalVolumeCredits() {
-    let result = 0;
-    for (let perf of invoice.performances) {
-      volumeCredits = volumeCreditsFor(perf);
-    }
-    return result;
-  }
-
-  function totalAmount() {
-    let result = 0;
-    for (let perf of invoice.performances) {
-      totalAmount += amountFor(perf);
-    }
-    return result;
-  }
-}
-```
-
-## 八、测试
-
-整本书都在强调**测试**的重要性，上面重构的每一步都需要进行测试才进行下一步操作。
-
-书中有这么一句话：
-
-:::warning
-![image](https://cdn.nlark.com/yuque/__latex/ab9ea7a8ba5a456e6dc9fc2ba62d2849.svg)
-
-:::
-
-只要上线的代码就是有价值的代码，不管你现在的代码多么简洁, 只有经过充分的测试并上线才有价值，不然就是一文不值的。
-
-重构一定是有风险的。重构不是重写，所以我们需要有计划，有计划的进行，这就是《重构》《代码整洁之道》这些书的伟大之处。
-
-> 重构是需要测试资源的介入的，这就意味着，你的重构需要得到领导的同意。甚至涉及到了迭代开发流程。这就是另外一个话题了。
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
             <title><![CDATA[产品经理不靠谱怎么办]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/产品经理不靠谱怎么办</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/产品经理不靠谱怎么办</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[产品经理不靠谱怎么办 :::info 文章资料来源于极客时间上面<font style="color:rgb(136, 136, 136);">郑晔</font>的《10x 程序员》 ::: > 本文的问题都是出自于《10x 程序员》，这本书基本把我们平时工作中遇到的问题都涉及到了，给我带了很多的思考，也直接帮助到了我的工作。本篇文章，只是抽出他的几篇文章结合起来，加以自己的理解。推荐同学们自己去搜索来看看全书。 > > 图片的来源不明，多个地方看到，不知道水印的是不是真正的来源  一、产品和开发之争 ![](https://cdn.nlark.com/yuque/0/2022/png/654...]]></description>
             <content:encoded><![CDATA[# 产品经理不靠谱怎么办
 
@@ -4511,7 +4034,7 @@ function statement(invoice, plays, type) {
             <title><![CDATA[代码审查常见问题]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/代码审查常见问题</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/代码审查常见问题</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[格式错误 +  是否符合开发规范      - 详情请参考前文代码规范 +  eslint 规则是否正确  +  是否使用了 ignore   在 ESLint 中，可以使用 .eslintignore 文件来指定忽略文件的规则。该文件使用与 .gitignore 相同的语法，并支持通配符。通常，您应该将 .eslintignore 文件放在项目根目录下，并在其中指定要忽略的文件或目录。例如：  javascript  Ignore all files in the nodemodules directory nodemodules/  Ignore compiled output dist/...]]></description>
             <content:encoded><![CDATA[## 格式错误
 
@@ -5929,10 +5452,1230 @@ export default {
             <author>295563358@qq.com (Yoran Wu)</author>
         </item>
         <item>
+            <title><![CDATA[VsCode中使用vim]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/VsCode中使用vim</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/VsCode中使用vim</guid>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
+            <description><![CDATA[VsCode 中使用 vim 插件  一、vim 是什么 它把我们平时操作的动作抽象拆分为三种类型，插入模式、可视化模式、普通模式。  二、使用 vim 的动机是什么 第一次听到的能够不使用鼠标，使用键盘就可以操作电脑，符合小时候对于电脑大佬的刻板印象。对不起，是我不成熟了。  三、在 vscode 中的配置 json "vim.easymotion": true, // 启用系统粘贴板作为vim寄存器 "vim.useSystemClipboard": true, // 由vim接管ctrl+any的按键，而不是vscode "vim.useCtrlKeys": true, // 突出显示与...]]></description>
+            <content:encoded><![CDATA[# VsCode 中使用 vim 插件
+
+## 一、vim 是什么
+
+它把我们平时操作的动作抽象拆分为三种类型，插入模式、可视化模式、普通模式。
+
+## 二、使用 vim 的动机是什么
+
+第一次听到的能够不使用鼠标，使用键盘就可以操作电脑，符合小时候对于电脑大佬的刻板印象。对不起，是我不成熟了。
+
+## 三、在 vscode 中的配置
+
+```json
+"vim.easymotion": true,
+// 启用系统粘贴板作为vim寄存器
+"vim.useSystemClipboard": true,
+// 由vim接管ctrl+any的按键，而不是vscode
+"vim.useCtrlKeys": true,
+// 突出显示与当前搜索匹配的所有文本
+"vim.hlsearch": true,
+// 下面定义的按键将交由vscode进行处理，而不是vscode-vim插件
+"vim.handleKeys": {
+  "<C-a>": false,
+  "<C-f>": false,
+  "<C-n>": false
+},
+"vim.leader": "<space>",
+"vim.normalModeKeyBindings": [
+  {
+    "before": ["<leader>", "f"],
+    "commands": ["revealInExplorer"]
+  },
+  {
+    "before": ["J"],
+    "after": ["5", "j"]
+  },
+  {
+    "before": ["K"],
+    "after": ["5", "k"]
+  },
+  // rename 重命名
+  {
+    "before": ["<Leader>", "r", "n"],
+    "commands": ["editor.action.rename"]
+  },
+  {
+    "before": ["<Leader>", "f", "d"],
+    "commands": ["editor.action.formatDocument"]
+  }
+],
+"vim.insertModeKeyBindings": [
+  {
+    "before": ["j", "k"],
+    "after": ["<Esc>"]
+  }
+],
+"vim.sneak": true
+```
+
+## 四、关键快捷键
+
+**移动可视窗(光标也可以跟着移动):**
+
+| Ctrl + d（control + d） | 向下滚动半屏                                      |
+| ----------------------- | ------------------------------------------------- |
+| Ctrl + u（control + u)  | 向上滚动半屏                                      |
+| zt                      | 将当前行置于屏幕顶部附近                          |
+| zz                      | 将当前行置于屏幕中央                              |
+| zb                      | 将当前行置于屏幕底部                              |
+| H/M/L                   | 跳转到屏幕的顶部/中间/底部                        |
+| （）{}                  | 跳转到上一个句子/下一个句子/上一个段落/下一个段落 |
+
+一些使用 VSCode 开发中常用的操作：
+
+**函数定义之类：**
+
+| gd                    | 进入函数定义       |
+| --------------------- | ------------------ |
+| Ctrl+o（control + o） | 从函数定义中返回   |
+| gd                    | 查看函数参数等信息 |
+
+**切换标签页：**
+
+| gt  | 切换到下一个标签页  |
+| --- | ------------------- |
+| gT  | 切换到上一个标签页  |
+| 4gt | 切换到第 4 个标签页 |
+
+**切换分栏：**
+
+| Ctrl + 1 | 第一个分栏 |
+| -------- | ---------- |
+| Ctrl + 2 | 第二个分栏 |
+
+> 其他： 可以使用 Ctrl + 0 来将光标从编辑器跳转到文件栏，在文件栏可以使用 j 和 k 进行移动，可以使用 Space 展开或者关闭文件夹，使用 l 可以将光标选中的文件在编辑器中打开。
+
+### 4.3 vim-surround
+
+|             |                                       |
+| ----------- | ------------------------------------- |
+| `ds "`      | `"Hello world!"` => `Hello world!`    |
+| `cs "(`     | `"Hello world!"` => `(Hello world!)`  |
+| cS          | 替换括号，括号内文本做新一行          |
+| ys          | 添加括号(配合 vim 光标移动)           |
+| `ys w [`    | `Hello world!` => `[Hello] world!`    |
+| ys w Enter  | Hello world! => <em>Hello</em> world! |
+| yS          | 添加括号，括号内文本做新一行          |
+| `yS w [`    | `Hello world!` => `[ Hello ] world!`  |
+| `yss (`     | `Hello world!` => `( Hello world! )`  |
+| ySS         | 整行括起来，括号内文本做新一行        |
+| `ySS {`     | `Hello world!` => `{ Hello world! }`  |
+| `ySS Enter` | `Hello world!` => `Hello world!`      |
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
+            <title><![CDATA[vue的业务开发如何进行组件的拆分]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/vue的业务开发如何进行组件的拆分</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/vue的业务开发如何进行组件的拆分</guid>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
+            <description><![CDATA[Vue2 业务开发组件拆分实战 组件化是一种思维的表现，这种技能映射到人的本质是，一个人是否有能力把一个复杂的问题拆解、简单化的能力。  一、组件化诞生的历史 我们在讨论如何拆分组件之前，是有必要简单的了解一下组件化诞生的一个历史。 前端娱乐圈有一个独有的生态：框架。每年出现的框架层出不穷，根本学不完。但是总的来说还是可以分成两个阶段。 第一阶段：JQ 和 PrototypeJS。 该阶段解决了浏览器的兼容性问题以及 API 的遍历程度 第二阶段:  Vue、React、Angular。解决了组件化、解耦、复用等问题 在大陆，主要讨论的是 Vue 和 React。 有些人说 Vue 是 fra...]]></description>
+            <content:encoded><![CDATA[# Vue2 业务开发组件拆分实战
+
+组件化是一种思维的表现，这种技能映射到人的本质是，**一个人是否有能力把一个复杂的问题拆解、简单化的能力。**
+
+## 一、组件化诞生的历史
+
+我们在讨论如何拆分组件之前，是有必要简单的了解一下组件化诞生的一个历史。
+
+前端娱乐圈有一个独有的生态：框架。每年出现的框架层出不穷，根本学不完。但是总的来说还是可以分成两个阶段。
+
+**第一阶段**：JQ 和 PrototypeJS。 该阶段解决了浏览器的兼容性问题以及 API 的遍历程度
+
+**第二阶段: ** Vue、React、Angular。解决了组件化、解耦、复用等问题
+
+在大陆，主要讨论的是 Vue 和 React。 有些人说 Vue 是 framework,而 React 是 library，前者有更多的约束和更加齐全的工具链。而后者更加的自由。但是真的要投入生产的话，依旧需求认为的给 React 添加很多的约束，而且 Vue 也是支持 jsx 的，所以我一直不太赞同 React 更加自由这样的说话。
+
+在我看来，它们在实际生产开发过程中，在那一堆工具链中，**只是 API 的不同而已**。
+
+它们都为前端提供了很好的组件化。而且近一年来两者都不约而同朝着函数式跟进。它们带来的各种 hook,给我们带来了不一致的组件化的写法。
+
+## 二、为什么业务组件越开发越难维护
+
+当然是人的问题. 或许产品的问题,或许整个工作流程的问题,或许上面的问题. 这些我们暂且不提,我作为开发, 首先是要管好自己的代码组织.
+
+再次我们先排除其他外界的因素,比如产品经常改需求. 仅从编码阶段来说.
+
+以我们团队为例，我们团队内部员工 2 个，8 个外包，外包兄弟们的招聘标准是远低于内部的。团队人员每个人的编码能力差距还是很大的。项目都是长期维护的，一个业务模块就会有很多人维护，在上面不断的填尿加屎。
+
+> 在这里并不是说外包人员的编码能力差，我们组就有一个外包的兄弟编码能力、解决问题的能力相当厉害的，比很多内部的都好很多。这里只是从平局值上面来说。
+
+团队成员的水平层次不齐, 估计到团队协作, 我们在写业务组件中弄过做的,就是设定一些源码.
+
+### 2.1 项目现状
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1669737578936-58556351-edf6-4549-81d6-fb4cf2f02eef.png)以该图为例, A B C 分别是父子孙组件. 当我们要控制其中一个组件的状态的是, 可以通过很多方式来进行控制. 这些方式的来源有可能是**全局变量**、**vuex**、**时间总线**、**来自自己父组件或子组件的改变**等等.
+
+可以看出, 改变它组件内部状态的来源非常的多, 维护或者修改的时候,需要翻阅的文件目录和范围就很广. 自然就很难维护.
+
+举一个 mixins 的例子：
+
+假设它混入了这么多功能。
+
+```javascript
+export default {
+  mixins: [a, b, c, d, e, f, g],
+  mounted() {
+    console.log(this.whoAreYou);
+  },
+};
+```
+
+这个`this.whoAreYou`你能够知道来源于哪一个么？
+
+而如果改成`hook`的写法来引入某个 JS 中的变量：
+
+```javascript
+const { IamI } = myHome()
+
+const { IamI as me } = myHome()
+```
+
+这就很简洁干净。在你维护代码的时候，可以很好的进行溯源。
+
+而上面的一切，导致难以维护的原因总结来说有两个：
+
+- 混用业务变量和 UI 变量
+- 不区分受控组件和非受控组件
+
+下面我会实际例子分别介绍这个两个概念。而基于`hooks`的复用才是我们现在解决组件化复用的更好的选择。
+
+### 2.2 理想目标
+
+基于`hook`的理想模型
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1669738146798-78c6d796-233b-4281-8e50-835e67188cb5.png)
+
+依旧是 A B C 三个组件.但是 A B C 三个组件外边飘的那些箭头不存在了. 所有能够控制它们的内部状态的方式都集中在了`controllers`上面.
+
+其中`controllers`部分的组织形式和 vue 的`composition api`宣传图表现一致。
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1669776438338-feb8af6b-2b04-4c02-8f9a-cd8a07827a4c.png)
+
+将相似的功能以及用到的变量都封装在一个函数当中。这一切也更加好的迎合了
+
+实际代码如下:
+
+```vue
+<template>
+  <div>
+    <B setC={setC} />
+  <div>
+</template>
+<script setup>
+  import B from 'B.js'
+  import cController from 'cController.js'
+
+  const { setC } = cController(props)
+</script>
+
+// cController.js
+export default c(props) {
+  const c = ref('')
+  const setC() {
+    c.value = 'I an cController'
+  }
+
+  return {
+    c,
+    setC,
+  }
+}
+
+```
+
+`cController.js`就是`controllers`中的一个`void`. 引入到 A 组件当中,然后将里面的方法通过 props 传给 B 组件.
+
+```vue
+<template>
+  <div>
+    <C setC={setC} />
+  <div>
+</template>
+<script setup>
+	import C from 'C.js'
+
+  props: {
+  	setC: {
+      type: Number,
+    }
+  }
+</script>
+```
+
+也就是说,控制 C 组件内部状态的是通过引入到 A 组件中的`controller`来进行通过,中间的 B 组件不做任何的处理,仅仅作为一个中转站. 操作起来和理论都很简单。但是想要更好的拆分的话，还需要了解三个概念：
+
+- 业务变脸和 UI 变量
+- 受控组件和非受控组件
+- 控制反转 ioc
+
+下面我通过一个实际的业务场景来描述。
+
+## 三、举一个实际的例子
+
+### 3.1 需求背景
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1669799527274-fbdc2ba8-d0d8-481c-9ec8-83c8b14cbf1f.png)
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1669800209694-ecf04a1c-e290-47eb-889b-c05d20927c58.png)
+
+简单的截两张图. 需求大致如下:
+
+- 功能就是典型的笔记软件的功能,右边可以放各种类型的文件,点击就可以在右边渲染出对应的内容.
+- 目录树有两个彩蛋,会根据当前文件类型出现不同的操作
+- 目录树下面有一个固定的收藏夹,目录树可以在这其中滚动
+
+### 3.2 开发之前: 前端设计文档
+
+#### 数据流向图
+
+功能还是很清楚的,但是功能其实很多.
+
+我认为我们团队在开发之前是必须要有的. 作为一个前端, 可以没有流程图,但是一定要下面这样的图. 我在别的地方没有见过这样的图,所以自己给这样的图做了一个定义,叫**数据流向图**.
+
+> 关于完整的工作流程,之后再写一篇文章进行描述
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1669912582986-3671f3d3-a7b4-42ca-854d-7797e7404738.png)
+
+它是有两部分构成:
+
+- 组件的模块
+- 组件之间的控制关系
+
+第一点, 还是比较清楚,就是这个需求可以拆成哪几个模块.
+
+第二点, tree 组件和 content 组件是同级组件, tree 可以控制 content 组件内的状态, content 组件也可以改变 tree 内的状态. 再深入一点说,就是 tree 点击不同的文件类型, content 组件部分就会渲染不同的模块; 而当在 content 组件内对当前阅读的文件进行删除操作的时候,tree 作为目录树自然是要刷新最新的目录信息的.
+
+#### 目录结构
+
+通过上面的结构图,可以得到下面这样目录结构.
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1669940918346-49ab45fe-1811-48ee-9e72-2c789ef4c333.png)
+
+#### 逻辑控制
+
+数据流向图中的各个组件都放在根目录下`index.vue`中挂载. 如下入![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670061371190-782d65a7-2c51-444e-94d9-378c5a3eb2e4.png)
+
+控制目录树的相关逻辑都放在`listTreeController`控制器里边, 和右边内容 content 相关逻辑都放入到`renderContentController`的方法当中.
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670061591951-06c51152-80b2-4355-bc3a-bfdbaf15b6d2.png)
+
+随后将 controller 中公共方法都传进到组件当中. `doc-aside`是包括`search`和`tree`已经`other`三个模块的中转组件. 不在这个组件中做任何的逻辑处理. 如下图:
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670061777032-3f7e7fdc-25aa-41f7-8103-57052b5487bd.png)
+
+举一个例子, **控制按钮的权限.**
+
+**[背景]**
+
+- 所有功能点都受控挂载在 vuex 的 store 上面的一个变量, 没有权限的话,就直接通过`v-if`来隐藏对应的入口
+
+**[之前实现]**
+
+- 直接找到对应的按钮在`v-if`上,通过`root.docAuth('createDoc')`来判断
+
+**[修改之后]**
+
+- 创建来一个`authoControllers.js`在`index.vue`引入, 需要用的地方是应用的是
+
+**[具体实现]**
+
+```javascript
+export default function authController({ root }) {
+  const menuAuth = {
+    [MENTY_TYPE.rename]: root.docAuth("rename"),
+    [MENTY_TYPE.delete]: root.docAuth("delete"),
+    // ....
+  };
+}
+```
+
+虽然在 Index.vue 中引入,不管是通过 props,还是通过依赖注入来给子组件来使用,都不重要.重要的是,它统一管理, 并在 index.vue 中引入是唯一一个入口.
+
+当我们维护的时候, 只需要通过子组件一路找到对应的`controller`就可以找到对应的逻辑了.
+
+#### 拆分的原则
+
+- 对于组件的拆分一开始不需要太细
+- 拆分好受控组件和非受控组件
+
+### 3.3 受控组件和非受控组件
+
+我们使用的任何 UI 框架都是受控组件, 受控组件的概念就是它里面的状态都是受调用它的组件来控制的. 非受控组件反之.
+
+### 3.4 开发进行: 逻辑变量和 UI 变量
+
+UI 变量其实很好理解. 像 element-ui 的组件中所需要的属性就是 UI 变量. 但是对于我们实际业务当中, 会对这些进行一定扩展.
+
+举一个例子, 在上面的目录中`dialog组件`的显示或隐藏,是通过`<font style="color:rgb(48, 49, 51);">model-value / v-model</font>`<font style="color:rgb(48, 49, 51);">来进行控制的, </font>`<font style="color:rgb(48, 49, 51);">true</font>`<font style="color:rgb(48, 49, 51);">就显示, </font>`<font style="color:rgb(48, 49, 51);">false</font>`<font style="color:rgb(48, 49, 51);">就隐藏起来. </font>
+
+> <font style="color:rgb(48, 49, 51);">隐藏和显示的渐入渐出效果是 elementUI 框架内置的.</font>
+
+平时工作中很多人是这样传的:
+
+```vue
+<el-dialog :v-model="data.id === XXXX">
+  // code
+</el-dialog>
+props = { data: { type: Object } }
+```
+
+通过通过接口拿到的,或者自己组件的数据传进来之后,再进行对`v-model`的控制. `data.id`这样的变量就是业务变量, 通过业务变量来直接控制 UI 的组件的显示和隐藏,就是业务变量和 UI 变量的混用. 或者说**业务逻辑和交互逻辑的混用. **
+
+混用之后的后果,就是我们进行维护的时候, 需要查看的变量或者说字段就成倍的增加, 交互变量和业务变量交织在一起. 这部分的代码**同时承载了业务逻辑和交互逻辑.**
+
+> **DDD 领域模型也是可以解决这个问题, 之后我会再开篇幅聊一聊.**
+
+所以我们就需要将业务逻辑和交互逻辑给拆开. 如下:
+
+```vue
+<template>
+  <el-dialog :v-model="isShow">
+    <template slot="header">
+      {{ dialogTitle }}
+    </template>
+    <template slot="content">
+      // type === 创建表单
+      // type === 移动文件夹目录
+    </template>
+  </el-dialog>
+</temaplte>
+props = {
+  isShow: {
+    type : Boolean,
+    desc: '是否显示弹窗'
+  },
+  type: {
+    type: String,
+    desc: '弹窗的类型'
+  }
+}
+```
+
+其中`ishow`和`type` 就可以视为 UI 变量, 它们不关心外界是通过了什么判断, 只关系传进来的是 true 还是 false.
+
+## 四、持续的优化
+
+不管一开始代码是如何规划的,如何组织的.最重要的还是要持续的去维护. 屎山到了之后, 前面的维护者没有一个人是无辜的. 但是也不需要过早的去维护.什么时候到了维护重构的时机呢?
+
+- 当碰到这里用的代码别的地方也用到的时候
+- 这个变量出现在好几个地方,被好几个地方都 set 的时候, 而自己搞不懂它们 set 的顺序的时候
+- 函数复杂到自己看了半天都看不明白的时候
+
+## 五、可能的问题
+
+**问题一: **中转的组件没有挂载任何逻辑，为什么还存在?
+
+1. 为了之后可能的拆分
+2. 让结构更加的清晰
+
+**问题二: **中转的组件要挂载这么多办法, 或许太难看?
+
+1. 实在是太多可以使用 vue 的`$attr`和 `$listeners`
+2. 为了维护对于数据的溯源
+
+## 五、实践是学习前端的捷径
+
+前端是一门手艺活,只有实践才能够提高技术. 前端的天花板确实相比其他方向的低,但是也不是我这样的普通人说能够触碰就能触碰到的. 就算很多高端大佬嗤之以鼻的业务代码, 写的时候如果不多思考如何写的简洁,怎么写优雅,写十年和写三年也是没有差别的.
+
+业务才能创造价值, 有了价值才能有我们前端工程师生存的空间. 所以为了提升自己的价值, 提升自己的工资. 平时写业务代码的时候,想想这样写会有什么问题, 如何写才能够更加好. 在这个基础上, 才能看明白那些框架存在的意义. 业务是在轮子之上的,如果对业务的代码都不理解, 又怎么能够真正的写好轮子呢?
+
+我们在保障业务按时完成的情况下,应该多尝试,多实践.
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
+            <title><![CDATA[《重构》导读]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/《重构》导读</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/《重构》导读</guid>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
+            <description><![CDATA[《重构》导读  零、导读 > 这篇文章是对《重构》这本经典书籍的一个导读。或者说是对于这本书第一章的读书笔记。 有这么一句话，高质量代码是重构出来的。想要理解这句话，我们先来了解一下，开发工作期间，在摸鱼之外的时间分配。《奔跑吧，程序员》这个书正好有这样的饼状图： ![](https://cdn.nlark.com/yuque/mermaidv3/41220a262ddc314a2e1a6298cceb4b98.svg) 从这个表可以清楚的看到，开发直接面对代码的时间为百分之 50，而这百分之 50 中，却有百分之 45.5%的时间是在阅读代码，基本可以说，写代码的时候，程序员基本都是在看代码...]]></description>
+            <content:encoded><![CDATA[# 《重构》导读
+
+## 零、导读
+
+> 这篇文章是对《重构》这本经典书籍的一个导读。或者说是对于这本书第一章的读书笔记。
+
+有这么一句话，**高质量代码是重构出来的**。想要理解这句话，我们先来了解一下，开发工作期间，在摸鱼之外的时间分配。《奔跑吧，程序员》这个书正好有这样的饼状图：
+
+![](https://cdn.nlark.com/yuque/__mermaid_v3/41220a262ddc314a2e1a6298cceb4b98.svg)
+
+从这个表可以清楚的看到，开发直接面对代码的时间为百分之 50，而这百分之 50 中，却有百分之 45.5%的时间是在阅读代码，基本可以说，写代码的时候，程序员基本都是在看代码。
+
+如果这时候一直在看的是低质量的代码，不仅仅会拉长阅读代码的时间，还会影响自己的心情，心情不好的好，活也干不好，晚上还有可能睡得晚，睡得晚就会影响自己的健康，这是一种折寿的事情。也就是说：
+
+![image](https://cdn.nlark.com/yuque/__latex/153f1d3a23929cc2eca6aead7b82de1c.svg)
+
+所以我们希望看到的是高质量的代码，而高质量的代码是由重构出来的。可想而知**重构**是多么的重要‼️
+
+每次成功的重构一段代码，看着这出自自己手的优雅代码，成就感油然而生。工作也没有那么糟心了，晚上睡眠质量也高了。重构直接的提高了自己的生活质量。
+
+下面有我总结一下《重构》这本书第一章的内容，希望能够让大家感受到重构的魅力。
+
+## 一、重构目标
+
+这串代码要实现的业务很简单。
+
+"有一家按摩店，它提供的一些服务，会根据服务的类型和服务的时长来计算客户的消费情况。除此之外，还会根据用户的消费，给予用户的一定的积分。"
+
+> 积分,一种营销手段，类似于办会员卡，积分达到一定分数可以打折等。
+
+而下面的代码是一个刘姓开发对于这个需求的实现，目标是打印出某个用户的发票:
+
+```javascript
+// 按摩店当前的收费项目
+const plays = {
+  Thai: { name: "Thai", type: "massage back" },
+  Chinese: { name: "Chinese", type: "pinch the foot" },
+  American: { name: "American", type: "massage back" },
+};
+
+// 某个用户单词消费类目
+const invoices = {
+  customer: "刘冠荣",
+  performances: [
+    {
+      playID: "Thai",
+      time: 55,
+    },
+    {
+      playID: "Chinese",
+      time: 35,
+    },
+    {
+      playID: "American",
+      time: 40,
+    },
+  ],
+};
+
+function statement(invoice, plays) {
+  let totalAmount = 0;
+  let volumeCredits = 0;
+  let result = `${invoice.customer}的账单:\n`;
+  // 数字转化成RMB
+  const format = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "RMB",
+    minimumFractionDigits: 0,
+  }).format;
+
+  for (let perf of invoice.performances) {
+    const play = plays[perf.playID];
+    let thisAmount = 0;
+    switch (play.type) {
+      case "message back":
+        thisAmount = 40000;
+        if (perf.time > 30) {
+          thisAmount += 1000 * (perf.time - 30);
+        }
+        break;
+      case "pinch the foot":
+        thisAmount = 30000;
+        if (perf.time > 20) {
+          thisAmount += 10000 + 500 * (perf.time - 20);
+        }
+        thisAmount += 300 * perf.time;
+        break;
+      default:
+        throw new Error(`没有这个项目，去别的店吧: ${play.type}`);
+    }
+    volumeCredits += Math.max(perf.time - 30, 0);
+    if ("comedy" === play.type) volumeCredits += Math.floor(perf.time / 5);
+    result += ` ${play.name}: ${format(thisAmount / 100)} (${
+      perf.time
+    } 分钟)\n`;
+    totalAmount += thisAmount;
+  }
+
+  result += `总共花费 ${format(totalAmount / 100)}\n`;
+  result += `您获得 ${volumeCredits} 积分\n`;
+  return result;
+}
+
+const statementLog = statement(invoices, plays);
+console.log(statementLog);
+```
+
+打印的结果如下是：
+
+![](https://cdn.nlark.com/yuque/0/2025/png/654315/1754332950402-1bd9f101-46ba-417d-be3c-8f0601df8047.png)![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f8670452cf92489fb6837181a04a5634~tplv-k3u1fbpfcp-watermark.image?)
+
+咋看一下，这段代码没啥问题，又不长，逻辑也不多。也没有什么嵌套的 if else。
+
+但是，此时 **产品** 她不单单你打印出字符串直接渲染到界面了。她想要你拼接成`html`。那我们是不是要复制一份下来，然后在每一个`result`相关逻辑上修改，还需要修改标签拼接的逻辑。
+
+当我们好不容易写完，产品这时候又要求修改积分计算的算法。我们是不是需要在两个地方修改两遍？
+
+而且，我们每添加修改一个功能，都需要从头到尾再看一次这一片代码。自己写的代码尚且过了几个星期都不认识，更不用说在团队的合作当中了。
+
+当然，如果只是一次性开发的东西，以后不用再维护了，怎么样都无所谓。但是如果是长期的项目,这样必然是有隐患的。所以我们就需要重构它!
+
+> 为了更好的修改代码，我们遵守诸如函数单一原则，封闭原则等，这是解决问题的道，而重构就是术。重构详细的解释了每种情况应该怎么应对。
+
+## 二、提炼函数 & switch
+
+看到最显眼的就是 switch 那一串代码。那么我们就把它给先提出来单独构成一个函数。
+
+拆分一个函数最大的问题，不是拆分这些逻辑，而是拆分那些变量。更准确的说，是要改变**作用域**。
+
+它有这些变量 **thisAmout、play、perf**
+
+thisAmout 是一个临时变量，先不用搭理它。
+
+play 和 perf 都是可以外边传进来的，所以有了如下的拆分结果：
+
+```javascript
+function statement （....） {
+
+    // 顶层作用域 的code
+
+   function amountFor((perf, play) {
+    let thisAmount = 0
+    switch (play.type) {
+      case 'message back':
+        thisAmount = 40000
+        if (perf.time > 30) {
+          thisAmount += 1000 * (perf.time - 30)
+        }
+        break
+      case 'pinch the foot':
+        thisAmount = 30000
+        if (perf.time > 20) {
+          thisAmount += 10000 + 500 * (perf.time - 20)
+        }
+        thisAmount += 300 * perf.time
+        break
+      default:
+        throw new Error(`没有这个项目，去别的店吧: ${play.type}`)
+    }
+
+
+    return thisAmount
+  }
+}
+```
+
+## 三、修改变量名 & 内联变量 & 消减变量
+
+:::color1
+**好代码应能清楚地表明它在做什么，而变量命名是更是代码清晰的关键**
+
+:::
+
+**thisAmout:** 是需要 return 回去，而且函数名也很直白的表述清楚这个函数要输出的东西是什么。所以它可以改为 result
+
+**perf:** 由于是在循环中返回的，所以为了语义化更加的明确，可以加一个冠词在前面，变成 aPerf
+
+**play:** 我们回到原本的语境当中，可以知道.play 由顶级作用域的变量以及 perf 构成临时变量. 我们要消灭它。
+
+我们项目中经常出现这样的一个场景：
+
+![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6346483598e54caaaa857ab284e9d93c~tplv-k3u1fbpfcp-watermark.image?)![](https://cdn.nlark.com/yuque/0/2025/png/654315/1754332987170-ca996b98-42bc-4ba6-a0fb-ddda5f935a7b.png)
+
+图并没有截完。
+
+作为一个经常使用 vue2.0 的开发者，截图应该是我们经常看到这样的。我不知道你们看到这样的场景是什么感受，反正我是头皮发麻的。更不要说要在这个上面进行修改了。
+
+我们在修改命名之后, 还需要结合内敛变量手法以及消减变量手法，尽可能的**减少不必要的变量。**
+
+**整理如下：**
+
+```javascript
+function statement(invoice, plays) {
+  // .....
+  function amountFor(aPerf) {
+    let result = 0;
+    switch (playFor(aPerf).type) {
+      case "message back":
+        result = 40000;
+        if (aPerf.time > 30) {
+          result += 1000 * (aPerf.time - 30);
+        }
+        break;
+      case "pinch the foot":
+        result = 30000;
+        if (aPerf.time > 20) {
+          result += 10000 + 500 * (aPerf.time - 20);
+        }
+        result += 300 * aPerf.time;
+        break;
+      default:
+        throw new Error(`没有这个项目，去别的店吧: ${playFor(aPerf).type}`);
+    }
+
+    return result;
+  }
+
+  function playFor(perf) {
+    return plays[perf.playID];
+  }
+}
+```
+
+回到循环当中，在顶级作用域中 thisAmout 既然也是临时变量，那么也可以使用内联变量手法去消除它
+
+```javascript
+for (let perf of invoice.performances) {
+  volumeCredits += Math.max(perf.time - 30, 0);
+
+  if ("comedy" === playFor(perf).type)
+    volumeCredits += Math.floor(perf.time / 5);
+
+  result += ` ${playFor(perf).name}: ${format(thisAmount / 100)} (${
+    perf.time
+  } 分钟)\n`;
+  totalAmount += amountFor(perf);
+}
+```
+
+此时再回到循环当中。可以明显看到，它既然做了两件事情，一个是计算 刘冠荣 消费的金额，另外一个是计算他所得的积分。所以我们自然要对循环进行进一步的处理。
+
+## 四、拆分循环 & 提取积分计算
+
+```javascript
+for (let perf of invoice.performances) {
+  volumeCredits = volumeCreditsFor(perf);
+
+  result += ` ${playFor(perf).name}: ${format(thisAmount / 100)} (${
+    perf.time
+  } 分钟)\n`;
+
+  totalAmount += amountFor(perf);
+}
+
+function volumeCreditsFor(aPerf) {
+  let result = 0;
+  result += Math.max(aPerf.time - 30, 0);
+  if ("comedy" === playFor(aPerf).type) result += Math.floor(aPerf.time / 5);
+
+  return result;
+}
+```
+
+**即便如此，这个循环当中，依旧干了两件事情！！！！**
+
+```javascript
+for (let perf of invoice.performances) {
+  result += ` ${playFor(perf).name}: ${format(thisAmount / 100)} (${
+    perf.time
+  } 分钟)\n`;
+  totalAmount += amountFor(perf);
+}
+
+for (let perf of invoice.performances) {
+  volumeCredits = volumeCreditsFor(perf);
+}
+```
+
+循环了两遍。或许会引起对于性能的担忧。但是起码在这样的场景下面，对于性能的影响其实可以忽略不计的。而且很多我们以为的性能问题，其实对于现代的浏览器而言都不是问题，我们小看开发浏览器的那群人了。
+
+不过，情况自然也是有例外。
+
+就算真的有了性能问题，我们也应该在重构之后在考虑。重构之后，我们的代码结构更加的干净，整洁，对于性能的调优自然是更加的直观明确的，也更加的有助于你分析性能的瓶颈出在哪里.
+
+在《重构》这本书就明确的表述了：
+
+_**大多数情况下可以忽略它。如果重构引起了性能损耗，先完成重构，再做性能优化**_
+
+> 很多我们以为的性能问题，其实对于现代的浏览器而言都不是问题
+
+## 五、唯一性命名 & 提取 format
+
+```javascript
+function rmb(aNumber) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currensy",
+    currency: "RMB",
+    minimumFractionDigits: 0,
+  }).format(aNumber / 100);
+}
+```
+
+- 进一步消减了临时变量
+
+## 六、移动语句
+
+- 把相关联的变量和语句结合在一起
+- react 的代码规范
+
+```javascript
+function statement(invoice, plays) {
+  let result = `${invoice.customer}的账单:\n`;
+
+  let totalAmount = 0;
+  for (let perf of invoice.performances) {
+    result += ` ${playFor(perf).name}: ${rmb(amountFor(perf))} (${
+      perf.time
+    } 分钟)\n`;
+    totalAmount += amountFor(perf);
+  }
+
+  let volumeCredits = 0;
+  for (let perf of invoice.performances) {
+    volumeCredits = volumeCreditsFor(perf);
+  }
+
+  result += `总共花费 ${rmb(totalAmount)}\n`;
+  result += `您获得 ${volumeCredits} 积分\n`;
+  return result;
+
+  // ......
+  // ......
+}
+```
+
+**组合式 API**
+
+这张图就很好的解释了 vue3 退出 COmpostionAPI 的一个动机，能够让相关代码集中起来，方便之后更好的复用和拆分。
+
+> 我们重构的目的不是为了让函数可以复用，而是让函数更加的容易读
+
+![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a286890b20854ba0a41a2a442919858b~tplv-k3u1fbpfcp-watermark.image?)![](https://cdn.nlark.com/yuque/0/2025/png/654315/1754333010630-050fa575-7826-441b-8e9a-874e24694127.png)
+
+- 为下一步 更进一步 提炼函数 提供直观的帮助
+
+## 七、提炼函数 & 消除变量
+
+上一步的移动语句，就是为了更好的提炼函数做准备的。我们把积分和费用的循环逻辑进一步封装。
+
+```javascript
+function totalVolumeCredits() {
+  let volumeCredits = 0;
+  for (let perf of invoice.performances) {
+    volumeCredits = volumeCreditsFor(perf);
+  }
+  return volumeCredits;
+}
+
+function totalAmount() {
+  let result = 0;
+  for (let perf of invoice.performances) {
+    totalAmount += amountFor(perf);
+  }
+  return result;
+}
+```
+
+在结合我们的内联变量，消除临时变量。
+
+此时看看现在代码的全貌，将函数都给折叠起来：
+
+![](https://cdn.nlark.com/yuque/0/2025/png/654315/1754333027520-97080531-fc55-4c7b-97b3-c801a1aade9d.png)
+
+有上图可以明显看出来。核心代码位于第一个红框之中。是不是比一开始的干净得太多?通过合理的命名和简洁的代码，可以更加的看出来这串代码是做什么用的。如果需要知道具体的变量是怎么来，只需要展开对应的函数即可。
+
+当需要进行修改什么逻辑的时候，可以直接定位到对应的函数中。**焦点可以聚集在对应函数当中，不会受到其他代码的干扰。**
+
+下面是完整的代码：
+
+```javascript
+function statement(invoice, plays, type) {
+  let result = `${invoice.customer}的账单:\n`;
+  for (let perf of invoice.performances) {
+    result += ` ${playFor(perf).name}: ${rmb(amountFor(perf))} (${
+      perf.time
+    } 分钟)\n`;
+  }
+
+  result += `总共花费 ${rmb(totalAmount())}\n`;
+  result += `您获得 ${totalVolumeCredits()} 积分\n`;
+  return result;
+
+  function amountFor(aPerf) {
+    let thisAmount = 0;
+    switch (playFor(aPerf).type) {
+      case "message back":
+        thisAmount = 40000;
+        if (aPerf.time > 30) {
+          thisAmount += 1000 * (aPerf.time - 30);
+        }
+        break;
+      case "pinch the foot":
+        thisAmount = 30000;
+        if (aPerf.time > 20) {
+          thisAmount += 10000 + 500 * (aPerf.time - 20);
+        }
+        thisAmount += 300 * aPerf.time;
+        break;
+      default:
+        throw new Error(`没有这个项目，去别的店吧: ${playFor(aPerf).type}`);
+    }
+    return thisAmount;
+  }
+
+  function playFor(aPerf) {
+    return plays[aPerf.playID];
+  }
+
+  function volumeCreditsFor(aPerf) {
+    let result = 0;
+    result += Math.max(aPerf.time - 30, 0);
+    if ("comedy" === playFor(aPerf).type) result += Math.floor(aPerf.time / 5);
+
+    return result;
+  }
+
+  function rmb(aNumber) {
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "RMB",
+      minimumFractionDigits: 0,
+    }).format(aNumber / 100);
+  }
+
+  function totalVolumeCredits() {
+    let result = 0;
+    for (let perf of invoice.performances) {
+      volumeCredits = volumeCreditsFor(perf);
+    }
+    return result;
+  }
+
+  function totalAmount() {
+    let result = 0;
+    for (let perf of invoice.performances) {
+      totalAmount += amountFor(perf);
+    }
+    return result;
+  }
+}
+```
+
+## 八、测试
+
+整本书都在强调**测试**的重要性，上面重构的每一步都需要进行测试才进行下一步操作。
+
+书中有这么一句话：
+
+:::warning
+![image](https://cdn.nlark.com/yuque/__latex/ab9ea7a8ba5a456e6dc9fc2ba62d2849.svg)
+
+:::
+
+只要上线的代码就是有价值的代码，不管你现在的代码多么简洁, 只有经过充分的测试并上线才有价值，不然就是一文不值的。
+
+重构一定是有风险的。重构不是重写，所以我们需要有计划，有计划的进行，这就是《重构》《代码整洁之道》这些书的伟大之处。
+
+> 重构是需要测试资源的介入的，这就意味着，你的重构需要得到领导的同意。甚至涉及到了迭代开发流程。这就是另外一个话题了。
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
+            <title><![CDATA[CodeReview礼仪]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/CodeReview礼仪</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/CodeReview礼仪</guid>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
+            <description><![CDATA[CodeReview 礼仪  一、序言: 原来程序员是这么合作的 在我工作的前四年, 经常会在网上看到 Code Review 这个词. 但是却从来实践过. 看着他们对于 Code Review 习以为常的样子, 我宛如活在了平行世界. 不知道他们在说什么, 虽然每一个字都认识, 自然也没有什么感触. 直到第五年,加入了现在的公司,才真正的知道 Code Review 是什么一回事. 或者说只是知道一冰山一角,毕竟到现在只有不到一年的 Code Review 的经验. 但是给我带来的感触还是很深的. > 向开源项目提交 PR, 也有 Code Review? 不好意思, 在此之前,从来不看别的...]]></description>
+            <content:encoded><![CDATA[# CodeReview 礼仪
+
+## 一、序言: 原来程序员是这么合作的
+
+在我工作的前四年, 经常会在网上看到 Code Review 这个词. 但是却从来实践过.
+
+看着他们对于 Code Review 习以为常的样子, 我宛如活在了平行世界. 不知道他们在说什么, 虽然每一个字都认识, 自然也没有什么感触.
+
+直到第五年,加入了现在的公司,才真正的知道 Code Review 是什么一回事. 或者说只是知道一冰山一角,毕竟到现在只有不到一年的 Code Review 的经验. 但是给我带来的感触还是很深的.
+
+> 向开源项目提交 PR, 也有 Code Review? 不好意思, 在此之前,从来不看别的源码,面向百度编程罢了
+
+这篇文章, 会首先介绍什么是 Code Review, 然后到我们组现在的 Code Review 流程, 接着到处理的好会打起来的 Code Review 礼仪。 最后加上一个问题， 小公司是否需要 Code Review。
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670130932656-379fd2f1-195d-446e-bdb3-965bbd90dbff.png)
+
+最后一个问题,我想来还是有一定的发言权的. **在工作的前四年换了六家公司, 去一家倒闭一家**. 并不是我想要跳槽,只是普本的学历、菜狗的技术, 很多人看不起的外包我都面不过. 再加上运气着实有点问题。
+
+所以在这些小公司协作的时候, 相当原始。 svn 代码管理, 本地项目打包出 dist 文件夹, 压缩之后通过 QQ 传给后台上传。 即便到了负责 APP 的时候, 也是本地手动打包出`.app`发送到测试手机上面.。
+
+即便后来用了 git,也和 svn 的使用没有任何差别, 不存在什么代码审查, 仓库权限的配置. `PR`和 `MR`是啥意思都分不清楚. CI 和 CL 是啥？
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670130597950-fb28e693-8e4a-4944-9e85-02d802d0da96.png)
+
+我的本科虽然是计算机科学与技术,但是除了学习,啥都干。
+
+直到来到了现在的这家公司, 才知道,原来程序员是这么协作的. 这篇文章只说 Code Review, 其他方面之后再出一片文章详细谈谈。
+
+## 二、什么是 Code Review
+
+Code Review 就是将自己的代码公开的给其他程序员审查的过程。
+
+Reviewer 和<font style="color:rgb(18, 18, 18);">Reviewee 之间主要是通过 comment 来进行沟通，comment 可以针对每一行来进行评论。</font>
+
+- <font style="color:rgb(18, 18, 18);">熟悉同事在编程时的思考方式，这样其余同事以后如果有需要就可以更轻松、快速的修改代码。</font>
+- <font style="color:rgb(18, 18, 18);">向同事介绍修改了哪些文件，增加了什么样的功能，这样在问题出现时，可以保证至少有两个人可以帮助诊断、解决问题。</font>
+
+### <font style="color:rgb(18, 18, 18);">2.1 评论规范</font>
+
+<font style="color:rgb(18, 18, 18);">comment 也有规范，如下</font>
+
+:::info
+[request] 我建议这里可以更改为函数 forEach 用户，这个更加的复合规范
+
+[advise] 这里的判断为了应对之后的扩展，可以考虑使用策略模式
+
+[question] 为什么需要多加一个变量来进行判断
+
+:::
+
+通过`[]`包住的标识含义还是很直接的。
+
+- [request] 必须要修改才能够通过
+- [advise] 不修改也可以通过
+- [question] 需要 reviewee 解释一下
+
+### 2.2 CM 实际是在 M 什么
+
+<font style="color:rgb(18, 18, 18);">目的是提高代码质量</font>
+
+<font style="color:rgb(18, 18, 18);">提前发现 bug 外，还包括统一团队的代码规范，比如经常会碰到有人说你这个变量命名不对</font>
+
+代码风格通过配置 Eslint 来进行统一，命<font style="color:rgb(18, 18, 18);">名规则，</font>[语法检查](https://www.zhihu.com/search?q=%E8%AF%AD%E6%B3%95%E6%A3%80%E6%9F%A5&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22article%22%2C%22sourceId%22%3A%2293450972%22%7D)<font style="color:rgb(18, 18, 18);">，分支规范等</font>是需要提前团队规范来解决的。这些都不应该放在 Code Review 上面。
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670165488441-c670d235-e9c3-46ad-863a-c2de5eecad94.png)
+
+所以实际上，在 CM 之前是有前置条件的：
+
+![画板](https://cdn.nlark.com/yuque/0/2022/jpeg/654315/1670430205802-6b0e6221-ba38-4476-a7f1-e1dfceda3a76.jpeg)
+
+在这里之后才开始 CM。CM 的内容基本包括下面：
+
+- 业务 BUG
+- 代码质量
+
+业务 BUG 很直接，很多时候，写的东西不一定用在一个场合，而写的人不一定都熟悉。
+
+代码质量包括这些内容：
+
+- 人工检查代码格式化的漏网之鱼
+- 是否存在重复
+- 最佳实践，`if else`、参数过多、ES6、设计模式（怼人的理论基础是《重构-改善既有代码》）
+- <font style="color:rgb(18, 18, 18);">命名可读性,能自我阐述的最好,英文用词尽量准确(命名是所有程序员的头痛之一)</font>
+- <font style="color:rgb(18, 18, 18);">注释,恰到好处的注释,重要的地方及时备注,不需要的地方要删除一定的注释信息,代码既是给机器运行的,也同时是交接给人看的.</font>
+- <font style="color:rgb(18, 18, 18);">代码是否健壮，是否可扩展</font>
+
+<font style="color:rgb(18, 18, 18);">我们的目标是消灭下面这张图：</font>
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670428340001-0c55330d-9c2c-4e2b-a34b-1df6ab1c131c.png)
+
+## 三、我们组的 Code Review 流程
+
+<font style="color:rgb(18, 18, 18);">我们组是每一次 Merge Request 都进行 Code Review。</font>
+
+> <font style="color:rgb(18, 18, 18);">还有一种是每隔一段时间集中大家一起来进行 CR。</font>
+
+基本的流程图如下:
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670148225843-b74c85c7-7433-4244-91cc-1e0f476649e3.png)
+
+简单来说，就是从 test 分支拉取最新的代码之后，开发完成之后需要合并到远程自己定义的分支，随后将这个分支申请合并到远程 test 分支上面，通过 CI 自动扫描之后，就出发代码审查阶段了
+
+- name\_需求编码指的是, 远程的分支的名称 = 是以自己的名字的首字母 + 下划线 + 需求的 ID。
+- test 分支在经过测试之后， 才会被允许合并到 releasel 分支， 这个过程是封版。将该分支发布部署之后，就可以合并到 master 分支。当然，这个涉及到了分支策略的问题，以后再谈
+
+我们组最多的时候十个人, 评审的人员除了申请人, 其他人都是评审员. 每一个 PR 只需要两个评审的通过就可以入库。当有未必解决状态的评论的时候，其他评审人一般情况是不能审批通过的。
+
+这样的评审的机制其实已经相当宽松了 ，也是希望所有人都能够参与到评审当中，相互都能够了解到对方模块的情况。
+
+但是现实中情况还是不太一样，由于人员之间的水平是有差距的，我们的人员搭配是两个内部的搭配 7/8 个外包的伙伴。虽然平时开发已经再三说明可以给任何人审查代码，不过由于整个环境的问题，实际上敢点击通过代码的依旧只有内部的两个人。形成了事实上的两人评审。
+
+## 四、Code Review 礼仪
+
+<font style="color:rgb(18, 18, 18);">Code Review 的礼仪决定了你是否会被同事背后捅刀。主要是谨记一条原则：</font>
+
+**<font style="color:rgb(18, 18, 18);">只针对代码不针对人</font>**
+
+### <font style="color:rgb(18, 18, 18);">4.1 总结</font>
+
+#### 对评审人员的建议：
+
+- 看不明白的时候，可以适当的提醒对方添加注释
+- 看不明白的时候，是请教对方而不是责问对方
+- 不管是明确修改的方案还是指出问题，给出自己的理由，依据，而不是感觉
+- 评论的内容不要过于广泛
+
+作为 reviewer 提出 comment,<font style="color:rgb(18, 18, 18);">目的是提升项目代码质量，而不是抨击别人，质疑别人的能力，应该保持平等友善的语气。</font>
+
+<font style="color:rgb(18, 18, 18);">评论的内容广泛的问题，比如说，评论 Reviewee 的耦合度太高。这么的言论就很操蛋，我们需要提出的是具体的建议，可以给出具体的改进的伪代码。不然最好闭嘴。</font>
+
+#### 对提审人的建议：
+
+- 每次提交的代码量都尽可能的小
+- 反驳一定需要给出的依据
+- 相比评审人要更加的谦虚
+
+第一点，为了方便<font style="color:rgb(18, 18, 18);">审阅者可以轻松了解代码中有哪些更改以及做了什么。如果 code review 的内容足够少，则可以更频繁地进行，可能每天几次，而且更易于管理。</font>
+
+对于第二点，评审的人花了这么多时间给你来看代码。如果提出的建议能够改善你写的代码，或者直接指出了问题，提审人都是最大的受益者。
+
+### 4.2 话术的建议
+
+| **bad**          | **good**                         |
+| ---------------- | -------------------------------- |
+| 你要这么做       | 我建议这么做/这么干是否更加好    |
+| 你写的代码比较差 | 这块代码写得比较差               |
+| 你这里写得太坑了 | 重构里面提议这种情况应该提取函数 |
+
+**最重要的一点就是，不要吝啬你的夸奖！**
+
+当你实在找不到问题的时候，多夸夸你的同事吧。这段代码设计得真好，这段代码性能提升得真高。当然，平时做人的时候也应该如此。
+
+## 五、小公司是否需要 Code Review
+
+**不需要！**
+
+对于公司而言，**业务第一，产品第二，技术无所属**。领导只关心如何活下去。所以对于你如何使用技术并不关心，关心的是业务是否来钱，自己还有几套房可以抵押。
+
+你们进行 CR 是需要时间，这是钱。
+
+你们想要提高代码质量，需要持续重构优化，客户操作界面的时候感受得出来么？如果没有，那是浪费钱。
+
+无关褒贬，客观事实罢了。
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670431699881-77bcfed9-e230-428b-8631-7e558d4977ea.png)
+
+但是对于个人而言呢？**需要，相当需要**。
+
+都不小了，要明白自己应该做什么。
+
+如果团队的 Code Review 有没有推行没关系,有,自然是非常的。没有的话，你也要通过别的手段自我提升。
+
+但凡有好的事物都应该主动去尝试,去坚持,克服外来因素影响。
+
+一个人,也同样可以 Review 自己和同事代码,为的不是公司，为的是自己。
+
+Review 水平比自己高的，可以直接提升自己的编码能力，学习高水平的思路和设计。
+
+Review 水平比自己低的，可以看看那些错误都是怎么发生的，告诫自己。
+
+Review 水平和自己差不多的，可以换位思考，如果是自己来实现会怎么实现。
+
+卷起来吧，
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670432316837-879ab9e2-8ee5-4cdb-a6eb-0e9b4e01b655.png)
+
+放错图，应该是
+
+![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670432581437-dbcfb7eb-1e13-43f2-8bb2-60010b9f1c14.png)
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
+            <title><![CDATA[Code评审模板和礼仪]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/Code评审模板和礼仪</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/Code评审模板和礼仪</guid>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
+            <description><![CDATA[Code 评审模板和礼仪 <font style="color:rgb(0, 0, 0);">Code Review 就是将自己的代码公开的给其他程序员审查的过程。Reviewer 和 Reviewee 之间主要是通过 comment 来进行沟通，comment 可以针对每一行来进行评论。</font> <font style="color:rgb(0, 0, 0);">熟悉同事在编程时的思考方式，这样其余同事以后如果有需要就可以更轻松、快速的修改代码。</font> <font style="color:rgb(0, 0, 0);">向同事介绍修改了哪些文件，增加了什么样的功能，这样在问题出...]]></description>
+            <content:encoded><![CDATA[# Code 评审模板和礼仪
+
+<font style="color:rgb(0, 0, 0);">Code Review 就是将自己的代码公开的给其他程序员审查的过程。Reviewer 和 Reviewee 之间主要是通过 comment 来进行沟通，comment 可以针对每一行来进行评论。</font>
+
+<font style="color:rgb(0, 0, 0);">熟悉同事在编程时的思考方式，这样其余同事以后如果有需要就可以更轻松、快速的修改代码。</font>
+
+<font style="color:rgb(0, 0, 0);">向同事介绍修改了哪些文件，增加了什么样的功能，这样在问题出现时，可以保证至少有两个人可以帮助诊断、解决问题。</font>
+
+## <font style="color:rgb(0, 0, 0);">一、评审模板</font>
+
+### <font style="color:rgb(0, 0, 0);">1.1 选择对应的标签</font>
+
+![](https://cdn.nlark.com/yuque/0/2023/png/654315/1704007605452-078202ed-ca9d-406d-b0a6-1a1475468e12.png)
+
+### <font style="color:rgb(0, 0, 0);">1.2 comment 规范</font>
+
+- <font style="color:rgb(0, 0, 0);">[必要]我建议这里可以更改为函数 forEach 用户，这个更加的复合规范</font>
+- <font style="color:rgb(0, 0, 0);">[建议]这里的判断为了应对之后的扩展，可以考虑使用策略模式</font>
+- <font style="color:rgb(0, 0, 0);">[疑问]为什么需要多加一个变量来进行判断</font>
+
+### <font style="color:rgb(0, 0, 0);">1.3 "[]"中对应的含义如下：</font>
+
+- <font style="color:rgb(0, 0, 0);">[必要] ⇒ 必须要修改才能够通过</font>
+- <font style="color:rgb(0, 0, 0);">[建议] ⇒ 不修改也可以通过</font>
+- <font style="color:rgb(0, 0, 0);">[疑问] ⇒ 需要 reviewee 解释一下</font>
+
+### <font style="color:rgb(0, 0, 0);">1.4 案例</font>
+
+![](https://cdn.nlark.com/yuque/0/2023/png/654315/1704007605531-f0001593-a743-44d0-b9b3-d8846d1cda0b.png)
+
+<font style="color:rgb(0, 0, 0);">数字分别对应：</font>
+
+1. <font style="color:rgb(0, 0, 0);">标签</font>
+2. <font style="color:rgb(0, 0, 0);">当前评论是否已经解决</font>
+3. <font style="color:rgb(0, 0, 0);">对于当前评论的建议等级</font>
+4. <font style="color:rgb(0, 0, 0);">评论主体</font>
+
+<font style="color:rgb(0, 0, 0);">推荐在评审设置的地方，将只有解决才可通过的勾选</font>
+
+### <font style="color:rgb(0, 0, 0);">1.5 如何收集自己的评审信息</font>
+
+1. <font style="color:rgb(0, 0, 0);">打卡 TT，选择研发云聊天框</font>![](https://cdn.nlark.com/yuque/0/2023/png/654315/1704007605460-00677f8e-a96d-415e-80bc-5318e6d2054e.png)
+2. <font style="color:rgb(0, 0, 0);">打开聊天记录，输入‘【已解决】。’ ，主要是全角。这样搜索出来的结果就是和你相关的评审，可以加上日期来进行过滤。</font>![](https://cdn.nlark.com/yuque/0/2023/png/654315/1704007605498-beb4f2a1-f1eb-47de-9452-e9a88d150f85.png)
+
+## <font style="color:rgb(0, 0, 0);">二、Code Review 礼仪</font>
+
+<font style="color:rgb(0, 0, 0);">代码质量包括这些内容：</font>
+
+- <font style="color:rgb(0, 0, 0);">人工检查代码格式化的漏网之鱼</font>
+- <font style="color:rgb(0, 0, 0);">是否存在重复</font>
+- <font style="color:rgb(0, 0, 0);">最佳实践，if else、参数过多、ES6、设计模式（怼人的理论基础是《重构-改善既有代码》）</font>
+- <font style="color:rgb(0, 0, 0);">命名可读性,能自我阐述的最好,英文用词尽量准确(命名是所有程序员的头痛之一)</font>
+- <font style="color:rgb(0, 0, 0);">注释,恰到好处的注释,重要的地方及时备注,不需要的地方要删除一定的注释信息,代码既是给机器运行的,也同时是交接给人看的.</font>
+- <font style="color:rgb(0, 0, 0);">代码是否健壮，是否可扩展</font>
+
+<font style="color:rgb(0, 0, 0);">我们的目标是消灭下面这张图：</font>
+
+![](https://cdn.nlark.com/yuque/0/2023/png/654315/1704007605504-be64e3d8-8221-4b84-ba93-21d45ab19af6.png)
+
+<font style="color:rgb(0, 0, 0);">同时，我们还需要注意一下礼仪。</font>
+
+<font style="color:rgb(0, 0, 0);">Code Review 的礼仪决定了你是否会被同事背后捅刀。主要是谨记一条原则：</font>
+
+**<font style="color:rgb(0, 0, 0);">只针对代码不针对人</font>**<font style="color:rgb(0, 0, 0);">。</font>
+
+**<font style="color:rgb(0, 0, 0);">对评审人员的建议</font>**<font style="color:rgb(0, 0, 0);">：</font>
+
+- <font style="color:rgb(0, 0, 0);">看不明白的时候，可以适当的提醒对方添加注释</font>
+- <font style="color:rgb(0, 0, 0);">看不明白的时候，是请教对方而不是责问对方</font>
+- <font style="color:rgb(0, 0, 0);">不管是明确修改的方案还是指出问题，给出自己的理由，依据，而不是感觉</font>
+- <font style="color:rgb(0, 0, 0);">评论的内容不要过于广泛</font>
+
+<font style="color:rgb(0, 0, 0);">作为 reviewer 提出 comment,目的是提升项目代码质量，而不是抨击别人，质疑别人的能力，应该保持平等友善的语气。</font>
+
+<font style="color:rgb(0, 0, 0);">评论的内容广泛的问题，比如说，评论 Reviewee 的耦合度太高。这么的言论就很操蛋，我们需要提出的是具体的建议，可以给出具体的改进的伪代码。不然最好闭嘴。</font>
+
+**<font style="color:rgb(0, 0, 0);">对提审人的建议:</font>**
+
+- <font style="color:rgb(0, 0, 0);">每次提交的代码量都尽可能的小</font>
+- <font style="color:rgb(0, 0, 0);">反驳一定需要给出的依据</font>
+- <font style="color:rgb(0, 0, 0);">相比评审人要更加的谦虚</font>
+
+<font style="color:rgb(0, 0, 0);">第一点，为了方便审阅者可以轻松了解代码中有哪些更改以及做了什么。如果 code review 的内容足够少，则可以更频繁地进行，可能每天几次，而且更易于管理。</font>
+
+<font style="color:rgb(0, 0, 0);">对于第二点，评审的人花了这么多时间给你来看代码。如果提出的建议能够改善你写的代码，或者直接指出了问题，提审人都是最大的受益者。</font>
+
+**<font style="color:rgb(0, 0, 0);">话术的建议</font>**
+
+| **<font style="color:rgb(0, 0, 0);">bad</font>**          | **<font style="color:rgb(0, 0, 0);">good</font>**                         |
+| --------------------------------------------------------- | ------------------------------------------------------------------------- |
+| <font style="color:rgb(0, 0, 0);">你要这么做</font>       | <font style="color:rgb(0, 0, 0);">我建议这么做/这么干是否更加好</font>    |
+| <font style="color:rgb(0, 0, 0);">你写的代码比较差</font> | <font style="color:rgb(0, 0, 0);">这块代码写得比较差</font>               |
+| <font style="color:rgb(0, 0, 0);">你这里写得太坑了</font> | <font style="color:rgb(0, 0, 0);">重构里面提议这种情况应该提取函数</font> |
+
+**<font style="color:rgb(0, 0, 0);">最重要的一点就是，不要吝啬你的夸奖！</font>**<font style="color:rgb(0, 0, 0);"><br />当你实在找不到问题的时候，多夸夸你的同事吧。这段代码设计得真好，这段代码性能提升得真高。当然，平时做人的时候也应该如此。</font>
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
             <title><![CDATA[React中如何分组件]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/React中如何分组件</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/React中如何分组件</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[React 中如何分组件 > 基于自己工作中的体会，还有在做的过程中翻阅的资料，看的资料没有收藏起来，很想指出具体的出处，但是很多都是从各个地方看到的。不过都是在掘金、公众号前端开发、还有知乎上看到的。  😫 前言 随着 web 业务越来越复杂，一个页面必须要分成多个部分才能使得代码逻辑更加的清晰，出了问题也能更加快速的定位。所以说如果分组件的重要性不言而喻。  一、基本原则 - 每个组件不能超过 300 行。网上看好多人都说是 200 行，但是那样实际操作的话，压力会很大的，导致很多时候会为了分组件而分组件。其实分组件的目的就是为了可读性和可维护性。为了分组件而分组件的话，很多时候写的会很...]]></description>
             <content:encoded><![CDATA[# React 中如何分组件
 
@@ -6042,7 +6785,7 @@ test = () => {
             <title><![CDATA[TS入门教程学习总结]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/TS入门教程学习总结</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/TS入门教程学习总结</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[TS 入门 ts 可以解决Top 10 JavaScript errors from 1000+ projects (and how to avoid them) 这样的问题。再加上对象提示 🔔  一、 TS 基础 typescript // 1.对象和函数 interface interface IPerson {   readonly name: string;   age: number;   callback: { (name: string): string }; } const obj: IPerson = {   name: "yoran",   age: 2,   callb...]]></description>
             <content:encoded><![CDATA[# TS 入门
 
@@ -6439,865 +7182,10 @@ console.log(base.boo); // 不报错。完美哦
             <author>295563358@qq.com (Yoran Wu)</author>
         </item>
         <item>
-            <title><![CDATA[VsCode中使用vim]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/VsCode中使用vim</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/VsCode中使用vim</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
-            <description><![CDATA[VsCode 中使用 vim 插件  一、vim 是什么 它把我们平时操作的动作抽象拆分为三种类型，插入模式、可视化模式、普通模式。  二、使用 vim 的动机是什么 第一次听到的能够不使用鼠标，使用键盘就可以操作电脑，符合小时候对于电脑大佬的刻板印象。对不起，是我不成熟了。  三、在 vscode 中的配置 json "vim.easymotion": true, // 启用系统粘贴板作为vim寄存器 "vim.useSystemClipboard": true, // 由vim接管ctrl+any的按键，而不是vscode "vim.useCtrlKeys": true, // 突出显示与...]]></description>
-            <content:encoded><![CDATA[# VsCode 中使用 vim 插件
-
-## 一、vim 是什么
-
-它把我们平时操作的动作抽象拆分为三种类型，插入模式、可视化模式、普通模式。
-
-## 二、使用 vim 的动机是什么
-
-第一次听到的能够不使用鼠标，使用键盘就可以操作电脑，符合小时候对于电脑大佬的刻板印象。对不起，是我不成熟了。
-
-## 三、在 vscode 中的配置
-
-```json
-"vim.easymotion": true,
-// 启用系统粘贴板作为vim寄存器
-"vim.useSystemClipboard": true,
-// 由vim接管ctrl+any的按键，而不是vscode
-"vim.useCtrlKeys": true,
-// 突出显示与当前搜索匹配的所有文本
-"vim.hlsearch": true,
-// 下面定义的按键将交由vscode进行处理，而不是vscode-vim插件
-"vim.handleKeys": {
-  "<C-a>": false,
-  "<C-f>": false,
-  "<C-n>": false
-},
-"vim.leader": "<space>",
-"vim.normalModeKeyBindings": [
-  {
-    "before": ["<leader>", "f"],
-    "commands": ["revealInExplorer"]
-  },
-  {
-    "before": ["J"],
-    "after": ["5", "j"]
-  },
-  {
-    "before": ["K"],
-    "after": ["5", "k"]
-  },
-  // rename 重命名
-  {
-    "before": ["<Leader>", "r", "n"],
-    "commands": ["editor.action.rename"]
-  },
-  {
-    "before": ["<Leader>", "f", "d"],
-    "commands": ["editor.action.formatDocument"]
-  }
-],
-"vim.insertModeKeyBindings": [
-  {
-    "before": ["j", "k"],
-    "after": ["<Esc>"]
-  }
-],
-"vim.sneak": true
-```
-
-## 四、关键快捷键
-
-**移动可视窗(光标也可以跟着移动):**
-
-| Ctrl + d（control + d） | 向下滚动半屏                                      |
-| ----------------------- | ------------------------------------------------- |
-| Ctrl + u（control + u)  | 向上滚动半屏                                      |
-| zt                      | 将当前行置于屏幕顶部附近                          |
-| zz                      | 将当前行置于屏幕中央                              |
-| zb                      | 将当前行置于屏幕底部                              |
-| H/M/L                   | 跳转到屏幕的顶部/中间/底部                        |
-| （）{}                  | 跳转到上一个句子/下一个句子/上一个段落/下一个段落 |
-
-一些使用 VSCode 开发中常用的操作：
-
-**函数定义之类：**
-
-| gd                    | 进入函数定义       |
-| --------------------- | ------------------ |
-| Ctrl+o（control + o） | 从函数定义中返回   |
-| gd                    | 查看函数参数等信息 |
-
-**切换标签页：**
-
-| gt  | 切换到下一个标签页  |
-| --- | ------------------- |
-| gT  | 切换到上一个标签页  |
-| 4gt | 切换到第 4 个标签页 |
-
-**切换分栏：**
-
-| Ctrl + 1 | 第一个分栏 |
-| -------- | ---------- |
-| Ctrl + 2 | 第二个分栏 |
-
-> 其他： 可以使用 Ctrl + 0 来将光标从编辑器跳转到文件栏，在文件栏可以使用 j 和 k 进行移动，可以使用 Space 展开或者关闭文件夹，使用 l 可以将光标选中的文件在编辑器中打开。
-
-### 4.3 vim-surround
-
-|             |                                       |
-| ----------- | ------------------------------------- |
-| `ds "`      | `"Hello world!"` => `Hello world!`    |
-| `cs "(`     | `"Hello world!"` => `(Hello world!)`  |
-| cS          | 替换括号，括号内文本做新一行          |
-| ys          | 添加括号(配合 vim 光标移动)           |
-| `ys w [`    | `Hello world!` => `[Hello] world!`    |
-| ys w Enter  | Hello world! => <em>Hello</em> world! |
-| yS          | 添加括号，括号内文本做新一行          |
-| `yS w [`    | `Hello world!` => `[ Hello ] world!`  |
-| `yss (`     | `Hello world!` => `( Hello world! )`  |
-| ySS         | 整行括起来，括号内文本做新一行        |
-| `ySS {`     | `Hello world!` => `{ Hello world! }`  |
-| `ySS Enter` | `Hello world!` => `Hello world!`      |
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
-            <title><![CDATA[vue的业务开发如何进行组件的拆分]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/vue的业务开发如何进行组件的拆分</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/vue的业务开发如何进行组件的拆分</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
-            <description><![CDATA[Vue2 业务开发组件拆分实战 组件化是一种思维的表现，这种技能映射到人的本质是，一个人是否有能力把一个复杂的问题拆解、简单化的能力。  一、组件化诞生的历史 我们在讨论如何拆分组件之前，是有必要简单的了解一下组件化诞生的一个历史。 前端娱乐圈有一个独有的生态：框架。每年出现的框架层出不穷，根本学不完。但是总的来说还是可以分成两个阶段。 第一阶段：JQ 和 PrototypeJS。 该阶段解决了浏览器的兼容性问题以及 API 的遍历程度 第二阶段:  Vue、React、Angular。解决了组件化、解耦、复用等问题 在大陆，主要讨论的是 Vue 和 React。 有些人说 Vue 是 fra...]]></description>
-            <content:encoded><![CDATA[# Vue2 业务开发组件拆分实战
-
-组件化是一种思维的表现，这种技能映射到人的本质是，**一个人是否有能力把一个复杂的问题拆解、简单化的能力。**
-
-## 一、组件化诞生的历史
-
-我们在讨论如何拆分组件之前，是有必要简单的了解一下组件化诞生的一个历史。
-
-前端娱乐圈有一个独有的生态：框架。每年出现的框架层出不穷，根本学不完。但是总的来说还是可以分成两个阶段。
-
-**第一阶段**：JQ 和 PrototypeJS。 该阶段解决了浏览器的兼容性问题以及 API 的遍历程度
-
-**第二阶段: ** Vue、React、Angular。解决了组件化、解耦、复用等问题
-
-在大陆，主要讨论的是 Vue 和 React。 有些人说 Vue 是 framework,而 React 是 library，前者有更多的约束和更加齐全的工具链。而后者更加的自由。但是真的要投入生产的话，依旧需求认为的给 React 添加很多的约束，而且 Vue 也是支持 jsx 的，所以我一直不太赞同 React 更加自由这样的说话。
-
-在我看来，它们在实际生产开发过程中，在那一堆工具链中，**只是 API 的不同而已**。
-
-它们都为前端提供了很好的组件化。而且近一年来两者都不约而同朝着函数式跟进。它们带来的各种 hook,给我们带来了不一致的组件化的写法。
-
-## 二、为什么业务组件越开发越难维护
-
-当然是人的问题. 或许产品的问题,或许整个工作流程的问题,或许上面的问题. 这些我们暂且不提,我作为开发, 首先是要管好自己的代码组织.
-
-再次我们先排除其他外界的因素,比如产品经常改需求. 仅从编码阶段来说.
-
-以我们团队为例，我们团队内部员工 2 个，8 个外包，外包兄弟们的招聘标准是远低于内部的。团队人员每个人的编码能力差距还是很大的。项目都是长期维护的，一个业务模块就会有很多人维护，在上面不断的填尿加屎。
-
-> 在这里并不是说外包人员的编码能力差，我们组就有一个外包的兄弟编码能力、解决问题的能力相当厉害的，比很多内部的都好很多。这里只是从平局值上面来说。
-
-团队成员的水平层次不齐, 估计到团队协作, 我们在写业务组件中弄过做的,就是设定一些源码.
-
-### 2.1 项目现状
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1669737578936-58556351-edf6-4549-81d6-fb4cf2f02eef.png)以该图为例, A B C 分别是父子孙组件. 当我们要控制其中一个组件的状态的是, 可以通过很多方式来进行控制. 这些方式的来源有可能是**全局变量**、**vuex**、**时间总线**、**来自自己父组件或子组件的改变**等等.
-
-可以看出, 改变它组件内部状态的来源非常的多, 维护或者修改的时候,需要翻阅的文件目录和范围就很广. 自然就很难维护.
-
-举一个 mixins 的例子：
-
-假设它混入了这么多功能。
-
-```javascript
-export default {
-  mixins: [a, b, c, d, e, f, g],
-  mounted() {
-    console.log(this.whoAreYou);
-  },
-};
-```
-
-这个`this.whoAreYou`你能够知道来源于哪一个么？
-
-而如果改成`hook`的写法来引入某个 JS 中的变量：
-
-```javascript
-const { IamI } = myHome()
-
-const { IamI as me } = myHome()
-```
-
-这就很简洁干净。在你维护代码的时候，可以很好的进行溯源。
-
-而上面的一切，导致难以维护的原因总结来说有两个：
-
-- 混用业务变量和 UI 变量
-- 不区分受控组件和非受控组件
-
-下面我会实际例子分别介绍这个两个概念。而基于`hooks`的复用才是我们现在解决组件化复用的更好的选择。
-
-### 2.2 理想目标
-
-基于`hook`的理想模型
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1669738146798-78c6d796-233b-4281-8e50-835e67188cb5.png)
-
-依旧是 A B C 三个组件.但是 A B C 三个组件外边飘的那些箭头不存在了. 所有能够控制它们的内部状态的方式都集中在了`controllers`上面.
-
-其中`controllers`部分的组织形式和 vue 的`composition api`宣传图表现一致。
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1669776438338-feb8af6b-2b04-4c02-8f9a-cd8a07827a4c.png)
-
-将相似的功能以及用到的变量都封装在一个函数当中。这一切也更加好的迎合了
-
-实际代码如下:
-
-```vue
-<template>
-  <div>
-    <B setC={setC} />
-  <div>
-</template>
-<script setup>
-  import B from 'B.js'
-  import cController from 'cController.js'
-
-  const { setC } = cController(props)
-</script>
-
-// cController.js
-export default c(props) {
-  const c = ref('')
-  const setC() {
-    c.value = 'I an cController'
-  }
-
-  return {
-    c,
-    setC,
-  }
-}
-
-```
-
-`cController.js`就是`controllers`中的一个`void`. 引入到 A 组件当中,然后将里面的方法通过 props 传给 B 组件.
-
-```vue
-<template>
-  <div>
-    <C setC={setC} />
-  <div>
-</template>
-<script setup>
-	import C from 'C.js'
-
-  props: {
-  	setC: {
-      type: Number,
-    }
-  }
-</script>
-```
-
-也就是说,控制 C 组件内部状态的是通过引入到 A 组件中的`controller`来进行通过,中间的 B 组件不做任何的处理,仅仅作为一个中转站. 操作起来和理论都很简单。但是想要更好的拆分的话，还需要了解三个概念：
-
-- 业务变脸和 UI 变量
-- 受控组件和非受控组件
-- 控制反转 ioc
-
-下面我通过一个实际的业务场景来描述。
-
-## 三、举一个实际的例子
-
-### 3.1 需求背景
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1669799527274-fbdc2ba8-d0d8-481c-9ec8-83c8b14cbf1f.png)
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1669800209694-ecf04a1c-e290-47eb-889b-c05d20927c58.png)
-
-简单的截两张图. 需求大致如下:
-
-- 功能就是典型的笔记软件的功能,右边可以放各种类型的文件,点击就可以在右边渲染出对应的内容.
-- 目录树有两个彩蛋,会根据当前文件类型出现不同的操作
-- 目录树下面有一个固定的收藏夹,目录树可以在这其中滚动
-
-### 3.2 开发之前: 前端设计文档
-
-#### 数据流向图
-
-功能还是很清楚的,但是功能其实很多.
-
-我认为我们团队在开发之前是必须要有的. 作为一个前端, 可以没有流程图,但是一定要下面这样的图. 我在别的地方没有见过这样的图,所以自己给这样的图做了一个定义,叫**数据流向图**.
-
-> 关于完整的工作流程,之后再写一篇文章进行描述
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1669912582986-3671f3d3-a7b4-42ca-854d-7797e7404738.png)
-
-它是有两部分构成:
-
-- 组件的模块
-- 组件之间的控制关系
-
-第一点, 还是比较清楚,就是这个需求可以拆成哪几个模块.
-
-第二点, tree 组件和 content 组件是同级组件, tree 可以控制 content 组件内的状态, content 组件也可以改变 tree 内的状态. 再深入一点说,就是 tree 点击不同的文件类型, content 组件部分就会渲染不同的模块; 而当在 content 组件内对当前阅读的文件进行删除操作的时候,tree 作为目录树自然是要刷新最新的目录信息的.
-
-#### 目录结构
-
-通过上面的结构图,可以得到下面这样目录结构.
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1669940918346-49ab45fe-1811-48ee-9e72-2c789ef4c333.png)
-
-#### 逻辑控制
-
-数据流向图中的各个组件都放在根目录下`index.vue`中挂载. 如下入![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670061371190-782d65a7-2c51-444e-94d9-378c5a3eb2e4.png)
-
-控制目录树的相关逻辑都放在`listTreeController`控制器里边, 和右边内容 content 相关逻辑都放入到`renderContentController`的方法当中.
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670061591951-06c51152-80b2-4355-bc3a-bfdbaf15b6d2.png)
-
-随后将 controller 中公共方法都传进到组件当中. `doc-aside`是包括`search`和`tree`已经`other`三个模块的中转组件. 不在这个组件中做任何的逻辑处理. 如下图:
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670061777032-3f7e7fdc-25aa-41f7-8103-57052b5487bd.png)
-
-举一个例子, **控制按钮的权限.**
-
-**[背景]**
-
-- 所有功能点都受控挂载在 vuex 的 store 上面的一个变量, 没有权限的话,就直接通过`v-if`来隐藏对应的入口
-
-**[之前实现]**
-
-- 直接找到对应的按钮在`v-if`上,通过`root.docAuth('createDoc')`来判断
-
-**[修改之后]**
-
-- 创建来一个`authoControllers.js`在`index.vue`引入, 需要用的地方是应用的是
-
-**[具体实现]**
-
-```javascript
-export default function authController({ root }) {
-  const menuAuth = {
-    [MENTY_TYPE.rename]: root.docAuth("rename"),
-    [MENTY_TYPE.delete]: root.docAuth("delete"),
-    // ....
-  };
-}
-```
-
-虽然在 Index.vue 中引入,不管是通过 props,还是通过依赖注入来给子组件来使用,都不重要.重要的是,它统一管理, 并在 index.vue 中引入是唯一一个入口.
-
-当我们维护的时候, 只需要通过子组件一路找到对应的`controller`就可以找到对应的逻辑了.
-
-#### 拆分的原则
-
-- 对于组件的拆分一开始不需要太细
-- 拆分好受控组件和非受控组件
-
-### 3.3 受控组件和非受控组件
-
-我们使用的任何 UI 框架都是受控组件, 受控组件的概念就是它里面的状态都是受调用它的组件来控制的. 非受控组件反之.
-
-### 3.4 开发进行: 逻辑变量和 UI 变量
-
-UI 变量其实很好理解. 像 element-ui 的组件中所需要的属性就是 UI 变量. 但是对于我们实际业务当中, 会对这些进行一定扩展.
-
-举一个例子, 在上面的目录中`dialog组件`的显示或隐藏,是通过`<font style="color:rgb(48, 49, 51);">model-value / v-model</font>`<font style="color:rgb(48, 49, 51);">来进行控制的, </font>`<font style="color:rgb(48, 49, 51);">true</font>`<font style="color:rgb(48, 49, 51);">就显示, </font>`<font style="color:rgb(48, 49, 51);">false</font>`<font style="color:rgb(48, 49, 51);">就隐藏起来. </font>
-
-> <font style="color:rgb(48, 49, 51);">隐藏和显示的渐入渐出效果是 elementUI 框架内置的.</font>
-
-平时工作中很多人是这样传的:
-
-```vue
-<el-dialog :v-model="data.id === XXXX">
-  // code
-</el-dialog>
-props = { data: { type: Object } }
-```
-
-通过通过接口拿到的,或者自己组件的数据传进来之后,再进行对`v-model`的控制. `data.id`这样的变量就是业务变量, 通过业务变量来直接控制 UI 的组件的显示和隐藏,就是业务变量和 UI 变量的混用. 或者说**业务逻辑和交互逻辑的混用. **
-
-混用之后的后果,就是我们进行维护的时候, 需要查看的变量或者说字段就成倍的增加, 交互变量和业务变量交织在一起. 这部分的代码**同时承载了业务逻辑和交互逻辑.**
-
-> **DDD 领域模型也是可以解决这个问题, 之后我会再开篇幅聊一聊.**
-
-所以我们就需要将业务逻辑和交互逻辑给拆开. 如下:
-
-```vue
-<template>
-  <el-dialog :v-model="isShow">
-    <template slot="header">
-      {{ dialogTitle }}
-    </template>
-    <template slot="content">
-      // type === 创建表单
-      // type === 移动文件夹目录
-    </template>
-  </el-dialog>
-</temaplte>
-props = {
-  isShow: {
-    type : Boolean,
-    desc: '是否显示弹窗'
-  },
-  type: {
-    type: String,
-    desc: '弹窗的类型'
-  }
-}
-```
-
-其中`ishow`和`type` 就可以视为 UI 变量, 它们不关心外界是通过了什么判断, 只关系传进来的是 true 还是 false.
-
-## 四、持续的优化
-
-不管一开始代码是如何规划的,如何组织的.最重要的还是要持续的去维护. 屎山到了之后, 前面的维护者没有一个人是无辜的. 但是也不需要过早的去维护.什么时候到了维护重构的时机呢?
-
-- 当碰到这里用的代码别的地方也用到的时候
-- 这个变量出现在好几个地方,被好几个地方都 set 的时候, 而自己搞不懂它们 set 的顺序的时候
-- 函数复杂到自己看了半天都看不明白的时候
-
-## 五、可能的问题
-
-**问题一: **中转的组件没有挂载任何逻辑，为什么还存在?
-
-1. 为了之后可能的拆分
-2. 让结构更加的清晰
-
-**问题二: **中转的组件要挂载这么多办法, 或许太难看?
-
-1. 实在是太多可以使用 vue 的`$attr`和 `$listeners`
-2. 为了维护对于数据的溯源
-
-## 五、实践是学习前端的捷径
-
-前端是一门手艺活,只有实践才能够提高技术. 前端的天花板确实相比其他方向的低,但是也不是我这样的普通人说能够触碰就能触碰到的. 就算很多高端大佬嗤之以鼻的业务代码, 写的时候如果不多思考如何写的简洁,怎么写优雅,写十年和写三年也是没有差别的.
-
-业务才能创造价值, 有了价值才能有我们前端工程师生存的空间. 所以为了提升自己的价值, 提升自己的工资. 平时写业务代码的时候,想想这样写会有什么问题, 如何写才能够更加好. 在这个基础上, 才能看明白那些框架存在的意义. 业务是在轮子之上的,如果对业务的代码都不理解, 又怎么能够真正的写好轮子呢?
-
-我们在保障业务按时完成的情况下,应该多尝试,多实践.
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
-            <title><![CDATA[样式覆盖问题解决]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/微前端/样式覆盖问题解决</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/微前端/样式覆盖问题解决</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
-            <description><![CDATA[微前端样式覆盖问题解决  一、背景 现在没有哪家公司不使用微前端来进行作为项目的组织架构了。 但是这个东西的出现也带来了新的问题。 比如说各个业务团队使用的 UI 框架不一样的时候，就会导致如下这样的样式污染。 !image.png 样式的污染，css-scoped 或者 css module 解决了绝大部分，但是对于多子应用同时加载，主子应用之间的冲突，导致了所有的弹窗样式都是有问题的。  二、解决方案  使用 qiankun 沙盒模式隔离 这是一个坑。神光最近也写过相关的文章，想要详细的了解，可以自寻查找。下面我简单的总结一下： - qiankun 的 css 沙箱的原理是重写 HTMLH...]]></description>
-            <content:encoded><![CDATA[# 微前端样式覆盖问题解决
-
-## 一、背景
-
-现在没有哪家公司不使用微前端来进行作为项目的组织架构了。
-
-但是这个东西的出现也带来了新的问题。
-
-比如说各个业务团队使用的 UI 框架不一样的时候，就会导致如下这样的样式污染。
-
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d11950d8419c4a8c9bc23615dc3c8684~tplv-k3u1fbpfcp-watermark.image?)
-
-样式的污染，css-scoped 或者 css module 解决了绝大部分，但是对于多子应用同时加载，主子应用之间的冲突，导致了所有的弹窗样式都是有问题的。
-
-## 二、解决方案
-
-### 使用 qiankun 沙盒模式隔离
-
-这是一个坑。神光最近也写过相关的文章，想要详细的了解，可以自寻查找。下面我简单的总结一下：
-
-- `qiankun` 的 `css` 沙箱的原理是重写 `HTMLHeadElement.prototype.appendChild` 事件，记录子项目运行时新增的 `style/link` 标签，卸载子项目时移除这些标签。
-
-思路就是将子项目的样式局限到子项目的容器范围，不在这个范围样式不生效。但是对于一些弹窗就无能为力了，它们需要挂载到 `body` 上面，不在子应用容器中，样式就无法生效。
-
-- 使用换肤的思路来解决 ：在子项目给 `body` 加一个唯一的 `id` 或`class`），在对应的全局的样式前面加上这个 `id/class`。而 `single-spa` 模式则在 `mount` 周期给 `body/html` 加上这个唯一的 `id/class`，在 `unmount` 周期去掉，这样就可以保证这个全局 `css` 只对这个项目生效了。
-
-这两个方案的致命点都在于无法解决多个子项目同时运行时的 `css` 污染，以及子项目对主项目的 `css` 污染。
-
-这两个方案已经能够把绝大多数问题解决。但是我们的项目中，是有一个看板的业务的。看板的业务就会把多个子应用同时加载。如果使用上面的两种方案，那么谁的包大，谁加载得慢，那么 body 的 id/class 就归谁的。物尽天择？
-
-### 添加自定义命名空间
-
-如果使用了 element plus 版本的简单很多了。2.20 版本以上的，详情可以点击[https://element-plus.gitee.io/zh-CN/guide/namespace.html#设置-elconfigprovider](https://element-plus.gitee.io/zh-CN/guide/namespace.html#%E8%AE%BE%E7%BD%AE-elconfigprovider)
-
-核心代码如下：
-
-```
-// styles/element/index.scss
-// we can add this to custom namespace, default is 'el'
-@forward 'element-plus/theme-chalk/src/mixins/config.scss' with (
-  $namespace: 'ep'
-);
-// ...
-```
-
-### 使用 postcss-plugin-namespace 插件添加自定义命名空间
-
-其他版本就需要借助插件来实现自定义命名空间了。有很多可以实现相同功能的插件，下面我以插件为例子。
-
-```
-npm i postcss-plugin-namespace -D
-```
-
-在根目录创建`postcss.config.js` 文件。
-
-```
-module.exports = (ctx) => {
-  return {
-    plugins: [
-      require('postcss-plugin-namespace')('#lee_project', {
-        ignore: [
-          'html', /body/, 'span', 'el-form-item', /[data/,
-        ]
-      }),
-    ]
-  }
-}
-```
-
-ignore 顾名思义就是忽略的 class,也可以使用正则，如 `/body/` 。里面有一个 data，这是使用了 style scroped 之后，会给节点上面添加 data-xxxx 。所以它也需要忽略掉。
-
-### 直接覆盖样式
-
-我劝你不要冲动，这是我们统计一部分样式污染的 class 名称：
-
-<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91142fee4c644af0ae06e3e46e5ce9ea~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" width="30%" />
-
-主应用使用了和子应用不同的 UI 框架。我们为了让样式在加载我的应用的时候，需要全局复写上面的这些 class 名，并放在全局。
-
-上面这些污染的 class 只是冰山一角哦，可自行评估一下需要多少工时。
-
-## 三、容易疏忽的问题
-
-字体属于静态资源。项目肯定是开启了协商缓存的。所以说，加载过之后的静态资源也是会污染全局的。而这个时候我们就需要处理两个问题。
-
-### 自己从 iconfont 中下载下来的字体图标
-
-直接修改 iconfont 的前缀即可。如下图配置：
-
-<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3ede642e497242fbb39e814a551b9dff~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" width="50%" />
-
-### element ui 内置的图标
-
-并没有搞明白为什么什么的插件没有自动添加修改前缀。所以我们使用了最暴力的解决办法。不用 element ui 内置的图标，全部替换成 iconfont 的。问题解决就行。
-
-这是因为我们项目的图标很少，所以能够这样干。如果你项目中有大量的图标的话，还是想想怎么使用插件来解决吧。解决了求求教教我。求求了！
-
-改为使用 **按需引入** 问题即可解决。
-
-## 四、总结
-
-- 编程没有银弹，引入的 qiankun 解决了多团队协作的问题，也带来了新的问题。但是也要有我们在做技术选项的时候要有这样的心理预期。
-- 自定义命名空间本质依旧是约定样式规范。
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
-            <title><![CDATA[CodeReview礼仪]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/CodeReview礼仪</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/CodeReview礼仪</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
-            <description><![CDATA[CodeReview 礼仪  一、序言: 原来程序员是这么合作的 在我工作的前四年, 经常会在网上看到 Code Review 这个词. 但是却从来实践过. 看着他们对于 Code Review 习以为常的样子, 我宛如活在了平行世界. 不知道他们在说什么, 虽然每一个字都认识, 自然也没有什么感触. 直到第五年,加入了现在的公司,才真正的知道 Code Review 是什么一回事. 或者说只是知道一冰山一角,毕竟到现在只有不到一年的 Code Review 的经验. 但是给我带来的感触还是很深的. > 向开源项目提交 PR, 也有 Code Review? 不好意思, 在此之前,从来不看别的...]]></description>
-            <content:encoded><![CDATA[# CodeReview 礼仪
-
-## 一、序言: 原来程序员是这么合作的
-
-在我工作的前四年, 经常会在网上看到 Code Review 这个词. 但是却从来实践过.
-
-看着他们对于 Code Review 习以为常的样子, 我宛如活在了平行世界. 不知道他们在说什么, 虽然每一个字都认识, 自然也没有什么感触.
-
-直到第五年,加入了现在的公司,才真正的知道 Code Review 是什么一回事. 或者说只是知道一冰山一角,毕竟到现在只有不到一年的 Code Review 的经验. 但是给我带来的感触还是很深的.
-
-> 向开源项目提交 PR, 也有 Code Review? 不好意思, 在此之前,从来不看别的源码,面向百度编程罢了
-
-这篇文章, 会首先介绍什么是 Code Review, 然后到我们组现在的 Code Review 流程, 接着到处理的好会打起来的 Code Review 礼仪。 最后加上一个问题， 小公司是否需要 Code Review。
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670130932656-379fd2f1-195d-446e-bdb3-965bbd90dbff.png)
-
-最后一个问题,我想来还是有一定的发言权的. **在工作的前四年换了六家公司, 去一家倒闭一家**. 并不是我想要跳槽,只是普本的学历、菜狗的技术, 很多人看不起的外包我都面不过. 再加上运气着实有点问题。
-
-所以在这些小公司协作的时候, 相当原始。 svn 代码管理, 本地项目打包出 dist 文件夹, 压缩之后通过 QQ 传给后台上传。 即便到了负责 APP 的时候, 也是本地手动打包出`.app`发送到测试手机上面.。
-
-即便后来用了 git,也和 svn 的使用没有任何差别, 不存在什么代码审查, 仓库权限的配置. `PR`和 `MR`是啥意思都分不清楚. CI 和 CL 是啥？
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670130597950-fb28e693-8e4a-4944-9e85-02d802d0da96.png)
-
-我的本科虽然是计算机科学与技术,但是除了学习,啥都干。
-
-直到来到了现在的这家公司, 才知道,原来程序员是这么协作的. 这篇文章只说 Code Review, 其他方面之后再出一片文章详细谈谈。
-
-## 二、什么是 Code Review
-
-Code Review 就是将自己的代码公开的给其他程序员审查的过程。
-
-Reviewer 和<font style="color:rgb(18, 18, 18);">Reviewee 之间主要是通过 comment 来进行沟通，comment 可以针对每一行来进行评论。</font>
-
-- <font style="color:rgb(18, 18, 18);">熟悉同事在编程时的思考方式，这样其余同事以后如果有需要就可以更轻松、快速的修改代码。</font>
-- <font style="color:rgb(18, 18, 18);">向同事介绍修改了哪些文件，增加了什么样的功能，这样在问题出现时，可以保证至少有两个人可以帮助诊断、解决问题。</font>
-
-### <font style="color:rgb(18, 18, 18);">2.1 评论规范</font>
-
-<font style="color:rgb(18, 18, 18);">comment 也有规范，如下</font>
-
-:::info
-[request] 我建议这里可以更改为函数 forEach 用户，这个更加的复合规范
-
-[advise] 这里的判断为了应对之后的扩展，可以考虑使用策略模式
-
-[question] 为什么需要多加一个变量来进行判断
-
-:::
-
-通过`[]`包住的标识含义还是很直接的。
-
-- [request] 必须要修改才能够通过
-- [advise] 不修改也可以通过
-- [question] 需要 reviewee 解释一下
-
-### 2.2 CM 实际是在 M 什么
-
-<font style="color:rgb(18, 18, 18);">目的是提高代码质量</font>
-
-<font style="color:rgb(18, 18, 18);">提前发现 bug 外，还包括统一团队的代码规范，比如经常会碰到有人说你这个变量命名不对</font>
-
-代码风格通过配置 Eslint 来进行统一，命<font style="color:rgb(18, 18, 18);">名规则，</font>[语法检查](https://www.zhihu.com/search?q=%E8%AF%AD%E6%B3%95%E6%A3%80%E6%9F%A5&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22article%22%2C%22sourceId%22%3A%2293450972%22%7D)<font style="color:rgb(18, 18, 18);">，分支规范等</font>是需要提前团队规范来解决的。这些都不应该放在 Code Review 上面。
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670165488441-c670d235-e9c3-46ad-863a-c2de5eecad94.png)
-
-所以实际上，在 CM 之前是有前置条件的：
-
-![画板](https://cdn.nlark.com/yuque/0/2022/jpeg/654315/1670430205802-6b0e6221-ba38-4476-a7f1-e1dfceda3a76.jpeg)
-
-在这里之后才开始 CM。CM 的内容基本包括下面：
-
-- 业务 BUG
-- 代码质量
-
-业务 BUG 很直接，很多时候，写的东西不一定用在一个场合，而写的人不一定都熟悉。
-
-代码质量包括这些内容：
-
-- 人工检查代码格式化的漏网之鱼
-- 是否存在重复
-- 最佳实践，`if else`、参数过多、ES6、设计模式（怼人的理论基础是《重构-改善既有代码》）
-- <font style="color:rgb(18, 18, 18);">命名可读性,能自我阐述的最好,英文用词尽量准确(命名是所有程序员的头痛之一)</font>
-- <font style="color:rgb(18, 18, 18);">注释,恰到好处的注释,重要的地方及时备注,不需要的地方要删除一定的注释信息,代码既是给机器运行的,也同时是交接给人看的.</font>
-- <font style="color:rgb(18, 18, 18);">代码是否健壮，是否可扩展</font>
-
-<font style="color:rgb(18, 18, 18);">我们的目标是消灭下面这张图：</font>
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670428340001-0c55330d-9c2c-4e2b-a34b-1df6ab1c131c.png)
-
-## 三、我们组的 Code Review 流程
-
-<font style="color:rgb(18, 18, 18);">我们组是每一次 Merge Request 都进行 Code Review。</font>
-
-> <font style="color:rgb(18, 18, 18);">还有一种是每隔一段时间集中大家一起来进行 CR。</font>
-
-基本的流程图如下:
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670148225843-b74c85c7-7433-4244-91cc-1e0f476649e3.png)
-
-简单来说，就是从 test 分支拉取最新的代码之后，开发完成之后需要合并到远程自己定义的分支，随后将这个分支申请合并到远程 test 分支上面，通过 CI 自动扫描之后，就出发代码审查阶段了
-
-- name\_需求编码指的是, 远程的分支的名称 = 是以自己的名字的首字母 + 下划线 + 需求的 ID。
-- test 分支在经过测试之后， 才会被允许合并到 releasel 分支， 这个过程是封版。将该分支发布部署之后，就可以合并到 master 分支。当然，这个涉及到了分支策略的问题，以后再谈
-
-我们组最多的时候十个人, 评审的人员除了申请人, 其他人都是评审员. 每一个 PR 只需要两个评审的通过就可以入库。当有未必解决状态的评论的时候，其他评审人一般情况是不能审批通过的。
-
-这样的评审的机制其实已经相当宽松了 ，也是希望所有人都能够参与到评审当中，相互都能够了解到对方模块的情况。
-
-但是现实中情况还是不太一样，由于人员之间的水平是有差距的，我们的人员搭配是两个内部的搭配 7/8 个外包的伙伴。虽然平时开发已经再三说明可以给任何人审查代码，不过由于整个环境的问题，实际上敢点击通过代码的依旧只有内部的两个人。形成了事实上的两人评审。
-
-## 四、Code Review 礼仪
-
-<font style="color:rgb(18, 18, 18);">Code Review 的礼仪决定了你是否会被同事背后捅刀。主要是谨记一条原则：</font>
-
-**<font style="color:rgb(18, 18, 18);">只针对代码不针对人</font>**
-
-### <font style="color:rgb(18, 18, 18);">4.1 总结</font>
-
-#### 对评审人员的建议：
-
-- 看不明白的时候，可以适当的提醒对方添加注释
-- 看不明白的时候，是请教对方而不是责问对方
-- 不管是明确修改的方案还是指出问题，给出自己的理由，依据，而不是感觉
-- 评论的内容不要过于广泛
-
-作为 reviewer 提出 comment,<font style="color:rgb(18, 18, 18);">目的是提升项目代码质量，而不是抨击别人，质疑别人的能力，应该保持平等友善的语气。</font>
-
-<font style="color:rgb(18, 18, 18);">评论的内容广泛的问题，比如说，评论 Reviewee 的耦合度太高。这么的言论就很操蛋，我们需要提出的是具体的建议，可以给出具体的改进的伪代码。不然最好闭嘴。</font>
-
-#### 对提审人的建议：
-
-- 每次提交的代码量都尽可能的小
-- 反驳一定需要给出的依据
-- 相比评审人要更加的谦虚
-
-第一点，为了方便<font style="color:rgb(18, 18, 18);">审阅者可以轻松了解代码中有哪些更改以及做了什么。如果 code review 的内容足够少，则可以更频繁地进行，可能每天几次，而且更易于管理。</font>
-
-对于第二点，评审的人花了这么多时间给你来看代码。如果提出的建议能够改善你写的代码，或者直接指出了问题，提审人都是最大的受益者。
-
-### 4.2 话术的建议
-
-| **bad**          | **good**                         |
-| ---------------- | -------------------------------- |
-| 你要这么做       | 我建议这么做/这么干是否更加好    |
-| 你写的代码比较差 | 这块代码写得比较差               |
-| 你这里写得太坑了 | 重构里面提议这种情况应该提取函数 |
-
-**最重要的一点就是，不要吝啬你的夸奖！**
-
-当你实在找不到问题的时候，多夸夸你的同事吧。这段代码设计得真好，这段代码性能提升得真高。当然，平时做人的时候也应该如此。
-
-## 五、小公司是否需要 Code Review
-
-**不需要！**
-
-对于公司而言，**业务第一，产品第二，技术无所属**。领导只关心如何活下去。所以对于你如何使用技术并不关心，关心的是业务是否来钱，自己还有几套房可以抵押。
-
-你们进行 CR 是需要时间，这是钱。
-
-你们想要提高代码质量，需要持续重构优化，客户操作界面的时候感受得出来么？如果没有，那是浪费钱。
-
-无关褒贬，客观事实罢了。
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670431699881-77bcfed9-e230-428b-8631-7e558d4977ea.png)
-
-但是对于个人而言呢？**需要，相当需要**。
-
-都不小了，要明白自己应该做什么。
-
-如果团队的 Code Review 有没有推行没关系,有,自然是非常的。没有的话，你也要通过别的手段自我提升。
-
-但凡有好的事物都应该主动去尝试,去坚持,克服外来因素影响。
-
-一个人,也同样可以 Review 自己和同事代码,为的不是公司，为的是自己。
-
-Review 水平比自己高的，可以直接提升自己的编码能力，学习高水平的思路和设计。
-
-Review 水平比自己低的，可以看看那些错误都是怎么发生的，告诫自己。
-
-Review 水平和自己差不多的，可以换位思考，如果是自己来实现会怎么实现。
-
-卷起来吧，
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670432316837-879ab9e2-8ee5-4cdb-a6eb-0e9b4e01b655.png)
-
-放错图，应该是
-
-![](https://cdn.nlark.com/yuque/0/2022/png/654315/1670432581437-dbcfb7eb-1e13-43f2-8bb2-60010b9f1c14.png)
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
-            <title><![CDATA[Code评审模板和礼仪]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/Code评审模板和礼仪</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/Code评审模板和礼仪</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
-            <description><![CDATA[Code 评审模板和礼仪 <font style="color:rgb(0, 0, 0);">Code Review 就是将自己的代码公开的给其他程序员审查的过程。Reviewer 和 Reviewee 之间主要是通过 comment 来进行沟通，comment 可以针对每一行来进行评论。</font> <font style="color:rgb(0, 0, 0);">熟悉同事在编程时的思考方式，这样其余同事以后如果有需要就可以更轻松、快速的修改代码。</font> <font style="color:rgb(0, 0, 0);">向同事介绍修改了哪些文件，增加了什么样的功能，这样在问题出...]]></description>
-            <content:encoded><![CDATA[# Code 评审模板和礼仪
-
-<font style="color:rgb(0, 0, 0);">Code Review 就是将自己的代码公开的给其他程序员审查的过程。Reviewer 和 Reviewee 之间主要是通过 comment 来进行沟通，comment 可以针对每一行来进行评论。</font>
-
-<font style="color:rgb(0, 0, 0);">熟悉同事在编程时的思考方式，这样其余同事以后如果有需要就可以更轻松、快速的修改代码。</font>
-
-<font style="color:rgb(0, 0, 0);">向同事介绍修改了哪些文件，增加了什么样的功能，这样在问题出现时，可以保证至少有两个人可以帮助诊断、解决问题。</font>
-
-## <font style="color:rgb(0, 0, 0);">一、评审模板</font>
-
-### <font style="color:rgb(0, 0, 0);">1.1 选择对应的标签</font>
-
-![](https://cdn.nlark.com/yuque/0/2023/png/654315/1704007605452-078202ed-ca9d-406d-b0a6-1a1475468e12.png)
-
-### <font style="color:rgb(0, 0, 0);">1.2 comment 规范</font>
-
-- <font style="color:rgb(0, 0, 0);">[必要]我建议这里可以更改为函数 forEach 用户，这个更加的复合规范</font>
-- <font style="color:rgb(0, 0, 0);">[建议]这里的判断为了应对之后的扩展，可以考虑使用策略模式</font>
-- <font style="color:rgb(0, 0, 0);">[疑问]为什么需要多加一个变量来进行判断</font>
-
-### <font style="color:rgb(0, 0, 0);">1.3 "[]"中对应的含义如下：</font>
-
-- <font style="color:rgb(0, 0, 0);">[必要] ⇒ 必须要修改才能够通过</font>
-- <font style="color:rgb(0, 0, 0);">[建议] ⇒ 不修改也可以通过</font>
-- <font style="color:rgb(0, 0, 0);">[疑问] ⇒ 需要 reviewee 解释一下</font>
-
-### <font style="color:rgb(0, 0, 0);">1.4 案例</font>
-
-![](https://cdn.nlark.com/yuque/0/2023/png/654315/1704007605531-f0001593-a743-44d0-b9b3-d8846d1cda0b.png)
-
-<font style="color:rgb(0, 0, 0);">数字分别对应：</font>
-
-1. <font style="color:rgb(0, 0, 0);">标签</font>
-2. <font style="color:rgb(0, 0, 0);">当前评论是否已经解决</font>
-3. <font style="color:rgb(0, 0, 0);">对于当前评论的建议等级</font>
-4. <font style="color:rgb(0, 0, 0);">评论主体</font>
-
-<font style="color:rgb(0, 0, 0);">推荐在评审设置的地方，将只有解决才可通过的勾选</font>
-
-### <font style="color:rgb(0, 0, 0);">1.5 如何收集自己的评审信息</font>
-
-1. <font style="color:rgb(0, 0, 0);">打卡 TT，选择研发云聊天框</font>![](https://cdn.nlark.com/yuque/0/2023/png/654315/1704007605460-00677f8e-a96d-415e-80bc-5318e6d2054e.png)
-2. <font style="color:rgb(0, 0, 0);">打开聊天记录，输入‘【已解决】。’ ，主要是全角。这样搜索出来的结果就是和你相关的评审，可以加上日期来进行过滤。</font>![](https://cdn.nlark.com/yuque/0/2023/png/654315/1704007605498-beb4f2a1-f1eb-47de-9452-e9a88d150f85.png)
-
-## <font style="color:rgb(0, 0, 0);">二、Code Review 礼仪</font>
-
-<font style="color:rgb(0, 0, 0);">代码质量包括这些内容：</font>
-
-- <font style="color:rgb(0, 0, 0);">人工检查代码格式化的漏网之鱼</font>
-- <font style="color:rgb(0, 0, 0);">是否存在重复</font>
-- <font style="color:rgb(0, 0, 0);">最佳实践，if else、参数过多、ES6、设计模式（怼人的理论基础是《重构-改善既有代码》）</font>
-- <font style="color:rgb(0, 0, 0);">命名可读性,能自我阐述的最好,英文用词尽量准确(命名是所有程序员的头痛之一)</font>
-- <font style="color:rgb(0, 0, 0);">注释,恰到好处的注释,重要的地方及时备注,不需要的地方要删除一定的注释信息,代码既是给机器运行的,也同时是交接给人看的.</font>
-- <font style="color:rgb(0, 0, 0);">代码是否健壮，是否可扩展</font>
-
-<font style="color:rgb(0, 0, 0);">我们的目标是消灭下面这张图：</font>
-
-![](https://cdn.nlark.com/yuque/0/2023/png/654315/1704007605504-be64e3d8-8221-4b84-ba93-21d45ab19af6.png)
-
-<font style="color:rgb(0, 0, 0);">同时，我们还需要注意一下礼仪。</font>
-
-<font style="color:rgb(0, 0, 0);">Code Review 的礼仪决定了你是否会被同事背后捅刀。主要是谨记一条原则：</font>
-
-**<font style="color:rgb(0, 0, 0);">只针对代码不针对人</font>**<font style="color:rgb(0, 0, 0);">。</font>
-
-**<font style="color:rgb(0, 0, 0);">对评审人员的建议</font>**<font style="color:rgb(0, 0, 0);">：</font>
-
-- <font style="color:rgb(0, 0, 0);">看不明白的时候，可以适当的提醒对方添加注释</font>
-- <font style="color:rgb(0, 0, 0);">看不明白的时候，是请教对方而不是责问对方</font>
-- <font style="color:rgb(0, 0, 0);">不管是明确修改的方案还是指出问题，给出自己的理由，依据，而不是感觉</font>
-- <font style="color:rgb(0, 0, 0);">评论的内容不要过于广泛</font>
-
-<font style="color:rgb(0, 0, 0);">作为 reviewer 提出 comment,目的是提升项目代码质量，而不是抨击别人，质疑别人的能力，应该保持平等友善的语气。</font>
-
-<font style="color:rgb(0, 0, 0);">评论的内容广泛的问题，比如说，评论 Reviewee 的耦合度太高。这么的言论就很操蛋，我们需要提出的是具体的建议，可以给出具体的改进的伪代码。不然最好闭嘴。</font>
-
-**<font style="color:rgb(0, 0, 0);">对提审人的建议:</font>**
-
-- <font style="color:rgb(0, 0, 0);">每次提交的代码量都尽可能的小</font>
-- <font style="color:rgb(0, 0, 0);">反驳一定需要给出的依据</font>
-- <font style="color:rgb(0, 0, 0);">相比评审人要更加的谦虚</font>
-
-<font style="color:rgb(0, 0, 0);">第一点，为了方便审阅者可以轻松了解代码中有哪些更改以及做了什么。如果 code review 的内容足够少，则可以更频繁地进行，可能每天几次，而且更易于管理。</font>
-
-<font style="color:rgb(0, 0, 0);">对于第二点，评审的人花了这么多时间给你来看代码。如果提出的建议能够改善你写的代码，或者直接指出了问题，提审人都是最大的受益者。</font>
-
-**<font style="color:rgb(0, 0, 0);">话术的建议</font>**
-
-| **<font style="color:rgb(0, 0, 0);">bad</font>**          | **<font style="color:rgb(0, 0, 0);">good</font>**                         |
-| --------------------------------------------------------- | ------------------------------------------------------------------------- |
-| <font style="color:rgb(0, 0, 0);">你要这么做</font>       | <font style="color:rgb(0, 0, 0);">我建议这么做/这么干是否更加好</font>    |
-| <font style="color:rgb(0, 0, 0);">你写的代码比较差</font> | <font style="color:rgb(0, 0, 0);">这块代码写得比较差</font>               |
-| <font style="color:rgb(0, 0, 0);">你这里写得太坑了</font> | <font style="color:rgb(0, 0, 0);">重构里面提议这种情况应该提取函数</font> |
-
-**<font style="color:rgb(0, 0, 0);">最重要的一点就是，不要吝啬你的夸奖！</font>**<font style="color:rgb(0, 0, 0);"><br />当你实在找不到问题的时候，多夸夸你的同事吧。这段代码设计得真好，这段代码性能提升得真高。当然，平时做人的时候也应该如此。</font>
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
             <title><![CDATA[响应式API：进阶]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/响应式API：进阶</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/响应式API：进阶</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[响应式 API：进阶  参考资料(vue3 官网) - shallowRef() - triggerRef() - customRef() - shallowReactive() - shallowReadonly() - toRaw() - markRaw() - effectScope() - getCurrentScope() - onScopeDispose()  前言 官方已经很好的写出了这些 API 是如何使用的，但是没有结合实践的业务场景来说明运用的场景，这个对于我们实际的开发非常的重要，而且在现在离不开大模型的情况下，对于我这种业务开发员来说，广度可能比深度更加的重要。  1....]]></description>
             <content:encoded><![CDATA[# 响应式 API：进阶
 
@@ -8026,7 +7914,7 @@ const { count } = useGlobalCount();
             <title><![CDATA[组合式API：依赖注入]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/组合式API：依赖注入</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/组合式API：依赖注入</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[组合式 API：依赖注入  参考质量 组合式 API：依赖注入  基础使用 父级组件如下： js <template> 	<button @click='addCount'>Add Count</button> 	<inject /> </template> <script setup> import { provide } from 'vue' const count = ref(0) provide('ProvideCount', count) const addCount = () => { 	count.value++ } </script> 自己组件中如下： js <template...]]></description>
             <content:encoded><![CDATA[# 组合式 API：依赖注入
 
@@ -8157,7 +8045,7 @@ const changeAge = () => {
             <title><![CDATA[垃圾回收机制]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/brower/垃圾回收机制</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/brower/垃圾回收机制</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[我们为什么需要了解 作为前端，和 GC 强相关就是内存泄漏场景、调试工具、基础优化策略，这就是需要我们理解可达性、分代回收概念，以及熟练使用 DevTools 分析内存。  为什么需要 GC GC 就是垃圾回收的缩写。下面统一使用 GC 来指代垃圾回收。 众所周知，应用程序在运行过程中需要占用一定的内存空间，且在运行过后就必须将不再用到的内存释放掉，否则就会出现下图中内存的占用持续升高的情况，一方面会影响程序的运行速度，另一方面严重的话则会导致整个程序的崩溃。 我们可以通过 Dev Tool 的 Performance 来直观的观察到内存的改变，在页面加载完毕之后，正常的应该如下，线条在没有控...]]></description>
             <content:encoded><![CDATA[## 我们为什么需要了解
 
@@ -8497,7 +8385,7 @@ a.height = null;
             <title><![CDATA[浏览器缓存机制]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/brower/浏览器缓存机制</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/brower/浏览器缓存机制</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[浏览器缓存机制 -  所谓机制,就是说有这么一套规则来束约缓存的逻辑. 束约的工具是浏览器内部实现的. 束约的参数就是我们 [[HTTP和HTTPS协议]]的报文内容. 结果就是用户看到的资源. - 所以说我们在讨论的浏览器缓存机制的时候,就是在讨论[[HTTP报文]]中的某些对应字段的发挥的作用, 辅以一套处理这些字段的逻辑. - 这套处理的逻辑可以分为两种[[强制缓存]]和[[协商缓存]]  强制缓存 - 在 http1.0 时代,通过配置expires相应头的属性,设置过期的时间,只要超过这个时间,资源就从服务器上获取.反之就从本地获取. - 很简单,但是问题也很多   - 对本地时间...]]></description>
             <content:encoded><![CDATA[# 浏览器缓存机制
 
@@ -8653,10 +8541,122 @@ output:{
             <author>295563358@qq.com (Yoran Wu)</author>
         </item>
         <item>
+            <title><![CDATA[样式覆盖问题解决]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/微前端/样式覆盖问题解决</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/微前端/样式覆盖问题解决</guid>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
+            <description><![CDATA[微前端样式覆盖问题解决  一、背景 现在没有哪家公司不使用微前端来进行作为项目的组织架构了。 但是这个东西的出现也带来了新的问题。 比如说各个业务团队使用的 UI 框架不一样的时候，就会导致如下这样的样式污染。 !image.png 样式的污染，css-scoped 或者 css module 解决了绝大部分，但是对于多子应用同时加载，主子应用之间的冲突，导致了所有的弹窗样式都是有问题的。  二、解决方案  使用 qiankun 沙盒模式隔离 这是一个坑。神光最近也写过相关的文章，想要详细的了解，可以自寻查找。下面我简单的总结一下： - qiankun 的 css 沙箱的原理是重写 HTMLH...]]></description>
+            <content:encoded><![CDATA[# 微前端样式覆盖问题解决
+
+## 一、背景
+
+现在没有哪家公司不使用微前端来进行作为项目的组织架构了。
+
+但是这个东西的出现也带来了新的问题。
+
+比如说各个业务团队使用的 UI 框架不一样的时候，就会导致如下这样的样式污染。
+
+![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d11950d8419c4a8c9bc23615dc3c8684~tplv-k3u1fbpfcp-watermark.image?)
+
+样式的污染，css-scoped 或者 css module 解决了绝大部分，但是对于多子应用同时加载，主子应用之间的冲突，导致了所有的弹窗样式都是有问题的。
+
+## 二、解决方案
+
+### 使用 qiankun 沙盒模式隔离
+
+这是一个坑。神光最近也写过相关的文章，想要详细的了解，可以自寻查找。下面我简单的总结一下：
+
+- `qiankun` 的 `css` 沙箱的原理是重写 `HTMLHeadElement.prototype.appendChild` 事件，记录子项目运行时新增的 `style/link` 标签，卸载子项目时移除这些标签。
+
+思路就是将子项目的样式局限到子项目的容器范围，不在这个范围样式不生效。但是对于一些弹窗就无能为力了，它们需要挂载到 `body` 上面，不在子应用容器中，样式就无法生效。
+
+- 使用换肤的思路来解决 ：在子项目给 `body` 加一个唯一的 `id` 或`class`），在对应的全局的样式前面加上这个 `id/class`。而 `single-spa` 模式则在 `mount` 周期给 `body/html` 加上这个唯一的 `id/class`，在 `unmount` 周期去掉，这样就可以保证这个全局 `css` 只对这个项目生效了。
+
+这两个方案的致命点都在于无法解决多个子项目同时运行时的 `css` 污染，以及子项目对主项目的 `css` 污染。
+
+这两个方案已经能够把绝大多数问题解决。但是我们的项目中，是有一个看板的业务的。看板的业务就会把多个子应用同时加载。如果使用上面的两种方案，那么谁的包大，谁加载得慢，那么 body 的 id/class 就归谁的。物尽天择？
+
+### 添加自定义命名空间
+
+如果使用了 element plus 版本的简单很多了。2.20 版本以上的，详情可以点击[https://element-plus.gitee.io/zh-CN/guide/namespace.html#设置-elconfigprovider](https://element-plus.gitee.io/zh-CN/guide/namespace.html#%E8%AE%BE%E7%BD%AE-elconfigprovider)
+
+核心代码如下：
+
+```
+// styles/element/index.scss
+// we can add this to custom namespace, default is 'el'
+@forward 'element-plus/theme-chalk/src/mixins/config.scss' with (
+  $namespace: 'ep'
+);
+// ...
+```
+
+### 使用 postcss-plugin-namespace 插件添加自定义命名空间
+
+其他版本就需要借助插件来实现自定义命名空间了。有很多可以实现相同功能的插件，下面我以插件为例子。
+
+```
+npm i postcss-plugin-namespace -D
+```
+
+在根目录创建`postcss.config.js` 文件。
+
+```
+module.exports = (ctx) => {
+  return {
+    plugins: [
+      require('postcss-plugin-namespace')('#lee_project', {
+        ignore: [
+          'html', /body/, 'span', 'el-form-item', /[data/,
+        ]
+      }),
+    ]
+  }
+}
+```
+
+ignore 顾名思义就是忽略的 class,也可以使用正则，如 `/body/` 。里面有一个 data，这是使用了 style scroped 之后，会给节点上面添加 data-xxxx 。所以它也需要忽略掉。
+
+### 直接覆盖样式
+
+我劝你不要冲动，这是我们统计一部分样式污染的 class 名称：
+
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91142fee4c644af0ae06e3e46e5ce9ea~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" width="30%" />
+
+主应用使用了和子应用不同的 UI 框架。我们为了让样式在加载我的应用的时候，需要全局复写上面的这些 class 名，并放在全局。
+
+上面这些污染的 class 只是冰山一角哦，可自行评估一下需要多少工时。
+
+## 三、容易疏忽的问题
+
+字体属于静态资源。项目肯定是开启了协商缓存的。所以说，加载过之后的静态资源也是会污染全局的。而这个时候我们就需要处理两个问题。
+
+### 自己从 iconfont 中下载下来的字体图标
+
+直接修改 iconfont 的前缀即可。如下图配置：
+
+<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3ede642e497242fbb39e814a551b9dff~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" width="50%" />
+
+### element ui 内置的图标
+
+并没有搞明白为什么什么的插件没有自动添加修改前缀。所以我们使用了最暴力的解决办法。不用 element ui 内置的图标，全部替换成 iconfont 的。问题解决就行。
+
+这是因为我们项目的图标很少，所以能够这样干。如果你项目中有大量的图标的话，还是想想怎么使用插件来解决吧。解决了求求教教我。求求了！
+
+改为使用 **按需引入** 问题即可解决。
+
+## 四、总结
+
+- 编程没有银弹，引入的 qiankun 解决了多团队协作的问题，也带来了新的问题。但是也要有我们在做技术选项的时候要有这样的心理预期。
+- 自定义命名空间本质依旧是约定样式规范。
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
             <title><![CDATA[内置指令]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/内置指令</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/内置指令</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[内置指令  参考资料 - 内置指令  v-text & 插值语法 > 插值语法就是 {{ message }} v-text 相比插值语法最大的作用就是语义化更加的好，理论上它的性能可能要比插值语法好，不过可以忽略不计。 当我们在v-text的元素中添加子节点，这个子节点包括textContent或者其他节点类型的话，会在编译时就报错，报错信息如下： ![[Pasted image 20250813143743.png]] 这个是从语法层面的规范，利好团队协作，然后其他开发看一眼就知道这个 dom 的意图，不要往它子节点添加东西。  v-html 和 xss  基础用法 js <templat...]]></description>
             <content:encoded><![CDATA[# 内置指令
 
@@ -8961,7 +8961,7 @@ SlotChild.vue 中如下：
             <title><![CDATA[内置组件]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/内置组件</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/内置组件</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[内置组件  参考资料 - Transition - TransitionGroup - KeepAlive - Teleport - Suspense  Transition & TransitionGroup 它的使用没有比官网更加的清晰了。 html <Transition   name="fade"   @before-enter="beforeEnter"   @after-enter="afterEnter"   @before-leave="beforeLeave"   @after-leave="afterLeave" > </Transition> css / 进入阶段：从隐藏...]]></description>
             <content:encoded><![CDATA[# 内置组件
 
@@ -9087,7 +9087,7 @@ const showTeleport = computed(() => {
             <title><![CDATA[响应式API：基础]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/响应式API：基础</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/响应式API：基础</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[响应式 API：基础  参考资料 - ref() - computed() - reactive() - readonly() - watchEffect() - watchPostEffect() - watchSyncEffect() - watch() - onWatcherCleanup()  1. ref 无需多说它的使用，说一个可以对 ref 的初始化和赋值的封装，让它和 react hook 的写法一致。 js const useRef = <T>(value: T): [Ref<T>, (value: T) => void] => {   const targetRef = r...]]></description>
             <content:encoded><![CDATA[# 响应式 API：基础
 
@@ -9295,7 +9295,7 @@ watch(keyword, async (newVal, oldVal, onCleanup) => {
             <title><![CDATA[响应式API：工具]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/响应式API：工具</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/响应式API：工具</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[响应式 API：工具  参考资料 - isRef() - unref() - toRef() - toValue() - toRefs() - isProxy() - isReactive() - isReadonly() 这些 API 的用法非常的简单，而且通过这些命名就可以知道它们属于可有可无的一些方法。  防御性编程 API - isRef() : 检车某个值是否为 ref。 - isProxy() : 检测某个值是否为reactive、shallowReactive、readonly，以及shallowReaonly。 - isReactive() : 检测某个值是否为reactive...]]></description>
             <content:encoded><![CDATA[# 响应式 API：工具
 
@@ -9352,218 +9352,10 @@ const { foo, bar } = useFeatureX();
             <author>295563358@qq.com (Yoran Wu)</author>
         </item>
         <item>
-            <title><![CDATA[NodeJS-net 模块和 Http 模块]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/Network/NodeJS-net 模块和 Http 模块</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Network/NodeJS-net 模块和 Http 模块</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
-            <description><![CDATA[NodeJS-net 模块和 Http 模块  前言 这节内容会设置到如何完整的展示一个 html 页面,以及其上的图片样式. 其中涉及到了 fs 模块的知识和 buff 的概念. 要渲染一个 html 页面,自然就要涉及到报文, 所以也会简单的解释一下报文的概念. 正文如下.  HTTP 报文 在 TCP/IP 协议中,我们经常会听到请求报文,响应报文这样的字眼. 顾名思义. 由于 B/S 架构的标准是基于 HTTP 协议，客户端发送请求，服务器给出响应的一问一答形式进行通信。所以很明显, 请求报文就是客户端发出的, 而响应报文就是服务端发给客户端的,从语义而知,是为了回复请求,所以要响应....]]></description>
-            <content:encoded><![CDATA[# NodeJS-net 模块和 Http 模块
-
-## 前言
-
-这节内容会设置到如何完整的展示一个 html 页面,以及其上的图片样式. 其中涉及到了 fs 模块的知识和 buff 的概念.
-要渲染一个 html 页面,自然就要涉及到报文, 所以也会简单的解释一下报文的概念.
-
-正文如下.
-
-## HTTP 报文
-
-在 TCP/IP 协议中,我们经常会听到`请求报文`,`响应报文`这样的字眼.
-
-顾名思义. 由于 B/S 架构的标准是基于 HTTP 协议，客户端发送请求，服务器给出响应的一问一答形式进行通信。所以很明显, `请求报文`就是客户端发出的, 而`响应报文`就是服务端发给客户端的,从语义而知,是为了回复请求,所以要响应.
-
-它们可以统称为`HTTP报文`, 作用就是用于规范信息的格式. 所以也叫`协议`.
-
-`协议`类比到我们生活中, 我们在入职新公司的,就需要牵劳动合同,保密协议, 这些都是协议, 他们都是有固定需要需要的内容, 比如说甲方、乙方、日期、印章、正文等. 如果没有这些固定的内容话,那么协议就没有任何意义.
-
-`HTTP报文` 也是如此,它有固定的格式,你只要按照这个格式填写上对应的信息, 客户端和服务端才能够识别出你的意思, 才算是一个有效的协议.
-
-`HTTP报文`的格式如下:
-
-![http报文.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/18a6b92d4af44241958c86fa92843b25~tplv-k3u1fbpfcp-watermark.image?)
-
-图片出自《图解 HTTP》. 上面是`请求报文`, 下面是`响应报文`.
-
-- 报文主体是不一定要有的
-
-如图所示, 隐藏的内容还有换行,空行等. 对应的实体是`\r`和`\n`.
-
-对于图中各个字段的作用和含义, 可以自行参考图解 HTTP.
-
-## net 模块展示完整的网页
-
-知道了`HTTP报文`相关的概念之后,我们来通过代码来展示报文的具体结果.
-
-和上一章内容一样 net 模块的. 创建我们的服务
-
-```js
-// netBrewer.js
-const net = require("net");
-const post = 3306;
-const host = "127.0.0.1";
-
-const server = net.createServer();
-server.listen(post, host);
-
-server.on("listening", () => {});
-server.on("connection", (socket) => {
-  // 浏览器对该域名发起的请求
-});
-```
-
-随后命令行中输入`node server.js`
-
-打开浏览器,输入`http://localhost:3306?params=1`, 并在`connenction`监听请求的报文
-
-```js
-server.on("connection", (socket) => {
-  socket.on("data", (data) => {
-    console.log(data.toString());
-  });
-});
-```
-
-在控制台就可以看到浏览器的请求报文:
-
-![截屏2022-04-10 22.18.37.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b6aa63ae2ff1422396a452669b9d9595~tplv-k3u1fbpfcp-watermark.image?)
-
-也正好和上一节`HTTP报文`对应上了.
-
-此时浏览器就会一直在转圈圈,因为它接收不到服务器响应内容, 所以我在下面中输入要`响应的报文`
-
-```js
-server.on("connection", (socket) => {
-  socket.on("data", (data) => {
-    socket.write("HTTP/1.1 200 OK\r\n\r\n<html><body>hello world</body><head>");
-    socket.end();
-  });
-});
-```
-
-值得注意的是,一个报文必须要以`socket.end()`来告诉浏览器数据结束了. 不然它依旧会是转圈圈的状态.
-
-> `socket.end()` 不能写在`socket.on('data')`的外面.因为`data`是一个微任务, 会先执行`end()`
-
-顺利的话, 重启服务器,然后刷新页面,你就可以在页面中看到`hello world`了.
-
-## 通过 fs 模块来获取`html`文件,并响应给浏览器
-
-现在已经能够正常的让浏览器渲染出内容.接下来,我们更进一步,让浏览器渲染的内容更加的贴近我们的实际开发.
-
-我们在使用`react`和`vue`开发完成之后,`npm run build`出来的入口文件一般来说都是`index.html`. 让我们来模拟这一个文件.
-
-创建`index.html`并输入内容
-
-```js
-touch index.html
-```
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Test</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
-  </head>
-  <body>
-    <h1>今日你学习了嘛?</h1>
-    <img src="./img.png" />
-  </body>
-</html>
-```
-
-通过 fs 模块来读取该文件:
-
-```js
-server.on("connection", (socket) => {
-  socket.on("data", (data) => {
-    const dataFile = fs.readFileSync(__dirname + "/index.html");
-
-    console.log(dataFile.toString());
-
-    socket.write("HTTP/1.1 200 OK\r\n");
-    socket.write(dataFile);
-
-    socket.end();
-  });
-});
-```
-
-可以在控制台中看到打印出来的`index.html`的字符串. 刷新一下页面应该也能够看到界面渲染的结果.
-意外也在这个时候发生来. 出现了一个报错:
-
-![截屏2022-04-10 22.50.04.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5bc284a3549043c297a17f878a08f141~tplv-k3u1fbpfcp-watermark.image?)
-
-favicon.ico 图标用于收藏夹图标和浏览器标签上的显示，如果不设置，浏览器会请求网站根目录的这个图标. 我们现在没有指定 favicon.ico 的内容,为了不让它报错,我们可以可以抛出异常的方式来处理.
-
-```js
-try {
-  const dataFile = fs.readFileSync(__dirname + "index.html");
-
-  console.log(dataFile.toString());
-  socket.write("HTTP/1.1 200 OK\r\n");
-  socket.write(dataFile);
-
-  socket.end();
-} catch (e) {
-  socket.write("HTTP/1.1 200 OK\r\n\r\n<body>404</body>");
-  socket.end();
-}
-```
-
-报错的问题已经解决. 当浏览器指定访问地址的是如何处理呢? 这个时候我们就需要解析`请求报文`的内容来做响应的判断:
-
-```js
-const url = data.toString().split("\r\n")[0].split(" ")[1];
-```
-
-通过简单的字符串截取,就可以获取当前浏览器访问的文件是什么.
-
-完整的代码如下:
-
-```js
-const fs = require("fs");
-const net = require("net");
-const post = 3306;
-const host = "127.0.0.1";
-
-const server = net.createServer();
-server.listen(post, host);
-
-server.on("listening", () => {});
-
-server.on("connection", (socket) => {
-  socket.on("data", (data) => {
-    // 1. 解析请求报文
-    const url = data.toString().split("\r\n")[0].split(" ")[1];
-
-    try {
-      const dataFile = fs.readFileSync(__dirname + url);
-
-      console.log(dataFile.toString());
-      socket.write("HTTP/1.1 200 OK\r\n");
-      socket.write(dataFile);
-
-      socket.end();
-    } catch (e) {
-      socket.write("HTTP/1.1 200 OK\r\n\r\n<body>404</body>");
-      socket.end();
-    }
-  });
-});
-```
-
-> 在响应报文中, 只有在 chrome 浏览器中可以不配置`contentType:text/html`. 其他浏览器不配置是显示不出来的.
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
             <title><![CDATA[网络缓存机制]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Network/网络缓存机制</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Network/网络缓存机制</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[缓存机制  所谓机制,就是说有这么一套规则来束约缓存的逻辑. 束约的工具是浏览器内部实现的. 束约的参数就是我们 HTTP 和 HTTPS 协议的报文内容. 结果就是用户看到的资源. 所以说我们在讨论的浏览器缓存机制的时候,就是在讨论 HTTP 报文中的某些对应字段的发挥的作用, 辅以一套处理这些字段的逻辑. 这套处理的逻辑可以分为两种强制缓存和协商缓存  强制缓存 在 http1.0 时代,通过配置expires相应头的属性,设置过期的时间,只要超过这个时间,资源就从服务器上获取.反之就从本地获取. 很简单,但是问题也很多 对本地时间戳过分的依赖,如果客户端本地的时间和服务器的时间不一致的...]]></description>
             <content:encoded><![CDATA[# 缓存机制
 
@@ -9737,7 +9529,7 @@ Cache-Control 的相关属性
             <title><![CDATA[MVC 设计规范]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/MVC 设计规范</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/MVC 设计规范</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[MVC 设计规范 想要真正的明白 MVC 的框架是需要大量的实战的. 而 MVC 框架是 MVVM 框架的前置知识. 而 MVC 框架带的前置知识是整个 JavaScript 知识体系. MVC 是 Model、View、Controller 三个的缩写合并而成. 今天的我的目标是要创造一个能够自加自减的工具. 点击 + 可以增加岁数, 减就减少对应的岁数.如图所示: !截屏2022-02-2023.04.1316453694990110.png  接下来进入 code 缓解, 现在需要创建一个容器来承载接下来的内容 html <body>   <div id="app"></div> </b...]]></description>
             <content:encoded><![CDATA[# MVC 设计规范
 
@@ -10000,7 +9792,7 @@ const Controller = {
             <title><![CDATA[vapor]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/vapor</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/vapor</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[Vapor  性能提升测试 |                  | 首屏加载速度       | 更新耗时 | 更新内存使用 | | ---------------- | ------------------ | -------- | ------------ | | traditional Mode | 1.82s 到 2.28s | 143ms    | 180 mb       | | Vapor Mode       | 1.72s 到 2s    | 25ms     | 144 mb       |  测试方法 浏览器：Chorme 版本 135 隐私模式 创建项目，把 vite...]]></description>
             <content:encoded><![CDATA[# Vapor
 
@@ -10424,7 +10216,7 @@ defineAsyncComponent、`<KeepAlive>`、`<Teleport>`、`<Suspense>`都没有支�
             <title><![CDATA[隐式转化问题]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/隐式转化问题</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/隐式转化问题</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[隐式转化问题 之前写过一篇文章[[js让人诟病的这些feature]]中提出过一个疑问. 这个问题一开始我想简单了.认为只要记住一些特性就可以了.所以直接用穷举法来进行规律的总结. 但是当遇到console.log(Number([])) 的结果是 0, 而console.log(Number([1, 2])) 的结果是 NaN.都什么乱七八糟的,里面必有蹊跷.虽然能够强背背下来, 但是作为一个有追求的程序员还是要弄明白它是怎么一回事的. js console.log({} - {}); // NaN console.log([] - []); // 0 console.log([] - [1...]]></description>
             <content:encoded><![CDATA[# 隐式转化问题
 
@@ -11120,7 +10912,7 @@ console.log(NaN == NaN); // fasle
             <title><![CDATA[HTTP 协议]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Network/HTTP 协议</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Network/HTTP 协议</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[<img width="60%" src="https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/20250824213628776.png" />  HTTP 协议 HTTP 协议可以等同于合同，大家按照合同办事就好，这个大家指的是浏览器和服务端，换句话来说就是它们之间的通信规则。 它本身是没有什么业务逻辑的，只存在通信规则的逻辑，所以我们作为一个 WEB 前端的开发而言，平时接触的 fetch 和 Axios 都是对于 HTTP 协议的使用。 所以我们学习的重点放在如下地方： 1. 业务开发的高频问题    1. 跨域（...]]></description>
             <content:encoded><![CDATA[<img width="60%" src="https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/20250824213628776.png" />
 
@@ -11474,7 +11266,7 @@ RESTfull 规范参考路径：https://www.ruanyifeng.com/blog/2014/05/restful_ap
             <title><![CDATA[NodeJS-net 模块]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Network/NodeJS-net 模块</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Network/NodeJS-net 模块</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[NodeJS-Net 模块  1. 前言 这是 nodeJs 系列的第一篇文章, 我之前看教程的时候,很多都是从 IO、buffer、path、event、fs、process、node 事件循环机制开始说起的. 这些确实是 node 开发主要依赖的开发依赖. 但是我比较着急, 从了解到 node,就是说 node 可以干后端的话,但是这些课程前半截都在说它拥有的能力,就是最后才到如何和客户端通信的模块介绍. 我很难受,所以在我自己写总结的时候,一定要写先服务端和客户端通信的模块才舒服.即便过程中涉及到了 event 模块、fs 模块的知识点,可以暂时搁置,只从整体来理解net模块如何实现通信...]]></description>
             <content:encoded><![CDATA[# NodeJS-Net 模块
 
@@ -11717,10 +11509,355 @@ node client.js
             <author>295563358@qq.com (Yoran Wu)</author>
         </item>
         <item>
+            <title><![CDATA[NodeJS-net 模块和 Http 模块]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/Network/NodeJS-net 模块和 Http 模块</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Network/NodeJS-net 模块和 Http 模块</guid>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
+            <description><![CDATA[NodeJS-net 模块和 Http 模块  前言 这节内容会设置到如何完整的展示一个 html 页面,以及其上的图片样式. 其中涉及到了 fs 模块的知识和 buff 的概念. 要渲染一个 html 页面,自然就要涉及到报文, 所以也会简单的解释一下报文的概念. 正文如下.  HTTP 报文 在 TCP/IP 协议中,我们经常会听到请求报文,响应报文这样的字眼. 顾名思义. 由于 B/S 架构的标准是基于 HTTP 协议，客户端发送请求，服务器给出响应的一问一答形式进行通信。所以很明显, 请求报文就是客户端发出的, 而响应报文就是服务端发给客户端的,从语义而知,是为了回复请求,所以要响应....]]></description>
+            <content:encoded><![CDATA[# NodeJS-net 模块和 Http 模块
+
+## 前言
+
+这节内容会设置到如何完整的展示一个 html 页面,以及其上的图片样式. 其中涉及到了 fs 模块的知识和 buff 的概念.
+要渲染一个 html 页面,自然就要涉及到报文, 所以也会简单的解释一下报文的概念.
+
+正文如下.
+
+## HTTP 报文
+
+在 TCP/IP 协议中,我们经常会听到`请求报文`,`响应报文`这样的字眼.
+
+顾名思义. 由于 B/S 架构的标准是基于 HTTP 协议，客户端发送请求，服务器给出响应的一问一答形式进行通信。所以很明显, `请求报文`就是客户端发出的, 而`响应报文`就是服务端发给客户端的,从语义而知,是为了回复请求,所以要响应.
+
+它们可以统称为`HTTP报文`, 作用就是用于规范信息的格式. 所以也叫`协议`.
+
+`协议`类比到我们生活中, 我们在入职新公司的,就需要牵劳动合同,保密协议, 这些都是协议, 他们都是有固定需要需要的内容, 比如说甲方、乙方、日期、印章、正文等. 如果没有这些固定的内容话,那么协议就没有任何意义.
+
+`HTTP报文` 也是如此,它有固定的格式,你只要按照这个格式填写上对应的信息, 客户端和服务端才能够识别出你的意思, 才算是一个有效的协议.
+
+`HTTP报文`的格式如下:
+
+![http报文.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/18a6b92d4af44241958c86fa92843b25~tplv-k3u1fbpfcp-watermark.image?)
+
+图片出自《图解 HTTP》. 上面是`请求报文`, 下面是`响应报文`.
+
+- 报文主体是不一定要有的
+
+如图所示, 隐藏的内容还有换行,空行等. 对应的实体是`\r`和`\n`.
+
+对于图中各个字段的作用和含义, 可以自行参考图解 HTTP.
+
+## net 模块展示完整的网页
+
+知道了`HTTP报文`相关的概念之后,我们来通过代码来展示报文的具体结果.
+
+和上一章内容一样 net 模块的. 创建我们的服务
+
+```js
+// netBrewer.js
+const net = require("net");
+const post = 3306;
+const host = "127.0.0.1";
+
+const server = net.createServer();
+server.listen(post, host);
+
+server.on("listening", () => {});
+server.on("connection", (socket) => {
+  // 浏览器对该域名发起的请求
+});
+```
+
+随后命令行中输入`node server.js`
+
+打开浏览器,输入`http://localhost:3306?params=1`, 并在`connenction`监听请求的报文
+
+```js
+server.on("connection", (socket) => {
+  socket.on("data", (data) => {
+    console.log(data.toString());
+  });
+});
+```
+
+在控制台就可以看到浏览器的请求报文:
+
+![截屏2022-04-10 22.18.37.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b6aa63ae2ff1422396a452669b9d9595~tplv-k3u1fbpfcp-watermark.image?)
+
+也正好和上一节`HTTP报文`对应上了.
+
+此时浏览器就会一直在转圈圈,因为它接收不到服务器响应内容, 所以我在下面中输入要`响应的报文`
+
+```js
+server.on("connection", (socket) => {
+  socket.on("data", (data) => {
+    socket.write("HTTP/1.1 200 OK\r\n\r\n<html><body>hello world</body><head>");
+    socket.end();
+  });
+});
+```
+
+值得注意的是,一个报文必须要以`socket.end()`来告诉浏览器数据结束了. 不然它依旧会是转圈圈的状态.
+
+> `socket.end()` 不能写在`socket.on('data')`的外面.因为`data`是一个微任务, 会先执行`end()`
+
+顺利的话, 重启服务器,然后刷新页面,你就可以在页面中看到`hello world`了.
+
+## 通过 fs 模块来获取`html`文件,并响应给浏览器
+
+现在已经能够正常的让浏览器渲染出内容.接下来,我们更进一步,让浏览器渲染的内容更加的贴近我们的实际开发.
+
+我们在使用`react`和`vue`开发完成之后,`npm run build`出来的入口文件一般来说都是`index.html`. 让我们来模拟这一个文件.
+
+创建`index.html`并输入内容
+
+```js
+touch index.html
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <h1>今日你学习了嘛?</h1>
+    <img src="./img.png" />
+  </body>
+</html>
+```
+
+通过 fs 模块来读取该文件:
+
+```js
+server.on("connection", (socket) => {
+  socket.on("data", (data) => {
+    const dataFile = fs.readFileSync(__dirname + "/index.html");
+
+    console.log(dataFile.toString());
+
+    socket.write("HTTP/1.1 200 OK\r\n");
+    socket.write(dataFile);
+
+    socket.end();
+  });
+});
+```
+
+可以在控制台中看到打印出来的`index.html`的字符串. 刷新一下页面应该也能够看到界面渲染的结果.
+意外也在这个时候发生来. 出现了一个报错:
+
+![截屏2022-04-10 22.50.04.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5bc284a3549043c297a17f878a08f141~tplv-k3u1fbpfcp-watermark.image?)
+
+favicon.ico 图标用于收藏夹图标和浏览器标签上的显示，如果不设置，浏览器会请求网站根目录的这个图标. 我们现在没有指定 favicon.ico 的内容,为了不让它报错,我们可以可以抛出异常的方式来处理.
+
+```js
+try {
+  const dataFile = fs.readFileSync(__dirname + "index.html");
+
+  console.log(dataFile.toString());
+  socket.write("HTTP/1.1 200 OK\r\n");
+  socket.write(dataFile);
+
+  socket.end();
+} catch (e) {
+  socket.write("HTTP/1.1 200 OK\r\n\r\n<body>404</body>");
+  socket.end();
+}
+```
+
+报错的问题已经解决. 当浏览器指定访问地址的是如何处理呢? 这个时候我们就需要解析`请求报文`的内容来做响应的判断:
+
+```js
+const url = data.toString().split("\r\n")[0].split(" ")[1];
+```
+
+通过简单的字符串截取,就可以获取当前浏览器访问的文件是什么.
+
+完整的代码如下:
+
+```js
+const fs = require("fs");
+const net = require("net");
+const post = 3306;
+const host = "127.0.0.1";
+
+const server = net.createServer();
+server.listen(post, host);
+
+server.on("listening", () => {});
+
+server.on("connection", (socket) => {
+  socket.on("data", (data) => {
+    // 1. 解析请求报文
+    const url = data.toString().split("\r\n")[0].split(" ")[1];
+
+    try {
+      const dataFile = fs.readFileSync(__dirname + url);
+
+      console.log(dataFile.toString());
+      socket.write("HTTP/1.1 200 OK\r\n");
+      socket.write(dataFile);
+
+      socket.end();
+    } catch (e) {
+      socket.write("HTTP/1.1 200 OK\r\n\r\n<body>404</body>");
+      socket.end();
+    }
+  });
+});
+```
+
+> 在响应报文中, 只有在 chrome 浏览器中可以不配置`contentType:text/html`. 其他浏览器不配置是显示不出来的.
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
+            <title><![CDATA[立即执行函数]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/立即执行函数</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/立即执行函数</guid>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
+            <description><![CDATA[立即执行函数  一、是什么 立即执行函数又名[[IIFE]]，具体对于它的介绍可以看我之前的文章。 和它相对应的是[[具名函数表达式]]，是相对的。先来看看具名函数表达式： js function foo() {   console.log("橘子哥"); } 而 IIFE 的典型例子如下： js (function () {   console.log("橘子哥"); })(); 有三个不同： 1. [[IIFE]]没有函数名，具名函数有，可以通过 console.log(foo.name)打印出来 2. [[IIFE]]直接调用，这就是它立即的由来，而具名需要添加foo()才能够运行 3....]]></description>
+            <content:encoded><![CDATA[# 立即执行函数
+
+## 一、是什么
+
+立即执行函数又名[[IIFE]]，具体对于它的介绍可以看我之前的文章。
+
+和它相对应的是[[具名函数表达式]]，是相对的。先来看看具名函数表达式：
+
+```js
+function foo() {
+  console.log("橘子哥");
+}
+```
+
+而 IIFE 的典型例子如下：
+
+```js
+(function () {
+  console.log("橘子哥");
+})();
+```
+
+有三个不同：
+
+1. [[IIFE]]没有函数名，具名函数有，可以通过 console.log(`foo.name`)打印出来
+2. [[IIFE]]直接调用，这就是它立即的由来，而具名需要添加`foo()`才能够运行
+3. [[IIFE]]第一个字符是`;`
+
+## 二、IIFE 给出我们带来了什么
+
+1. 戳破了形成[[闭包]]需要函数嵌套的谣言
+
+创建一个独立的作用域，让我知道函数嵌套函数的目的是什么，详见上一篇文章
+
+2. 解决了循环打印的问题
+
+经典面试题：
+
+```js
+for (var i = 0; i < 5; i++) {
+  setTimout(function () {
+    console.log(i); // 为啥打印出来额都是5呀，而不是0 ,1 ,2 ,3, 4
+  });
+}
+```
+
+或者
+
+```js
+var lis = ul.querySelector("li");
+for (var i = 0; i < 6; i++) {
+  lis[i].onclick = function () {
+    console.log(i); // 为啥打印出来额都是5呀，而不是0 ,1 ,2 ,3, 4
+  };
+}
+```
+
+两个例子都是一个问题。i 相对于函数是全局变量，所以不管循环多少个函数，里面的`i`指向的都是同一个内存，而这个内存中放的值只有一个。所以它们打印出来的值自然都是一样的。
+
+要解决这个问题，自然就是让这些函数能够执行不同的`i`。所以函数作用域就能够办到这件事情。
+
+```js
+for (var i = 0; i < 5; i++) {
+  !(function foo(j) {
+    setTimout(function () {
+      console.log(j); // 为啥打印出来额都是5呀，而不是0 ,1 ,2 ,3, 4
+    });
+  })(j);
+}
+var lis = ul.querySelector("li");
+for (var i = 0; i < 6; i++) {
+  !(function foo(j) {
+    lis[j].onclick = function () {
+      console.log(j); // 为啥打印出来额都是5呀，而不是0 ,1 ,2 ,3, 4
+    };
+  })(j);
+}
+```
+
+> ES6 之前 JS 原生又不提供块级作用域，所以只能用[[函数作用域]]模拟了。现在处理这样的问题，[[let]]显然是更加方便的。
+
+总结一下：
+
+1. 改变变量的作用域（创建一个独立的作用域)
+
+2. 封装临时变量。
+
+## 三、一些少为人知的技巧
+
+**写上函数名**, 两个作用：
+
+第一个，辅助定位 BUG。有小面这串代码：
+
+```js
+!(function () {
+  a;
+  console.log(11);
+})();
+```
+
+明显看出其中 a 没有定义，会在控制台把如下错误。
+
+![[截屏2023-02-07 23.54.31.png]]
+
+如果我们给它添加上函数名，会有什么不一样的么？
+
+```js
+!(function foo() {
+  a;
+  console.log(11);
+})();
+```
+
+报错信息就会出现`foo`函数名。这就是为啥说它可以辅助定位 BUG。
+
+![[截屏2023-02-07 23.58.41.png]]
+
+第二个，老一代框架写法, 比如说 JQ：
+
+```js
+(function JQ(g) {
+  g(window);
+})(function g(window) {
+  // code
+});
+```
+
+了解一下即可。
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
             <title><![CDATA[让 a == 1 && a == 2 && a == 3 成立]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/让 a == 1 &amp;&amp; a == 2 &amp;&amp; a == 3 成立</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/让 a == 1 &amp;&amp; a == 2 &amp;&amp; a == 3 成立</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[让 a == 1 && a == 2 && a == 3 成立 JavaScript if (a == 1 && a == 2 && a == 3) {   console.log('Win') } 如何打印除Win 看到题目的第一眼,我是蒙蔽的.怎么可能会有如此矛盾的情况发生呢?就相当于一个人怎么可能即是小孩,又是成年人,还是老年人呢? 冷静下来,发现一些端倪.它并不是让 a 同时等于 1 2 3, 而且 js 是单线程运行的. 及时它们写在了一行,那也是从左到右执行的. 所以它们可以不是同一时期的东西.既然不是同一时期的东西,那么一个人当然可以是过小孩子,是过成年人,是过老年人了. 回到题...]]></description>
             <content:encoded><![CDATA[# 让 a == 1 && a == 2 && a == 3 成立
 
@@ -11780,7 +11917,7 @@ if (a == 1 && a == 2 && a == 3) {
             <title><![CDATA[运算符的优先级]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/运算符的优先级</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/运算符的优先级</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[运算符的优先级  我们在讨论的是一个什么问题 - 我们在讨论的是处理计算的优先级.   比如说1 + 2  3 等价于 1 + (2  3). 计算的过程还是从左到右 - 所以说,在实际开发中,你想要谁优先处理,就用括号包裹住,准没错.而且也推荐在实际发开着么干. - 如果从编译器的角度上看的话,我们讨论的是[[AST节点]]和根的距离的问题.   - 简单的说就是在求值的过程中,对于整个 AST 树的遍历是[[后序遍历]], 就是说,理根节点越远就越早被求值.   - 具体可以查看[[JavaScript中运算符优先级]]这篇文章  如何记忆 https://developer.mozill...]]></description>
             <content:encoded><![CDATA[# 运算符的优先级
 
@@ -11818,7 +11955,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Oper
             <title><![CDATA[迭代器与生成器]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/迭代器与生成器</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/迭代器与生成器</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[迭代器和生成器  前言 重看看红宝书，略微了解到迭代器和生成器这两个概念为什么那么难理解了。 首先是平时直接使用到的机会确实是非常的少，其次就是书上面为了介绍这两个概念使用了非常多的专业的名词来描述，而且相互穿插，能够把人给绕晕了，而且并没有明确的给出这些概念之间的关联。 所以我这篇文章为了辅助我的学习和记忆，着重于迭代器和生成器这关系。 首先简单的描述一下书中是如何描述这两个规范的,  迭代器导读 在迭代器中，先介绍了迭代，在 ES6 之前 for 和 forEach 两个循环的问题，引出了迭代器模式。接下来就自然的介绍迭代器模式，它包含两个概念： 1.  第一个是可迭代协议     介绍了...]]></description>
             <content:encoded><![CDATA[# 迭代器和生成器
 
@@ -12146,7 +12283,7 @@ for 循环和 for in 看着很像，其实只是共用了`for`这个关键字，
             <title><![CDATA[错误信息]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/错误信息</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/错误信息</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[错误信息   1. SyntaxError 语法错误(uncaught SyntaxError)  - Invalid or unexpected token - unexpected token = - Invalid or unexpected token   2. ReferenceError 引用错误  - Invalid left-hand side in assignment - ...   3. RangeError 范围错误  - Invalid array length  js var arr = [1, 2, 3]; arr.lengh...]]></description>
             <content:encoded><![CDATA[# 错误信息
 
@@ -12193,7 +12330,7 @@ function test() {
             <title><![CDATA[对象继承]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/对象继承</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/对象继承</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[对象继承  面向对象中必须要知道的继承 身为一个靠 js 吃饭的程序员.我们必须明白一点. JavaScript 是最纯正的面向对象的语言 JS 中没有类这个玩意儿,我们在 ES6 看到的 Class 是基于原型来模拟的.也称呼为[[模拟类]]. 比爪哇,C 什么加都要纯的多!!!🐶  我们为什么需要继承 js const kitty = {   say: function () {     console.log("喵喵喵");   }, }; const tiger = {   say: function (value) {     console.log("呼呼呼");   }, };...]]></description>
             <content:encoded><![CDATA[# 对象继承
 
@@ -12548,7 +12685,7 @@ function inherit(Target, Origin) {
             <title><![CDATA[数组API]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/数组API</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/数组API</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[数组 API  1. Array.prototype.copyWithin  1.1 基本形式 Arrauy.prototype.copyWithin(target, (start, end]) > target 是指从什么位置开始 js const arr = [1, 2, 3, 4, 5]; const newArr = arr.copyWithin(1, 0, 3); console.log(newArr); // 1, 1, 2, 3, 5 > start 旁边的(符号代表闭区间,end 旁边的]开区间 从上面的例子可以直接知道.target 代表从数组的第几位开始覆盖. start ...]]></description>
             <content:encoded><![CDATA[# 数组 API
 
@@ -12663,7 +12800,7 @@ console.log(newArra); // 1, 2, 3, 4, 5
             <title><![CDATA[正则基础]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/正则基础</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/正则基础</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[正则基础 要学习正则内置对象的话,需要了解一下 js 中[[转义符]]的概念.它是学习正则表达式的前置知识。  一、转义符 使用转义符的场景如下如下： js const a = '我就蹭蹭，绝不'进去'哦' console.log(a) 我们的目的是要打印我就蹭蹭，绝不'进去'. 但是事与愿违，这样写会直接报错。 Uncaught SyntaxError: Unexpected identifier. 这是因为 JS 引擎把这串代码分成 了前后两部，进去被识别成了变量，这个时候报错说的是你应该要在进入的两边加上+号。 如果加上了加号的话，const a = '我就蹭蹭，绝不'+ 进去 + '哦...]]></description>
             <content:encoded><![CDATA[# 正则基础
 
@@ -13017,7 +13154,7 @@ console.log(reg.exec(str));
             <title><![CDATA[用函数调用的方式来分析this]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/用函数调用的方式来分析this</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/用函数调用的方式来分析this</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[用函数调用的方式来分析 this > 每个函数都有一个隐式的 this 形参。将函数作为方法调用时，这个参数会被设置为用于访问该方法的对象。这和大多数面向对象语言中的 this（或 self）含义相同。但是 JavaScript 在「关联到对象的方法」与「独立函数」这两者之间，使用了单一的定义形式。这使 \\this\\ 导致了许多程序员的困惑和 bug。 ——————Brendan Eich(JS 之父) this 指向到问题是公认的！创造 JS 的人都这么说它。所谓的灵活指向不过是缝合怪。 所以说，对于 this 的强限制是非常有必要的，比如 ES6 的发布。 现在面试还在考查 this ...]]></description>
             <content:encoded><![CDATA[# 用函数调用的方式来分析 this
 
@@ -13125,139 +13262,263 @@ setTimeout(object.logMessage, 1000);
             <author>295563358@qq.com (Yoran Wu)</author>
         </item>
         <item>
-            <title><![CDATA[立即执行函数]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/立即执行函数</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/立即执行函数</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
-            <description><![CDATA[立即执行函数  一、是什么 立即执行函数又名[[IIFE]]，具体对于它的介绍可以看我之前的文章。 和它相对应的是[[具名函数表达式]]，是相对的。先来看看具名函数表达式： js function foo() {   console.log("橘子哥"); } 而 IIFE 的典型例子如下： js (function () {   console.log("橘子哥"); })(); 有三个不同： 1. [[IIFE]]没有函数名，具名函数有，可以通过 console.log(foo.name)打印出来 2. [[IIFE]]直接调用，这就是它立即的由来，而具名需要添加foo()才能够运行 3....]]></description>
-            <content:encoded><![CDATA[# 立即执行函数
+            <title><![CDATA[再次理解闭包]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/再次理解闭包</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/再次理解闭包</guid>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
+            <description><![CDATA[再次理解闭包  一、为什么重复写闭包 之前也写过关于闭包的文章。使用到了上下文，使用到了[[立即执行函数]]，使用到了 AO、GO，甚至还使用到了[[堆内存]]这一大堆名词来进行解释。 一个月过去之后，自己看都愣半天。啥是堆内存了？AO 和 GO 又是什么玩意儿？ !image.png 用了一些更高深莫测的词汇来解释一个概念，而这些词汇的知识点甚至比当前要解释的概念更复杂。在当前 AI 大行其道的时代，或许写这种基础知识的文章更多的是为了悦己，为的是加深自己对于某个知识点的，而不是装逼的。 通俗易懂才是最重要的。 之前写得还是太复杂了，随着自己的理解加深，重现更新，加深自己的认知。  二、闭包...]]></description>
+            <content:encoded><![CDATA[# 再次理解闭包
 
-## 一、是什么
+## 一、为什么重复写闭包
 
-立即执行函数又名[[IIFE]]，具体对于它的介绍可以看我之前的文章。
+之前也写过关于闭包的文章。使用到了上下文，使用到了[[立即执行函数]]，使用到了 AO、GO，甚至还使用到了[[堆内存]]这一大堆名词来进行解释。
+一个月过去之后，自己看都愣半天。啥是堆内存了？AO 和 GO 又是什么玩意儿？
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0d17f26cce084569a01c679c8a854c2b~tplv-k3u1fbpfcp-watermark.image?)
+用了一些更高深莫测的词汇来解释一个概念，而这些词汇的知识点甚至比当前要解释的概念更复杂。在当前 AI 大行其道的时代，或许写这种基础知识的文章更多的是为了悦己，为的是加深自己对于某个知识点的，而不是装逼的。
 
-和它相对应的是[[具名函数表达式]]，是相对的。先来看看具名函数表达式：
+**通俗易懂才是最重要的。**
+
+之前写得还是太复杂了，随着自己的理解加深，重现更新，加深自己的认知。
+
+## 二、闭包是什么
+
+闭包由 closure 翻译而来。
+
+<img width="300" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8c03e70ce92e4d64a23c105b48502da3~tplv-k3u1fbpfcp-watermark.image?"/>
+
+它的含义更多的是闭，而不是包。为什么要提及这一点呢？因为这词语更加准确的翻译应该是**闭合性**，我们在讨论 JS 的闭包的时候，其实是在讨论 JS 中如何实现函数的闭合性的？
+
+换一句话来说，**就是 JS 如何让变量在函数外边如何被调用的**。这个本质依旧是在说[[函数作用域]]。只需要让目标变量的作用域不被销毁，那么你就可以在任何地方访问这个变量。如下图，fn1 想要访问 fn2 内的 a 变量：
+
+![[Pasted image 20250410193451.png]]
+
+> 这里提到的这个变量，一般来说指的不是变量的指，而是这个变量的内存位置。
+
+那么，闭合性在 JS 中是如何表现的呢？实践是唯一真理，直接看下面的闭包的例子，从中总结规律。
+
+**1. 第一段代码，常见的闭包,直接返回一个函数：**
 
 ```js
 function foo() {
-  console.log("橘子哥");
+  let local = 1;
+  return function () {
+    local++;
+    console.log(local);
+  };
+}
+
+const fn = foo();
+fn(); // 2
+fn(); // 3
+```
+
+**2. 第二段代码，循环赋值 + IIFE:**
+
+```js
+for (var i = 0; i < 10; i++) {
+  (function () {
+    setTimeout(function () {
+      console.log(i); // 10, 10, 10, 10, 10
+    }, 1000);
+  })();
 }
 ```
 
-而 IIFE 的典型例子如下：
+**3. 第三段代码，全局应用函数:**
+
+```js
+function foo() {
+  let local = 1;
+  window.addLocal = function () {
+    local++;
+    console.log(local);
+  };
+}
+addLocal(); // 2
+addLocal(); // 3
+```
+
+**4. 第四段代码，函数返回对象函数：**
+
+```js
+function foo() {
+  let local = 1;
+  function too() {
+    local++;
+    console.log(local);
+  }
+  function eoo() {
+    local++;
+    console.log(local);
+  }
+  return [too, eoo];
+}
+
+const a = foo();
+a[0](); // 2
+a[0](); // 3
+a[1](); // 4
+```
+
+上面段代码都体现了 JS 中函数对于闭合性的实现。局部变量在函数外部依旧可以访问到。通过这四个代码片段，我们找到它们的共性，得出 JS 实现闭合性的最小单位如下：
+
+```js
+let local = 1;
+function foo() {
+  console.log(local);
+}
+```
+
+但是这样看不出它是局部变量，那么我们给它添加上 IIFE：
 
 ```js
 (function () {
-  console.log("橘子哥");
+  let local = 1;
+  function foo() {
+    console.log(local);
+  }
 })();
 ```
 
-有三个不同：
+由此我们还可以给出一些关于 JS 实现函数闭合性的问题：
 
-1. [[IIFE]]没有函数名，具名函数有，可以通过 console.log(`foo.name`)打印出来
-2. [[IIFE]]直接调用，这就是它立即的由来，而具名需要添加`foo()`才能够运行
-3. [[IIFE]]第一个字符是`;`
+1. 不是一定需要 return 一个函数，代码片段 3 和 4 中都没有返回一个函数。
+2. 不是一定需要函数嵌套函数，代码片段 2 中。
 
-## 二、IIFE 给出我们带来了什么
+## 三、闭包实现的原理
 
-1. 戳破了形成[[闭包]]需要函数嵌套的谣言
+**闭包是 JS 函数作用域的副产品**,所以《高程》上面说了解闭包就要先理解什么是函数作用域。它是 由**函数**和*这个函数可以访问到的变量*这两者构成的。
 
-创建一个独立的作用域，让我知道函数嵌套函数的目的是什么，详见上一篇文章
+上面的说到的作用域和垃圾回收机制在其中又有什么作用的呢？
 
-2. 解决了循环打印的问题
+- ​**​[[作用域]]（词法环境）​**​：  
+   JavaScript 闭包的核心机制是 ​**​ 词法作用域 ​**​（Lexical Scope）。当一个函数内部定义了另一个函数，且内部函数引用了外部函数的变量时，内部函数会“记住”它被定义时的词法环境（即外部函数的作用域），即使外部函数已经执行完毕。这是闭包实现的基础。
+- ​**​[[垃圾回收机制​]]**​：  
+   JavaScript 的垃圾回收机制（Garbage Collection）会回收不再被引用的内存。闭包中，如果内部函数仍然持有对外部函数变量的引用，这些变量就不会被回收（即使外部函数已执行完），从而形成闭包。因此，垃圾回收机制间接支持了闭包的存在。
 
-经典面试题：
+两者缺一不可。
 
-```js
-for (var i = 0; i < 5; i++) {
-  setTimout(function () {
-    console.log(i); // 为啥打印出来额都是5呀，而不是0 ,1 ,2 ,3, 4
-  });
-}
-```
+结论：JS 对于函数闭合性的实现是基于作用域和垃圾回收机制相互作用的一个现象。
 
-或者
+## 四、在平时工作的时候我们如何应用到闭包
 
-```js
-var lis = ul.querySelector("li");
-for (var i = 0; i < 6; i++) {
-  lis[i].onclick = function () {
-    console.log(i); // 为啥打印出来额都是5呀，而不是0 ,1 ,2 ,3, 4
+为了能够访问一个变量，我们可以直接让这个变量位于的全局作用域中。我们平时工作中还需要直接使用闭包吗？
+
+答案是需要的。**闭包在我们业务开发中最大的作用就是为了隐藏变量！**，尤其在 vue3 hook 写法的时候，闭包出现的场景更加多，而且也足够安全。
+
+### 场景一：结合 ref 实现 vue hook
+
+​**​1. 实现一个带闭包的 Hook​**​
+
+```ts
+// useCounter.ts
+import { ref } from "vue";
+
+export function useCounter(
+  initialValue: number,
+  options: { min?: number; max?: number }
+) {
+  const { min = -Infinity, max = Infinity } = options;
+
+  // 闭包内部的私有状态（通过 ref 转为响应式）
+  const count = ref(initialValue);
+
+  // 闭包内部方法（直接操作闭包中的 count）
+  const increment = () => {
+    if (count.value < max) count.value++;
   };
+
+  const decrement = () => {
+    if (count.value > min) count.value--;
+  };
+
+  const reset = () => {
+    count.value = initialValue;
+  };
+
+  // 暴露响应式变量和方法
+  return { count, increment, decrement, reset };
 }
 ```
 
-两个例子都是一个问题。i 相对于函数是全局变量，所以不管循环多少个函数，里面的`i`指向的都是同一个内存，而这个内存中放的值只有一个。所以它们打印出来的值自然都是一样的。
+**2. 在组件中使用 Hook**
 
-要解决这个问题，自然就是让这些函数能够执行不同的`i`。所以函数作用域就能够办到这件事情。
+```vue
+<template>
+  <div>
+    <button @click="decrement">-</button>
+    <span>{{ count }}</span>
+    <button @click="increment">+</button>
+    <button @click="reset">Reset</button>
+  </div>
+</template>
 
-```js
-for (var i = 0; i < 5; i++) {
-  !(function foo(j) {
-    setTimout(function () {
-      console.log(j); // 为啥打印出来额都是5呀，而不是0 ,1 ,2 ,3, 4
-    });
-  })(j);
-}
-var lis = ul.querySelector("li");
-for (var i = 0; i < 6; i++) {
-  !(function foo(j) {
-    lis[j].onclick = function () {
-      console.log(j); // 为啥打印出来额都是5呀，而不是0 ,1 ,2 ,3, 4
-    };
-  })(j);
-}
-```
+<script setup>
+import { useCounter } from "./useCounter";
 
-> ES6 之前 JS 原生又不提供块级作用域，所以只能用[[函数作用域]]模拟了。现在处理这样的问题，[[let]]显然是更加方便的。
-
-总结一下：
-
-1. 改变变量的作用域（创建一个独立的作用域)
-
-2. 封装临时变量。
-
-## 三、一些少为人知的技巧
-
-**写上函数名**, 两个作用：
-
-第一个，辅助定位 BUG。有小面这串代码：
-
-```js
-!(function () {
-  a;
-  console.log(11);
-})();
-```
-
-明显看出其中 a 没有定义，会在控制台把如下错误。
-
-![[截屏2023-02-07 23.54.31.png]]
-
-如果我们给它添加上函数名，会有什么不一样的么？
-
-```js
-!(function foo() {
-  a;
-  console.log(11);
-})();
-```
-
-报错信息就会出现`foo`函数名。这就是为啥说它可以辅助定位 BUG。
-
-![[截屏2023-02-07 23.58.41.png]]
-
-第二个，老一代框架写法, 比如说 JQ：
-
-```js
-(function JQ(g) {
-  g(window);
-})(function g(window) {
-  // code
+// 每次调用 useCounter 会创建一个新的闭包，独立维护 count 状态
+const { count, increment, decrement, reset } = useCounter(0, {
+  min: 0,
+  max: 10,
 });
+</script>
 ```
 
-了解一下即可。
+### 场景二：非 ref 本地变量的使用
+
+前端对于接口响应的数据进行缓存：
+
+```ts
+export function useCache<T>() {
+  // 闭包中缓存计算结果
+  let cache: T | null = null;
+
+  const calculate = (data: T) => {
+    if (cache !== null) {
+      console.log("返回缓存结果");
+      return cache;
+    }
+
+    console.log("首次请求");
+    cache = result as T;
+    return result;
+  };
+
+  const clearCache = () => {
+    cache = null;
+  };
+
+  return { calculate, clearCache };
+}
+```
+
+### **总结 ​**​
+
+在 Vue3 的 Hook 写法中，闭包的核心价值：
+
+1. ​**​ 隔离作用域 ​**​：每个 Hook 实例独立维护状态。
+2. ​**​ 封装私有逻辑 ​**​：隐藏内部实现细节，只暴露必要接口。
+3. ​**​ 性能优化 ​**​：通过缓存、防抖/节流等模式减少重复计算或操作。
+
+## 五、为什么都说需要谨慎的使用闭包
+
+百度一下，也不知道谁抄的谁，太多一模一样的文章。而我也是长期这么认为的。
+
+![截屏2023-02-07 00.17.30.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/85910b12a9fd4aa896b5c787b01cb0c7~tplv-k3u1fbpfcp-watermark.image?)
+
+根据我之前写的闭包的文章，闭包长期存在于 GO 当中，自然可能会占用内存，如果数量过多了，不就导致内存泄漏了么？
+
+看起来挺有道理的，这是因为我不懂啥啥叫[[内存泄漏]]而差产生的误解。所以我上网搜索到了如下的回答：
+
+<img width="500" src='https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f9739800df634a3595c75dc227179daa~tplv-k3u1fbpfcp-watermark.image?'/>
+
+<img width="500" src='https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/be8aed0b360d41e1a2a13bf144047e04~tplv-k3u1fbpfcp-watermark.image?'/>
+
+也就是说，对于闭包而言，造成内存泄漏的不是闭包本身，而是 IE 浏览器。
+
+也就是说，只要我在使用闭包的时候，只有主要及时的销毁作用域就可以了。拿 vue3 来举例的话，我们平时都是在 tsx 或者在.vue 组件中引入闭包，那么它就会随着这个组件的销毁而销毁，一般来说是不会产生闭包长期存在于 GO 的现象。
+
+所以平时该用就用，不需要顾虑那么多。
 ]]></content:encoded>
             <author>295563358@qq.com (Yoran Wu)</author>
         </item>
@@ -13265,7 +13526,7 @@ for (var i = 0; i < 6; i++) {
             <title><![CDATA[原型和原型链]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/原型和原型链</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/原型和原型链</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[原型和原型链 (当前个人理解,仅仅供参考)  一、函数的调用方式 要知道原型和原型链是什么.首先是需要知道函数的调用方式,所有知识点都不应该是孤立存在的,有了对于函数调用全盘的了解才能够明白原型链产生的过程发生了啥.这里简单做一些表述.  1.1 直接调用方式 JavaScript function fn() {} fn() const a = {   name: '妈咋',   fn: function() {     console.log(this.name)   } } a.fn() // 妈咋 这种方式是绝大多数人学习函数第一个学会的.但是我在看 B 站某个老师的视频上面有说到,函数...]]></description>
             <content:encoded><![CDATA[# 原型和原型链
 
@@ -13522,7 +13783,7 @@ F.b(); // 'b'
             <title><![CDATA[块级作用域与嵌套、let、暂时性死区]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/块级作用域与嵌套、let、暂时性死区</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/块级作用域与嵌套、let、暂时性死区</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[块级作用域与嵌套、let、暂时性死区 别以为你稳了, Don't get comfortable  let 都 2022 年了,let 和 const、以及 var 的区别有太多的文章作出了解析. 甚至于,如果不用兼容 ie11, 现在的项目都可以不用使用[[babel]]来进行转译.白白生成那么多多余的代码. 下面这些题都能够毫无压力的做出来,那么证明这个知识点你已经完全掌握了. 一共十二道题. js // 1 var b = 0 let b 10 console.log(b) - 结果   报错 js // 2 function test(a) {   let a = 19;   cons...]]></description>
             <content:encoded><![CDATA[# 块级作用域与嵌套、let、暂时性死区
 
@@ -13781,7 +14042,7 @@ a.number++;
             <title><![CDATA[对象的属性描述符]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/对象的属性描述符</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/对象的属性描述符</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[对象的属性描述符  配置 definePropertye 之后,除了 value,其他值不显型的写出的话,默认是 false  js var o = { a: 1 }; Object.defineProperty(o, "b", {   value: 2,   writable: false,   enumerable: false,   configurable: true, });   - value: 基本属性值 - writable: 是否可以改,如果为 false 的话,在 es5 严格模式下面就会报错了 - enumberable: 是否可以枚举 ...]]></description>
             <content:encoded><![CDATA[# 对象的属性描述符
 
@@ -13855,7 +14116,7 @@ Object.defineProperties(person, {
             <title><![CDATA[js让人诟病的这些feature]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/js让人诟病的这些feature</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/js让人诟病的这些feature</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[![](https://img2.baidu.com/it/u=139382954,2115973602&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500k)  js 让人诟病的这些 feature  1.前言 - 是糟粕还是feature?这要取决于对于它的认识和使用.用的好就是 feature,用得不好,可能就不单单是糟粕,还会要留在公司加班的.所以为了更加好的利用隐式转化,今天我们要好好的认识它. - 而大部分的觉得 js 混乱的原因,也是由于它的想对于静态语言的不确定性. - 下面我就一一来解析这些让人疑惑的问题. > Thanks for inve...]]></description>
             <content:encoded><![CDATA[![](https://img2.baidu.com/it/u=139382954,2115973602&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500k)
 
@@ -14230,7 +14491,7 @@ console.log("23" > "3");
             <title><![CDATA[new 的时候都干了什么]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/new 的时候都干了什么</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/new 的时候都干了什么</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[new 的时候都干了什么  为什么要有 new 我认为了解一个 api 怎么用之前，更重要的是要知道这个 api 为什么因何而诞生的！ JS 的诞生就是为了快速的解决问题的。所以它的语法很多时候都是为了让用户省心而设计的，比如弱语法，比如这个 new。 <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/36b0879f8da6456c93b5f93f7ff93855tplv-k3u1fbpfcp-watermark.image?" alt="image.png" width="30%" /> 在我平时写的业务中，其实没有创造...]]></description>
             <content:encoded><![CDATA[# new 的时候都干了什么
 
@@ -14470,7 +14731,7 @@ function isObject(obj) {
             <title><![CDATA[parseInt总结]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/parseInt总结</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/parseInt总结</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[parseInt 使用总结 parseInt('012', 16)和 parseInt(012, 16)相等吗？ ["10", "10", "10", "10", "10"].map(parseInt)的结果是什么？ 先来一起复习一下parseInt()的基本用法。  1 parseInt()的使用说明 使用参数说明：paraseInt(value: string, radix?: number) > parseInt()是对 Number()很好的补充  1.1 解析数字和字母的混合字符串 当Number()返回的都是NaN的时候，parseInt()有不一样的解析结果。parseInt 会...]]></description>
             <content:encoded><![CDATA[# parseInt 使用总结
 
@@ -14651,568 +14912,10 @@ parseInt("10", 4); // 4
             <author>295563358@qq.com (Yoran Wu)</author>
         </item>
         <item>
-            <title><![CDATA[再次理解闭包]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/再次理解闭包</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/再次理解闭包</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
-            <description><![CDATA[再次理解闭包  一、为什么重复写闭包 之前也写过关于闭包的文章。使用到了上下文，使用到了[[立即执行函数]]，使用到了 AO、GO，甚至还使用到了[[堆内存]]这一大堆名词来进行解释。 一个月过去之后，自己看都愣半天。啥是堆内存了？AO 和 GO 又是什么玩意儿？ !image.png 用了一些更高深莫测的词汇来解释一个概念，而这些词汇的知识点甚至比当前要解释的概念更复杂。在当前 AI 大行其道的时代，或许写这种基础知识的文章更多的是为了悦己，为的是加深自己对于某个知识点的，而不是装逼的。 通俗易懂才是最重要的。 之前写得还是太复杂了，随着自己的理解加深，重现更新，加深自己的认知。  二、闭包...]]></description>
-            <content:encoded><![CDATA[# 再次理解闭包
-
-## 一、为什么重复写闭包
-
-之前也写过关于闭包的文章。使用到了上下文，使用到了[[立即执行函数]]，使用到了 AO、GO，甚至还使用到了[[堆内存]]这一大堆名词来进行解释。
-一个月过去之后，自己看都愣半天。啥是堆内存了？AO 和 GO 又是什么玩意儿？
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0d17f26cce084569a01c679c8a854c2b~tplv-k3u1fbpfcp-watermark.image?)
-用了一些更高深莫测的词汇来解释一个概念，而这些词汇的知识点甚至比当前要解释的概念更复杂。在当前 AI 大行其道的时代，或许写这种基础知识的文章更多的是为了悦己，为的是加深自己对于某个知识点的，而不是装逼的。
-
-**通俗易懂才是最重要的。**
-
-之前写得还是太复杂了，随着自己的理解加深，重现更新，加深自己的认知。
-
-## 二、闭包是什么
-
-闭包由 closure 翻译而来。
-
-<img width="300" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8c03e70ce92e4d64a23c105b48502da3~tplv-k3u1fbpfcp-watermark.image?"/>
-
-它的含义更多的是闭，而不是包。为什么要提及这一点呢？因为这词语更加准确的翻译应该是**闭合性**，我们在讨论 JS 的闭包的时候，其实是在讨论 JS 中如何实现函数的闭合性的？
-
-换一句话来说，**就是 JS 如何让变量在函数外边如何被调用的**。这个本质依旧是在说[[函数作用域]]。只需要让目标变量的作用域不被销毁，那么你就可以在任何地方访问这个变量。如下图，fn1 想要访问 fn2 内的 a 变量：
-
-![[Pasted image 20250410193451.png]]
-
-> 这里提到的这个变量，一般来说指的不是变量的指，而是这个变量的内存位置。
-
-那么，闭合性在 JS 中是如何表现的呢？实践是唯一真理，直接看下面的闭包的例子，从中总结规律。
-
-**1. 第一段代码，常见的闭包,直接返回一个函数：**
-
-```js
-function foo() {
-  let local = 1;
-  return function () {
-    local++;
-    console.log(local);
-  };
-}
-
-const fn = foo();
-fn(); // 2
-fn(); // 3
-```
-
-**2. 第二段代码，循环赋值 + IIFE:**
-
-```js
-for (var i = 0; i < 10; i++) {
-  (function () {
-    setTimeout(function () {
-      console.log(i); // 10, 10, 10, 10, 10
-    }, 1000);
-  })();
-}
-```
-
-**3. 第三段代码，全局应用函数:**
-
-```js
-function foo() {
-  let local = 1;
-  window.addLocal = function () {
-    local++;
-    console.log(local);
-  };
-}
-addLocal(); // 2
-addLocal(); // 3
-```
-
-**4. 第四段代码，函数返回对象函数：**
-
-```js
-function foo() {
-  let local = 1;
-  function too() {
-    local++;
-    console.log(local);
-  }
-  function eoo() {
-    local++;
-    console.log(local);
-  }
-  return [too, eoo];
-}
-
-const a = foo();
-a[0](); // 2
-a[0](); // 3
-a[1](); // 4
-```
-
-上面段代码都体现了 JS 中函数对于闭合性的实现。局部变量在函数外部依旧可以访问到。通过这四个代码片段，我们找到它们的共性，得出 JS 实现闭合性的最小单位如下：
-
-```js
-let local = 1;
-function foo() {
-  console.log(local);
-}
-```
-
-但是这样看不出它是局部变量，那么我们给它添加上 IIFE：
-
-```js
-(function () {
-  let local = 1;
-  function foo() {
-    console.log(local);
-  }
-})();
-```
-
-由此我们还可以给出一些关于 JS 实现函数闭合性的问题：
-
-1. 不是一定需要 return 一个函数，代码片段 3 和 4 中都没有返回一个函数。
-2. 不是一定需要函数嵌套函数，代码片段 2 中。
-
-## 三、闭包实现的原理
-
-**闭包是 JS 函数作用域的副产品**,所以《高程》上面说了解闭包就要先理解什么是函数作用域。它是 由**函数**和*这个函数可以访问到的变量*这两者构成的。
-
-上面的说到的作用域和垃圾回收机制在其中又有什么作用的呢？
-
-- ​**​[[作用域]]（词法环境）​**​：  
-   JavaScript 闭包的核心机制是 ​**​ 词法作用域 ​**​（Lexical Scope）。当一个函数内部定义了另一个函数，且内部函数引用了外部函数的变量时，内部函数会“记住”它被定义时的词法环境（即外部函数的作用域），即使外部函数已经执行完毕。这是闭包实现的基础。
-- ​**​[[垃圾回收机制​]]**​：  
-   JavaScript 的垃圾回收机制（Garbage Collection）会回收不再被引用的内存。闭包中，如果内部函数仍然持有对外部函数变量的引用，这些变量就不会被回收（即使外部函数已执行完），从而形成闭包。因此，垃圾回收机制间接支持了闭包的存在。
-
-两者缺一不可。
-
-结论：JS 对于函数闭合性的实现是基于作用域和垃圾回收机制相互作用的一个现象。
-
-## 四、在平时工作的时候我们如何应用到闭包
-
-为了能够访问一个变量，我们可以直接让这个变量位于的全局作用域中。我们平时工作中还需要直接使用闭包吗？
-
-答案是需要的。**闭包在我们业务开发中最大的作用就是为了隐藏变量！**，尤其在 vue3 hook 写法的时候，闭包出现的场景更加多，而且也足够安全。
-
-### 场景一：结合 ref 实现 vue hook
-
-​**​1. 实现一个带闭包的 Hook​**​
-
-```ts
-// useCounter.ts
-import { ref } from "vue";
-
-export function useCounter(
-  initialValue: number,
-  options: { min?: number; max?: number }
-) {
-  const { min = -Infinity, max = Infinity } = options;
-
-  // 闭包内部的私有状态（通过 ref 转为响应式）
-  const count = ref(initialValue);
-
-  // 闭包内部方法（直接操作闭包中的 count）
-  const increment = () => {
-    if (count.value < max) count.value++;
-  };
-
-  const decrement = () => {
-    if (count.value > min) count.value--;
-  };
-
-  const reset = () => {
-    count.value = initialValue;
-  };
-
-  // 暴露响应式变量和方法
-  return { count, increment, decrement, reset };
-}
-```
-
-**2. 在组件中使用 Hook**
-
-```vue
-<template>
-  <div>
-    <button @click="decrement">-</button>
-    <span>{{ count }}</span>
-    <button @click="increment">+</button>
-    <button @click="reset">Reset</button>
-  </div>
-</template>
-
-<script setup>
-import { useCounter } from "./useCounter";
-
-// 每次调用 useCounter 会创建一个新的闭包，独立维护 count 状态
-const { count, increment, decrement, reset } = useCounter(0, {
-  min: 0,
-  max: 10,
-});
-</script>
-```
-
-### 场景二：非 ref 本地变量的使用
-
-前端对于接口响应的数据进行缓存：
-
-```ts
-export function useCache<T>() {
-  // 闭包中缓存计算结果
-  let cache: T | null = null;
-
-  const calculate = (data: T) => {
-    if (cache !== null) {
-      console.log("返回缓存结果");
-      return cache;
-    }
-
-    console.log("首次请求");
-    cache = result as T;
-    return result;
-  };
-
-  const clearCache = () => {
-    cache = null;
-  };
-
-  return { calculate, clearCache };
-}
-```
-
-### **总结 ​**​
-
-在 Vue3 的 Hook 写法中，闭包的核心价值：
-
-1. ​**​ 隔离作用域 ​**​：每个 Hook 实例独立维护状态。
-2. ​**​ 封装私有逻辑 ​**​：隐藏内部实现细节，只暴露必要接口。
-3. ​**​ 性能优化 ​**​：通过缓存、防抖/节流等模式减少重复计算或操作。
-
-## 五、为什么都说需要谨慎的使用闭包
-
-百度一下，也不知道谁抄的谁，太多一模一样的文章。而我也是长期这么认为的。
-
-![截屏2023-02-07 00.17.30.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/85910b12a9fd4aa896b5c787b01cb0c7~tplv-k3u1fbpfcp-watermark.image?)
-
-根据我之前写的闭包的文章，闭包长期存在于 GO 当中，自然可能会占用内存，如果数量过多了，不就导致内存泄漏了么？
-
-看起来挺有道理的，这是因为我不懂啥啥叫[[内存泄漏]]而差产生的误解。所以我上网搜索到了如下的回答：
-
-<img width="500" src='https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f9739800df634a3595c75dc227179daa~tplv-k3u1fbpfcp-watermark.image?'/>
-
-<img width="500" src='https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/be8aed0b360d41e1a2a13bf144047e04~tplv-k3u1fbpfcp-watermark.image?'/>
-
-也就是说，对于闭包而言，造成内存泄漏的不是闭包本身，而是 IE 浏览器。
-
-也就是说，只要我在使用闭包的时候，只有主要及时的销毁作用域就可以了。拿 vue3 来举例的话，我们平时都是在 tsx 或者在.vue 组件中引入闭包，那么它就会随着这个组件的销毁而销毁，一般来说是不会产生闭包长期存在于 GO 的现象。
-
-所以平时该用就用，不需要顾虑那么多。
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
-            <title><![CDATA[IIFE]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/IIFE</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/IIFE</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
-            <description><![CDATA[IIFE JavaScript ; (function test() {   var a = 1,     b = 2     console.log(a + b) })() console.log(test) // test 报错,立即执行函数执行完毕之后马上就进行了销毁. const b = (function(){   return 5 }()) // w3c的规范写法, 但是上面那种在写代码过程更加的常用,只要是容易识别 console.log(b) // 函数表达式才能够使用立即执行函数o function test1() {    console.log(1) }() // 报语法...]]></description>
-            <content:encoded><![CDATA[# IIFE
-
-```JavaScript
-
-; (function test() {
-  var a = 1,
-    b = 2
-    console.log(a + b)
-})()
-
-console.log(test) // test 报错,立即执行函数执行完毕之后马上就进行了销毁.
-
-const b = (function(){
-  return 5
-}()) // w3c的规范写法, 但是上面那种在写代码过程更加的常用,只要是容易识别
-
-console.log(b)
-
-// 函数表达式才能够使用立即执行函数o
-function test1() {
-   console.log(1)
-}() // 报语法错误
-
-const c = function test2() {
-  console.log(2)
- }()
-
- +function test3() {
-   console.log(3)
- }()
-
- 1 && function test3() {
-   console.log(3)
- }()
-
- undefined || function test3() {
-   console.log(3)
- }()
-```
-
-就如《JavaScript 忍者秘籍》中对于`IIFE`的描述一样, 函数表达式 + () = 立即函数.
-
-所以有如下:
-
-```JavaScript
-const a = 1 + function() {return 3} () // 4
-```
-
-**w3c 的推荐写法：**
-
-```JavaScript
-(function(){}())
-```
-
-别的常用的写法：
-
-```JavaScript
-(function(){})()
-```
-
-以及在函数前面加上! && || - + 等符号也可以把函数声明变为函数表达式
-
-利用立即执行函数来解决因为闭包产生的相关问题。
-
-如闭包和循环中的图 1 中：
-
-```JavaScript
-function test() {
-  var arr = []
-
-  for(var i = 0; i < 10; i++) {
-    (function(j){
-      console.log(j) // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-    })(i)
-  }
-
-}
-```
-
-理解执行函数带来的作用域的问题
-
-```JavaScript
-(function fun() {
-    fun = 2
-    console.log(fun) // [Function fun]
-})()
-
-```
-
-> 据说这个的考点不是变量提升
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
-            <title><![CDATA[JavaScript中运算符优先级]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/JavaScript中运算符优先级</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/JavaScript中运算符优先级</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
-            <description><![CDATA[- Metadata   - Author:   - Link:   - Publisher   - Date: [[2022-01-06]]   - Status: waiting   - Tag: - content   - JavaScript 中运算符优先级的问题？   - 优先级 是 结合的优先级，不是说谁的优先级高就先给谁求值。   - 结合是什么意思呢？可以理解成是加一个括号     <img src="https://pica.zhimg.com/50/v2-b2c09744a0088336494e8d9400d42065720w.jpg?source=1940ef5c" da...]]></description>
-            <content:encoded><![CDATA[- Metadata
-  - Author:
-  - Link:
-  - Publisher
-  - Date: [[2022-01-06]]
-  - Status: #waiting
-  - Tag:
-- content
-
-  - JavaScript 中运算符优先级的问题？
-  - 优先级 是 结合的优先级，不是说谁的优先级高就先给谁求值。
-
-  - 结合是什么意思呢？可以理解成是加一个括号
-
-    <img src="https://pica.zhimg.com/50/v2-b2c09744a0088336494e8d9400d42065_720w.jpg?source=1940ef5c" data-rawwidth="294" data-rawheight="60" class="content_image" width="294"/>
-
-    上面的这条表达式，在执行的时候，可以看做是下面这样的，加个括号就很容易理解了吧
-
-    <img src="https://pic2.zhimg.com/50/v2-4ec5ec1989d20449e25b0850be0ea68e_720w.jpg?source=1940ef5c" data-rawwidth="313" data-rawheight="57" class="content_image" width="313"/>
-
-  - 可是你不能说加了括号就要先给你求值啊，还是要按照基本法！！！从左往右
-
-  - 这里还有个短路计算的概念， || 操作符左边的是 true 的话，这个表达式的结果就是 true，不管右边的值是 false 还是 true，所以它就不会去求右边的值；&& 正好反过来，详细看文档：
-
-  [ 逻辑运算符 - JavaScript](https://link.zhihu.com/?target=https%3A//developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
-
-  - 如果 fn01() 算出的结果是 true，那整个
-
-    [表达式](https://www.zhihu.com/search?q=%E8%A1%A8%E8%BE%BE%E5%BC%8F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129171248%7D)的结果就是 false，根本不会去求其他的值。
-
-    `false || false && true || true === false || (false && true) || true`
-
-  - 优先级是结合的优先级，不是说谁的优先级高就先给谁求值！！！
-
-  - 再通俗一点，看到谁的优先级高就给它加一个括号，就像这样：
-  - `1 + 2 * 3 === 1 + (2 * 3)`
-
-- Metadata
-  - Author: RednaxelaFX
-  - Link:[(2 条消息) JavaScript 中运算符优先级的问题？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/52116922)
-  - Publisher: [[知乎]]
-  - Date: [[2022-01-06]]
-  - Status: #waiting
-  - Tag:
-- content
-
-  - 前面的回答都说得挺好了。那我还是来放传送门：
-  - [虚拟机随谈（一）：解释器，树遍历解释器，基于栈与基于寄存器，大杂烩](https://link.zhihu.com/?target=http%3A//rednaxelafx.iteye.com/blog/492667)
-  - 题主要注意区分优先级、结合性、
-  - [求值顺序](https://www.zhihu.com/search?q=%E6%B1%82%E5%80%BC%E9%A1%BA%E5%BA%8F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)三者的区别。
-  - 这三个是不同的概念，却经常被混淆。通过 AST 来看就很容易理解：（假设源码是从左到右输入的）
-  - 所谓优先级，就是不同操作相邻出现时，
-  - [AST 节点](https://www.zhihu.com/search?q=AST%E8%8A%82%E7%82%B9&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)与根的距离的关系。优先级高的操作会更远离根，优先级低的操作会更接近根。为什么？因为整棵 AST 是以后序遍历求值的，显然节点离根越远就越早被求值。
-  - 所谓结合性，就是当同类操作相邻出现时，操作的先后顺序同 AST 节点与根的距离的关系。如果是左结合，则先出现的操作对应的 AST 节点比后出现的操作的节点离根更远；换句话说，先出现的节点会是后出现节点的子节点。
-  - 所谓求值顺序，就是在遍历子节点时的顺序。对二元运算对应的节点来说，先遍历
-  - [左子节点](https://www.zhihu.com/search?q=%E5%B7%A6%E5%AD%90%E8%8A%82%E7%82%B9&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)再遍历右子节点就是从左到右的求值顺序，反之则是从右到左的求值顺序。
-  - 这三个概念与运算的联系都很紧密，但实际描述的是不同的关系。前两者是
-  - [解析器](https://www.zhihu.com/search?q=%E8%A7%A3%E6%9E%90%E5%99%A8&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)根据语法生成 AST 时就已经决定好的，后者则是解释执行或者生成代码而去遍历 AST 时决定的。
-  - 在没有副作用的环境中，给定优先级与结合性，则无论求值顺序是怎样的都能得到同样的结果；而在有副作用的环境中，求值顺序会影响结果。
-  - 题主可以看看您的代码对应的 AST 长啥样：
-  - [Esprima: Parser](https://link.zhihu.com/?target=http%3A//esprima.org/demo/parse.html)
-  - ，对照上面传送门所说的看看。
-  - 或者这个：
-  - [AST Visualization on browser](https://link.zhihu.com/?target=http%3A//nhiro.org/learn_language/AST-Visualization-on-browser.html)
-  - 对应 console.log(fn01() || fn02() && fn03())，AST 是：
-  - 具体到题主有疑问的那个地方，AST 是这样的：` || / \ fn01() && / \ fn02() fn03()`
-  - 表达式层面上，代码的执行就是后序遍历这棵 AST 而已。
-  - 优先级：在相邻的两个运算符 || 与 && 中，&& 比 || 离 AST 的根更远所以优先级更高
-  - 结合性：这里没有相邻的同优先级运算符所以展现不出 || 与 && 的结合性，虽然它们都是左结合的
-  - 求值顺序：JavaScript 的求值顺序就是从左向右的。对这棵 AST 来说就是在后序遍历时，每个节点的求值过程是先遍历左子树，再遍历右子树，然后对自己求值。
-  - 外加 || 与 && 的短路求值语义，如果左操作数已经足以求出结果则不会对右操作数求值
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
-            <title><![CDATA[generator和iterator]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/generator和iterator</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/generator和iterator</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
-            <description><![CDATA[generator 和 iterator  前言 最近重新现在看红宝书，总算知道为什么迭代器和生成器这两个概念为什么那么难理解了，根本原因是平时直接使用到的机会确实是非常的少，其次就是书上面为了介绍这两个概念使用了非常多的专业的名词来描述，而且相互穿插，能把人看睡着了都。下面简单的描述一下书中的介绍这两个概念的思路。  迭代器导读 在迭代器中，先介绍了迭代，在 ES6 之前 for 和 forEach 两个循环的问题，引出了迭代器模式。接下来就自然的介绍迭代器模式，它包含两个概念： 1. 第一个是可迭代协议，介绍了它具备的能力，以及实现它的必要条件，最后介绍了当前内置的类型都有那些实现了这个可...]]></description>
-            <content:encoded><![CDATA[# generator 和 iterator
-
-## 前言
-
-最近重新现在看红宝书，总算知道为什么迭代器和生成器这两个概念为什么那么难理解了，根本原因是平时直接使用到的机会确实是非常的少，其次就是书上面为了介绍这两个概念使用了非常多的专业的名词来描述，而且相互穿插，能把人看睡着了都。下面简单的描述一下书中的介绍这两个概念的思路。
-
-### 迭代器导读
-
-在迭代器中，先介绍了迭代，在 ES6 之前 for 和 forEach 两个循环的问题，引出了迭代器模式。接下来就自然的介绍迭代器模式，它包含两个概念：
-
-1. 第一个是可迭代协议，介绍了它具备的能力，以及实现它的必要条件，最后介绍了当前内置的类型都有那些实现了这个可迭代协议，并且可以接受这些内置类型的原生语言特使包括那些。
-2. 第二个是迭代器协议，介绍了它的基本概念和基本使用方法。了解了了迭代器的协议之后，也可以称呼它们为迭代器的接口，就介绍了自定义迭代器如何实现和一些细则。
-
-但是关于两个协议的关系和职责范围没有总结出来，导致了我对于他们的关系一直很模糊，经常混淆在一起。总结一下：
-
-| **协议类型 ​**​    | ​**​ 可迭代协议（Iterable Protocol）​**​        | ​**​ 迭代器协议（Iterator Protocol）​**​   |
-| ------------------ | ----------------------------------------------- | ------------------------------------------ |
-| ​**​ 目的 ​**​     | 定义对象如何被迭代（如 `for...of` 遍历）        | 定义如何按顺序访问元素（如 `next()` 方法） |
-| ​**​ 实现方法 ​**​ | 对象需实现 `[Symbol.iterator]()` 方法           | 对象需实现 `next()` 方法                   |
-| ​**​ 返回值 ​**​   | 返回一个 ​**​ 迭代器对象 ​**​（符合迭代器协议） | 返回 `{ value: T, done: boolean }` 对象    |
-| ​**​ 核心作用 ​**​ | ​**​ 声明对象可被迭代 ​**​                      | ​**​ 实际执行迭代过程 ​**​                 |
-
-### 生成器导读
-
-在生成器中，先介绍了生成器的写法，包含的元素和生命周期，存在暂停状态，存在`next()`方法，该方法返回的对象也是包含 done 属性和 value 属性。接下来介绍生成器最重要的组成部分：`yield`，被称为生成器最有用的地方。包括如下内容：
-
-1. 中断执行，异步变为同步的关键
-2.
-
-**生成器和迭代器的关系如下**：
-
-生成器是一种特殊的函数结构，它返回的对象是一个迭代器。生成器函数本质上是 JavaScript 语法规范提供的一种**用户自定义的迭代器工厂函数**。
-
-> 生成器（Generator）**不是基于 ES5 的语法糖**，而是 **ES6（ECMAScript 2015）引入的基础语言规范**，需要 JavaScript 引擎在底层实现支持。
-
-## 资料
-
-- [(1 封私信 / 9 条消息) es6 generator 到底有什么用？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/55810122/answer/1988210728)
-- [Rx.js 思想入门（讲义） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/34481617)
-  - generator 是 ES 对迭代器的实现，迭代器源于设计模式。(这个事关 generator 怎么来的)，我们想知道 generator 有什么的本质其实是了解迭代器有什么作用。
-
-# generator 和 iterator
-
-![[截屏2022-01-30 02.22.26.png]]
-这句感觉啥都没有说. 怎么写法就复杂了,怎么就枯燥了. 复杂体现在哪里?枯燥体现在哪里?如何手抖产生 bug 的.现在的人出教程都这么随意的么?
-
-这个例子出自于《JavaScript 高级程序设计》第五版，是为了说明在迭代器这个规范出来之前 ES 处理迭代的一个历史，有两个阶段，一个如图中使用到 for 循环，另外一个就是 forEach 更加函数式的写法。
-
-for 循环的凡事得出的结论也不是图中的两点，而是：
-
-1. 迭代之前需要事先知道如何使用数据结构。
-2. 遍历顺序并不是数据结构固有的。
-
-## 1.总结一下在此之前的 7 组遍历的方法
-
-- forEach -> 普通的数组遍历
-- map -> 映射, 每一次遍历,返回 bool.来决定当前元素是否纳入新的数组
-- filter -> 过滤, 每一次遍历,返回 bool,来决定当前元素是否纳入新的数组
-- reduce -> 归纳, 每一次遍历,将挡元素收归到容器中
-- reduceRight -> reduce 的反向操作
-- every -> 判定是否所有元素都符合一个条件
-- some -> 判定是否有某一个或多个符合一个条件
-
-> async 是 Generator 的语法糖，在 Generator 基础上封装的
-
-## 2. 手写 iterator
-
-```js
-const arr = ["姓名: 小野", "年龄: 28", "爱好: 我爱JavaScript"];
-function getIterator(arr) {
-  let i = 0;
-  return {
-    next() {
-      return {
-        value: arr[i++],
-        done: i > arr.length,
-      };
-    },
-  };
-}
-
-const iterator = getIterator(arr);
-console.log(iterator.next()); // {value: 姓名: 小野, done: false}
-console.log(iterator.next()); // {value: 年龄: 28, done: false}
-console.log(iterator.next()); // {value: 爱好: 我爱JavaScript, done: false}
-console.log(iterator.next()); // {value: undefined, done: true}
-```
-
-## 3. ES6 提供的 Generator 方法
-
-```js
-function* createIterator(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    yield arr[i];
-  }
-}
-
-const iterator1 = createIterator(arr);
-console.log(iterator.next()); // {value: 姓名: 小野, done: false}
-console.log(iterator.next()); // {value: 年龄: 28, done: false}
-console.log(iterator.next()); // {value: 爱好: 我爱JavaScript, done: false}
-console.log(iterator.next()); // {value: undefined, done: true}
-```
-
-**基本构成就是\* 加上 yield.**
-
-## 4. Generator 实现 async 的写法
-
-大佬写的文章还是不错的 https://juejin.cn/post/6844903599529541645
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
             <title><![CDATA[Java 学习路线-前端功利性]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Java/Java 学习路线-前端功利性</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Java/Java 学习路线-前端功利性</guid>
-            <pubDate>Sun, 24 Aug 2025 18:11:15 GMT</pubDate>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
             <description><![CDATA[Java 学习路线-前端功利性  符号表 可以通过路线知识点前的表情字符，根据自己的实际情况选择学习： - 🌕 必须学习！！！ - 🌖 非常急着找工作，才可不学；目标大厂，必须学习！ - 🌗 急着找工作的话，可不学；目标大厂，建议学习 - 🌘 时间充足的话，再去学 - ⭐ 表示推荐资源  前言 首先呢，我们要了解 Java 的应用场景和就业方向，看看和自己的学习目的是否一致。 目前，Java 由于其优秀的特性以及火爆的生态，岗位需求量大，是后台开发、安卓开发、大数据开发的主流编程语言，因此学习资源也很丰富，值得学习！  阶段 1：编程语言基础  目标 培养兴趣、快速上手，能运行和编写简...]]></description>
             <content:encoded><![CDATA[# Java 学习路线-前端功利性
 
@@ -17371,6 +17074,303 @@ JVM 的知识略显枯燥，建议先看视频，有实操的地方一定要实�
 - 美团技术团队：[https://tech.meituan.com/](https://tech.meituan.com/)
 - 阿里技术团队：[https://102.alibaba.com/tech/list/](https://102.alibaba.com/tech/list/)
 - 有赞技术团队：[https://tech.youzan.com/tag/back-end/](https://tech.youzan.com/tag/back-end/)
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
+            <title><![CDATA[IIFE]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/IIFE</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/IIFE</guid>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
+            <description><![CDATA[IIFE JavaScript ; (function test() {   var a = 1,     b = 2     console.log(a + b) })() console.log(test) // test 报错,立即执行函数执行完毕之后马上就进行了销毁. const b = (function(){   return 5 }()) // w3c的规范写法, 但是上面那种在写代码过程更加的常用,只要是容易识别 console.log(b) // 函数表达式才能够使用立即执行函数o function test1() {    console.log(1) }() // 报语法...]]></description>
+            <content:encoded><![CDATA[# IIFE
+
+```JavaScript
+
+; (function test() {
+  var a = 1,
+    b = 2
+    console.log(a + b)
+})()
+
+console.log(test) // test 报错,立即执行函数执行完毕之后马上就进行了销毁.
+
+const b = (function(){
+  return 5
+}()) // w3c的规范写法, 但是上面那种在写代码过程更加的常用,只要是容易识别
+
+console.log(b)
+
+// 函数表达式才能够使用立即执行函数o
+function test1() {
+   console.log(1)
+}() // 报语法错误
+
+const c = function test2() {
+  console.log(2)
+ }()
+
+ +function test3() {
+   console.log(3)
+ }()
+
+ 1 && function test3() {
+   console.log(3)
+ }()
+
+ undefined || function test3() {
+   console.log(3)
+ }()
+```
+
+就如《JavaScript 忍者秘籍》中对于`IIFE`的描述一样, 函数表达式 + () = 立即函数.
+
+所以有如下:
+
+```JavaScript
+const a = 1 + function() {return 3} () // 4
+```
+
+**w3c 的推荐写法：**
+
+```JavaScript
+(function(){}())
+```
+
+别的常用的写法：
+
+```JavaScript
+(function(){})()
+```
+
+以及在函数前面加上! && || - + 等符号也可以把函数声明变为函数表达式
+
+利用立即执行函数来解决因为闭包产生的相关问题。
+
+如闭包和循环中的图 1 中：
+
+```JavaScript
+function test() {
+  var arr = []
+
+  for(var i = 0; i < 10; i++) {
+    (function(j){
+      console.log(j) // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+    })(i)
+  }
+
+}
+```
+
+理解执行函数带来的作用域的问题
+
+```JavaScript
+(function fun() {
+    fun = 2
+    console.log(fun) // [Function fun]
+})()
+
+```
+
+> 据说这个的考点不是变量提升
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
+            <title><![CDATA[JavaScript中运算符优先级]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/JavaScript中运算符优先级</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/JavaScript中运算符优先级</guid>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
+            <description><![CDATA[- Metadata   - Author:   - Link:   - Publisher   - Date: [[2022-01-06]]   - Status: waiting   - Tag: - content   - JavaScript 中运算符优先级的问题？   - 优先级 是 结合的优先级，不是说谁的优先级高就先给谁求值。   - 结合是什么意思呢？可以理解成是加一个括号     <img src="https://pica.zhimg.com/50/v2-b2c09744a0088336494e8d9400d42065720w.jpg?source=1940ef5c" da...]]></description>
+            <content:encoded><![CDATA[- Metadata
+  - Author:
+  - Link:
+  - Publisher
+  - Date: [[2022-01-06]]
+  - Status: #waiting
+  - Tag:
+- content
+
+  - JavaScript 中运算符优先级的问题？
+  - 优先级 是 结合的优先级，不是说谁的优先级高就先给谁求值。
+
+  - 结合是什么意思呢？可以理解成是加一个括号
+
+    <img src="https://pica.zhimg.com/50/v2-b2c09744a0088336494e8d9400d42065_720w.jpg?source=1940ef5c" data-rawwidth="294" data-rawheight="60" class="content_image" width="294"/>
+
+    上面的这条表达式，在执行的时候，可以看做是下面这样的，加个括号就很容易理解了吧
+
+    <img src="https://pic2.zhimg.com/50/v2-4ec5ec1989d20449e25b0850be0ea68e_720w.jpg?source=1940ef5c" data-rawwidth="313" data-rawheight="57" class="content_image" width="313"/>
+
+  - 可是你不能说加了括号就要先给你求值啊，还是要按照基本法！！！从左往右
+
+  - 这里还有个短路计算的概念， || 操作符左边的是 true 的话，这个表达式的结果就是 true，不管右边的值是 false 还是 true，所以它就不会去求右边的值；&& 正好反过来，详细看文档：
+
+  [ 逻辑运算符 - JavaScript](https://link.zhihu.com/?target=https%3A//developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
+
+  - 如果 fn01() 算出的结果是 true，那整个
+
+    [表达式](https://www.zhihu.com/search?q=%E8%A1%A8%E8%BE%BE%E5%BC%8F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129171248%7D)的结果就是 false，根本不会去求其他的值。
+
+    `false || false && true || true === false || (false && true) || true`
+
+  - 优先级是结合的优先级，不是说谁的优先级高就先给谁求值！！！
+
+  - 再通俗一点，看到谁的优先级高就给它加一个括号，就像这样：
+  - `1 + 2 * 3 === 1 + (2 * 3)`
+
+- Metadata
+  - Author: RednaxelaFX
+  - Link:[(2 条消息) JavaScript 中运算符优先级的问题？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/52116922)
+  - Publisher: [[知乎]]
+  - Date: [[2022-01-06]]
+  - Status: #waiting
+  - Tag:
+- content
+
+  - 前面的回答都说得挺好了。那我还是来放传送门：
+  - [虚拟机随谈（一）：解释器，树遍历解释器，基于栈与基于寄存器，大杂烩](https://link.zhihu.com/?target=http%3A//rednaxelafx.iteye.com/blog/492667)
+  - 题主要注意区分优先级、结合性、
+  - [求值顺序](https://www.zhihu.com/search?q=%E6%B1%82%E5%80%BC%E9%A1%BA%E5%BA%8F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)三者的区别。
+  - 这三个是不同的概念，却经常被混淆。通过 AST 来看就很容易理解：（假设源码是从左到右输入的）
+  - 所谓优先级，就是不同操作相邻出现时，
+  - [AST 节点](https://www.zhihu.com/search?q=AST%E8%8A%82%E7%82%B9&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)与根的距离的关系。优先级高的操作会更远离根，优先级低的操作会更接近根。为什么？因为整棵 AST 是以后序遍历求值的，显然节点离根越远就越早被求值。
+  - 所谓结合性，就是当同类操作相邻出现时，操作的先后顺序同 AST 节点与根的距离的关系。如果是左结合，则先出现的操作对应的 AST 节点比后出现的操作的节点离根更远；换句话说，先出现的节点会是后出现节点的子节点。
+  - 所谓求值顺序，就是在遍历子节点时的顺序。对二元运算对应的节点来说，先遍历
+  - [左子节点](https://www.zhihu.com/search?q=%E5%B7%A6%E5%AD%90%E8%8A%82%E7%82%B9&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)再遍历右子节点就是从左到右的求值顺序，反之则是从右到左的求值顺序。
+  - 这三个概念与运算的联系都很紧密，但实际描述的是不同的关系。前两者是
+  - [解析器](https://www.zhihu.com/search?q=%E8%A7%A3%E6%9E%90%E5%99%A8&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)根据语法生成 AST 时就已经决定好的，后者则是解释执行或者生成代码而去遍历 AST 时决定的。
+  - 在没有副作用的环境中，给定优先级与结合性，则无论求值顺序是怎样的都能得到同样的结果；而在有副作用的环境中，求值顺序会影响结果。
+  - 题主可以看看您的代码对应的 AST 长啥样：
+  - [Esprima: Parser](https://link.zhihu.com/?target=http%3A//esprima.org/demo/parse.html)
+  - ，对照上面传送门所说的看看。
+  - 或者这个：
+  - [AST Visualization on browser](https://link.zhihu.com/?target=http%3A//nhiro.org/learn_language/AST-Visualization-on-browser.html)
+  - 对应 console.log(fn01() || fn02() && fn03())，AST 是：
+  - 具体到题主有疑问的那个地方，AST 是这样的：` || / \ fn01() && / \ fn02() fn03()`
+  - 表达式层面上，代码的执行就是后序遍历这棵 AST 而已。
+  - 优先级：在相邻的两个运算符 || 与 && 中，&& 比 || 离 AST 的根更远所以优先级更高
+  - 结合性：这里没有相邻的同优先级运算符所以展现不出 || 与 && 的结合性，虽然它们都是左结合的
+  - 求值顺序：JavaScript 的求值顺序就是从左向右的。对这棵 AST 来说就是在后序遍历时，每个节点的求值过程是先遍历左子树，再遍历右子树，然后对自己求值。
+  - 外加 || 与 && 的短路求值语义，如果左操作数已经足以求出结果则不会对右操作数求值
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
+            <title><![CDATA[generator和iterator]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/generator和iterator</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/generator和iterator</guid>
+            <pubDate>Sun, 24 Aug 2025 18:16:05 GMT</pubDate>
+            <description><![CDATA[generator 和 iterator  前言 最近重新现在看红宝书，总算知道为什么迭代器和生成器这两个概念为什么那么难理解了，根本原因是平时直接使用到的机会确实是非常的少，其次就是书上面为了介绍这两个概念使用了非常多的专业的名词来描述，而且相互穿插，能把人看睡着了都。下面简单的描述一下书中的介绍这两个概念的思路。  迭代器导读 在迭代器中，先介绍了迭代，在 ES6 之前 for 和 forEach 两个循环的问题，引出了迭代器模式。接下来就自然的介绍迭代器模式，它包含两个概念： 1. 第一个是可迭代协议，介绍了它具备的能力，以及实现它的必要条件，最后介绍了当前内置的类型都有那些实现了这个可...]]></description>
+            <content:encoded><![CDATA[# generator 和 iterator
+
+## 前言
+
+最近重新现在看红宝书，总算知道为什么迭代器和生成器这两个概念为什么那么难理解了，根本原因是平时直接使用到的机会确实是非常的少，其次就是书上面为了介绍这两个概念使用了非常多的专业的名词来描述，而且相互穿插，能把人看睡着了都。下面简单的描述一下书中的介绍这两个概念的思路。
+
+### 迭代器导读
+
+在迭代器中，先介绍了迭代，在 ES6 之前 for 和 forEach 两个循环的问题，引出了迭代器模式。接下来就自然的介绍迭代器模式，它包含两个概念：
+
+1. 第一个是可迭代协议，介绍了它具备的能力，以及实现它的必要条件，最后介绍了当前内置的类型都有那些实现了这个可迭代协议，并且可以接受这些内置类型的原生语言特使包括那些。
+2. 第二个是迭代器协议，介绍了它的基本概念和基本使用方法。了解了了迭代器的协议之后，也可以称呼它们为迭代器的接口，就介绍了自定义迭代器如何实现和一些细则。
+
+但是关于两个协议的关系和职责范围没有总结出来，导致了我对于他们的关系一直很模糊，经常混淆在一起。总结一下：
+
+| **协议类型 ​**​    | ​**​ 可迭代协议（Iterable Protocol）​**​        | ​**​ 迭代器协议（Iterator Protocol）​**​   |
+| ------------------ | ----------------------------------------------- | ------------------------------------------ |
+| ​**​ 目的 ​**​     | 定义对象如何被迭代（如 `for...of` 遍历）        | 定义如何按顺序访问元素（如 `next()` 方法） |
+| ​**​ 实现方法 ​**​ | 对象需实现 `[Symbol.iterator]()` 方法           | 对象需实现 `next()` 方法                   |
+| ​**​ 返回值 ​**​   | 返回一个 ​**​ 迭代器对象 ​**​（符合迭代器协议） | 返回 `{ value: T, done: boolean }` 对象    |
+| ​**​ 核心作用 ​**​ | ​**​ 声明对象可被迭代 ​**​                      | ​**​ 实际执行迭代过程 ​**​                 |
+
+### 生成器导读
+
+在生成器中，先介绍了生成器的写法，包含的元素和生命周期，存在暂停状态，存在`next()`方法，该方法返回的对象也是包含 done 属性和 value 属性。接下来介绍生成器最重要的组成部分：`yield`，被称为生成器最有用的地方。包括如下内容：
+
+1. 中断执行，异步变为同步的关键
+2.
+
+**生成器和迭代器的关系如下**：
+
+生成器是一种特殊的函数结构，它返回的对象是一个迭代器。生成器函数本质上是 JavaScript 语法规范提供的一种**用户自定义的迭代器工厂函数**。
+
+> 生成器（Generator）**不是基于 ES5 的语法糖**，而是 **ES6（ECMAScript 2015）引入的基础语言规范**，需要 JavaScript 引擎在底层实现支持。
+
+## 资料
+
+- [(1 封私信 / 9 条消息) es6 generator 到底有什么用？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/55810122/answer/1988210728)
+- [Rx.js 思想入门（讲义） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/34481617)
+  - generator 是 ES 对迭代器的实现，迭代器源于设计模式。(这个事关 generator 怎么来的)，我们想知道 generator 有什么的本质其实是了解迭代器有什么作用。
+
+# generator 和 iterator
+
+![[截屏2022-01-30 02.22.26.png]]
+这句感觉啥都没有说. 怎么写法就复杂了,怎么就枯燥了. 复杂体现在哪里?枯燥体现在哪里?如何手抖产生 bug 的.现在的人出教程都这么随意的么?
+
+这个例子出自于《JavaScript 高级程序设计》第五版，是为了说明在迭代器这个规范出来之前 ES 处理迭代的一个历史，有两个阶段，一个如图中使用到 for 循环，另外一个就是 forEach 更加函数式的写法。
+
+for 循环的凡事得出的结论也不是图中的两点，而是：
+
+1. 迭代之前需要事先知道如何使用数据结构。
+2. 遍历顺序并不是数据结构固有的。
+
+## 1.总结一下在此之前的 7 组遍历的方法
+
+- forEach -> 普通的数组遍历
+- map -> 映射, 每一次遍历,返回 bool.来决定当前元素是否纳入新的数组
+- filter -> 过滤, 每一次遍历,返回 bool,来决定当前元素是否纳入新的数组
+- reduce -> 归纳, 每一次遍历,将挡元素收归到容器中
+- reduceRight -> reduce 的反向操作
+- every -> 判定是否所有元素都符合一个条件
+- some -> 判定是否有某一个或多个符合一个条件
+
+> async 是 Generator 的语法糖，在 Generator 基础上封装的
+
+## 2. 手写 iterator
+
+```js
+const arr = ["姓名: 小野", "年龄: 28", "爱好: 我爱JavaScript"];
+function getIterator(arr) {
+  let i = 0;
+  return {
+    next() {
+      return {
+        value: arr[i++],
+        done: i > arr.length,
+      };
+    },
+  };
+}
+
+const iterator = getIterator(arr);
+console.log(iterator.next()); // {value: 姓名: 小野, done: false}
+console.log(iterator.next()); // {value: 年龄: 28, done: false}
+console.log(iterator.next()); // {value: 爱好: 我爱JavaScript, done: false}
+console.log(iterator.next()); // {value: undefined, done: true}
+```
+
+## 3. ES6 提供的 Generator 方法
+
+```js
+function* createIterator(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    yield arr[i];
+  }
+}
+
+const iterator1 = createIterator(arr);
+console.log(iterator.next()); // {value: 姓名: 小野, done: false}
+console.log(iterator.next()); // {value: 年龄: 28, done: false}
+console.log(iterator.next()); // {value: 爱好: 我爱JavaScript, done: false}
+console.log(iterator.next()); // {value: undefined, done: true}
+```
+
+**基本构成就是\* 加上 yield.**
+
+## 4. Generator 实现 async 的写法
+
+大佬写的文章还是不错的 https://juejin.cn/post/6844903599529541645
 ]]></content:encoded>
             <author>295563358@qq.com (Yoran Wu)</author>
         </item>
