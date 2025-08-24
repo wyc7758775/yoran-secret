@@ -16,6 +16,8 @@
       ></div>
     </div>
   </div>
+  <BackToTop />
+  <TocSidebar :content="renderedContent" />
 </template>
 <script setup lang="ts">
 import { ref, watch, computed, onMounted } from "vue";
@@ -23,7 +25,11 @@ import { Loading } from "@element-plus/icons-vue";
 import { ElIcon } from "element-plus";
 import { useData } from "vitepress";
 import useMdRender from "./use-md-render.ts";
+import BackToTop from "./components/BackToTop.vue";
+import { useNavToStatic } from "./hooks/use-nav-to-static.ts";
+import TocSidebar from "./components/TocSidebar.vue";
 
+useNavToStatic();
 const { page } = useData();
 
 // 使用ref存储路径信息，默认值从page.params获取

@@ -25,7 +25,9 @@ rm -rf /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core; brew update
 
 ## 2. M1 版本的配置
 
-### 2.1 官网的安装方法，只要配置一下国内镜像就可以了. 复制下面的终端,直接回车就可
+### 2.1 官网的安装方法
+
+只要配置一下国内镜像就可以了. 复制下面的终端,直接回车就可
 
 ```bash
 export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
@@ -33,7 +35,9 @@ export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-### 2.2 配置环境变量，不然 brew 还是会提示找不到该命令的
+### 2.2 配置环境变量
+
+> 不然 brew 还是会提示找不到该命令的
 
 在`.zshrc` 中输入
 
@@ -80,7 +84,9 @@ brwe install node
 
 当然具体的命令行可以直接使用它提供的软件搜索，如下。
 
-### 4.1 如果安装的速度实在太慢,只能切换国内源了
+### 4.1 切换国内源
+
+如果安装的速度实在太慢,如下操作
 
 **中科大的镜像:**
 
@@ -145,7 +151,8 @@ brew install xxx 例如：brew install mysql
 brew info xxx 例如：brew info mysql 主要查看具体的信息及依赖关系当前版本注意事项等
 
 #更新
-如果想要更新到当前最新的版本要先把当前 brew 更新到最新。brew update 这个时候他会先更新自己到最新 接下来的操作才更有意义
+如果想要更新到当前最新的版本要先把当前
+brew 更新到最新。brew update 这个时候他会先更新自己到最新 接下来的操作才更有意义
 
 #检测新版本
 brew outdated 会列出所有有新版本的程序
@@ -198,7 +205,7 @@ brew bundle dump
 
 **随后在新设备直接`brew bundle` 既可.**
 
-### Cakebrew
+## 9. Cakebrew
 
 homeBrew 的 GUI 界面操作软件.
 

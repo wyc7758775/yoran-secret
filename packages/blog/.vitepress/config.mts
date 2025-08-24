@@ -16,8 +16,7 @@ export default defineConfig({
       { text: "Observer", link: "/observing" },
       { text: "Gallery", link: "/gallery" },
     ],
-    sidebar: sidebar,
-    socialLinks: [{ icon: "github", link: "https://github.com/wyc7758775" }],
+    sidebar: sidebar
   },
   vite: {
     plugins: [UnoCSS(unocssConfig)],

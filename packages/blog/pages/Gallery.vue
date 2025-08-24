@@ -1,37 +1,40 @@
 <template>
-  <div class="slide-fade max-w-7xl mx-auto" v-once>
+  <div class="slide-fade">
+    <div class="h-12 flex items-center cursor-pointer pl-4" @click="swtichFit">
+      <el-icon v-if="fitImg === 'cover'"><Grid /></el-icon>
+      <el-icon v-else><Menu /></el-icon>
+    </div>
+
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-10 px-4"
     >
-      <div
+      <el-image
+        class="w-full hover:-translate-y-2 transition-transform duration-300 h-[15rem]"
         v-for="(image, index) in images"
         :key="index"
-        class="rounded-lg overflow-hidden shadow-md hover:-translate-y-2 transition-transform duration-300 bg-white"
-      >
-        <el-image
-          :src="image.src"
-          :preview-src-list="[image.src]"
-          fit="cover"
-          class="w-full h-48 cursor-pointer"
-          lazy
-          show-progress
-          preview-teleported
-          @click="showPreview(index)"
-        />
-        <div class="text-center text-xs dark:text-black pb-1">
-          {{ image.caption }}
-        </div>
-      </div>
+        :src="image.src"
+        :preview-src-list="[image.src]"
+        :fit="fitImg"
+        lazy
+        show-progress
+        preview-teleported
+        @click="showPreview(index)"
+      />
     </div>
   </div>
+
+  <BackToTop />
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { ElImage } from "element-plus";
+import { ElImage, ElIcon } from "element-plus";
+import { Grid, Menu } from "@element-plus/icons-vue";
 import getGallery from "../.vitepress/router/gallery";
 import picture from "../.vitepress/router/picture";
 import { getImageUrl } from "../helps/import-images";
+import { useNavToStatic } from "./hooks/use-nav-to-static.ts";
+import BackToTop from "./components/BackToTop.vue";
 
 // 图片数据 - 实际使用时会从assets/gallery目录加载
 const images = [
@@ -55,5 +58,12 @@ const showPreview = (index: number) => {
     src: images[index].src,
   };
   scale.value = 1;
+};
+
+useNavToStatic();
+
+const fitImg = ref<string>("cover");
+const swtichFit = () => {
+  fitImg.value = fitImg.value === "cover" ? "contain" : "cover";
 };
 </script>

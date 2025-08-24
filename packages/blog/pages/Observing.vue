@@ -118,12 +118,14 @@
       <ObservingVideo />
     </div>
   </div>
+  <BackToTop />
 </template>
 
 <script setup>
 import { ElImage } from "element-plus";
 import ObservingData from "../.vitepress/router/life.js";
 import ObservingVideo from "./ObservingVideo.vue";
+import BackToTop from "./components/BackToTop.vue";
 
 const emits = defineEmits(["open"]);
 

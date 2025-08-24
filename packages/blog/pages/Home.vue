@@ -1,13 +1,15 @@
 <template>
-  <div class="slide-fade" v-once>
-    <div class="flex flex-col justify-center items-start">
-      <div class="flex flex-col justify-center items-start mx-auto">
+  <div class="slide-fade flex items-center justify-center" v-once>
+    <div class="max-w-[650px]">
+      <!-- 姓名 -->
+      <div class="max-w-[650px] flex flex-col ml-0">
         <div class="text-[2.5rem] font-bold">Hey, I'm Yoran</div>
         <span class="text-[1rem] opacity-80 mb-[2rem] mt-[1rem]">
           My name is pronounced as /dʒɛn'haʊ/
         </span>
       </div>
 
+      <!-- 个人照片 -->
       <div
         class="max-w-[400px] mx-auto mb-[2rem] overflow-hidden border-4 border-solid border-[#333] dark:border-primary-50"
       >
@@ -18,6 +20,7 @@
         />
       </div>
 
+      <!-- info -->
       <div class="profile-bio">
         <p class="text">
           I am a software engineer based in ShenZheng. I am currently working at
@@ -39,7 +42,7 @@
             "How you spend every day is how you spend your life."</span
           >
         </p>
-        <h3 style="padding-top: 3rem">Contact</h3>
+        <h3 class="pt-[1rem]">Contact</h3>
         <p class="text">
           If you enjoy my content, consider subscribing to my
           <a class="highlight highlight:dark" href="/rss.xml">RSS feed</a>
