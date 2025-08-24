@@ -2,7 +2,7 @@
   <div
     class="toc-sidebar text-sm"
     :class="{ 'toc-sidebar-dark': isDarkMode }"
-    v-show="!isHidden"
+    v-show="!isHidden && tocItems.length > 0"
   >
     <div
       class="pl-[10px] transition-opacity duration-500 ease-in-out text-black-50"
@@ -26,7 +26,7 @@
       class="toc-content max-h-[70vh] overflow-y-auto transition-opacity duration-600 ease-in-out"
       :style="{ opacity: isVisible ? '1' : '0' }"
     >
-      <ul v-if="tocItems.length > 0">
+      <ul>
         <li
           v-for="(item, index) in tocItems"
           :key="index"
@@ -41,7 +41,6 @@
           </span>
         </li>
       </ul>
-      <p v-else class="text-center py-1 text-sm text-gray-400">没有目录数据</p>
     </div>
   </div>
 </template>

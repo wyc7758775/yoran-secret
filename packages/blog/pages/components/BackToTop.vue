@@ -1,13 +1,13 @@
 <template>
   <button
-    v-if="showBackToTop"
-    class="back-to-top fixed bottom-12 right-6 p-3 rounded-full shadow-lg hover:bg-gray-700 transition-all duration-300 z-50"
+    v-show="showBackToTop"
+    class="back-to-top cursor-pointer fixed bottom-12 right-6 p-3 rounded-full shadow-lg hover:dark:bg-gray-700 transition-all duration-300 z-50"
     @click="scrollToTop"
     aria-label="回到顶部"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="h-4 w-4"
+      class="h-4 w-4 cursor-pointer"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
