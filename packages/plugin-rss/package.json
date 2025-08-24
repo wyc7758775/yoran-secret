@@ -1,8 +1,9 @@
 {
   "name": "plugin-rss",
   "version": "1.0.0",
-  "description": "",
+  "description": "VitePress RSS Feed Generator Plugin",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "feed": "^5.1.0"
+    "feed": "^5.1.0",
+    "gray-matter": "^4.0.3"
   }
 }

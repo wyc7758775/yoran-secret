@@ -3,6 +3,14 @@ import UnoCSS from "unocss/vite";
 import sidebar from "./router/sidebar.json";
 import unocssConfig from "./unocss.config.ts";
 import configHead from './configHead.ts'
+// 导入 RSS 插件
+import rssPlugin from '../../plugin-rss/index.ts';
+
+// 从 package.json 获取站点信息
+const packageInfo = {
+  author: 'Yoran Wu',
+  siteUrl: 'https://wyc7758775.github.io/yoran-secret/' // 替换为你的实际站点URL
+};
 
 export default defineConfig({
   title: " Yoran Wu",
@@ -19,7 +27,20 @@ export default defineConfig({
     sidebar: sidebar
   },
   vite: {
-    plugins: [UnoCSS(unocssConfig)],
+    plugins: [
+      UnoCSS(unocssConfig),
+      // 添加 RSS 插件
+      (rssPlugin as any)({
+        baseUrl: packageInfo.siteUrl,
+        title: 'Yoran Wu 的博客',
+        description: '个人学习总结记录',
+        author: {
+          name: packageInfo.author,
+          email: '295563358@qq.com' // 替换为你的邮箱
+        },
+        contentDir: 'posts'
+      })
+    ],
     assetsInclude: ["**/assets/**"],
     resolve: {
       alias: {

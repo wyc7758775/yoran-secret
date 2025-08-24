@@ -20,5 +20,8 @@
   "type": "commonjs",
   "devDependencies": {
     "vitepress": "^2.0.0-alpha.12"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
   }
 }
