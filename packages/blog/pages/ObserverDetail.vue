@@ -11,13 +11,15 @@
       </div>
       <div
         v-else
+        @mouseleave="handleMouseLeave"
+        @mouseenter="handleMouseEnter"
         class="md-prose max-w-none prose-sm sm:prose base:text-sm sm:text-base md:text-lg w-full md:w-7/10 prose-img:center"
         v-html="renderedContent"
       ></div>
     </div>
   </div>
   <BackToTop />
-  <TocSidebar :content="renderedContent" />
+  <TocSidebar :isVisibleToc="isVisibleToc" :content="renderedContent" />
   <el-image-viewer
     v-if="visibleViewer"
     :url-list="viewerList"
@@ -42,7 +44,14 @@ const pathFromUrl = ref(page.value?.params?.src || "");
 
 const visibleViewer = ref(false);
 const viewerList = ref<string[]>([]);
-onMounted(() => {});
+
+const isVisibleToc = ref(false);
+const handleMouseLeave = () => {
+  isVisibleToc.value = false;
+};
+const handleMouseEnter = () => {
+  isVisibleToc.value = true;
+};
 
 // 获取路由器上面的链接，由于是通过中文来获取的，所以需要下面一下特殊的处理
 const getPathFromUrl = () => {

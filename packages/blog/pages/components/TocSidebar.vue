@@ -6,7 +6,7 @@
   >
     <div
       class="pl-[10px] transition-opacity duration-500 ease-in-out text-black-50"
-      :style="{ opacity: isVisible ? '1' : '0.5' }"
+      :style="{ opacity: isVisibleToc ? '1' : '0.5' }"
     >
       <svg
         viewBox="0 0 24 24"
@@ -24,7 +24,7 @@
     </div>
     <div
       class="toc-content max-h-[70vh] overflow-y-auto transition-opacity duration-600 ease-in-out"
-      :style="{ opacity: isVisible ? '1' : '0' }"
+      :style="{ opacity: isVisibleToc ? '1' : '0' }"
     >
       <ul>
         <li
@@ -63,11 +63,14 @@ const props = defineProps({
     type: Number,
     default: 2,
   },
+  isVisibleToc: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 // 响应式数据
 const tocItems = ref<TocItem[]>([]);
-const isVisible = ref(true);
 
 const querySelectors = () => {
   let querySelectors = "";
@@ -123,33 +126,16 @@ watch(
   }
 );
 
-// 将事件处理函数提取为命名函数
-const handleMouseLeave = () => {
-  isVisible.value = false;
-};
-
-const handleMouseEnter = () => {
-  isVisible.value = true;
-};
-
 onMounted(() => {
   if (typeof window !== "undefined" && typeof document !== "undefined") {
-    document.addEventListener("mouseleave", handleMouseLeave);
-    document.addEventListener("mouseenter", handleMouseEnter);
+    window.addEventListener("resize", handleResize);
   }
-  window.addEventListener("resize", handleResize);
 });
 onUnmounted(() => {
-  // 使用相同的函数引用移除事件监听器
-  if (typeof window !== "undefined" && typeof document !== "undefined") {
-    document.removeEventListener("mouseleave", handleMouseLeave);
-    document.removeEventListener("mouseenter", handleMouseEnter);
-  }
   window.removeEventListener("resize", handleResize);
 });
 
 const isHidden = ref(false);
-// 监听屏幕宽度变化，当距离右边右边的 dom 元素小于 12px 的时候，就隐藏目录
 const handleResize = () => {
   if (window.innerWidth < 1000) {
     isHidden.value = true;
@@ -159,6 +145,7 @@ const handleResize = () => {
 };
 
 // 更新 isDarkMode 计算属性，添加环境检查
+// 确保在客户端环境下执行所以需要判断 window
 const isDarkMode = computed(() => {
   if (typeof window !== "undefined" && typeof document !== "undefined") {
     return document.documentElement.classList.contains("dark");
@@ -166,7 +153,6 @@ const isDarkMode = computed(() => {
   return false;
 });
 
-// 更新 scrollToSection 函数，添加环境检查
 const scrollToSection = (item: TocItem, event: MouseEvent) => {
   if (typeof window !== "undefined" && typeof document !== "undefined") {
     event.preventDefault();
