@@ -7,7 +7,7 @@
         class="min-h-[60vh] flex justify-center items-center w-full"
         v-if="contentLoading"
       >
-        <el-icon class="rotate-icon"><Loading /></el-icon>
+        <el-icon class="rotate-icon" size="36"><Loading /></el-icon>
       </div>
       <div
         v-else
