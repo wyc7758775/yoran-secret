@@ -1,9 +1,3 @@
----
-title: js让人诟病的这些feature
-date: 2025-08-10 # 必须存在
-description: 摘要 # 推荐添加
----
-
 ![](https://img2.baidu.com/it/u=139382954,2115973602&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500k)
 
 # js 让人诟病的这些 feature

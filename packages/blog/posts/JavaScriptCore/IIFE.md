@@ -1,9 +1,3 @@
----
-title: 你麻痹 # 必须存在
-date: 2025-08-10 # 必须存在
-description: 摘要 # 推荐添加
----
-
 # IIFE
 
 ```JavaScript
