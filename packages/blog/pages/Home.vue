@@ -45,7 +45,9 @@
         <h3 class="pt-[1rem]">Contact</h3>
         <p class="text">
           If you enjoy my content, consider subscribing to my
-          <a class="highlight highlight:dark" href="/rss.xml">RSS feed</a>
+          <a class="highlight highlight:dark" href="/yoran-secret/rss.xml"
+            >RSS feed</a
+          >
           . If you feel so inclined, you're welcome to
           <span
             class="highlight highlight:dark cursor-pointer relative inline-block group"
