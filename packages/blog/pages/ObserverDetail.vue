@@ -18,11 +18,16 @@
   </div>
   <BackToTop />
   <TocSidebar :content="renderedContent" />
+  <el-image-viewer
+    v-if="visibleViewer"
+    :url-list="viewerList"
+    @close="visibleViewer = false"
+  />
 </template>
 <script setup lang="ts">
 import { ref, watch, computed, onMounted } from "vue";
 import { Loading } from "@element-plus/icons-vue";
-import { ElIcon } from "element-plus";
+import { ElIcon, ElImageViewer } from "element-plus";
 import { useData } from "vitepress";
 import useMdRender from "./use-md-render.ts";
 import BackToTop from "./components/BackToTop.vue";
@@ -35,8 +40,12 @@ const { page } = useData();
 // 使用ref存储路径信息，默认值从page.params获取
 const pathFromUrl = ref(page.value?.params?.src || "");
 
-// 在客户端挂载后才尝试访问window对象
-onMounted(() => {
+const visibleViewer = ref(false);
+const viewerList = ref<string[]>([]);
+onMounted(() => {});
+
+// 获取路由器上面的链接，由于是通过中文来获取的，所以需要下面一下特殊的处理
+const getPathFromUrl = () => {
   try {
     if (typeof window !== "undefined") {
       const fullPath = window.location.pathname;
@@ -71,6 +80,21 @@ onMounted(() => {
   } catch (error) {
     console.error("解析URL路径失败:", error);
   }
+};
+const handleViewerList = () => {
+  if (typeof window === "undefined") return;
+
+  document?.addEventListener("click", (e: Event) => {
+    if (e.target instanceof HTMLImageElement) {
+      viewerList.value = [e?.target?.src || ""];
+      visibleViewer.value = true;
+    }
+  });
+};
+// 在客户端挂载后才尝试访问window对象
+onMounted(() => {
+  getPathFromUrl();
+  handleViewerList();
 });
 
 const articleSrc = computed(() => {
