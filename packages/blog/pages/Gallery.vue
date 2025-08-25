@@ -9,7 +9,7 @@
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-10 px-4"
     >
       <el-image
-        class="w-full hover:-translate-y-2 transition-transform duration-300 h-[15rem]"
+        class="w-full hover:-translate-y-2 transition-transform duration-300 h-[24rem]"
         v-for="(image, index) in images"
         :key="index"
         :src="image.src"
@@ -20,6 +20,15 @@
         preview-teleported
         @click="showPreview(index)"
       />
+    </div>
+  </div>
+
+  <div class="prose mx-auto mt-10 mb-10 flex justify-center content-center">
+    <div>
+      <em>
+        Thank you for being interested in my photos. You can find the tools I
+        use here.
+      </em>
     </div>
   </div>
 
@@ -38,6 +47,7 @@ import BackToTop from "./components/BackToTop.vue";
 
 // 图片数据 - 实际使用时会从assets/gallery目录加载
 const images = [
+  ...picture,
   ...getGallery
     .filter((item) => item !== null)
     .map((item) => ({
@@ -46,7 +56,6 @@ const images = [
       src: getImageUrl(item.src),
       createTime: new Date(item.createTime),
     })),
-  ...picture,
 ];
 
 const currentImage = ref({ src: "", caption: "" });
