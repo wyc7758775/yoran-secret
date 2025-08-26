@@ -12,13 +12,13 @@ function loadHighlightStyle(isDark: boolean) {
   if (existingStyle) {
     existingStyle.remove();
   }
-  
+
   // 创建新的样式元素
   const style = document.createElement('link');
   style.id = 'highlight-style';
   style.rel = 'stylesheet';
   // 根据主题选择不同的样式
-  style.href = isDark 
+  style.href = isDark
     ? 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css'
     : 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css';
   document.head.appendChild(style);
@@ -32,10 +32,9 @@ const md: ReturnType<typeof MarkdownIt> = new MarkdownIt({
   highlight: (str: string, lang: string) => {
     if (lang && (hljs as any).getLanguage(lang)) {
       try {
-        return `<pre class="hljs"><code>${
-          (hljs as any).highlight(str, { language: lang, ignoreIllegals: true }).value
-        }</code></pre>`;
-      } catch (__) {}
+        return `<pre class="hljs"><code>${(hljs as any).highlight(str, { language: lang, ignoreIllegals: true }).value
+          }</code></pre>`;
+      } catch (__) { }
     }
     return `<pre class="hljs"><code>${md.utils.escapeHtml(str)}</code></pre>`;
   },
@@ -60,7 +59,7 @@ export default function useMdRender() {
         }
       });
     };
-    
+
     // 添加 MutationObserver 来监听主题变化
     const observer = new MutationObserver(themeChangeListener);
     observer.observe(document.documentElement, {
@@ -68,11 +67,11 @@ export default function useMdRender() {
       attributeFilter: ['class'],
     });
   }
-  
+
   const mdRender = (markdownContent: string) => {
     return (md as any).render(markdownContent);
   }
-  
+
   return {
     mdRender
   }

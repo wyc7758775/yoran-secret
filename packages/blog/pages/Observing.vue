@@ -1,9 +1,52 @@
+<script setup>
+import { ElImage } from 'element-plus'
+import ObservingData from '../.vitepress/router/life.js'
+import BackToTop from './components/BackToTop.vue'
+import ObservingVideo from './ObservingVideo.vue'
+
+const emits = defineEmits(['open'])
+
+// 路由跳转函数
+function navigateToDetail(article) {
+  emits('open', article)
+}
+
+const defaultImage = 'https://picsum.photos/id/1033/1200/800'
+function hostArticle() {
+  return {
+    ...ObservingData[0],
+    firstImage: ObservingData[0].firstImage ?? defaultImage,
+  }
+}
+// 其他热门文章，拿 ObservingData 前四个
+function otherHostArticle() {
+  return ObservingData.slice(1, 5).map(item => ({
+    ...item,
+    firstImage:
+      item.firstImage
+      ?? `https://picsum.photos/id/${Math.floor(Math.random() * 1084)}/1200/800`,
+  }))
+}
+
+// 剩下的文章
+function otherArticle() {
+  return ObservingData.slice(5).map(item => ({
+    ...item,
+    firstImage:
+      item.firstImage
+      ?? `https://picsum.photos/id/${Math.floor(Math.random() * 1084)}/1200/800`,
+  }))
+}
+</script>
+
 <template>
   <div class="slide-fade">
     <div class="max-w-7xl mx-auto">
       <div class="container mx-auto mb-10">
         <!-- 页面标题 -->
-        <h1 class="text-4xl font-bold mb-8">Life</h1>
+        <h1 class="text-4xl font-bold mb-8">
+          Life
+        </h1>
 
         <!-- 热门文章 -->
         <div class="flex flex-col lg:flex-row gap-8">
@@ -14,7 +57,7 @@
             >
               <div class="group">
                 <div class="relative overflow-hidden rounded-lg">
-                  <el-image
+                  <ElImage
                     :src="hostArticle().firstImage"
                     alt="出错啰"
                     fit="contain"
@@ -41,8 +84,8 @@
           <div class="lg:w-1/3">
             <div class="space-y-8">
               <a
-                :href="`/yoran-secret/observer-detail?src=${value.src}`"
                 v-for="value in otherHostArticle()"
+                :href="`/yoran-secret/observer-detail?src=${value.src}`"
                 class="block"
               >
                 <article
@@ -50,7 +93,7 @@
                 >
                   <div class="sm:w-1/3">
                     <div class="relative overflow-hidden rounded-lg">
-                      <el-image
+                      <ElImage
                         :src="value.firstImage"
                         alt="404"
                         fit="cover"
@@ -92,7 +135,7 @@
                 class="block"
               >
                 <div class="relative overflow-hidden rounded-lg mb-2">
-                  <el-image
+                  <ElImage
                     :src="value.firstImage"
                     :alt="value.caption"
                     fit="cover"
@@ -121,46 +164,6 @@
   <BackToTop />
 </template>
 
-<script setup>
-import { ElImage } from "element-plus";
-import ObservingData from "../.vitepress/router/life.js";
-import ObservingVideo from "./ObservingVideo.vue";
-import BackToTop from "./components/BackToTop.vue";
-
-const emits = defineEmits(["open"]);
-
-// 路由跳转函数
-const navigateToDetail = (article) => {
-  emits("open", article);
-};
-
-const defaultImage = "https://picsum.photos/id/1033/1200/800";
-const hostArticle = () => {
-  return {
-    ...ObservingData[0],
-    firstImage: ObservingData[0].firstImage ?? defaultImage,
-  };
-};
-// 其他热门文章，拿 ObservingData 前四个
-const otherHostArticle = () => {
-  return ObservingData.slice(1, 5).map((item) => ({
-    ...item,
-    firstImage:
-      item.firstImage ??
-      `https://picsum.photos/id/${Math.floor(Math.random() * 1084)}/1200/800`,
-  }));
-};
-
-// 剩下的文章
-const otherArticle = () => {
-  return ObservingData.slice(5).map((item) => ({
-    ...item,
-    firstImage:
-      item.firstImage ??
-      `https://picsum.photos/id/${Math.floor(Math.random() * 1084)}/1200/800`,
-  }));
-};
-</script>
 <style scoped>
 /* 针对移动设备的优化 */
 @media (max-width: 640px) {

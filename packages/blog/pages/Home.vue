@@ -1,9 +1,11 @@
 <template>
-  <div class="slide-fade flex items-center justify-center" v-once>
+  <div v-once class="slide-fade flex items-center justify-center">
     <div class="max-w-[650px]">
       <!-- 姓名 -->
       <div class="max-w-[650px] flex flex-col ml-0">
-        <div class="text-[2.5rem] font-bold">Hey, I'm Yoran</div>
+        <div class="text-[2.5rem] font-bold">
+          Hey, I'm Yoran
+        </div>
         <span class="text-[1rem] opacity-80 mb-[2rem] mt-[1rem]">
           My name is pronounced as /dʒɛn'haʊ/
         </span>
@@ -17,7 +19,7 @@
           src="https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/handsome.jpg"
           alt="Yoran"
           class="w-full h-full object-cover"
-        />
+        >
       </div>
 
       <!-- info -->
@@ -31,23 +33,21 @@
           musings in
           <span
             class="highlight highlight:dark link-btn hover:bg-red-500 cursor-pointer"
-            >here</span
-          >
+          >here</span>
           about software development, specifically JavaScript, TypeScript and
           web technologies in general.
         </p>
         <p class="text">
           My motto is:
           <span class="text-[1.2rem] font-bold">
-            "How you spend every day is how you spend your life."</span
-          >
+            "How you spend every day is how you spend your life."</span>
         </p>
-        <h3 class="pt-[1rem]">Contact</h3>
+        <h3 class="pt-[1rem]">
+          Contact
+        </h3>
         <p class="text">
           If you enjoy my content, consider subscribing to my
-          <a class="highlight highlight:dark" href="/yoran-secret/rss.xml"
-            >RSS feed</a
-          >
+          <a class="highlight highlight:dark" href="/yoran-secret/rss.xml">RSS feed</a>
           . If you feel so inclined, you're welcome to
           <span
             class="highlight highlight:dark cursor-pointer relative inline-block group"
@@ -59,10 +59,8 @@
                 src="https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/alipay-qrcode.jpg"
                 alt="支付宝收款码"
                 class="w-[200px] h-[200px] object-contain"
-              />
-              <span class="mt-2 text-sm text-gray-800 text-center"
-                >thank you!</span
               >
+              <span class="mt-2 text-sm text-gray-800 text-center">thank you!</span>
             </span>
           </span>
         </p>
@@ -70,6 +68,7 @@
     </div>
   </div>
 </template>
+
 <style scoped>
 .home {
   padding-top: 2rem;
