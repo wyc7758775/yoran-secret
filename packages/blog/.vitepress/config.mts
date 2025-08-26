@@ -44,7 +44,7 @@ export default defineConfig({
     assetsInclude: ["**/assets/**"],
     resolve: {
       alias: {
-        "@assets": "/Users/wuyucun/programmer/font-end/packages/blog/assets",
+        "@assets": "/Users/wuyucun/programmer/font-end/packages/blog/assets",``
       },
     },
     build: {

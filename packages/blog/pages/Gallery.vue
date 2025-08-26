@@ -2,8 +2,12 @@
   <div class="slide-fade">
     <div class="h-12 flex items-center cursor-pointer pl-4">
       <span @click="swtichFit">
-        <el-icon v-if="fitImg === 'cover'"><Grid /></el-icon>
-        <el-icon v-else><Menu /></el-icon>
+        <el-icon v-if="fitImg === 'cover'">
+          <Grid />
+        </el-icon>
+        <el-icon v-else>
+          <Menu />
+        </el-icon>
       </span>
     </div>
 
