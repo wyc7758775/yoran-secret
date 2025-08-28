@@ -2,11 +2,11 @@
 import { Grid, Menu } from '@element-plus/icons-vue'
 import { ElIcon, ElImage } from 'element-plus'
 import { ref } from 'vue'
+import { getImageUrl } from '../.vitepress/plugins/import-images'
 import getGallery from '../.vitepress/router/gallery'
 import picture from '../.vitepress/router/picture'
-import { getImageUrl } from '../helps/import-images'
 import BackToTop from './components/BackToTop.vue'
-import { useNavToStatic } from './hooks/use-nav-to-static.ts'
+import { useNavToStatic } from './hooks/use-nav-to-static'
 
 // 图片数据 - 实际使用时会从assets/gallery目录加载
 const images = [
@@ -34,8 +34,8 @@ function showPreview(index) {
 
 useNavToStatic()
 
-const fitImg = ref < string > ('cover')
-function swtichFit() {
+const fitImg = ref('cover')
+function switchFit() {
   fitImg.value = fitImg.value === 'cover' ? 'contain' : 'cover'
 }
 </script>
@@ -43,7 +43,7 @@ function swtichFit() {
 <template>
   <div class="slide-fade">
     <div class="h-12 flex items-center cursor-pointer pl-4">
-      <span @click="swtichFit">
+      <span @click="switchFit">
         <ElIcon v-if="fitImg === 'cover'">
           <Grid />
         </ElIcon>

@@ -5,6 +5,8 @@ import unocssConfig from "./unocss.config.ts";
 import configHead from './configHead.ts'
 // 导入 RSS 插件
 import rssPlugin from '../../plugin-rss/index.ts';
+// 导入 HTML Hash 插件
+import htmlHashPlugin from './plugins/html-hash-plugin.ts';
 
 // 从 package.json 获取站点信息
 const packageInfo = {
@@ -51,9 +53,9 @@ export default defineConfig({
       sourcemap: false,
       rollupOptions: {
         output: {
-          assetFileNames: "assets/[name]-[hash][extname]",
+          assetFileNames: "assets/[name]-[hash][extname]"
         },
-      },
-    },
+      }
+    }
   },
 });

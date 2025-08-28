@@ -39,17 +39,18 @@
 
 ```js
 // netBrewer.js
-const net = require("net");
-const post = 3306;
-const host = "127.0.0.1";
+const net = require('node:net')
 
-const server = net.createServer();
-server.listen(post, host);
+const post = 3306
+const host = '127.0.0.1'
 
-server.on("listening", () => {});
-server.on("connection", (socket) => {
+const server = net.createServer()
+server.listen(post, host)
+
+server.on('listening', () => {})
+server.on('connection', (socket) => {
   // 浏览器对该域名发起的请求
-});
+})
 ```
 
 随后命令行中输入`node server.js`
@@ -57,11 +58,11 @@ server.on("connection", (socket) => {
 打开浏览器,输入`http://localhost:3306?params=1`, 并在`connenction`监听请求的报文
 
 ```js
-server.on("connection", (socket) => {
-  socket.on("data", (data) => {
-    console.log(data.toString());
-  });
-});
+server.on('connection', (socket) => {
+  socket.on('data', (data) => {
+    console.log(data.toString())
+  })
+})
 ```
 
 在控制台就可以看到浏览器的请求报文:
@@ -73,12 +74,12 @@ server.on("connection", (socket) => {
 此时浏览器就会一直在转圈圈,因为它接收不到服务器响应内容, 所以我在下面中输入要`响应的报文`
 
 ```js
-server.on("connection", (socket) => {
-  socket.on("data", (data) => {
-    socket.write("HTTP/1.1 200 OK\r\n\r\n<html><body>hello world</body><head>");
-    socket.end();
-  });
-});
+server.on('connection', (socket) => {
+  socket.on('data', (data) => {
+    socket.write('HTTP/1.1 200 OK\r\n\r\n<html><body>hello world</body><head>')
+    socket.end()
+  })
+})
 ```
 
 值得注意的是,一个报文必须要以`socket.end()`来告诉浏览器数据结束了. 不然它依旧会是转圈圈的状态.
@@ -118,18 +119,18 @@ touch index.html
 通过 fs 模块来读取该文件:
 
 ```js
-server.on("connection", (socket) => {
-  socket.on("data", (data) => {
-    const dataFile = fs.readFileSync(__dirname + "/index.html");
+server.on('connection', (socket) => {
+  socket.on('data', (data) => {
+    const dataFile = fs.readFileSync(`${__dirname}/index.html`)
 
-    console.log(dataFile.toString());
+    console.log(dataFile.toString())
 
-    socket.write("HTTP/1.1 200 OK\r\n");
-    socket.write(dataFile);
+    socket.write('HTTP/1.1 200 OK\r\n')
+    socket.write(dataFile)
 
-    socket.end();
-  });
-});
+    socket.end()
+  })
+})
 ```
 
 可以在控制台中看到打印出来的`index.html`的字符串. 刷新一下页面应该也能够看到界面渲染的结果.
@@ -141,23 +142,24 @@ favicon.ico 图标用于收藏夹图标和浏览器标签上的显示，如果�
 
 ```js
 try {
-  const dataFile = fs.readFileSync(__dirname + "index.html");
+  const dataFile = fs.readFileSync(`${__dirname}index.html`)
 
-  console.log(dataFile.toString());
-  socket.write("HTTP/1.1 200 OK\r\n");
-  socket.write(dataFile);
+  console.log(dataFile.toString())
+  socket.write('HTTP/1.1 200 OK\r\n')
+  socket.write(dataFile)
 
-  socket.end();
-} catch (e) {
-  socket.write("HTTP/1.1 200 OK\r\n\r\n<body>404</body>");
-  socket.end();
+  socket.end()
+}
+catch (e) {
+  socket.write('HTTP/1.1 200 OK\r\n\r\n<body>404</body>')
+  socket.end()
 }
 ```
 
 报错的问题已经解决. 当浏览器指定访问地址的是如何处理呢? 这个时候我们就需要解析`请求报文`的内容来做响应的判断:
 
 ```js
-const url = data.toString().split("\r\n")[0].split(" ")[1];
+const url = data.toString().split('\r\n')[0].split(' ')[1]
 ```
 
 通过简单的字符串截取,就可以获取当前浏览器访问的文件是什么.
@@ -165,35 +167,37 @@ const url = data.toString().split("\r\n")[0].split(" ")[1];
 完整的代码如下:
 
 ```js
-const fs = require("fs");
-const net = require("net");
-const post = 3306;
-const host = "127.0.0.1";
+const fs = require('node:fs')
+const net = require('node:net')
 
-const server = net.createServer();
-server.listen(post, host);
+const post = 3306
+const host = '127.0.0.1'
 
-server.on("listening", () => {});
+const server = net.createServer()
+server.listen(post, host)
 
-server.on("connection", (socket) => {
-  socket.on("data", (data) => {
+server.on('listening', () => {})
+
+server.on('connection', (socket) => {
+  socket.on('data', (data) => {
     // 1. 解析请求报文
-    const url = data.toString().split("\r\n")[0].split(" ")[1];
+    const url = data.toString().split('\r\n')[0].split(' ')[1]
 
     try {
-      const dataFile = fs.readFileSync(__dirname + url);
+      const dataFile = fs.readFileSync(__dirname + url)
 
-      console.log(dataFile.toString());
-      socket.write("HTTP/1.1 200 OK\r\n");
-      socket.write(dataFile);
+      console.log(dataFile.toString())
+      socket.write('HTTP/1.1 200 OK\r\n')
+      socket.write(dataFile)
 
-      socket.end();
-    } catch (e) {
-      socket.write("HTTP/1.1 200 OK\r\n\r\n<body>404</body>");
-      socket.end();
+      socket.end()
     }
-  });
-});
+    catch (e) {
+      socket.write('HTTP/1.1 200 OK\r\n\r\n<body>404</body>')
+      socket.end()
+    }
+  })
+})
 ```
 
 > 在响应报文中, 只有在 chrome 浏览器中可以不配置`contentType:text/html`. 其他浏览器不配置是显示不出来的.

@@ -7,7 +7,9 @@
         class="min-h-[60vh] flex justify-center items-center w-full"
         v-if="contentLoading"
       >
-        <el-icon class="rotate-icon" size="36"><Loading /></el-icon>
+        <el-icon class="rotate-icon" size="36">
+          <Loading />
+        </el-icon>
       </div>
       <div
         v-else
@@ -31,9 +33,9 @@ import { ref, watch, computed, onMounted } from "vue";
 import { Loading } from "@element-plus/icons-vue";
 import { ElIcon, ElImageViewer } from "element-plus";
 import { useData } from "vitepress";
-import useMdRender from "./use-md-render.ts";
+import useMdRender from "./use-md-render";
 import BackToTop from "./components/BackToTop.vue";
-import { useNavToStatic } from "./hooks/use-nav-to-static.ts";
+import { useNavToStatic } from "./hooks/use-nav-to-static";
 import TocSidebar from "./components/TocSidebar.vue";
 
 useNavToStatic();
@@ -202,9 +204,11 @@ watch(
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 /* 添加内容区域图片居中样式 */
 </style>

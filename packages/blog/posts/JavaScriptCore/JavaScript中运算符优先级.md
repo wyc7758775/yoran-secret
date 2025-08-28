@@ -1,15 +1,7 @@
-- Metadata
-  - Author:
-  - Link:
-  - Publisher
-  - Date: [[2022-01-06]]
-  - Status: #waiting
-  - Tag:
 - content
 
   - JavaScript 中运算符优先级的问题？
   - 优先级 是 结合的优先级，不是说谁的优先级高就先给谁求值。
-
   - 结合是什么意思呢？可以理解成是加一个括号
 
     <img src="https://pica.zhimg.com/50/v2-b2c09744a0088336494e8d9400d42065_720w.jpg?source=1940ef5c" data-rawwidth="294" data-rawheight="60" class="content_image" width="294"/>
@@ -43,7 +35,6 @@
   - Status: #waiting
   - Tag:
 - content
-
   - 前面的回答都说得挺好了。那我还是来放传送门：
   - [虚拟机随谈（一）：解释器，树遍历解释器，基于栈与基于寄存器，大杂烩](https://link.zhihu.com/?target=http%3A//rednaxelafx.iteye.com/blog/492667)
   - 题主要注意区分优先级、结合性、

@@ -1,14 +1,14 @@
-const fs = require("fs");
-const path = require("path");
-const https = require("https");
-const videoSource = require("../.vitepress/router/video.js");
+const fs = require('node:fs')
+const https = require('node:https')
+const path = require('node:path')
+const videoSource = require('../router/video.js')
 
 /**
  * 从B站视频URL中提取BV号
  */
 function extractBvNumber(url) {
-  const match = url.match(/BV[0-9A-Za-z]+/);
-  return match ? match[0] : "";
+  const match = url.match(/BV[0-9A-Za-z]+/)
+  return match ? match[0] : ''
 }
 
 /**
@@ -17,46 +17,48 @@ function extractBvNumber(url) {
  * @returns {Promise<string>} - 返回封面图片URL
  */
 function getBilibiliCoverUrlByApi(bv) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     // 从BV号中提取ID部分（去掉开头的"BV"）
-    const bvId = bv.replace("BV", "");
+    const bvId = bv.replace('BV', '')
 
     // 使用正确的参数格式：type=bv&id=xxx&client=2.6.0
-    const apiUrl = `https://apiv2.magecorn.com/bilicover/get?type=bv&id=${bvId}&client=2.6.0`;
+    const apiUrl = `https://apiv2.magecorn.com/bilicover/get?type=bv&id=${bvId}&client=2.6.0`
 
     https
       .get(apiUrl, (res) => {
-        let data = "";
+        let data = ''
 
-        res.on("data", (chunk) => {
-          data += chunk;
-        });
+        res.on('data', (chunk) => {
+          data += chunk
+        })
 
-        res.on("end", () => {
+        res.on('end', () => {
           try {
-            const result = JSON.parse(data);
+            const result = JSON.parse(data)
             // 根据API返回的结构解析封面URL
             if (result.code === 0) {
               resolve({
                 title: result.title,
                 cover: result.url,
                 desc: result.desc,
-              });
-            } else {
-              console.warn(`API返回错误: ${result || "未知错误"}`);
-              resolve({});
+              })
             }
-          } catch (error) {
-            console.error("解析API返回数据失败:", error);
-            resolve({});
+            else {
+              console.warn(`API返回错误: ${result || '未知错误'}`)
+              resolve({})
+            }
           }
-        });
+          catch (error) {
+            console.error('解析API返回数据失败:', error)
+            resolve({})
+          }
+        })
       })
-      .on("error", (error) => {
-        console.error("API请求失败:", error);
-        resolve({});
-      });
-  });
+      .on('error', (error) => {
+        console.error('API请求失败:', error)
+        resolve({})
+      })
+  })
 }
 
 /**
@@ -65,20 +67,20 @@ function getBilibiliCoverUrlByApi(bv) {
  * @returns {Promise<Array>} - 处理后的视频数据
  */
 async function processVideoData() {
-  const processedVideos = [];
+  const processedVideos = []
 
   // 逐个处理视频，确保API调用完成
   for (const video of videoSource) {
-    const bvNumber = extractBvNumber(video.src);
+    const bvNumber = extractBvNumber(video.src)
 
     if (!bvNumber) {
       processedVideos.push({
         ...video,
-      });
-      continue;
+      })
+      continue
     }
 
-    const { title, cover, desc } = await getBilibiliCoverUrlByApi(bvNumber);
+    const { title, cover, desc } = await getBilibiliCoverUrlByApi(bvNumber)
 
     processedVideos.push({
       ...video,
@@ -86,10 +88,10 @@ async function processVideoData() {
       cover,
       title,
       desc,
-    });
+    })
   }
 
-  return processedVideos;
+  return processedVideos
 }
 
 /**
@@ -98,18 +100,18 @@ async function processVideoData() {
 function writeVideoCoverFile(processedData) {
   const outputPath = path.resolve(
     __dirname,
-    "../.vitepress/router/video-cover.js"
-  );
+    '../.vitepress/router/video-cover.js',
+  )
 
   // 生成导出的JavaScript代码
   const fileContent = `// 自动生成的视频封面数据
 export default ${JSON.stringify(processedData, null, 2)};
-`;
+`
 
   // 写入文件
-  fs.writeFileSync(outputPath, fileContent, "utf-8");
-  console.log(`视频封面数据已成功生成到: ${outputPath}`);
-  return processedData;
+  fs.writeFileSync(outputPath, fileContent, 'utf-8')
+  console.log(`视频封面数据已成功生成到: ${outputPath}`)
+  return processedData
 }
 
 /**
@@ -118,20 +120,21 @@ export default ${JSON.stringify(processedData, null, 2)};
 async function main() {
   try {
     // 处理视频数据，添加封面URL（异步处理）
-    const processedData = await processVideoData();
+    const processedData = await processVideoData()
 
     // 写入到video-cover.js文件
-    writeVideoCoverFile(processedData);
+    writeVideoCoverFile(processedData)
 
-    console.log("视频封面数据生成成功！");
-  } catch (error) {
-    console.error("生成视频封面数据时出错:", error);
-    process.exit(1);
+    console.log('视频封面数据生成成功！')
+  }
+  catch (error) {
+    console.error('生成视频封面数据时出错:', error)
+    process.exit(1)
   }
 }
 
 // 执行主函数
-main();
+main()
 
 // 为了兼容可能的CommonJS模块导入
 module.exports = {
@@ -139,4 +142,4 @@ module.exports = {
   getBilibiliCoverUrlByApi,
   processVideoData,
   writeVideoCoverFile,
-};
+}

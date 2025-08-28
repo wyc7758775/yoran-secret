@@ -43,7 +43,7 @@ key 值如果只是通过字符串来区分，是存在混淆的可能的，所�
 
 ```js
 // contans.ts
-export const COUNT_SYMBOL = symbol("provide 组件中的 count 哦");
+export const COUNT_SYMBOL = symbol('provide 组件中的 count 哦')
 ```
 
 在`provide.vue` 中：

@@ -1,5 +1,7 @@
 <img width="60%" src="https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/20250824213628776.png" />
 
+---
+
 # HTTP 协议
 
 HTTP 协议可以等同于合同，大家按照合同办事就好，这个大家指的是浏览器和服务端，换句话来说就是它们之间的通信规则。
@@ -108,15 +110,18 @@ JSONP、服务器反向代理（ng 配置和 vite 配置 proxy）、服务端配
 2. Vite 的 proxy 配置：
 
 ```js
-server: {
-	proxy:{
-		"/api": {
-			target: "http://xxx.xxx.xx.x:8080",
-			changeOrigin: true, // 允许跨域
-			secure: false, //忽略安全证书
-			rewrite: (path) => path.replace(/^\/api/, '')
-		},
-	},
+// vite.config.js
+export default {
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://xxx.xxx.xx.x:8080',
+        changeOrigin: true, // 允许跨域
+        secure: false, // 忽略安全证书
+        rewrite: path => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 }
 ```
 
@@ -124,7 +129,7 @@ server: {
 
 3. 生产环境 NG 配置
 
-**生产环境使用 Nginx 反向代理 ​**​：
+**生产环境使用 Nginx 反向代理**:
 
 部署时通过 Nginx 配置反向代理，将前端静态资源（如  `https://your-domain.com`）的请求转发到跨域接口（如  `https://api.other-domain.com`）。
 
@@ -162,65 +167,68 @@ server {
 `XHR`作为传统的网络实现，自带了`progress`事件实现监听下载进度，自带`upload`属性用于监听上传进度。
 
 ```js
-const xhr = new XMLHttpRequest();
-xhr.open("GET", "https://example.com/large-file.zip");
+const xhr = new XMLHttpRequest()
+xhr.open('GET', 'https://example.com/large-file.zip')
 
 // 监听下载进度
-xhr.addEventListener("progress", (e) => {
+xhr.addEventListener('progress', (e) => {
   if (e.lengthComputable) {
-    const percent = (e.loaded / e.total) * 100;
-    console.log(`下载进度：${percent.toFixed(1)}%`);
-  } else {
-    console.log("总大小未知，无法计算百分比进度");
+    const percent = (e.loaded / e.total) * 100
+    console.log(`下载进度：${percent.toFixed(1)}%`)
   }
-});
+  else {
+    console.log('总大小未知，无法计算百分比进度')
+  }
+})
 
 // 监听上传进度
-const upload = xhr.upload;
-upload.addEventListener("progress", (e) => {
+const upload = xhr.upload
+upload.addEventListener('progress', (e) => {
   if (e.lengthComputable) {
-    const percent = (e.loaded / e.total) * 100;
-    console.log(`上传进度：${percent.toFixed(1)}%`);
-  } else {
-    console.log("总大小未知，无法计算百分比进度");
+    const percent = (e.loaded / e.total) * 100
+    console.log(`上传进度：${percent.toFixed(1)}%`)
   }
-});
+  else {
+    console.log('总大小未知，无法计算百分比进度')
+  }
+})
 
 xhr.onload = () => {
-  console.log("下载完成");
-};
-xhr.send();
+  console.log('下载完成')
+}
+xhr.send()
 ```
 
 `Fetch` API 的不提供，需要`ReadableStream` 和 请求头配置`Content-Length`来获取上传的进度，比较复杂，这里不展开说，我也没记住, 核心就是 fetch 需要配置其他的 API 来实现 xhr 中对应的功能，包括中断请求。
 
 ```js
-const file = ... // 你要上传的文件
-let uploaded = 0;
-const total = file.size;
+const file = new File([], 'example.txt') // 你要上传的文件
+let uploaded = 0
+const total = file.size
 const stream = new ReadableStream({
-	async start(controller) {
-		const reader = file.stream().getReader();
-		while (true) {
-			const { done, value } = await reader.read();
-			if (done) break;
-			controller.enqueue(value);
-			uploaded += value.length;
-			// 这里可以更新进度条
-			console.log(已上传: ${uploaded} / ${total});
-		}
-		controller.close();
-	}
-});
+  async start(controller) {
+    const reader = file.stream().getReader()
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done)
+        break
+      controller.enqueue(value)
+      uploaded += value.length
+      // 这里可以更新进度条
+      console.log(`已上传: ${uploaded} / ${total}`)
+    }
+    controller.close()
+  }
+})
 
 fetch('/upload', {
-	method: 'POST',
-	body: stream,
-	headers: {
-		'Content-Type': 'application/octet-stream',
-		'Content-Length': total
-	}
-});
+  method: 'POST',
+  body: stream,
+  headers: {
+    'Content-Type': 'application/octet-stream',
+    'Content-Length': total
+  }
+})
 ```
 
 ### 鉴权（JWT、 Cookie）

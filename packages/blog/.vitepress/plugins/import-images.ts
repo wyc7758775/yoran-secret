@@ -3,7 +3,7 @@
 
 export const galleryImages = {
   // 使用Vite的glob功能导入所有图片
-  ...import.meta.glob('/assets/gallery/*.(jpg|jpeg|png|gif|webp|bmp|svg)', { eager: true }),
+  ...(import.meta as any).glob('/assets/gallery/*.(jpg|jpeg|png|gif|webp|bmp|svg)', { eager: true }),
 };
 
 /**

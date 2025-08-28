@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "target": "ES2020",
+    "jsx": "preserve",
     "module": "ESNext",
     "moduleResolution": "Node",
     "strict": true,
-    "jsx": "preserve",
-    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "skipLibCheck": true
   },
-  "include": ["**/*.ts", "**/*.tsx", ".vitepress/unocss.config.ts"]
+  "include": ["**/*.ts", "**/*.tsx", ".vitepress/unocss.config.ts", ".vitepress/plugins/resolve-image-url.ts", ".vitepress/plugins/import-images.ts"]
 }

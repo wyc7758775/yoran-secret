@@ -46,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted, onUnmounted } from "vue";
+import { ref, computed, watch, onMounted, onUnmounted } from "vue"
 
 interface TocItem {
   title: string;
@@ -169,6 +169,7 @@ const scrollToSection = (item: TocItem, event: MouseEvent) => {
       });
       return;
     }
+    
     console.warn(`未找到元素: ${item.title}`);
   }
 };
