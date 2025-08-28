@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { Grid, Menu } from '@element-plus/icons-vue'
 import { ElIcon, ElImage } from 'element-plus'
 import { ref } from 'vue'

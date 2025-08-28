@@ -18,7 +18,6 @@ function extractBvNumber(url) {
  */
 function getBilibiliCoverUrlByApi(bv) {
   return new Promise((resolve) => {
-    // 从BV号中提取ID部分（去掉开头的"BV"）
     const bvId = bv.replace('BV', '')
 
     // 使用正确的参数格式：type=bv&id=xxx&client=2.6.0
@@ -100,7 +99,7 @@ async function processVideoData() {
 function writeVideoCoverFile(processedData) {
   const outputPath = path.resolve(
     __dirname,
-    '../.vitepress/router/video-cover.js',
+    '../router/video-cover.js',
   )
 
   // 生成导出的JavaScript代码
