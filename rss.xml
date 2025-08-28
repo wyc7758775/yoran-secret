@@ -4,7 +4,7 @@
         <title>Yoran Wu 的博客</title>
         <link>https://wyc7758775.github.io/yoran-secret/</link>
         <description>个人学习总结记录</description>
-        <lastBuildDate>Tue, 26 Aug 2025 13:13:32 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 28 Aug 2025 12:16:47 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -18,7 +18,7 @@
             <title><![CDATA[如何阅读源码]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/如何阅读源码</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/如何阅读源码</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[如何阅读源码？  一、为什么有这一篇阅读源码的文章？ 想要提升自己的编码水平，阅读优秀的开源项目是一个重要的手段。掘金网站上面有很多解析各种框架源码的文章，还有更多教你如何组织好代码的文章。 比如说，红皮书、绿皮书、黄皮书告诉了我们 JS 是什么？而《重构》、《代码整洁之道》告诉了我们如何组织好 JS。 唯独阅读源码的文章却很少。这就让我在一开始阅读源码的时候无所适从。打开 github，搜索 vue3 的源码，看到如下的界面： !image.png !image.png 和我们平时做的业务项目结构基本不对应。不知道从哪里看起，应该看什么？想来是一些技巧和方法是我没有掌握的。 所以我开始认为，...]]></description>
             <content:encoded><![CDATA[# 如何阅读源码？
 
@@ -447,7 +447,7 @@ return this.buildIdealTree(bitOpt)
             <title><![CDATA[富文本无法渲染多个空格]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/富文本无法渲染多个空格</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/富文本无法渲染多个空格</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[富文本无法渲染多个空格  事情的起因 添加空格之后，上传给后台之后，回显的时候，没有正确的处理空格，不管多少个空格都只显示一个空格。 输入空格之前： ![](https://cdn.nlark.com/yuque/0/2023/png/654315/1688789869845-b90b3a51-ce8b-457e-b3fc-8008b433e33f.png) 输入之后： ![](https://cdn.nlark.com/yuque/0/2023/png/654315/1688789944441-cb02c067-63eb-49da-bf5f-89769486ab16.png)  问题盘查 将...]]></description>
             <content:encoded><![CDATA[# 富文本无法渲染多个空格
 
@@ -583,7 +583,7 @@ editor.commands.setContent(xxxxx, false, {
             <title><![CDATA[webpack 基础]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/构架工具/webpack 基础</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/构架工具/webpack 基础</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[webpack 基础  一、功能总览 - 能够节写 CommonJs 和 ES module 的语法. 自动合并这些模块的代码. - 默认是只能识别 js 和 json,所以为了适应 web 前端开发的工程.需要额外配置一些解析器.这些解析器放在 loader 配置属性当中 - css 使用 style-loader 和 cs-loader, 图片在 4.0 版本可以使用 file-loader 或者 url-loader 来解析. - 为了自动把把生成好的 js 文件自动引入到 html 当中.需要使用 htmlWebpackPlugins 的插件进行配置.还能使用默认的模版 - 如果要使用...]]></description>
             <content:encoded><![CDATA[# webpack 基础
 
@@ -1058,7 +1058,7 @@ output: {
             <title><![CDATA[先做人后做事，先学规范后写代码]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/先做人后做事，先学规范后写代码</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/先做人后做事，先学规范后写代码</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[先做人后做事，先学规范后写代码  1. 前言 JS 的使用规范旨在统一团队的代码风格，容易被团队中的任意一人理解，提升被维护性。对于我们这种已经成型的软件而言，是一个提升工作效率瓶颈成本最低，收益最高的方式，没有之一了。 一个良好的代码规范对于应用程序的功能没有直接的影响，但是对于改善源代码的理解是有帮助的。养成一个良好的系统对于软件的开发和维护都是有益的，不仅自己维护起来更加方便，也会让其他读者觉得赏心悦目。 短期可能会比之前花多一点时间，但是长期来看效率肯定是提升的。节省自己的时间，节省沟通的成本，每一位新入职的新员工都应该先 > 本文档很多都是基于百度 WEB 前端开发文档，或者阿里前端...]]></description>
             <content:encoded><![CDATA[# 先做人后做事，先学规范后写代码
 
@@ -2564,7 +2564,7 @@ todo-list-button.vue
             <title><![CDATA[前端已死]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/前端已死</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/前端已死</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[前端已死  <font style="color:rgb(0, 0, 0);">一、为什么要分享这么一个主题</font> <font style="color:rgb(0, 0, 0);">这个话题非常的重要，前端都死了，还学这些 vue3、hook、函数式有蛋用？岗位都没有了？你学得再好有什么用？更不用说，一群 985/211 的小孩要出来了，学历高，基础好，还年轻，最重要还便宜，我拿什么和他们拼？有什么优势和它们拼？</font> <font style="color:rgb(0, 0, 0);">所以我在准备 hook 材料的时候，一直不得劲，如果只是为了完成 KPI，毫无意义。</f...]]></description>
             <content:encoded><![CDATA[# 前端已死
 
@@ -2758,7 +2758,7 @@ _**<font style="color:rgb(0, 0, 0);">前端已死、后端已亡、测试被开�
             <title><![CDATA[如何设计组件？]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/如何设计组件？</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/如何设计组件？</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[如何设计组件？ 要讨论标题这个问题，我们首先要了解这个问题包含哪一些内容。如下图： ![](https://cdn.nlark.com/yuque/0/2025/png/654315/1753365280885-1b743f18-a034-4fd9-a599-5fe7e836a471.png) 图上面需要注意的是业务组件和基础组件的关系，它们虽然是并列的关系，但是大多数人都应该知道业务组件里面是由很多基础组件构成的。所以给它们都添加了一个备注，里面涉及两个概念：特性逻辑和共性逻辑。 顾名思义，共性逻辑或者交互代表的是多个业务组件，多个模块中一样的逻辑。而特性逻辑/交互是只存在在特定的组件当中，...]]></description>
             <content:encoded><![CDATA[# 如何设计组件？
 
@@ -3296,7 +3296,7 @@ function stopDrag() {
             <title><![CDATA[产品经理不靠谱怎么办]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/产品经理不靠谱怎么办</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/产品经理不靠谱怎么办</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[产品经理不靠谱怎么办 :::info 文章资料来源于极客时间上面<font style="color:rgb(136, 136, 136);">郑晔</font>的《10x 程序员》 ::: > 本文的问题都是出自于《10x 程序员》，这本书基本把我们平时工作中遇到的问题都涉及到了，给我带了很多的思考，也直接帮助到了我的工作。本篇文章，只是抽出他的几篇文章结合起来，加以自己的理解。推荐同学们自己去搜索来看看全书。 > > 图片的来源不明，多个地方看到，不知道水印的是不是真正的来源  一、产品和开发之争 ![](https://cdn.nlark.com/yuque/0/2022/png/654...]]></description>
             <content:encoded><![CDATA[# 产品经理不靠谱怎么办
 
@@ -3517,7 +3517,7 @@ function stopDrag() {
             <title><![CDATA[代码审查常见问题]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/代码审查常见问题</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/代码审查常见问题</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[格式错误 +  是否符合开发规范      - 详情请参考前文代码规范 +  eslint 规则是否正确  +  是否使用了 ignore   在 ESLint 中，可以使用 .eslintignore 文件来指定忽略文件的规则。该文件使用与 .gitignore 相同的语法，并支持通配符。通常，您应该将 .eslintignore 文件放在项目根目录下，并在其中指定要忽略的文件或目录。例如：  javascript  Ignore all files in the nodemodules directory nodemodules/  Ignore compiled output dist/...]]></description>
             <content:encoded><![CDATA[## 格式错误
 
@@ -4938,7 +4938,7 @@ export default {
             <title><![CDATA[使用composition api实践经验]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/使用composition api实践经验</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/使用composition api实践经验</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[使用 Composition API 实战经验 ![](https://cdn.nlark.com/yuque/0/2023/png/654315/1704006140571-694fd4fa-87b2-45b6-90d8-7b70304141c8.png) <font style="color:rgb(0, 0, 0);">Composition api 出来之后，我们除了要学习它的 API 之后，更加要学习他为什么要这样设计。</font>  <font style="color:rgb(0, 0, 0);">一、为什么组件越开发越难维护</font> <font style="color...]]></description>
             <content:encoded><![CDATA[# 使用 Composition API 实战经验
 
@@ -5455,7 +5455,7 @@ preview: 'preview',
             <title><![CDATA[VsCode中使用vim]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/VsCode中使用vim</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/VsCode中使用vim</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[VsCode 中使用 vim 插件  一、vim 是什么 它把我们平时操作的动作抽象拆分为三种类型，插入模式、可视化模式、普通模式。  二、使用 vim 的动机是什么 第一次听到的能够不使用鼠标，使用键盘就可以操作电脑，符合小时候对于电脑大佬的刻板印象。对不起，是我不成熟了。  三、在 vscode 中的配置 json "vim.easymotion": true, // 启用系统粘贴板作为vim寄存器 "vim.useSystemClipboard": true, // 由vim接管ctrl+any的按键，而不是vscode "vim.useCtrlKeys": true, // 突出显示与...]]></description>
             <content:encoded><![CDATA[# VsCode 中使用 vim 插件
 
@@ -5576,7 +5576,7 @@ preview: 'preview',
             <title><![CDATA[vue的业务开发如何进行组件的拆分]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/vue的业务开发如何进行组件的拆分</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/vue的业务开发如何进行组件的拆分</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[Vue2 业务开发组件拆分实战 组件化是一种思维的表现，这种技能映射到人的本质是，一个人是否有能力把一个复杂的问题拆解、简单化的能力。  一、组件化诞生的历史 我们在讨论如何拆分组件之前，是有必要简单的了解一下组件化诞生的一个历史。 前端娱乐圈有一个独有的生态：框架。每年出现的框架层出不穷，根本学不完。但是总的来说还是可以分成两个阶段。 第一阶段：JQ 和 PrototypeJS。 该阶段解决了浏览器的兼容性问题以及 API 的遍历程度 第二阶段:  Vue、React、Angular。解决了组件化、解耦、复用等问题 在大陆，主要讨论的是 Vue 和 React。 有些人说 Vue 是 fra...]]></description>
             <content:encoded><![CDATA[# Vue2 业务开发组件拆分实战
 
@@ -5896,7 +5896,7 @@ props = {
             <title><![CDATA[《重构》导读]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/《重构》导读</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/《重构》导读</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[《重构》导读  零、导读 > 这篇文章是对《重构》这本经典书籍的一个导读。或者说是对于这本书第一章的读书笔记。 有这么一句话，高质量代码是重构出来的。想要理解这句话，我们先来了解一下，开发工作期间，在摸鱼之外的时间分配。《奔跑吧，程序员》这个书正好有这样的饼状图： ![](https://cdn.nlark.com/yuque/mermaidv3/41220a262ddc314a2e1a6298cceb4b98.svg) 从这个表可以清楚的看到，开发直接面对代码的时间为百分之 50，而这百分之 50 中，却有百分之 45.5%的时间是在阅读代码，基本可以说，写代码的时候，程序员基本都是在看代码...]]></description>
             <content:encoded><![CDATA[# 《重构》导读
 
@@ -6373,7 +6373,7 @@ function statement(invoice, plays, type) {
             <title><![CDATA[CodeReview礼仪]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/CodeReview礼仪</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/CodeReview礼仪</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[CodeReview 礼仪  一、序言: 原来程序员是这么合作的 在我工作的前四年, 经常会在网上看到 Code Review 这个词. 但是却从来实践过. 看着他们对于 Code Review 习以为常的样子, 我宛如活在了平行世界. 不知道他们在说什么, 虽然每一个字都认识, 自然也没有什么感触. 直到第五年,加入了现在的公司,才真正的知道 Code Review 是什么一回事. 或者说只是知道一冰山一角,毕竟到现在只有不到一年的 Code Review 的经验. 但是给我带来的感触还是很深的. > 向开源项目提交 PR, 也有 Code Review? 不好意思, 在此之前,从来不看别的...]]></description>
             <content:encoded><![CDATA[# CodeReview 礼仪
 
@@ -6571,7 +6571,7 @@ Review 水平和自己差不多的，可以换位思考，如果是自己来实�
             <title><![CDATA[Code评审模板和礼仪]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/Code评审模板和礼仪</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/Code评审模板和礼仪</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[Code 评审模板和礼仪 <font style="color:rgb(0, 0, 0);">Code Review 就是将自己的代码公开的给其他程序员审查的过程。Reviewer 和 Reviewee 之间主要是通过 comment 来进行沟通，comment 可以针对每一行来进行评论。</font> <font style="color:rgb(0, 0, 0);">熟悉同事在编程时的思考方式，这样其余同事以后如果有需要就可以更轻松、快速的修改代码。</font> <font style="color:rgb(0, 0, 0);">向同事介绍修改了哪些文件，增加了什么样的功能，这样在问题出...]]></description>
             <content:encoded><![CDATA[# Code 评审模板和礼仪
 
@@ -6675,7 +6675,7 @@ Review 水平和自己差不多的，可以换位思考，如果是自己来实�
             <title><![CDATA[React中如何分组件]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/React中如何分组件</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/React中如何分组件</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[React 中如何分组件 > 基于自己工作中的体会，还有在做的过程中翻阅的资料，看的资料没有收藏起来，很想指出具体的出处，但是很多都是从各个地方看到的。不过都是在掘金、公众号前端开发、还有知乎上看到的。  😫 前言 随着 web 业务越来越复杂，一个页面必须要分成多个部分才能使得代码逻辑更加的清晰，出了问题也能更加快速的定位。所以说如果分组件的重要性不言而喻。  一、基本原则 - 每个组件不能超过 300 行。网上看好多人都说是 200 行，但是那样实际操作的话，压力会很大的，导致很多时候会为了分组件而分组件。其实分组件的目的就是为了可读性和可维护性。为了分组件而分组件的话，很多时候写的会很...]]></description>
             <content:encoded><![CDATA[# React 中如何分组件
 
@@ -6785,7 +6785,7 @@ test = () => {
             <title><![CDATA[TS入门教程学习总结]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/最佳实践/TS入门教程学习总结</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/最佳实践/TS入门教程学习总结</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[TS 入门 ts 可以解决Top 10 JavaScript errors from 1000+ projects (and how to avoid them) 这样的问题。再加上对象提示 🔔  一、 TS 基础 typescript // 1.对象和函数 interface interface IPerson {   readonly name: string;   age: number;   callback: { (name: string): string }; } const obj: IPerson = {   name: "yoran",   age: 2,   callb...]]></description>
             <content:encoded><![CDATA[# TS 入门
 
@@ -7185,7 +7185,7 @@ console.log(base.boo); // 不报错。完美哦
             <title><![CDATA[垃圾回收机制]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/brower/垃圾回收机制</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/brower/垃圾回收机制</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[我们为什么需要了解 作为前端，和 GC 强相关就是内存泄漏场景、调试工具、基础优化策略，这就是需要我们理解可达性、分代回收概念，以及熟练使用 DevTools 分析内存。  为什么需要 GC GC 就是垃圾回收的缩写。下面统一使用 GC 来指代垃圾回收。 众所周知，应用程序在运行过程中需要占用一定的内存空间，且在运行过后就必须将不再用到的内存释放掉，否则就会出现下图中内存的占用持续升高的情况，一方面会影响程序的运行速度，另一方面严重的话则会导致整个程序的崩溃。 我们可以通过 Dev Tool 的 Performance 来直观的观察到内存的改变，在页面加载完毕之后，正常的应该如下，线条在没有控...]]></description>
             <content:encoded><![CDATA[## 我们为什么需要了解
 
@@ -7525,7 +7525,7 @@ a.height = null;
             <title><![CDATA[浏览器缓存机制]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/brower/浏览器缓存机制</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/brower/浏览器缓存机制</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[浏览器缓存机制 -  所谓机制,就是说有这么一套规则来束约缓存的逻辑. 束约的工具是浏览器内部实现的. 束约的参数就是我们 [[HTTP和HTTPS协议]]的报文内容. 结果就是用户看到的资源. - 所以说我们在讨论的浏览器缓存机制的时候,就是在讨论[[HTTP报文]]中的某些对应字段的发挥的作用, 辅以一套处理这些字段的逻辑. - 这套处理的逻辑可以分为两种[[强制缓存]]和[[协商缓存]]  强制缓存 - 在 http1.0 时代,通过配置expires相应头的属性,设置过期的时间,只要超过这个时间,资源就从服务器上获取.反之就从本地获取. - 很简单,但是问题也很多   - 对本地时间...]]></description>
             <content:encoded><![CDATA[# 浏览器缓存机制
 
@@ -7684,7 +7684,7 @@ output:{
             <title><![CDATA[样式覆盖问题解决]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/微前端/样式覆盖问题解决</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/微前端/样式覆盖问题解决</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[微前端样式覆盖问题解决  一、背景 现在没有哪家公司不使用微前端来进行作为项目的组织架构了。 但是这个东西的出现也带来了新的问题。 比如说各个业务团队使用的 UI 框架不一样的时候，就会导致如下这样的样式污染。 !image.png 样式的污染，css-scoped 或者 css module 解决了绝大部分，但是对于多子应用同时加载，主子应用之间的冲突，导致了所有的弹窗样式都是有问题的。  二、解决方案  使用 qiankun 沙盒模式隔离 这是一个坑。神光最近也写过相关的文章，想要详细的了解，可以自寻查找。下面我简单的总结一下： - qiankun 的 css 沙箱的原理是重写 HTMLH...]]></description>
             <content:encoded><![CDATA[# 微前端样式覆盖问题解决
 
@@ -7793,218 +7793,10 @@ ignore 顾名思义就是忽略的 class,也可以使用正则，如 `/body/` �
             <author>295563358@qq.com (Yoran Wu)</author>
         </item>
         <item>
-            <title><![CDATA[响应式API：基础]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/响应式API：基础</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/响应式API：基础</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
-            <description><![CDATA[响应式 API：基础  参考资料 - ref() - computed() - reactive() - readonly() - watchEffect() - watchPostEffect() - watchSyncEffect() - watch() - onWatcherCleanup()  1. ref 无需多说它的使用，说一个可以对 ref 的初始化和赋值的封装，让它和 react hook 的写法一致。 js const useRef = <T>(value: T): [Ref<T>, (value: T) => void] => {   const targetRef = r...]]></description>
-            <content:encoded><![CDATA[# 响应式 API：基础
-
-## 参考资料
-
-- [ref()](https://cn.vuejs.org/api/reactivity-core.html#ref)
-
-- [computed()](https://cn.vuejs.org/api/reactivity-core.html#computed)
-
-- [reactive()](https://cn.vuejs.org/api/reactivity-core.html#reactive)
-
-- [readonly()](https://cn.vuejs.org/api/reactivity-core.html#readonly)
-
-- [watchEffect()](https://cn.vuejs.org/api/reactivity-core.html#watcheffect)
-
-- [watchPostEffect()](https://cn.vuejs.org/api/reactivity-core.html#watchposteffect)
-
-- [watchSyncEffect()](https://cn.vuejs.org/api/reactivity-core.html#watchsynceffect)
-
-- [watch()](https://cn.vuejs.org/api/reactivity-core.html#watch)
-
-- [onWatcherCleanup()](https://cn.vuejs.org/api/reactivity-core.html#onwatchercleanup)
-
-## 1. ref
-
-无需多说它的使用，说一个可以对 ref 的初始化和赋值的封装，让它和 react hook 的写法一致。
-
-```js
-const useRef = <T>(value: T): [Ref<T>, (value: T) => void] => {
-  const targetRef = ref<T>(value);
-  const setTargetValue = (value: T) => {
-    targetRef.value = value;
-  };
-  return [targetRef as Ref<T>, setTargetValue];
-};
-```
-
-具体的使用的组件中使用如下：
-
-```js
-const [count, setCount] = useRef < number > 0;
-
-const addCount = () => {
-  const newCount = count.value + 1;
-  setCount(newCount);
-};
-```
-
-很多人都说这样封装造成了代码的冗余，直接操作 count.value 就可以很方便了。非常的有道理，这个只是个人的喜欢而已，个人感觉给封装了一个 setCount 会让 ref 的操作更加的函数式，而不是直接操作这个变量。最大的好处就是**统一通过** `**setCount**`**来更新状态，提高代码的一致性**。
-
-## 2. computed
-
-大多数使用手法如下：
-
-```js
-<script setup>
-  const count = ref(1) const doubleCount = computed(（） => count.value++)
-</script>
-```
-
-直接操作 `doubleCount`会报错，它是只读的。
-
-另外一个比较不常用的，我们可以通过点击 `computed`打开它的 TS 类型，官方的例子依有记载，如下：
-
-```js
-export declare function computed<T>(getter: ComputedGetter<T>, debugOptions?: DebuggerOptions): ComputedRef<T>;
-export declare function computed<T, S = T>(options: WritableComputedOptions<T, S>, debugOptions?: DebuggerOptions): WritableComputedRef<T, S>;
-```
-
-利用 TS 的重载功能，支持两种使用方式，第一种就是传入一个 `getter`函数，返回的值为只读。而另外一种是一个 `options`对象，同时支持 `setter`和 `getter`两个函数，通过它的类型名字就可以看出 `writable`，既可写的对象。使用如下：
-
-```js
-const ableWrite = computed({
-  get() {
-    // 读取时: 原始值 * 10
-    return count.value * 10;
-  },
-  set(newValue) {
-    // 验证输入是否为有效数字
-    if (
-      newValue === null ||
-      newValue === undefined ||
-      isNaN(Number(newValue))
-    ) {
-      errorMessage.value = "请输入有效的数字!";
-      return;
-    }
-
-    // 验证通过，清除错误信息
-    errorMessage.value = "";
-
-    // 写入时: 新值同步到原始数据
-    count.value = Number(newValue);
-  },
-});
-```
-
-例子也是使用 options 的典型使用场景，可以用于数据的校验，和 `customRef`的使用场景是有重合的。但是有不错，`customRef`就是元数据，而 computed 不是，它返回的是另外一个响应式变量来处理。举个如下的 例子：
-
-```js
-// 需要额外的ref和watch，不直观
-const inputValue = ref("");
-const debouncedValue = ref("");
-
-// 防抖逻辑与计算逻辑分离
-watch(inputValue, (newVal) => {
-  const timeout = setTimeout(() => {
-    debouncedValue.value = newVal;
-  }, 300);
-  return () => clearTimeout(timeout);
-});
-
-// 基于防抖后的值计算
-const computedValue = computed(() => debouncedValue.value.toUpperCase());
-```
-
-同样是需要防抖的功能，翻阅[进阶 API](https://www.yuque.com/xiaoganju-ynq12/ypvc5e/gisghexpqziklrry "进阶 API")中的 `customRef`，它操作的更加底层，所以逻辑能够更加的内聚，防抖也是官方给出的典型的例子。
-
-## 3. reactive
-
-同 `ref`。
-
-## 4. readonly
-
-```js
-<script setup>
-const data = reative({
-  count: 0
-})
-const obj2 = readonly(obj);
-const obj3 = readonly({
-  cout: 0
-})
-
-const handleClick = () => {
-  obj.count++;
-};
-</script>
-```
-
-`obj2`依旧是可写。`obj3`才可读。
-
-## 5. watchEffect
-
-值得一提的就是它的 `onCleanup`回调函数的使用。和组件的生命周期非常的相似。
-
-```js
-watchEffect(async (onCleanup) => {
-  const controller = new AbortController();
-
-  // 注册清理：取消未完成的请求
-  onCleanup(() => controller.abort());
-
-  try {
-    const res = await fetch("/api/data", {
-      signal: controller.signal,
-    });
-    const data = await res.json();
-    // 处理数据...
-  } catch (e) {
-    if (e.name !== "AbortError") console.error(e);
-  }
-});
-```
-
-等同于
-
-```js
-import { onWatcherCleanup } from "vue";
-watchEffect(() => {
-  onWatcherCleanup(() => {
-    /* 清理逻辑 */
-  }); // 功能等同 onCleanup
-});
-```
-
-业务开发中，很很多方法可以实现这样的监听，所以大多数情况我们是禁止使用 `watchEffect`了，它的随意使用给排查问题带来了非常大的问题。团队开发的原则是可读性，而不是方便，所以才有各种规范。
-
-## 6. watch
-
-```js
-watch(id, (newId, oldId, onCleanup) => {
-  const timer = setInterval(() => console.log("Running"), 1000);
-  onCleanup(() => clearInterval(timer)); // 注册清理函数
-});
-```
-
-和 watchEffect 一致，但是用法更加的内聚，不需要想使用 watchEffect 一样，人工去判断里面到底是哪个响应式变化了引起了问题。
-
-这两个监听 API 最重要的就是 `onCleanup`方法，业务开发中，多用于手动清除一下宏任务，比如 setTimeout 方法等，以及取消请求，如下：
-
-```js
-watch(keyword, async (newVal, oldVal, onCleanup) => {
-  const controller = new AbortController();
-  onCleanup(() => controller.abort()); // 依赖变化时取消旧请求
-  const data = await fetch(url, { signal: controller.signal });
-});
-```
-
-在 input 输入框中，连续输入需要中断上一次请求。
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
             <title><![CDATA[响应式API：工具]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/响应式API：工具</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/响应式API：工具</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[响应式 API：工具  参考资料 - isRef() - unref() - toRef() - toValue() - toRefs() - isProxy() - isReactive() - isReadonly() 这些 API 的用法非常的简单，而且通过这些命名就可以知道它们属于可有可无的一些方法。  防御性编程 API - isRef() : 检车某个值是否为 ref。 - isProxy() : 检测某个值是否为reactive、shallowReactive、readonly，以及shallowReaonly。 - isReactive() : 检测某个值是否为reactive...]]></description>
             <content:encoded><![CDATA[# 响应式 API：工具
 
@@ -8064,7 +7856,7 @@ const { foo, bar } = useFeatureX();
             <title><![CDATA[响应式API：进阶]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/响应式API：进阶</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/响应式API：进阶</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[响应式 API：进阶  参考资料(vue3 官网) - shallowRef() - triggerRef() - customRef() - shallowReactive() - shallowReadonly() - toRaw() - markRaw() - effectScope() - getCurrentScope() - onScopeDispose()  前言 官方已经很好的写出了这些 API 是如何使用的，但是没有结合实践的业务场景来说明运用的场景，这个对于我们实际的开发非常的重要，而且在现在离不开大模型的情况下，对于我这种业务开发员来说，广度可能比深度更加的重要。  1....]]></description>
             <content:encoded><![CDATA[# 响应式 API：进阶
 
@@ -8793,7 +8585,7 @@ const { count } = useGlobalCount();
             <title><![CDATA[组合式API：依赖注入]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/组合式API：依赖注入</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/组合式API：依赖注入</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[组合式 API：依赖注入  参考质量 组合式 API：依赖注入  基础使用 父级组件如下： js <template> 	<button @click='addCount'>Add Count</button> 	<inject /> </template> <script setup> import { provide } from 'vue' const count = ref(0) provide('ProvideCount', count) const addCount = () => { 	count.value++ } </script> 自己组件中如下： js <template...]]></description>
             <content:encoded><![CDATA[# 组合式 API：依赖注入
 
@@ -8840,7 +8632,7 @@ key 值如果只是通过字符串来区分，是存在混淆的可能的，所�
 
 ```js
 // contans.ts
-export const COUNT_SYMBOL = symbol("provide 组件中的 count 哦");
+export const COUNT_SYMBOL = symbol('provide 组件中的 count 哦')
 ```
 
 在`provide.vue` 中：
@@ -8924,7 +8716,7 @@ const changeAge = () => {
             <title><![CDATA[MVC 设计规范]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/MVC 设计规范</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/MVC 设计规范</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[MVC 设计规范 想要真正的明白 MVC 的框架是需要大量的实战的. 而 MVC 框架是 MVVM 框架的前置知识. 而 MVC 框架带的前置知识是整个 JavaScript 知识体系. MVC 是 Model、View、Controller 三个的缩写合并而成. 今天的我的目标是要创造一个能够自加自减的工具. 点击 + 可以增加岁数, 减就减少对应的岁数.如图所示: !截屏2022-02-2023.04.1316453694990110.png  接下来进入 code 缓解, 现在需要创建一个容器来承载接下来的内容 html <body>   <div id="app"></div> </b...]]></description>
             <content:encoded><![CDATA[# MVC 设计规范
 
@@ -9187,7 +8979,7 @@ const Controller = {
             <title><![CDATA[vapor]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/vapor</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/vapor</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[Vapor  性能提升测试 |                  | 首屏加载速度       | 更新耗时 | 更新内存使用 | | ---------------- | ------------------ | -------- | ------------ | | traditional Mode | 1.82s 到 2.28s | 143ms    | 180 mb       | | Vapor Mode       | 1.72s 到 2s    | 25ms     | 144 mb       |  测试方法 浏览器：Chorme 版本 135 隐私模式 创建项目，把 vite...]]></description>
             <content:encoded><![CDATA[# Vapor
 
@@ -9611,7 +9403,7 @@ defineAsyncComponent、`<KeepAlive>`、`<Teleport>`、`<Suspense>`都没有支�
             <title><![CDATA[内置指令]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/内置指令</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/内置指令</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[内置指令  参考资料 - 内置指令  v-text & 插值语法 > 插值语法就是 {{ message }} v-text 相比插值语法最大的作用就是语义化更加的好，理论上它的性能可能要比插值语法好，不过可以忽略不计。 当我们在v-text的元素中添加子节点，这个子节点包括textContent或者其他节点类型的话，会在编译时就报错，报错信息如下： ![[Pasted image 20250813143743.png]] 这个是从语法层面的规范，利好团队协作，然后其他开发看一眼就知道这个 dom 的意图，不要往它子节点添加东西。  v-html 和 xss  基础用法 js <templat...]]></description>
             <content:encoded><![CDATA[# 内置指令
 
@@ -9916,7 +9708,7 @@ SlotChild.vue 中如下：
             <title><![CDATA[内置组件]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/内置组件</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/内置组件</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[内置组件  参考资料 - Transition - TransitionGroup - KeepAlive - Teleport - Suspense  Transition & TransitionGroup 它的使用没有比官网更加的清晰了。 html <Transition   name="fade"   @before-enter="beforeEnter"   @after-enter="afterEnter"   @before-leave="beforeLeave"   @after-leave="afterLeave" > </Transition> css / 进入阶段：从隐藏...]]></description>
             <content:encoded><![CDATA[# 内置组件
 
@@ -10039,10 +9831,218 @@ const showTeleport = computed(() => {
             <author>295563358@qq.com (Yoran Wu)</author>
         </item>
         <item>
+            <title><![CDATA[响应式API：基础]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/Vue/响应式API：基础</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Vue/响应式API：基础</guid>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
+            <description><![CDATA[响应式 API：基础  参考资料 - ref() - computed() - reactive() - readonly() - watchEffect() - watchPostEffect() - watchSyncEffect() - watch() - onWatcherCleanup()  1. ref 无需多说它的使用，说一个可以对 ref 的初始化和赋值的封装，让它和 react hook 的写法一致。 js const useRef = <T>(value: T): [Ref<T>, (value: T) => void] => {   const targetRef = r...]]></description>
+            <content:encoded><![CDATA[# 响应式 API：基础
+
+## 参考资料
+
+- [ref()](https://cn.vuejs.org/api/reactivity-core.html#ref)
+
+- [computed()](https://cn.vuejs.org/api/reactivity-core.html#computed)
+
+- [reactive()](https://cn.vuejs.org/api/reactivity-core.html#reactive)
+
+- [readonly()](https://cn.vuejs.org/api/reactivity-core.html#readonly)
+
+- [watchEffect()](https://cn.vuejs.org/api/reactivity-core.html#watcheffect)
+
+- [watchPostEffect()](https://cn.vuejs.org/api/reactivity-core.html#watchposteffect)
+
+- [watchSyncEffect()](https://cn.vuejs.org/api/reactivity-core.html#watchsynceffect)
+
+- [watch()](https://cn.vuejs.org/api/reactivity-core.html#watch)
+
+- [onWatcherCleanup()](https://cn.vuejs.org/api/reactivity-core.html#onwatchercleanup)
+
+## 1. ref
+
+无需多说它的使用，说一个可以对 ref 的初始化和赋值的封装，让它和 react hook 的写法一致。
+
+```js
+const useRef = <T>(value: T): [Ref<T>, (value: T) => void] => {
+  const targetRef = ref<T>(value);
+  const setTargetValue = (value: T) => {
+    targetRef.value = value;
+  };
+  return [targetRef as Ref<T>, setTargetValue];
+};
+```
+
+具体的使用的组件中使用如下：
+
+```js
+const [count, setCount] = useRef < number > 0;
+
+const addCount = () => {
+  const newCount = count.value + 1;
+  setCount(newCount);
+};
+```
+
+很多人都说这样封装造成了代码的冗余，直接操作 count.value 就可以很方便了。非常的有道理，这个只是个人的喜欢而已，个人感觉给封装了一个 setCount 会让 ref 的操作更加的函数式，而不是直接操作这个变量。最大的好处就是**统一通过** `**setCount**`**来更新状态，提高代码的一致性**。
+
+## 2. computed
+
+大多数使用手法如下：
+
+```js
+<script setup>
+  const count = ref(1) const doubleCount = computed(（） => count.value++)
+</script>
+```
+
+直接操作 `doubleCount`会报错，它是只读的。
+
+另外一个比较不常用的，我们可以通过点击 `computed`打开它的 TS 类型，官方的例子依有记载，如下：
+
+```js
+export declare function computed<T>(getter: ComputedGetter<T>, debugOptions?: DebuggerOptions): ComputedRef<T>;
+export declare function computed<T, S = T>(options: WritableComputedOptions<T, S>, debugOptions?: DebuggerOptions): WritableComputedRef<T, S>;
+```
+
+利用 TS 的重载功能，支持两种使用方式，第一种就是传入一个 `getter`函数，返回的值为只读。而另外一种是一个 `options`对象，同时支持 `setter`和 `getter`两个函数，通过它的类型名字就可以看出 `writable`，既可写的对象。使用如下：
+
+```js
+const ableWrite = computed({
+  get() {
+    // 读取时: 原始值 * 10
+    return count.value * 10;
+  },
+  set(newValue) {
+    // 验证输入是否为有效数字
+    if (
+      newValue === null ||
+      newValue === undefined ||
+      isNaN(Number(newValue))
+    ) {
+      errorMessage.value = "请输入有效的数字!";
+      return;
+    }
+
+    // 验证通过，清除错误信息
+    errorMessage.value = "";
+
+    // 写入时: 新值同步到原始数据
+    count.value = Number(newValue);
+  },
+});
+```
+
+例子也是使用 options 的典型使用场景，可以用于数据的校验，和 `customRef`的使用场景是有重合的。但是有不错，`customRef`就是元数据，而 computed 不是，它返回的是另外一个响应式变量来处理。举个如下的 例子：
+
+```js
+// 需要额外的ref和watch，不直观
+const inputValue = ref("");
+const debouncedValue = ref("");
+
+// 防抖逻辑与计算逻辑分离
+watch(inputValue, (newVal) => {
+  const timeout = setTimeout(() => {
+    debouncedValue.value = newVal;
+  }, 300);
+  return () => clearTimeout(timeout);
+});
+
+// 基于防抖后的值计算
+const computedValue = computed(() => debouncedValue.value.toUpperCase());
+```
+
+同样是需要防抖的功能，翻阅[进阶 API](https://www.yuque.com/xiaoganju-ynq12/ypvc5e/gisghexpqziklrry "进阶 API")中的 `customRef`，它操作的更加底层，所以逻辑能够更加的内聚，防抖也是官方给出的典型的例子。
+
+## 3. reactive
+
+同 `ref`。
+
+## 4. readonly
+
+```js
+<script setup>
+const data = reative({
+  count: 0
+})
+const obj2 = readonly(obj);
+const obj3 = readonly({
+  cout: 0
+})
+
+const handleClick = () => {
+  obj.count++;
+};
+</script>
+```
+
+`obj2`依旧是可写。`obj3`才可读。
+
+## 5. watchEffect
+
+值得一提的就是它的 `onCleanup`回调函数的使用。和组件的生命周期非常的相似。
+
+```js
+watchEffect(async (onCleanup) => {
+  const controller = new AbortController();
+
+  // 注册清理：取消未完成的请求
+  onCleanup(() => controller.abort());
+
+  try {
+    const res = await fetch("/api/data", {
+      signal: controller.signal,
+    });
+    const data = await res.json();
+    // 处理数据...
+  } catch (e) {
+    if (e.name !== "AbortError") console.error(e);
+  }
+});
+```
+
+等同于
+
+```js
+import { onWatcherCleanup } from "vue";
+watchEffect(() => {
+  onWatcherCleanup(() => {
+    /* 清理逻辑 */
+  }); // 功能等同 onCleanup
+});
+```
+
+业务开发中，很很多方法可以实现这样的监听，所以大多数情况我们是禁止使用 `watchEffect`了，它的随意使用给排查问题带来了非常大的问题。团队开发的原则是可读性，而不是方便，所以才有各种规范。
+
+## 6. watch
+
+```js
+watch(id, (newId, oldId, onCleanup) => {
+  const timer = setInterval(() => console.log("Running"), 1000);
+  onCleanup(() => clearInterval(timer)); // 注册清理函数
+});
+```
+
+和 watchEffect 一致，但是用法更加的内聚，不需要想使用 watchEffect 一样，人工去判断里面到底是哪个响应式变化了引起了问题。
+
+这两个监听 API 最重要的就是 `onCleanup`方法，业务开发中，多用于手动清除一下宏任务，比如 setTimeout 方法等，以及取消请求，如下：
+
+```js
+watch(keyword, async (newVal, oldVal, onCleanup) => {
+  const controller = new AbortController();
+  onCleanup(() => controller.abort()); // 依赖变化时取消旧请求
+  const data = await fetch(url, { signal: controller.signal });
+});
+```
+
+在 input 输入框中，连续输入需要中断上一次请求。
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
             <title><![CDATA[NodeJS-net 模块和 Http 模块]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Network/NodeJS-net 模块和 Http 模块</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Network/NodeJS-net 模块和 Http 模块</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[NodeJS-net 模块和 Http 模块  前言 这节内容会设置到如何完整的展示一个 html 页面,以及其上的图片样式. 其中涉及到了 fs 模块的知识和 buff 的概念. 要渲染一个 html 页面,自然就要涉及到报文, 所以也会简单的解释一下报文的概念. 正文如下.  HTTP 报文 在 TCP/IP 协议中,我们经常会听到请求报文,响应报文这样的字眼. 顾名思义. 由于 B/S 架构的标准是基于 HTTP 协议，客户端发送请求，服务器给出响应的一问一答形式进行通信。所以很明显, 请求报文就是客户端发出的, 而响应报文就是服务端发给客户端的,从语义而知,是为了回复请求,所以要响应....]]></description>
             <content:encoded><![CDATA[# NodeJS-net 模块和 Http 模块
 
@@ -10085,17 +10085,18 @@ const showTeleport = computed(() => {
 
 ```js
 // netBrewer.js
-const net = require("net");
-const post = 3306;
-const host = "127.0.0.1";
+const net = require('node:net')
 
-const server = net.createServer();
-server.listen(post, host);
+const post = 3306
+const host = '127.0.0.1'
 
-server.on("listening", () => {});
-server.on("connection", (socket) => {
+const server = net.createServer()
+server.listen(post, host)
+
+server.on('listening', () => {})
+server.on('connection', (socket) => {
   // 浏览器对该域名发起的请求
-});
+})
 ```
 
 随后命令行中输入`node server.js`
@@ -10103,11 +10104,11 @@ server.on("connection", (socket) => {
 打开浏览器,输入`http://localhost:3306?params=1`, 并在`connenction`监听请求的报文
 
 ```js
-server.on("connection", (socket) => {
-  socket.on("data", (data) => {
-    console.log(data.toString());
-  });
-});
+server.on('connection', (socket) => {
+  socket.on('data', (data) => {
+    console.log(data.toString())
+  })
+})
 ```
 
 在控制台就可以看到浏览器的请求报文:
@@ -10119,12 +10120,12 @@ server.on("connection", (socket) => {
 此时浏览器就会一直在转圈圈,因为它接收不到服务器响应内容, 所以我在下面中输入要`响应的报文`
 
 ```js
-server.on("connection", (socket) => {
-  socket.on("data", (data) => {
-    socket.write("HTTP/1.1 200 OK\r\n\r\n<html><body>hello world</body><head>");
-    socket.end();
-  });
-});
+server.on('connection', (socket) => {
+  socket.on('data', (data) => {
+    socket.write('HTTP/1.1 200 OK\r\n\r\n<html><body>hello world</body><head>')
+    socket.end()
+  })
+})
 ```
 
 值得注意的是,一个报文必须要以`socket.end()`来告诉浏览器数据结束了. 不然它依旧会是转圈圈的状态.
@@ -10164,18 +10165,18 @@ touch index.html
 通过 fs 模块来读取该文件:
 
 ```js
-server.on("connection", (socket) => {
-  socket.on("data", (data) => {
-    const dataFile = fs.readFileSync(__dirname + "/index.html");
+server.on('connection', (socket) => {
+  socket.on('data', (data) => {
+    const dataFile = fs.readFileSync(`${__dirname}/index.html`)
 
-    console.log(dataFile.toString());
+    console.log(dataFile.toString())
 
-    socket.write("HTTP/1.1 200 OK\r\n");
-    socket.write(dataFile);
+    socket.write('HTTP/1.1 200 OK\r\n')
+    socket.write(dataFile)
 
-    socket.end();
-  });
-});
+    socket.end()
+  })
+})
 ```
 
 可以在控制台中看到打印出来的`index.html`的字符串. 刷新一下页面应该也能够看到界面渲染的结果.
@@ -10187,23 +10188,24 @@ favicon.ico 图标用于收藏夹图标和浏览器标签上的显示，如果�
 
 ```js
 try {
-  const dataFile = fs.readFileSync(__dirname + "index.html");
+  const dataFile = fs.readFileSync(`${__dirname}index.html`)
 
-  console.log(dataFile.toString());
-  socket.write("HTTP/1.1 200 OK\r\n");
-  socket.write(dataFile);
+  console.log(dataFile.toString())
+  socket.write('HTTP/1.1 200 OK\r\n')
+  socket.write(dataFile)
 
-  socket.end();
-} catch (e) {
-  socket.write("HTTP/1.1 200 OK\r\n\r\n<body>404</body>");
-  socket.end();
+  socket.end()
+}
+catch (e) {
+  socket.write('HTTP/1.1 200 OK\r\n\r\n<body>404</body>')
+  socket.end()
 }
 ```
 
 报错的问题已经解决. 当浏览器指定访问地址的是如何处理呢? 这个时候我们就需要解析`请求报文`的内容来做响应的判断:
 
 ```js
-const url = data.toString().split("\r\n")[0].split(" ")[1];
+const url = data.toString().split('\r\n')[0].split(' ')[1]
 ```
 
 通过简单的字符串截取,就可以获取当前浏览器访问的文件是什么.
@@ -10211,35 +10213,37 @@ const url = data.toString().split("\r\n")[0].split(" ")[1];
 完整的代码如下:
 
 ```js
-const fs = require("fs");
-const net = require("net");
-const post = 3306;
-const host = "127.0.0.1";
+const fs = require('node:fs')
+const net = require('node:net')
 
-const server = net.createServer();
-server.listen(post, host);
+const post = 3306
+const host = '127.0.0.1'
 
-server.on("listening", () => {});
+const server = net.createServer()
+server.listen(post, host)
 
-server.on("connection", (socket) => {
-  socket.on("data", (data) => {
+server.on('listening', () => {})
+
+server.on('connection', (socket) => {
+  socket.on('data', (data) => {
     // 1. 解析请求报文
-    const url = data.toString().split("\r\n")[0].split(" ")[1];
+    const url = data.toString().split('\r\n')[0].split(' ')[1]
 
     try {
-      const dataFile = fs.readFileSync(__dirname + url);
+      const dataFile = fs.readFileSync(__dirname + url)
 
-      console.log(dataFile.toString());
-      socket.write("HTTP/1.1 200 OK\r\n");
-      socket.write(dataFile);
+      console.log(dataFile.toString())
+      socket.write('HTTP/1.1 200 OK\r\n')
+      socket.write(dataFile)
 
-      socket.end();
-    } catch (e) {
-      socket.write("HTTP/1.1 200 OK\r\n\r\n<body>404</body>");
-      socket.end();
+      socket.end()
     }
-  });
-});
+    catch (e) {
+      socket.write('HTTP/1.1 200 OK\r\n\r\n<body>404</body>')
+      socket.end()
+    }
+  })
+})
 ```
 
 > 在响应报文中, 只有在 chrome 浏览器中可以不配置`contentType:text/html`. 其他浏览器不配置是显示不出来的.
@@ -10250,7 +10254,7 @@ server.on("connection", (socket) => {
             <title><![CDATA[SSL 协议]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Network/SSL 协议</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Network/SSL 协议</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[SSL 协议 SSL（Secure Socket Layer），由于 HTTP 协议中传输的数据是明文，所以攻击者能够毫不费力的能够拿到开发者想要保证密文的数据，SSL 就是为了解决这个问题而诞生的，它运用一定的加密解密的策略来解决攻击者获取传输过程中数据的安全。  SSL 协议建立连接的过程  对称加密 对明文进行加密，让攻击者不知道它看到的数据是什么，但是同时又需要让客户端和服务端都能够解密，这样才可以进行沟通。所以对称加密就出现了，它的通过握手过程如下： <img witdh="50%" src="https://yoran-images-1256970527.cos.ap-guangz...]]></description>
             <content:encoded><![CDATA[# SSL 协议
 
@@ -10339,7 +10343,7 @@ SSL（Secure Socket Layer），由于 HTTP 协议中传输的数据是明文�
             <title><![CDATA[TCP 协议]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Network/TCP 协议</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Network/TCP 协议</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[TCP协议 TCP: Transmission Control Protocol, 传输控制协议。 和[[HTTP协议]]中说的一样，我们作为前端开发，首先要思考的是TCP协议解决的是什么问题，我们重点学习的地方是什么？ 它是由操作系统实现的，浏览器只是调用 API 的工具，所以我们学习的也只是浏览器通过的net模块，进行 NodeJs 开发的时候，这个是必须要学习的，以及TCP 的三次握手和四次挥手的过程，我们学习他们的这个过程，目的是为了更好和运维，或者后台进行沟通。这就是为什么我们需要学习接口 API 的命名规范。  TCP协议的 feature TCP的特点是相对于UDP而言的，所以在...]]></description>
             <content:encoded><![CDATA[# TCP协议
 
@@ -10475,7 +10479,7 @@ TCP协议要使用的序列号是后面报文实际携带的序列号和ISN的[�
             <title><![CDATA[网络缓存机制]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Network/网络缓存机制</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Network/网络缓存机制</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[缓存机制  所谓机制,就是说有这么一套规则来束约缓存的逻辑. 束约的工具是浏览器内部实现的. 束约的参数就是我们 HTTP 和 HTTPS 协议的报文内容. 结果就是用户看到的资源. 所以说我们在讨论的浏览器缓存机制的时候,就是在讨论 HTTP 报文中的某些对应字段的发挥的作用, 辅以一套处理这些字段的逻辑. 这套处理的逻辑可以分为两种强制缓存和协商缓存  强制缓存 在 http1.0 时代,通过配置expires相应头的属性,设置过期的时间,只要超过这个时间,资源就从服务器上获取.反之就从本地获取. 很简单,但是问题也很多 对本地时间戳过分的依赖,如果客户端本地的时间和服务器的时间不一致的...]]></description>
             <content:encoded><![CDATA[# 缓存机制
 
@@ -10649,9 +10653,11 @@ Cache-Control 的相关属性
             <title><![CDATA[HTTP 协议]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Network/HTTP 协议</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Network/HTTP 协议</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
-            <description><![CDATA[<img width="60%" src="https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/20250824213628776.png" />  HTTP 协议 HTTP 协议可以等同于合同，大家按照合同办事就好，这个大家指的是浏览器和服务端，换句话来说就是它们之间的通信规则。 它本身是没有什么业务逻辑的，只存在通信规则的逻辑，所以我们作为一个 WEB 前端的开发而言，平时接触的 fetch 和 Axios 都是对于 HTTP 协议的使用。 所以我们学习的重点放在如下地方： 1. 业务开发的高频问题    1. 跨域（...]]></description>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
+            <description><![CDATA[<img width="60%" src="https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/20250824213628776.png" /> ---  HTTP 协议 HTTP 协议可以等同于合同，大家按照合同办事就好，这个大家指的是浏览器和服务端，换句话来说就是它们之间的通信规则。 它本身是没有什么业务逻辑的，只存在通信规则的逻辑，所以我们作为一个 WEB 前端的开发而言，平时接触的 fetch 和 Axios 都是对于 HTTP 协议的使用。 所以我们学习的重点放在如下地方： 1. 业务开发的高频问题    1....]]></description>
             <content:encoded><![CDATA[<img width="60%" src="https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/20250824213628776.png" />
+
+---
 
 # HTTP 协议
 
@@ -10761,15 +10767,18 @@ JSONP、服务器反向代理（ng 配置和 vite 配置 proxy）、服务端配
 2. Vite 的 proxy 配置：
 
 ```js
-server: {
-	proxy:{
-		"/api": {
-			target: "http://xxx.xxx.xx.x:8080",
-			changeOrigin: true, // 允许跨域
-			secure: false, //忽略安全证书
-			rewrite: (path) => path.replace(/^\/api/, '')
-		},
-	},
+// vite.config.js
+export default {
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://xxx.xxx.xx.x:8080',
+        changeOrigin: true, // 允许跨域
+        secure: false, // 忽略安全证书
+        rewrite: path => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 }
 ```
 
@@ -10777,7 +10786,7 @@ server: {
 
 3. 生产环境 NG 配置
 
-**生产环境使用 Nginx 反向代理 ​**​：
+**生产环境使用 Nginx 反向代理**:
 
 部署时通过 Nginx 配置反向代理，将前端静态资源（如  `https://your-domain.com`）的请求转发到跨域接口（如  `https://api.other-domain.com`）。
 
@@ -10815,65 +10824,68 @@ server {
 `XHR`作为传统的网络实现，自带了`progress`事件实现监听下载进度，自带`upload`属性用于监听上传进度。
 
 ```js
-const xhr = new XMLHttpRequest();
-xhr.open("GET", "https://example.com/large-file.zip");
+const xhr = new XMLHttpRequest()
+xhr.open('GET', 'https://example.com/large-file.zip')
 
 // 监听下载进度
-xhr.addEventListener("progress", (e) => {
+xhr.addEventListener('progress', (e) => {
   if (e.lengthComputable) {
-    const percent = (e.loaded / e.total) * 100;
-    console.log(`下载进度：${percent.toFixed(1)}%`);
-  } else {
-    console.log("总大小未知，无法计算百分比进度");
+    const percent = (e.loaded / e.total) * 100
+    console.log(`下载进度：${percent.toFixed(1)}%`)
   }
-});
+  else {
+    console.log('总大小未知，无法计算百分比进度')
+  }
+})
 
 // 监听上传进度
-const upload = xhr.upload;
-upload.addEventListener("progress", (e) => {
+const upload = xhr.upload
+upload.addEventListener('progress', (e) => {
   if (e.lengthComputable) {
-    const percent = (e.loaded / e.total) * 100;
-    console.log(`上传进度：${percent.toFixed(1)}%`);
-  } else {
-    console.log("总大小未知，无法计算百分比进度");
+    const percent = (e.loaded / e.total) * 100
+    console.log(`上传进度：${percent.toFixed(1)}%`)
   }
-});
+  else {
+    console.log('总大小未知，无法计算百分比进度')
+  }
+})
 
 xhr.onload = () => {
-  console.log("下载完成");
-};
-xhr.send();
+  console.log('下载完成')
+}
+xhr.send()
 ```
 
 `Fetch` API 的不提供，需要`ReadableStream` 和 请求头配置`Content-Length`来获取上传的进度，比较复杂，这里不展开说，我也没记住, 核心就是 fetch 需要配置其他的 API 来实现 xhr 中对应的功能，包括中断请求。
 
 ```js
-const file = ... // 你要上传的文件
-let uploaded = 0;
-const total = file.size;
+const file = new File([], 'example.txt') // 你要上传的文件
+let uploaded = 0
+const total = file.size
 const stream = new ReadableStream({
-	async start(controller) {
-		const reader = file.stream().getReader();
-		while (true) {
-			const { done, value } = await reader.read();
-			if (done) break;
-			controller.enqueue(value);
-			uploaded += value.length;
-			// 这里可以更新进度条
-			console.log(已上传: ${uploaded} / ${total});
-		}
-		controller.close();
-	}
-});
+  async start(controller) {
+    const reader = file.stream().getReader()
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done)
+        break
+      controller.enqueue(value)
+      uploaded += value.length
+      // 这里可以更新进度条
+      console.log(`已上传: ${uploaded} / ${total}`)
+    }
+    controller.close()
+  }
+})
 
 fetch('/upload', {
-	method: 'POST',
-	body: stream,
-	headers: {
-		'Content-Type': 'application/octet-stream',
-		'Content-Length': total
-	}
-});
+  method: 'POST',
+  body: stream,
+  headers: {
+    'Content-Type': 'application/octet-stream',
+    'Content-Length': total
+  }
+})
 ```
 
 ### 鉴权（JWT、 Cookie）
@@ -11003,7 +11015,7 @@ RESTfull 规范参考路径：https://www.ruanyifeng.com/blog/2014/05/restful_ap
             <title><![CDATA[HTTP 缓存机制]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Network/HTTP 缓存机制</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Network/HTTP 缓存机制</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[HTTP 缓存机制 HTTP 协议提供“缓存规则说明书”，浏览器作为“工程师”按说明书搭建缓存系统。 把已请求并返回的WEB资源(HTML页面、图片、JS文件、CSS文件、数据等)复制到一个副本存储到浏览器的缓存中。 理解了这个缓存机制的过程，才能够知道为什么现在打包工具都会默认给构建之后的结果添加上hash值。 - 缓存的好处:   - 减少网络贷款的消耗   - 降低服务器的压力   - 较少网络延迟  强制缓存 有两个 API 可以实现强制缓存，expires 和 Cache-Control。 它是http/1 时期的属性，通过expires 响应头的属性设置，这个属性表示过期的时间，超...]]></description>
             <content:encoded><![CDATA[# HTTP 缓存机制
 
@@ -11147,7 +11159,7 @@ Cache-Control的相关属性
             <title><![CDATA[NodeJS-net 模块]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Network/NodeJS-net 模块</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Network/NodeJS-net 模块</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[NodeJS-Net 模块  1. 前言 这是 nodeJs 系列的第一篇文章, 我之前看教程的时候,很多都是从 IO、buffer、path、event、fs、process、node 事件循环机制开始说起的. 这些确实是 node 开发主要依赖的开发依赖. 但是我比较着急, 从了解到 node,就是说 node 可以干后端的话,但是这些课程前半截都在说它拥有的能力,就是最后才到如何和客户端通信的模块介绍. 我很难受,所以在我自己写总结的时候,一定要写先服务端和客户端通信的模块才舒服.即便过程中涉及到了 event 模块、fs 模块的知识点,可以暂时搁置,只从整体来理解net模块如何实现通信...]]></description>
             <content:encoded><![CDATA[# NodeJS-Net 模块
 
@@ -11393,7 +11405,7 @@ node client.js
             <title><![CDATA[运算符的优先级]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/运算符的优先级</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/运算符的优先级</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[运算符的优先级  我们在讨论的是一个什么问题 - 我们在讨论的是处理计算的优先级.   比如说1 + 2  3 等价于 1 + (2  3). 计算的过程还是从左到右 - 所以说,在实际开发中,你想要谁优先处理,就用括号包裹住,准没错.而且也推荐在实际发开着么干. - 如果从编译器的角度上看的话,我们讨论的是[[AST节点]]和根的距离的问题.   - 简单的说就是在求值的过程中,对于整个 AST 树的遍历是[[后序遍历]], 就是说,理根节点越远就越早被求值.   - 具体可以查看[[JavaScript中运算符优先级]]这篇文章  如何记忆 https://developer.mozill...]]></description>
             <content:encoded><![CDATA[# 运算符的优先级
 
@@ -11431,7 +11443,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Oper
             <title><![CDATA[迭代器与生成器]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/迭代器与生成器</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/迭代器与生成器</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[迭代器和生成器  前言 重看看红宝书，略微了解到迭代器和生成器这两个概念为什么那么难理解了。 首先是平时直接使用到的机会确实是非常的少，其次就是书上面为了介绍这两个概念使用了非常多的专业的名词来描述，而且相互穿插，能够把人给绕晕了，而且并没有明确的给出这些概念之间的关联。 所以我这篇文章为了辅助我的学习和记忆，着重于迭代器和生成器这关系。 首先简单的描述一下书中是如何描述这两个规范的,  迭代器导读 在迭代器中，先介绍了迭代，在 ES6 之前 for 和 forEach 两个循环的问题，引出了迭代器模式。接下来就自然的介绍迭代器模式，它包含两个概念： 1.  第一个是可迭代协议     介绍了...]]></description>
             <content:encoded><![CDATA[# 迭代器和生成器
 
@@ -11759,7 +11771,7 @@ for 循环和 for in 看着很像，其实只是共用了`for`这个关键字，
             <title><![CDATA[错误信息]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/错误信息</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/错误信息</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[错误信息   1. SyntaxError 语法错误(uncaught SyntaxError)  - Invalid or unexpected token - unexpected token = - Invalid or unexpected token   2. ReferenceError 引用错误  - Invalid left-hand side in assignment - ...   3. RangeError 范围错误  - Invalid array length  js var arr = [1, 2, 3]; arr.lengh...]]></description>
             <content:encoded><![CDATA[# 错误信息
 
@@ -11806,7 +11818,7 @@ function test() {
             <title><![CDATA[隐式转化问题]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/隐式转化问题</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/隐式转化问题</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[隐式转化问题 之前写过一篇文章[[js让人诟病的这些feature]]中提出过一个疑问. 这个问题一开始我想简单了.认为只要记住一些特性就可以了.所以直接用穷举法来进行规律的总结. 但是当遇到console.log(Number([])) 的结果是 0, 而console.log(Number([1, 2])) 的结果是 NaN.都什么乱七八糟的,里面必有蹊跷.虽然能够强背背下来, 但是作为一个有追求的程序员还是要弄明白它是怎么一回事的. js console.log({} - {}); // NaN console.log([] - []); // 0 console.log([] - [1...]]></description>
             <content:encoded><![CDATA[# 隐式转化问题
 
@@ -12502,7 +12514,7 @@ console.log(NaN == NaN); // fasle
             <title><![CDATA[数组API]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/数组API</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/数组API</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[数组 API  1. Array.prototype.copyWithin  1.1 基本形式 Arrauy.prototype.copyWithin(target, (start, end]) > target 是指从什么位置开始 js const arr = [1, 2, 3, 4, 5]; const newArr = arr.copyWithin(1, 0, 3); console.log(newArr); // 1, 1, 2, 3, 5 > start 旁边的(符号代表闭区间,end 旁边的]开区间 从上面的例子可以直接知道.target 代表从数组的第几位开始覆盖. start ...]]></description>
             <content:encoded><![CDATA[# 数组 API
 
@@ -12617,7 +12629,7 @@ console.log(newArra); // 1, 2, 3, 4, 5
             <title><![CDATA[正则基础]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/正则基础</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/正则基础</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[正则基础 要学习正则内置对象的话,需要了解一下 js 中[[转义符]]的概念.它是学习正则表达式的前置知识。  一、转义符 使用转义符的场景如下如下： js const a = '我就蹭蹭，绝不'进去'哦' console.log(a) 我们的目的是要打印我就蹭蹭，绝不'进去'. 但是事与愿违，这样写会直接报错。 Uncaught SyntaxError: Unexpected identifier. 这是因为 JS 引擎把这串代码分成 了前后两部，进去被识别成了变量，这个时候报错说的是你应该要在进入的两边加上+号。 如果加上了加号的话，const a = '我就蹭蹭，绝不'+ 进去 + '哦...]]></description>
             <content:encoded><![CDATA[# 正则基础
 
@@ -12971,7 +12983,7 @@ console.log(reg.exec(str));
             <title><![CDATA[用函数调用的方式来分析this]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/用函数调用的方式来分析this</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/用函数调用的方式来分析this</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[用函数调用的方式来分析 this > 每个函数都有一个隐式的 this 形参。将函数作为方法调用时，这个参数会被设置为用于访问该方法的对象。这和大多数面向对象语言中的 this（或 self）含义相同。但是 JavaScript 在「关联到对象的方法」与「独立函数」这两者之间，使用了单一的定义形式。这使 \\this\\ 导致了许多程序员的困惑和 bug。 ——————Brendan Eich(JS 之父) this 指向到问题是公认的！创造 JS 的人都这么说它。所谓的灵活指向不过是缝合怪。 所以说，对于 this 的强限制是非常有必要的，比如 ES6 的发布。 现在面试还在考查 this ...]]></description>
             <content:encoded><![CDATA[# 用函数调用的方式来分析 this
 
@@ -13082,7 +13094,7 @@ setTimeout(object.logMessage, 1000);
             <title><![CDATA[立即执行函数]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/立即执行函数</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/立即执行函数</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[立即执行函数  一、是什么 立即执行函数又名[[IIFE]]，具体对于它的介绍可以看我之前的文章。 和它相对应的是[[具名函数表达式]]，是相对的。先来看看具名函数表达式： js function foo() {   console.log("橘子哥"); } 而 IIFE 的典型例子如下： js (function () {   console.log("橘子哥"); })(); 有三个不同： 1. [[IIFE]]没有函数名，具名函数有，可以通过 console.log(foo.name)打印出来 2. [[IIFE]]直接调用，这就是它立即的由来，而具名需要添加foo()才能够运行 3....]]></description>
             <content:encoded><![CDATA[# 立即执行函数
 
@@ -13219,7 +13231,7 @@ for (var i = 0; i < 6; i++) {
             <title><![CDATA[让 a == 1 && a == 2 && a == 3 成立]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/让 a == 1 &amp;&amp; a == 2 &amp;&amp; a == 3 成立</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/让 a == 1 &amp;&amp; a == 2 &amp;&amp; a == 3 成立</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[让 a == 1 && a == 2 && a == 3 成立 JavaScript if (a == 1 && a == 2 && a == 3) {   console.log('Win') } 如何打印除Win 看到题目的第一眼,我是蒙蔽的.怎么可能会有如此矛盾的情况发生呢?就相当于一个人怎么可能即是小孩,又是成年人,还是老年人呢? 冷静下来,发现一些端倪.它并不是让 a 同时等于 1 2 3, 而且 js 是单线程运行的. 及时它们写在了一行,那也是从左到右执行的. 所以它们可以不是同一时期的东西.既然不是同一时期的东西,那么一个人当然可以是过小孩子,是过成年人,是过老年人了. 回到题...]]></description>
             <content:encoded><![CDATA[# 让 a == 1 && a == 2 && a == 3 成立
 
@@ -13279,7 +13291,7 @@ if (a == 1 && a == 2 && a == 3) {
             <title><![CDATA[原型和原型链]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/原型和原型链</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/原型和原型链</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[原型和原型链 (当前个人理解,仅仅供参考)  一、函数的调用方式 要知道原型和原型链是什么.首先是需要知道函数的调用方式,所有知识点都不应该是孤立存在的,有了对于函数调用全盘的了解才能够明白原型链产生的过程发生了啥.这里简单做一些表述.  1.1 直接调用方式 JavaScript function fn() {} fn() const a = {   name: '妈咋',   fn: function() {     console.log(this.name)   } } a.fn() // 妈咋 这种方式是绝大多数人学习函数第一个学会的.但是我在看 B 站某个老师的视频上面有说到,函数...]]></description>
             <content:encoded><![CDATA[# 原型和原型链
 
@@ -13536,7 +13548,7 @@ F.b(); // 'b'
             <title><![CDATA[块级作用域与嵌套、let、暂时性死区]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/块级作用域与嵌套、let、暂时性死区</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/块级作用域与嵌套、let、暂时性死区</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[块级作用域与嵌套、let、暂时性死区 别以为你稳了, Don't get comfortable  let 都 2022 年了,let 和 const、以及 var 的区别有太多的文章作出了解析. 甚至于,如果不用兼容 ie11, 现在的项目都可以不用使用[[babel]]来进行转译.白白生成那么多多余的代码. 下面这些题都能够毫无压力的做出来,那么证明这个知识点你已经完全掌握了. 一共十二道题. js // 1 var b = 0 let b 10 console.log(b) - 结果   报错 js // 2 function test(a) {   let a = 19;   cons...]]></description>
             <content:encoded><![CDATA[# 块级作用域与嵌套、let、暂时性死区
 
@@ -13795,7 +13807,7 @@ a.number++;
             <title><![CDATA[对象的属性描述符]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/对象的属性描述符</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/对象的属性描述符</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[对象的属性描述符  配置 definePropertye 之后,除了 value,其他值不显型的写出的话,默认是 false  js var o = { a: 1 }; Object.defineProperty(o, "b", {   value: 2,   writable: false,   enumerable: false,   configurable: true, });   - value: 基本属性值 - writable: 是否可以改,如果为 false 的话,在 es5 严格模式下面就会报错了 - enumberable: 是否可以枚举 ...]]></description>
             <content:encoded><![CDATA[# 对象的属性描述符
 
@@ -13869,11 +13881,9 @@ Object.defineProperties(person, {
             <title><![CDATA[对象继承]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/对象继承</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/对象继承</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
-            <description><![CDATA[对象继承  面向对象中必须要知道的继承 身为一个靠 js 吃饭的程序员.我们必须明白一点. JavaScript 是最纯正的面向对象的语言 JS 中没有类这个玩意儿,我们在 ES6 看到的 Class 是基于原型来模拟的.也称呼为[[模拟类]]. 比爪哇,C 什么加都要纯的多!!!🐶  我们为什么需要继承 js const kitty = {   say: function () {     console.log("喵喵喵");   }, }; const tiger = {   say: function (value) {     console.log("呼呼呼");   }, };...]]></description>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
+            <description><![CDATA[对象继承 身为一个靠 js 吃饭的程序员.我们必须明白一点. JavaScript 是最纯正的面向对象的语言 JS 中没有类这个玩意儿,我们在 ES6 看到的 Class 是基于原型来模拟的.也称呼为[[模拟类]]. 比爪哇,C 什么加都要纯的多!!!🐶  我们为什么需要继承 js const kitty = {   say() {     console.log('喵喵喵')   }, } const tiger = {   say(value) {     console.log('呼呼呼')   }, } const lion = {   say(value) {     consol...]]></description>
             <content:encoded><![CDATA[# 对象继承
-
-# 面向对象中必须要知道的继承
 
 身为一个靠 js 吃饭的程序员.我们必须明白一点.
 
@@ -13886,36 +13896,36 @@ JS 中没有类这个玩意儿,我们在 ES6 看到的 Class 是基于原型来�
 
 ```js
 const kitty = {
-  say: function () {
-    console.log("喵喵喵");
+  say() {
+    console.log('喵喵喵')
   },
-};
+}
 
 const tiger = {
-  say: function (value) {
-    console.log("呼呼呼");
+  say(value) {
+    console.log('呼呼呼')
   },
-};
+}
 
 const lion = {
-  say: function (value) {
-    console.log("嗷嗷嗷");
+  say(value) {
+    console.log('嗷嗷嗷')
   },
-};
+}
 ```
 
 上面每个对象中都有一个 say 的属性, 写了三遍.这个时候,如果我们都需要在 say 中添加一些判断的话,就需要在每个对象中添加一遍.那就是三遍了. 所以说我们需要一个办法,把三个对象都能够引用同一样一个方法.实现*代码的复用*.
 
 ```js
-const Felidae = function ({ value }) {
-  this.value = value;
+function Felidae({ value }) {
+  this.value = value
   this.say = function () {
-    console.log(this.value);
-  };
-};
-const kitty = new Felidae({ value: "喵喵喵" });
-const tiget = new Felidae({ value: "呼呼呼" });
-const lion = new Felidae({ value: "嗷嗷嗷" });
+    console.log(this.value)
+  }
+}
+const kitty = new Felidae({ value: '喵喵喵' })
+const tiget = new Felidae({ value: '呼呼呼' })
+const lion = new Felidae({ value: '嗷嗷嗷' })
 ```
 
 这样子我们就不用给每个对象都写一遍 say 的方法了.
@@ -13923,16 +13933,16 @@ const lion = new Felidae({ value: "嗷嗷嗷" });
 这个时候我需要让 Felidae 也能够有一些其他科的共同的方法应该怎么做呢?
 
 ```js
-const Animal = function () {};
+function Animal() {}
 animal.prototype.run = function () {
-  console.log("I can run");
-};
+  console.log('I can run')
+}
 
-const Felidae = function () {};
-Felidae.prototype = new Animal();
+function Felidae() {}
+Felidae.prototype = new Animal()
 
-const Kitty = new Felidae();
-conosle.log(kitty.run()); // 'I can run'
+const Kitty = new Felidae()
+conosle.log(kitty.run()) // 'I can run'
 ```
 
 通过[[原型]] 的赋值就可以达到要求.
@@ -13955,8 +13965,8 @@ conosle.log(kitty.run()); // 'I can run'
 接前面的代码,给 Kittiy 对象赋值 color.
 
 ```js
-Kitty.color = "white";
-console.log(Kitty.color); // 'white'
+Kitty.color = 'white'
+console.log(Kitty.color) // 'white'
 ```
 
 给 Kittiy 赋予 color 属性的过程中, 依旧会执行[[Get]]操作, 如果自身存在这个属性,就直接赋值就行.如果不存在,往[[原型链]]上面找.如果还是没有的话,会直接赋值 color 这个舒服给 Kitty.但是如果原型链上存在 color 属性的话,默认情况下就会发生`屏蔽属性`.
@@ -13966,16 +13976,16 @@ console.log(Kitty.color); // 'white'
 但是这个是默认的情况下,如果出现如下代码中的情况的话,就有得说了.
 
 ```js
-const Felidae = function () {};
+function Felidae() {}
 Object.defineProperties(Felidae.prototype, {
   color: {
-    value: "black",
+    value: 'black',
   },
-});
+})
 
-const Kitty = new Felidae();
-Kitty.color = "white";
-console.log(Kitty.color); // 'black'
+const Kitty = new Felidae()
+Kitty.color = 'white'
+console.log(Kitty.color) // 'black'
 ```
 
 > 显性的使用[[对象的属性描述符]]的话,除了 value,其他不配置的话,默认都为 false
@@ -13984,16 +13994,16 @@ console.log(Kitty.color); // 'black'
 还有下面这种,也不会产生屏蔽属性:
 
 ```js
-const Felidae = function () {};
+function Felidae() {}
 Object.defineProperties(Felidae.prototype, {
   color: {
-    set: function () {},
+    set() {},
   },
-});
+})
 
-const Kitty = new Felidae();
-Kitty.color = "white";
-console.log(Kitty.color); // undefined
+const Kitty = new Felidae()
+Kitty.color = 'white'
+console.log(Kitty.color) // undefined
 ```
 
 由此我们可以总结出,当我们给一个对象赋值的时候,会出现的三种情况(出自[[你不知道的JavaScript上]]):
@@ -14012,32 +14022,32 @@ Js 中的继承不存在复制的操作,而是对两个对象之间产生一定�
 
 ```js
 function Animate() {
-  this.color = "red"; // this可以当做隐藏的参数，所有下面通过apply调用函数的时候，this实际是Kitty作用域中的this。当new Kitty()的时候，就是它新创建的空对象，然后把这个兑现添加color,赋值为'red'
+  this.color = 'red' // this可以当做隐藏的参数，所有下面通过apply调用函数的时候，this实际是Kitty作用域中的this。当new Kitty()的时候，就是它新创建的空对象，然后把这个兑现添加color,赋值为'red'
 }
 
 function Kitty() {
-  Animate.apply(this);
+  Animate.apply(this)
 }
-const kitty = new Kitty();
-console.log(kitty.color); // 'red'
+const kitty = new Kitty()
+console.log(kitty.color) // 'red'
 ```
 
 Kitty 拥有了 Animate 构造函数的属性. nice. 似乎是完成了继承.可是这样有一个致命的问题, Kitty 没有办法继承 Animate 的原型。 因为 Animate 上面的原型没有集成 this, new 的时候，他们是组合的关系。但是在 Kitty 函数中，并没有 new Animate()
 
 ```js
 function Animate() {
-  this.color = "red";
+  this.color = 'red'
 }
 Animate.prototype = {
-  brand: "benz",
-};
+  brand: 'benz',
+}
 
 function Kitty() {
-  Animate.apply(this);
+  Animate.apply(this)
 }
-const kitty = new Kitty();
-console.log(kitty.color); // 'red'
-console.log(kitty.brand); // undefiend
+const kitty = new Kitty()
+console.log(kitty.color) // 'red'
+console.log(kitty.brand) // undefiend
 ```
 
 ### 原型关联 new 一个构造函数实现继承
@@ -14045,21 +14055,21 @@ console.log(kitty.brand); // undefiend
 我们通过下面的代码得出图中所示:
 
 ```js
-const Felidae = function () {};
+function Felidae() {}
 Felidae.prototype = {
-  run: function () {
-    console.log("I can run");
+  run() {
+    console.log('I can run')
   },
-};
+}
 
-const Kitty = new Felidae();
-conosle.log(kitty.run()); // 'I can run'
-const lion = new Felidae();
+const Kitty = new Felidae()
+conosle.log(kitty.run()) // 'I can run'
+const lion = new Felidae()
 
-const FelineSubfamily = function () {};
-FelineSubfamily.prototype = new Felidae();
+function FelineSubfamily() {}
+FelineSubfamily.prototype = new Felidae()
 
-const tiger = new FelineSubfamily();
+const tiger = new FelineSubfamily()
 ```
 
 ![[IMG_0069.jpg]]
@@ -14069,41 +14079,41 @@ kitty 和 lion 以及 tiger 看似没有直接的关系,但是都间接的有指
 而 JS 的原型继承和 Java 背道而驰. JS 中‘实例化’的实例甚至能够更改[[prototype]]上面的属性.
 
 ```js
-const Felidae = function () {
+function Felidae() {
   this.option = {
-    color: "white",
-  };
-};
+    color: 'white',
+  }
+}
 
-const FelineSubfamily = function () {};
-FelineSubfamily.prototype = new Felidae();
+function FelineSubfamily() {}
+FelineSubfamily.prototype = new Felidae()
 
-const Kitty = new FelineSubfamily();
-Kitty.option.color = "妈咋";
+const Kitty = new FelineSubfamily()
+Kitty.option.color = '妈咋'
 
-const Lino = new FelineSubfamily();
+const Lino = new FelineSubfamily()
 
-console.log(Kitty.option.color); // ‘妈咋’
-console.log(Lino.option.color); // '妈咋'
+console.log(Kitty.option.color) // ‘妈咋’
+console.log(Lino.option.color) // '妈咋'
 ```
 
 这个例子太典型了 , 所谓的'子级'改变了‘父级’的属性. 而且还连累了'兄弟'.
 改变的是[[引用类型]].原始类型是否可以改变呢?
 
 ```js
-const Felidae = function () {
-  this.number = 1;
-};
+function Felidae() {
+  this.number = 1
+}
 
-const FelineSubfamily = function () {};
-FelineSubfamily.prototype = new Felidae();
+function FelineSubfamily() {}
+FelineSubfamily.prototype = new Felidae()
 
-const Kitty = new FelineSubfamily();
-Kitty.number++;
-const Lino = new FelineSubfamily();
+const Kitty = new FelineSubfamily()
+Kitty.number++
+const Lino = new FelineSubfamily()
 
-console.log(Kitty.number); // 2
-console.log(Lino.number); // 1
+console.log(Kitty.number) // 2
+console.log(Lino.number) // 1
 ```
 
 结果显示没有变化的. 这里面发生了什么呢?
@@ -14114,21 +14124,21 @@ kitty.number = Kitty.number + 1
 由此可以知道 JS 如此继承的隐患太大了. 也更加明确了对象的继承不是复制的操作. 为了减少这样的隐患.我们一般都将属性赋值到[[prototype]]上面:
 
 ```js
-const Felidae = function () {};
+function Felidae() {}
 Felidae.prototype = {
-  color: "red",
-};
+  color: 'red',
+}
 
-const FelineSubfamily = function () {};
-FelineSubfamily.prototype = new Felidae();
+function FelineSubfamily() {}
+FelineSubfamily.prototype = new Felidae()
 
-const Kitty = new FelineSubfamily();
-Kitty.color = "white";
+const Kitty = new FelineSubfamily()
+Kitty.color = 'white'
 
-const Lino = new FelineSubfamily();
+const Lino = new FelineSubfamily()
 
-console.log(Kitty.color); // ‘white’
-console.log(Lino.color); // 'red'
+console.log(Kitty.color) // ‘white’
+console.log(Lino.color) // 'red'
 ```
 
 如此就可以消除,实例化对象直接通过访问成员属性来修改构造函数上面的属性. '兄弟级'也没有发生了意外的改变.
@@ -14157,19 +14167,19 @@ car.__proto__.intor() // 'Mazda'
 ```js
 function Test() {}
 Test.prototype = {
-  color: "red",
-};
+  color: 'red',
+}
 
 function A() {}
-A.prototype = new Test();
+A.prototype = new Test()
 
-const a = new A();
+const a = new A()
 
-a.__proto__.color = "green";
-console.log(a.color); // 'green'
+a.__proto__.color = 'green'
+console.log(a.color) // 'green'
 
-const b = new A();
-console.log(b.color); // 'green'
+const b = new A()
+console.log(b.color) // 'green'
 ```
 
 ### 创造一个中间构造函数来实现继承(企业级的做法)
@@ -14177,22 +14187,22 @@ console.log(b.color); // 'green'
 ```js
 function Test() {}
 Test.prototype = {
-  color: "red",
-};
+  color: 'red',
+}
 
 function Buffer() {}
-Buffer.prototype = Test.prototype;
-const buffer = new Buffer();
+Buffer.prototype = Test.prototype
+const buffer = Buffer.from()
 
 function A() {}
-A.prototype = buffer;
-A.prototype.color = "green";
+A.prototype = buffer
+A.prototype.color = 'green'
 
-const a = new A();
-console.log(a.color); // 'green'
+const a = new A()
+console.log(a.color) // 'green'
 
-const b = new Test();
-console.log(b.color); // 'red'
+const b = new Test()
+console.log(b.color) // 'red'
 ```
 
 通过一个中间的`Buffer` 就轻松的解决了来继承的对象改变 Test 原型上面的属性.
@@ -14202,11 +14212,11 @@ console.log(b.color); // 'red'
 ```js
 function inherit(Target, Origin) {
   function Buffer() {}
-  Buffer.prototype = Origin.prototye;
-  Target.prototype = new Buffer();
+  Buffer.prototype = Origin.prototye
+  Target.prototype = Buffer.from()
   // 规范构造函数的数据
-  Target.prototype.constructor = Target;
-  Target.prototype.super_class = Origin;
+  Target.prototype.constructor = Target
+  Target.prototype.super_class = Origin
 }
 ```
 
@@ -14215,990 +14225,7 @@ function inherit(Target, Origin) {
 还需要配合[[对象的属性描述符]]才可以更稳定.让原型链上的属性都配置上只读不可配置.
 
 对象的原型继承如此的别扭,这不行那不行的.更不用说还有传统面向对象中,基于类的多态的概念.费劲.
-所以说,react 推出了 hook, vue 推出了 3.0. 都提供了一定的函数式编程的概念.通过函数的组合来代替对象的继承.
- 🤓
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
-            <title><![CDATA[new 的时候都干了什么]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/new 的时候都干了什么</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/new 的时候都干了什么</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
-            <description><![CDATA[new 的时候都干了什么  为什么要有 new 我认为了解一个 api 怎么用之前，更重要的是要知道这个 api 为什么因何而诞生的！ JS 的诞生就是为了快速的解决问题的。所以它的语法很多时候都是为了让用户省心而设计的，比如弱语法，比如这个 new。 <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/36b0879f8da6456c93b5f93f7ff93855tplv-k3u1fbpfcp-watermark.image?" alt="image.png" width="30%" /> 在我平时写的业务中，其实没有创造...]]></description>
-            <content:encoded><![CDATA[# new 的时候都干了什么
-
-## 为什么要有 new
-
-**我认为了解一个 api 怎么用之前，更重要的是要知道这个 api 为什么因何而诞生的！**
-
-JS 的诞生就是为了快速的解决问题的。**所以它的语法很多时候都是为了让用户省心而设计的，比如弱语法，比如这个 new。**
-
-<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/36b0879f8da6456c93b5f93f7ff93855~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" width="30%" />
-
-在我平时写的业务中，其实没有创造大量对象的场景。所以这里以游戏的业务为例子。我记得微信小游戏的 DEMO 就是飞机大战，现在我们给敌机设计它的属性。
-
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a39bf557f998426d9c1a3b915c49614f~tplv-k3u1fbpfcp-zoom-1.image)
-
-对于敌机而言，它有不同的机种，不同的血量，可以发送子弹，可以向屏幕下方移动。在代码中如下：
-
-```js
-const 敌机 = {
-  key: 0001, // 唯一ID
-  机种: 'a', // 非boss
-  攻击范围: 1000,
-  发射: function() {
-    // 发射子弹
-  }，
-  向下移动: function() {
-    // 冲向我方
-  }
-}
-```
-
-这是一辆飞机的对象。但是在飞机大战当中，敌机可是满屏都有的。所以我们需要很多辆这样的飞机：
-
-```js
-const 敌机s = []
-
-for (let i = 0; i< 50; i++) {
-  let 敌机 = {
-    key: '敌机' + i, // 唯一ID
-    机种: '歼20', // 非boss
-    攻击范围: 1000,
-    发射: function() {
-      // 发射子弹
-    }，
-    向下移动: function() {
-      // 冲向我方
-    }
-  }
-  敌机s.push(敌机)
-}
-```
-
-上面对象数组中的发射和向下移动是完全一样的函数 ，但是被创造了 50 遍。机种和攻击范围是固定，只有 key 值各不相同。
-
-所以我们可以有如下的改造：
-
-```js
-const 敌机原型 = {
-  兵种: "歼20",
-  攻击范围: 1000,
-  发射: function() {
-    // 发射子弹
-  }，
-  向下移动: function() {
-    // 冲向我方
-  }
-}
-
-const 敌机s = []
-for(let i = 0; i < 50; i++) {
-  let 敌机 = {
-    key: '敌机' + i,
-  }
-
-  敌机.[[proto]] = 敌机原型
-
-  敌机s.push(敌机)
-}
-```
-
-是不是有点‘构造’函数那个味了？循环里面我们做了两件事情，创建对象，以及处理对象，干了两件事情，敌机的对象也分开来了。有了更好的复用，我们可以使用函数来封装：
-
-```js
-function 敌机(key){
-  var 临时对象 = {}
-
-  临时对象.[[proto]] = 敌机.原型
-
-  临时对象.key = '敌机' + key
-
-  return 临时对象
-}
-
-敌机.原型 = {
-  兵种: "歼20",
-  攻击范围: 1000,
-  发射: function() {
-    // 发射子弹
-  }，
-  向下移动: function() {
-    // 冲向我方
-  }
-}
-```
-
-随后在创建敌机们的时候，可以直接调用上面的函数：
-
-```js
-const 敌机s = [];
-for (let i = 0; i < 100; i++) {
-  敌机s.push(敌机(i));
-}
-```
-
-回到我说的第一句话，**它的语法很多时候都是为了让用户省心而设计的。**
-
-它的这个省心体现在哪里呢？
-
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0dc2424447964368be1c666e4b8e4e9f~tplv-k3u1fbpfcp-watermark.image?)
-
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/32e551505a4f40289d238881d8b2fd33~tplv-k3u1fbpfcp-zoom-1.image)
-
-悄悄这位慈祥的老人。他为了让我更快的创建对象，通过一个 `new` 关键字为我们省略了四个步骤！
-
-## 当函数 return 不同类型的时候
-
-通俗的知道了 new 的意义，我们再来看它在这个过程中做了什么就容易很多了。
-
-回想一开始学习 JS 的时候，好好的函数，非要弄一个构造函数的称呼出来。
-
-我第一次看到构造函数的时候，郁闷了好久，为什么函数还分这么类型，匿名函数、立即执行函数、构造函数。
-
-<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/29546be3880048188b817968dde9421d~tplv-k3u1fbpfcp-zoom-1.image" alt="" width="30%" />
-
-给我造成了多年的记忆负担！函数就是函数，不能因为运行函数的时身边的关键字不一样就给它瞎起名字。
-
-所以就应该是 new 一个函数，而不是 new 一个构造函数。
-
-在 new 的过程中主要就是分为两种情况，根据函数 return 的是基础类型还是引用类型，返回不同的结果。
-
-## return 基础类型
-
-当使用`new`关键字调用一个函数时，函数中 return 的是一个基础类型。JavaScript 引擎将执行以下步骤：
-
-1.  创建一个新的空对象。
-1.  将新创建的对象的原型指向构造函数的原型对象。
-1.  将构造函数的 this 关键字绑定到新创建的对象上。
-1.  执行构造函数中的代码，将属性和方法添加到新的对象中。
-1.  如果构造函数返回一个对象，则返回该对象，否则返回新创建的对象。
-
-下面是一个简单的例子，演示了使用`new`关键字创建对象实例的过程：
-
-```
-// 定义一个构造函数
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
-}
-
-// 在Person的原型对象上添加一个方法
-Person.prototype.sayHello = function() {
-  console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
-}
-
-// 使用new关键字创建对象实例
-const person1 = new Person('John', 30);
-
-person1.sayHello(); // 输出: Hello, my name is John and I am 30 years old.
-```
-
-在上面的例子中，我们定义了一个`Person`构造函数，它有两个参数：`name`和`age`。然后，我们在`Person`的原型对象上添加了一个`sayHello`方法，该方法输出一个字符串，包含对象的`name`和`age`属性。最后，我们使用`new`关键字调用`Person`构造函数，并将结果赋值给`person1`变量。最后，我们调用`person1`对象的`sayHello`方法，输出一个字符串。
-
-通过这个例子，我们可以看到，使用`new`关键字创建对象实例时，JavaScript 引擎会将新创建的对象的原型指向构造函数的原型对象，因此我们可以在构造函数的原型对象上定义方法，并在新创建的对象上使用这些方法。
-
-> 众所周知，函数不写 return 的时候，它返回的是 undefined, 也是基础类型
-
-## return 引用类型
-
-return 引用类型就简单很多，return 的对象会直接'覆盖'JS 引擎内部生成的 "this" 对象。如下代码片段：
-
-```js
-function Person(name) {
-  this.name = name;
-  return {
-    name: "Greg",
-  };
-}
-Person.prototype.say = function () {
-  console.log("yoran");
-};
-
-const p = new Person("John");
-console.log(p.name); // Greg
-```
-
-## 总结一下
-
-- new 一个对象的过程
-
-  1.  创建一个空对象
-  1.  给这个空对象添加`__proto__`属性,并指向`prototype`原型对象
-  1.  将 this 的属性绑定到这个对象当中
-  1.  然后`return`这个对象给实例化对象
-
-- `return`的是基本类型和对象会带来不同的效果
-
-  - `return`的是数字的话, 不会有什么变化,直接走以前的
-  - `return`的是对象的话, 会直接覆盖你上面的那一连串骚操作
-
-## 手写一个 new 方法
-
-```js
-function targetFn(name) {
-  this.name = name;
-}
-targetFn.prototype = {
-  aget: 18,
-};
-
-function myNew(fn, ...rest) {
-  const newObj = Object.create(fn.prototype);
-
-  const returnResult = fn.apply(newObj, rest);
-
-  return isObject(returnResult) ? returnResult : newObj;
-}
-
-function isObject(obj) {
-  const target = "[object Object]";
-  return Object.prototype.toString.call(obj) === target;
-}
-```
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
-            <title><![CDATA[parseInt总结]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/parseInt总结</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/parseInt总结</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
-            <description><![CDATA[parseInt 使用总结 parseInt('012', 16)和 parseInt(012, 16)相等吗？ ["10", "10", "10", "10", "10"].map(parseInt)的结果是什么？ 先来一起复习一下parseInt()的基本用法。  1 parseInt()的使用说明 使用参数说明：paraseInt(value: string, radix?: number) > parseInt()是对 Number()很好的补充  1.1 解析数字和字母的混合字符串 当Number()返回的都是NaN的时候，parseInt()有不一样的解析结果。parseInt 会...]]></description>
-            <content:encoded><![CDATA[# parseInt 使用总结
-
-**parseInt('012', 16)和 parseInt(012, 16)相等吗？**
-
-**["10", "10", "10", "10", "10"].map(parseInt)的结果是什么？**
-
-先来一起复习一下`parseInt()`的基本用法。
-
-## 1 parseInt()的使用说明
-
-使用参数说明：**paraseInt(value: string, radix?: number)**
-
-> parseInt()是对 Number()很好的补充
-
-### 1.1 解析数字和字母的混合字符串
-
-当`Number()`返回的都是`NaN`的时候，`parseInt()`有不一样的解析结果。parseInt 会忽略无效字符，如果第一个字符串元素就非数字，那么就返回`NaN`。
-
-```js
-Number("123abc"); // NaN
-Number("123asd1"); // NaN
-Number("ad123"); // NaN
-// -------
-parseInt("123abc"); // 123
-parseInt("123asd1"); // 123
-parseInt("123---8979$$$"); // 123
-parseInt("ad123"); // NaN
-```
-
-### 1.2 用于浮点数的取整:
-
-```js
-console.log(parseInt(11.22)); // 11
-console.log(Number(11.22)); // 11.22
-```
-
-### 1.3 将其他的进制转化为十进制
-
-- 标准格式: **`parseInt(string, radix)`**
-- `radix`: 表示字符串的基数，取值范围是从 2 到 36。16 就表示被解析值是十六进制数。
-- 计算方法：**基数 \* (radix ^ (当前位数 - 1)) 然后依次相加**
-
-如下例子:
-
-```js
-console.log(parseInt(101, 2)); // 5
-console.log(parseInt(123, 5)); // 38
-parseInt("6axxx", 16); // 106
-```
-
-> parseInt('6axxx', 16), 16 进制能够识别 6a，到 x 为止。
-
-其转化的过程如下：
-
-$1\times( 2 ^ 2 ) + 0 \times (2 ^ 1) + 1 \times (2 ^ 0) = 4 + 0 + 1 = 5$
-
-$1 \times (5 ^ 2) + 2 \times (5 ^ 1) + 3 \times (5 ^ 0) = 25 + 10 + 8 = 38$
-
-需要注意的是：
-
-- `radix`的默认值不一定是 10，如果字符串 string 以其它任何值开头，则基数才是 10 (十进制)。
-
-这玩意儿很智能.输入的如果是标准的 16 进制或者 8 进制的话,就可以把`radix`初始化为对应的进制的值。比如说`parseInt(0xfff)` 的结果是 4096，不用放入`radix`值。
-
-但是如果，你后面非要加非 16 进制的制位的话，那还是会按照对应的`radix`来计算。比如`parseInt(012, 3)`是 3 而不是 8。
-
-### 1.4 parseInt 中的隐式转化
-
-parseInt('012', 16)和 parseInt(012, 16)的结果是否一致呢？
-
-我们打印结构如下：
-
-![截屏2023-02-11 00.34.18.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/90be49c2fde944bbba3ef86f3cfd1c4a~tplv-k3u1fbpfcp-watermark.image?)
-
-**前者是 18，后者是 16！**， why?
-
-很简单，其实通过我这个小标题也能够知道原因。因为 parseInt(012, 16)发生了隐式转化。第一参数是`string`类型，而它是`number`类型，构成了隐式转化的条件，触发了`toString()`的规则。
-
-`012.toString()`结果为 10.
-
-所以说，**parseInt(012, 16) = parseInt('10', 16).**
-
-$$
-1 \times(16^1)+0\times(16^0)=16
-$$
-
-## 2. **可以用来取整**
-
-```JavaScript
-console.log(parseInt(1213.22)) // 1213
-console.log(parseInt('1213.22')) // 1213
-console.log(parseInt('-1213.22')) // -1213
-```
-
-上面的过程会经过如下:
-
-1. isNaN 判断他是否是数字,不同的是 isNaN 在如果是数字或者**以数字开头**的字符串的话返回的是`boolean` 类型`true`. 而在 parseInt 中是返回了数字或者到出现除数字之外的字符位置.
-   ```JavaScript
-   console.log(parseInt('123add')) // 123
-   console.log(parseInt('1123.22')) // 1123
-   ```
-   间接的达到了取整数的作用.
-2. 转化为`String`类型.
-
-## 3.**设置当前的的\*\***`String`\***\* 是多少进制的. **
-
-parseInt 标准格式
-
-parseInt(_string_, _radix_);
-
-radix 默认为 10,即 10 进制.
-
-取值范围是从 `2` 到 `36`，表示字符串的基数。例如指定 16 表示被解析值是十六进制数。请注意，
-
-**10 不是默认值！**
-
-```JavaScript
-parseInt('1011', 2) // 11
-parseInt('123', 5) // 38
-```
-
-其他进制转化为十进制的公式
-
-最高位数 _ (radix ^ (当前位置 - 1)) ..... + 最后一位数 _ (radix ^ 0)
-
-从而可以得出
-
-```JavaScript
-1 * (5 ^ 2) + 2 * (5 ^ 1) + 3 * (5 ^ 0) = 38
-```
-
-## 4. 当然也存在不需要填写 radix 就可以得出它是多少进制的情况
-
-```JavaScript
-parseInt('0xfff') // 3095
-```
-
-如上所示,如果输入的是标准的 16 进制的表示法,后面的 radix 是可以省略的.
-
-这也印证了 10 不是默认值！
-
-## 5. 通过经典面试题检查对于它的理解
-
-下面的输出结果是什么？
-
-```js
-["10", "10", "10", "10", "10"].map(parseInt);
-```
-
-我们需要有这么一个认知：
-
-- map 是一个函数
-- map 的的参数有两个，一个函数`callbackFn`，一个可选对象`thisArg`，用于执行前者用作`this`值。
-- map 的的参数函数有三个参数：`currentValue`、`index`、`array`
-- `parseInt`就是一个函数
-
-所以说，什么的题目等于下面代码片段：
-
-```js
-["10", "10", "10", "10", "10"].map((item, index) => {
-  return parseInt(item, index);
-});
-```
-
-由此可得：
-
-```js
-parseInt("10", 0); // 10
-parseInt("10", 1); // NaN
-parseInt("10", 2); // 2
-parseInt("10", 3); // 3
-parseInt("10", 4); // 4
-```
-
-那么我们根据上面的描述，就可以很自然得出`[1, 2, 3, 4].map(parseInt)`的结果。
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
-            <title><![CDATA[再次理解闭包]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/再次理解闭包</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/再次理解闭包</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
-            <description><![CDATA[再次理解闭包  一、为什么重复写闭包 之前也写过关于闭包的文章。使用到了上下文，使用到了[[立即执行函数]]，使用到了 AO、GO，甚至还使用到了[[堆内存]]这一大堆名词来进行解释。 一个月过去之后，自己看都愣半天。啥是堆内存了？AO 和 GO 又是什么玩意儿？ !image.png 用了一些更高深莫测的词汇来解释一个概念，而这些词汇的知识点甚至比当前要解释的概念更复杂。在当前 AI 大行其道的时代，或许写这种基础知识的文章更多的是为了悦己，为的是加深自己对于某个知识点的，而不是装逼的。 通俗易懂才是最重要的。 之前写得还是太复杂了，随着自己的理解加深，重现更新，加深自己的认知。  二、闭包...]]></description>
-            <content:encoded><![CDATA[# 再次理解闭包
-
-## 一、为什么重复写闭包
-
-之前也写过关于闭包的文章。使用到了上下文，使用到了[[立即执行函数]]，使用到了 AO、GO，甚至还使用到了[[堆内存]]这一大堆名词来进行解释。
-一个月过去之后，自己看都愣半天。啥是堆内存了？AO 和 GO 又是什么玩意儿？
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0d17f26cce084569a01c679c8a854c2b~tplv-k3u1fbpfcp-watermark.image?)
-用了一些更高深莫测的词汇来解释一个概念，而这些词汇的知识点甚至比当前要解释的概念更复杂。在当前 AI 大行其道的时代，或许写这种基础知识的文章更多的是为了悦己，为的是加深自己对于某个知识点的，而不是装逼的。
-
-**通俗易懂才是最重要的。**
-
-之前写得还是太复杂了，随着自己的理解加深，重现更新，加深自己的认知。
-
-## 二、闭包是什么
-
-闭包由 closure 翻译而来。
-
-<img width="300" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8c03e70ce92e4d64a23c105b48502da3~tplv-k3u1fbpfcp-watermark.image?"/>
-
-它的含义更多的是闭，而不是包。为什么要提及这一点呢？因为这词语更加准确的翻译应该是**闭合性**，我们在讨论 JS 的闭包的时候，其实是在讨论 JS 中如何实现函数的闭合性的？
-
-换一句话来说，**就是 JS 如何让变量在函数外边如何被调用的**。这个本质依旧是在说[[函数作用域]]。只需要让目标变量的作用域不被销毁，那么你就可以在任何地方访问这个变量。如下图，fn1 想要访问 fn2 内的 a 变量：
-
-![[Pasted image 20250410193451.png]]
-
-> 这里提到的这个变量，一般来说指的不是变量的指，而是这个变量的内存位置。
-
-那么，闭合性在 JS 中是如何表现的呢？实践是唯一真理，直接看下面的闭包的例子，从中总结规律。
-
-**1. 第一段代码，常见的闭包,直接返回一个函数：**
-
-```js
-function foo() {
-  let local = 1;
-  return function () {
-    local++;
-    console.log(local);
-  };
-}
-
-const fn = foo();
-fn(); // 2
-fn(); // 3
-```
-
-**2. 第二段代码，循环赋值 + IIFE:**
-
-```js
-for (var i = 0; i < 10; i++) {
-  (function () {
-    setTimeout(function () {
-      console.log(i); // 10, 10, 10, 10, 10
-    }, 1000);
-  })();
-}
-```
-
-**3. 第三段代码，全局应用函数:**
-
-```js
-function foo() {
-  let local = 1;
-  window.addLocal = function () {
-    local++;
-    console.log(local);
-  };
-}
-addLocal(); // 2
-addLocal(); // 3
-```
-
-**4. 第四段代码，函数返回对象函数：**
-
-```js
-function foo() {
-  let local = 1;
-  function too() {
-    local++;
-    console.log(local);
-  }
-  function eoo() {
-    local++;
-    console.log(local);
-  }
-  return [too, eoo];
-}
-
-const a = foo();
-a[0](); // 2
-a[0](); // 3
-a[1](); // 4
-```
-
-上面段代码都体现了 JS 中函数对于闭合性的实现。局部变量在函数外部依旧可以访问到。通过这四个代码片段，我们找到它们的共性，得出 JS 实现闭合性的最小单位如下：
-
-```js
-let local = 1;
-function foo() {
-  console.log(local);
-}
-```
-
-但是这样看不出它是局部变量，那么我们给它添加上 IIFE：
-
-```js
-(function () {
-  let local = 1;
-  function foo() {
-    console.log(local);
-  }
-})();
-```
-
-由此我们还可以给出一些关于 JS 实现函数闭合性的问题：
-
-1. 不是一定需要 return 一个函数，代码片段 3 和 4 中都没有返回一个函数。
-2. 不是一定需要函数嵌套函数，代码片段 2 中。
-
-## 三、闭包实现的原理
-
-**闭包是 JS 函数作用域的副产品**,所以《高程》上面说了解闭包就要先理解什么是函数作用域。它是 由**函数**和*这个函数可以访问到的变量*这两者构成的。
-
-上面的说到的作用域和垃圾回收机制在其中又有什么作用的呢？
-
-- ​**​[[作用域]]（词法环境）​**​：  
-   JavaScript 闭包的核心机制是 ​**​ 词法作用域 ​**​（Lexical Scope）。当一个函数内部定义了另一个函数，且内部函数引用了外部函数的变量时，内部函数会“记住”它被定义时的词法环境（即外部函数的作用域），即使外部函数已经执行完毕。这是闭包实现的基础。
-- ​**​[[垃圾回收机制​]]**​：  
-   JavaScript 的垃圾回收机制（Garbage Collection）会回收不再被引用的内存。闭包中，如果内部函数仍然持有对外部函数变量的引用，这些变量就不会被回收（即使外部函数已执行完），从而形成闭包。因此，垃圾回收机制间接支持了闭包的存在。
-
-两者缺一不可。
-
-结论：JS 对于函数闭合性的实现是基于作用域和垃圾回收机制相互作用的一个现象。
-
-## 四、在平时工作的时候我们如何应用到闭包
-
-为了能够访问一个变量，我们可以直接让这个变量位于的全局作用域中。我们平时工作中还需要直接使用闭包吗？
-
-答案是需要的。**闭包在我们业务开发中最大的作用就是为了隐藏变量！**，尤其在 vue3 hook 写法的时候，闭包出现的场景更加多，而且也足够安全。
-
-### 场景一：结合 ref 实现 vue hook
-
-​**​1. 实现一个带闭包的 Hook​**​
-
-```ts
-// useCounter.ts
-import { ref } from "vue";
-
-export function useCounter(
-  initialValue: number,
-  options: { min?: number; max?: number }
-) {
-  const { min = -Infinity, max = Infinity } = options;
-
-  // 闭包内部的私有状态（通过 ref 转为响应式）
-  const count = ref(initialValue);
-
-  // 闭包内部方法（直接操作闭包中的 count）
-  const increment = () => {
-    if (count.value < max) count.value++;
-  };
-
-  const decrement = () => {
-    if (count.value > min) count.value--;
-  };
-
-  const reset = () => {
-    count.value = initialValue;
-  };
-
-  // 暴露响应式变量和方法
-  return { count, increment, decrement, reset };
-}
-```
-
-**2. 在组件中使用 Hook**
-
-```vue
-<template>
-  <div>
-    <button @click="decrement">-</button>
-    <span>{{ count }}</span>
-    <button @click="increment">+</button>
-    <button @click="reset">Reset</button>
-  </div>
-</template>
-
-<script setup>
-import { useCounter } from "./useCounter";
-
-// 每次调用 useCounter 会创建一个新的闭包，独立维护 count 状态
-const { count, increment, decrement, reset } = useCounter(0, {
-  min: 0,
-  max: 10,
-});
-</script>
-```
-
-### 场景二：非 ref 本地变量的使用
-
-前端对于接口响应的数据进行缓存：
-
-```ts
-export function useCache<T>() {
-  // 闭包中缓存计算结果
-  let cache: T | null = null;
-
-  const calculate = (data: T) => {
-    if (cache !== null) {
-      console.log("返回缓存结果");
-      return cache;
-    }
-
-    console.log("首次请求");
-    cache = result as T;
-    return result;
-  };
-
-  const clearCache = () => {
-    cache = null;
-  };
-
-  return { calculate, clearCache };
-}
-```
-
-### **总结 ​**​
-
-在 Vue3 的 Hook 写法中，闭包的核心价值：
-
-1. ​**​ 隔离作用域 ​**​：每个 Hook 实例独立维护状态。
-2. ​**​ 封装私有逻辑 ​**​：隐藏内部实现细节，只暴露必要接口。
-3. ​**​ 性能优化 ​**​：通过缓存、防抖/节流等模式减少重复计算或操作。
-
-## 五、为什么都说需要谨慎的使用闭包
-
-百度一下，也不知道谁抄的谁，太多一模一样的文章。而我也是长期这么认为的。
-
-![截屏2023-02-07 00.17.30.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/85910b12a9fd4aa896b5c787b01cb0c7~tplv-k3u1fbpfcp-watermark.image?)
-
-根据我之前写的闭包的文章，闭包长期存在于 GO 当中，自然可能会占用内存，如果数量过多了，不就导致内存泄漏了么？
-
-看起来挺有道理的，这是因为我不懂啥啥叫[[内存泄漏]]而差产生的误解。所以我上网搜索到了如下的回答：
-
-<img width="500" src='https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f9739800df634a3595c75dc227179daa~tplv-k3u1fbpfcp-watermark.image?'/>
-
-<img width="500" src='https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/be8aed0b360d41e1a2a13bf144047e04~tplv-k3u1fbpfcp-watermark.image?'/>
-
-也就是说，对于闭包而言，造成内存泄漏的不是闭包本身，而是 IE 浏览器。
-
-也就是说，只要我在使用闭包的时候，只有主要及时的销毁作用域就可以了。拿 vue3 来举例的话，我们平时都是在 tsx 或者在.vue 组件中引入闭包，那么它就会随着这个组件的销毁而销毁，一般来说是不会产生闭包长期存在于 GO 的现象。
-
-所以平时该用就用，不需要顾虑那么多。
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
-            <title><![CDATA[IIFE]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/IIFE</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/IIFE</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
-            <description><![CDATA[IIFE JavaScript ; (function test() {   var a = 1,     b = 2     console.log(a + b) })() console.log(test) // test 报错,立即执行函数执行完毕之后马上就进行了销毁. const b = (function(){   return 5 }()) // w3c的规范写法, 但是上面那种在写代码过程更加的常用,只要是容易识别 console.log(b) // 函数表达式才能够使用立即执行函数o function test1() {    console.log(1) }() // 报语法...]]></description>
-            <content:encoded><![CDATA[# IIFE
-
-```JavaScript
-
-; (function test() {
-  var a = 1,
-    b = 2
-    console.log(a + b)
-})()
-
-console.log(test) // test 报错,立即执行函数执行完毕之后马上就进行了销毁.
-
-const b = (function(){
-  return 5
-}()) // w3c的规范写法, 但是上面那种在写代码过程更加的常用,只要是容易识别
-
-console.log(b)
-
-// 函数表达式才能够使用立即执行函数o
-function test1() {
-   console.log(1)
-}() // 报语法错误
-
-const c = function test2() {
-  console.log(2)
- }()
-
- +function test3() {
-   console.log(3)
- }()
-
- 1 && function test3() {
-   console.log(3)
- }()
-
- undefined || function test3() {
-   console.log(3)
- }()
-```
-
-就如《JavaScript 忍者秘籍》中对于`IIFE`的描述一样, 函数表达式 + () = 立即函数.
-
-所以有如下:
-
-```JavaScript
-const a = 1 + function() {return 3} () // 4
-```
-
-**w3c 的推荐写法：**
-
-```JavaScript
-(function(){}())
-```
-
-别的常用的写法：
-
-```JavaScript
-(function(){})()
-```
-
-以及在函数前面加上! && || - + 等符号也可以把函数声明变为函数表达式
-
-利用立即执行函数来解决因为闭包产生的相关问题。
-
-如闭包和循环中的图 1 中：
-
-```JavaScript
-function test() {
-  var arr = []
-
-  for(var i = 0; i < 10; i++) {
-    (function(j){
-      console.log(j) // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-    })(i)
-  }
-
-}
-```
-
-理解执行函数带来的作用域的问题
-
-```JavaScript
-(function fun() {
-    fun = 2
-    console.log(fun) // [Function fun]
-})()
-
-```
-
-> 据说这个的考点不是变量提升
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
-            <title><![CDATA[JavaScript中运算符优先级]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/JavaScript中运算符优先级</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/JavaScript中运算符优先级</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
-            <description><![CDATA[- Metadata   - Author:   - Link:   - Publisher   - Date: [[2022-01-06]]   - Status: waiting   - Tag: - content   - JavaScript 中运算符优先级的问题？   - 优先级 是 结合的优先级，不是说谁的优先级高就先给谁求值。   - 结合是什么意思呢？可以理解成是加一个括号     <img src="https://pica.zhimg.com/50/v2-b2c09744a0088336494e8d9400d42065720w.jpg?source=1940ef5c" da...]]></description>
-            <content:encoded><![CDATA[- Metadata
-  - Author:
-  - Link:
-  - Publisher
-  - Date: [[2022-01-06]]
-  - Status: #waiting
-  - Tag:
-- content
-
-  - JavaScript 中运算符优先级的问题？
-  - 优先级 是 结合的优先级，不是说谁的优先级高就先给谁求值。
-
-  - 结合是什么意思呢？可以理解成是加一个括号
-
-    <img src="https://pica.zhimg.com/50/v2-b2c09744a0088336494e8d9400d42065_720w.jpg?source=1940ef5c" data-rawwidth="294" data-rawheight="60" class="content_image" width="294"/>
-
-    上面的这条表达式，在执行的时候，可以看做是下面这样的，加个括号就很容易理解了吧
-
-    <img src="https://pic2.zhimg.com/50/v2-4ec5ec1989d20449e25b0850be0ea68e_720w.jpg?source=1940ef5c" data-rawwidth="313" data-rawheight="57" class="content_image" width="313"/>
-
-  - 可是你不能说加了括号就要先给你求值啊，还是要按照基本法！！！从左往右
-
-  - 这里还有个短路计算的概念， || 操作符左边的是 true 的话，这个表达式的结果就是 true，不管右边的值是 false 还是 true，所以它就不会去求右边的值；&& 正好反过来，详细看文档：
-
-  [ 逻辑运算符 - JavaScript](https://link.zhihu.com/?target=https%3A//developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
-
-  - 如果 fn01() 算出的结果是 true，那整个
-
-    [表达式](https://www.zhihu.com/search?q=%E8%A1%A8%E8%BE%BE%E5%BC%8F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129171248%7D)的结果就是 false，根本不会去求其他的值。
-
-    `false || false && true || true === false || (false && true) || true`
-
-  - 优先级是结合的优先级，不是说谁的优先级高就先给谁求值！！！
-
-  - 再通俗一点，看到谁的优先级高就给它加一个括号，就像这样：
-  - `1 + 2 * 3 === 1 + (2 * 3)`
-
-- Metadata
-  - Author: RednaxelaFX
-  - Link:[(2 条消息) JavaScript 中运算符优先级的问题？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/52116922)
-  - Publisher: [[知乎]]
-  - Date: [[2022-01-06]]
-  - Status: #waiting
-  - Tag:
-- content
-
-  - 前面的回答都说得挺好了。那我还是来放传送门：
-  - [虚拟机随谈（一）：解释器，树遍历解释器，基于栈与基于寄存器，大杂烩](https://link.zhihu.com/?target=http%3A//rednaxelafx.iteye.com/blog/492667)
-  - 题主要注意区分优先级、结合性、
-  - [求值顺序](https://www.zhihu.com/search?q=%E6%B1%82%E5%80%BC%E9%A1%BA%E5%BA%8F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)三者的区别。
-  - 这三个是不同的概念，却经常被混淆。通过 AST 来看就很容易理解：（假设源码是从左到右输入的）
-  - 所谓优先级，就是不同操作相邻出现时，
-  - [AST 节点](https://www.zhihu.com/search?q=AST%E8%8A%82%E7%82%B9&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)与根的距离的关系。优先级高的操作会更远离根，优先级低的操作会更接近根。为什么？因为整棵 AST 是以后序遍历求值的，显然节点离根越远就越早被求值。
-  - 所谓结合性，就是当同类操作相邻出现时，操作的先后顺序同 AST 节点与根的距离的关系。如果是左结合，则先出现的操作对应的 AST 节点比后出现的操作的节点离根更远；换句话说，先出现的节点会是后出现节点的子节点。
-  - 所谓求值顺序，就是在遍历子节点时的顺序。对二元运算对应的节点来说，先遍历
-  - [左子节点](https://www.zhihu.com/search?q=%E5%B7%A6%E5%AD%90%E8%8A%82%E7%82%B9&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)再遍历右子节点就是从左到右的求值顺序，反之则是从右到左的求值顺序。
-  - 这三个概念与运算的联系都很紧密，但实际描述的是不同的关系。前两者是
-  - [解析器](https://www.zhihu.com/search?q=%E8%A7%A3%E6%9E%90%E5%99%A8&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)根据语法生成 AST 时就已经决定好的，后者则是解释执行或者生成代码而去遍历 AST 时决定的。
-  - 在没有副作用的环境中，给定优先级与结合性，则无论求值顺序是怎样的都能得到同样的结果；而在有副作用的环境中，求值顺序会影响结果。
-  - 题主可以看看您的代码对应的 AST 长啥样：
-  - [Esprima: Parser](https://link.zhihu.com/?target=http%3A//esprima.org/demo/parse.html)
-  - ，对照上面传送门所说的看看。
-  - 或者这个：
-  - [AST Visualization on browser](https://link.zhihu.com/?target=http%3A//nhiro.org/learn_language/AST-Visualization-on-browser.html)
-  - 对应 console.log(fn01() || fn02() && fn03())，AST 是：
-  - 具体到题主有疑问的那个地方，AST 是这样的：` || / \ fn01() && / \ fn02() fn03()`
-  - 表达式层面上，代码的执行就是后序遍历这棵 AST 而已。
-  - 优先级：在相邻的两个运算符 || 与 && 中，&& 比 || 离 AST 的根更远所以优先级更高
-  - 结合性：这里没有相邻的同优先级运算符所以展现不出 || 与 && 的结合性，虽然它们都是左结合的
-  - 求值顺序：JavaScript 的求值顺序就是从左向右的。对这棵 AST 来说就是在后序遍历时，每个节点的求值过程是先遍历左子树，再遍历右子树，然后对自己求值。
-  - 外加 || 与 && 的短路求值语义，如果左操作数已经足以求出结果则不会对右操作数求值
-]]></content:encoded>
-            <author>295563358@qq.com (Yoran Wu)</author>
-        </item>
-        <item>
-            <title><![CDATA[generator和iterator]]></title>
-            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/generator和iterator</link>
-            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/generator和iterator</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
-            <description><![CDATA[generator 和 iterator  前言 最近重新现在看红宝书，总算知道为什么迭代器和生成器这两个概念为什么那么难理解了，根本原因是平时直接使用到的机会确实是非常的少，其次就是书上面为了介绍这两个概念使用了非常多的专业的名词来描述，而且相互穿插，能把人看睡着了都。下面简单的描述一下书中的介绍这两个概念的思路。  迭代器导读 在迭代器中，先介绍了迭代，在 ES6 之前 for 和 forEach 两个循环的问题，引出了迭代器模式。接下来就自然的介绍迭代器模式，它包含两个概念： 1. 第一个是可迭代协议，介绍了它具备的能力，以及实现它的必要条件，最后介绍了当前内置的类型都有那些实现了这个可...]]></description>
-            <content:encoded><![CDATA[# generator 和 iterator
-
-## 前言
-
-最近重新现在看红宝书，总算知道为什么迭代器和生成器这两个概念为什么那么难理解了，根本原因是平时直接使用到的机会确实是非常的少，其次就是书上面为了介绍这两个概念使用了非常多的专业的名词来描述，而且相互穿插，能把人看睡着了都。下面简单的描述一下书中的介绍这两个概念的思路。
-
-### 迭代器导读
-
-在迭代器中，先介绍了迭代，在 ES6 之前 for 和 forEach 两个循环的问题，引出了迭代器模式。接下来就自然的介绍迭代器模式，它包含两个概念：
-
-1. 第一个是可迭代协议，介绍了它具备的能力，以及实现它的必要条件，最后介绍了当前内置的类型都有那些实现了这个可迭代协议，并且可以接受这些内置类型的原生语言特使包括那些。
-2. 第二个是迭代器协议，介绍了它的基本概念和基本使用方法。了解了了迭代器的协议之后，也可以称呼它们为迭代器的接口，就介绍了自定义迭代器如何实现和一些细则。
-
-但是关于两个协议的关系和职责范围没有总结出来，导致了我对于他们的关系一直很模糊，经常混淆在一起。总结一下：
-
-| **协议类型 ​**​    | ​**​ 可迭代协议（Iterable Protocol）​**​        | ​**​ 迭代器协议（Iterator Protocol）​**​   |
-| ------------------ | ----------------------------------------------- | ------------------------------------------ |
-| ​**​ 目的 ​**​     | 定义对象如何被迭代（如 `for...of` 遍历）        | 定义如何按顺序访问元素（如 `next()` 方法） |
-| ​**​ 实现方法 ​**​ | 对象需实现 `[Symbol.iterator]()` 方法           | 对象需实现 `next()` 方法                   |
-| ​**​ 返回值 ​**​   | 返回一个 ​**​ 迭代器对象 ​**​（符合迭代器协议） | 返回 `{ value: T, done: boolean }` 对象    |
-| ​**​ 核心作用 ​**​ | ​**​ 声明对象可被迭代 ​**​                      | ​**​ 实际执行迭代过程 ​**​                 |
-
-### 生成器导读
-
-在生成器中，先介绍了生成器的写法，包含的元素和生命周期，存在暂停状态，存在`next()`方法，该方法返回的对象也是包含 done 属性和 value 属性。接下来介绍生成器最重要的组成部分：`yield`，被称为生成器最有用的地方。包括如下内容：
-
-1. 中断执行，异步变为同步的关键
-2.
-
-**生成器和迭代器的关系如下**：
-
-生成器是一种特殊的函数结构，它返回的对象是一个迭代器。生成器函数本质上是 JavaScript 语法规范提供的一种**用户自定义的迭代器工厂函数**。
-
-> 生成器（Generator）**不是基于 ES5 的语法糖**，而是 **ES6（ECMAScript 2015）引入的基础语言规范**，需要 JavaScript 引擎在底层实现支持。
-
-## 资料
-
-- [(1 封私信 / 9 条消息) es6 generator 到底有什么用？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/55810122/answer/1988210728)
-- [Rx.js 思想入门（讲义） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/34481617)
-  - generator 是 ES 对迭代器的实现，迭代器源于设计模式。(这个事关 generator 怎么来的)，我们想知道 generator 有什么的本质其实是了解迭代器有什么作用。
-
-# generator 和 iterator
-
-![[截屏2022-01-30 02.22.26.png]]
-这句感觉啥都没有说. 怎么写法就复杂了,怎么就枯燥了. 复杂体现在哪里?枯燥体现在哪里?如何手抖产生 bug 的.现在的人出教程都这么随意的么?
-
-这个例子出自于《JavaScript 高级程序设计》第五版，是为了说明在迭代器这个规范出来之前 ES 处理迭代的一个历史，有两个阶段，一个如图中使用到 for 循环，另外一个就是 forEach 更加函数式的写法。
-
-for 循环的凡事得出的结论也不是图中的两点，而是：
-
-1. 迭代之前需要事先知道如何使用数据结构。
-2. 遍历顺序并不是数据结构固有的。
-
-## 1.总结一下在此之前的 7 组遍历的方法
-
-- forEach -> 普通的数组遍历
-- map -> 映射, 每一次遍历,返回 bool.来决定当前元素是否纳入新的数组
-- filter -> 过滤, 每一次遍历,返回 bool,来决定当前元素是否纳入新的数组
-- reduce -> 归纳, 每一次遍历,将挡元素收归到容器中
-- reduceRight -> reduce 的反向操作
-- every -> 判定是否所有元素都符合一个条件
-- some -> 判定是否有某一个或多个符合一个条件
-
-> async 是 Generator 的语法糖，在 Generator 基础上封装的
-
-## 2. 手写 iterator
-
-```js
-const arr = ["姓名: 小野", "年龄: 28", "爱好: 我爱JavaScript"];
-function getIterator(arr) {
-  let i = 0;
-  return {
-    next() {
-      return {
-        value: arr[i++],
-        done: i > arr.length,
-      };
-    },
-  };
-}
-
-const iterator = getIterator(arr);
-console.log(iterator.next()); // {value: 姓名: 小野, done: false}
-console.log(iterator.next()); // {value: 年龄: 28, done: false}
-console.log(iterator.next()); // {value: 爱好: 我爱JavaScript, done: false}
-console.log(iterator.next()); // {value: undefined, done: true}
-```
-
-## 3. ES6 提供的 Generator 方法
-
-```js
-function* createIterator(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    yield arr[i];
-  }
-}
-
-const iterator1 = createIterator(arr);
-console.log(iterator.next()); // {value: 姓名: 小野, done: false}
-console.log(iterator.next()); // {value: 年龄: 28, done: false}
-console.log(iterator.next()); // {value: 爱好: 我爱JavaScript, done: false}
-console.log(iterator.next()); // {value: undefined, done: true}
-```
-
-**基本构成就是\* 加上 yield.**
-
-## 4. Generator 实现 async 的写法
-
-大佬写的文章还是不错的 https://juejin.cn/post/6844903599529541645
+所以说,react 推出了 hook, vue 推出了 3.0. 都提供了一定的函数式编程的概念.通过函数的组合来代替对象的继承. 🤓
 ]]></content:encoded>
             <author>295563358@qq.com (Yoran Wu)</author>
         </item>
@@ -15206,7 +14233,7 @@ console.log(iterator.next()); // {value: undefined, done: true}
             <title><![CDATA[js让人诟病的这些feature]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/js让人诟病的这些feature</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/js让人诟病的这些feature</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[![](https://img2.baidu.com/it/u=139382954,2115973602&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500k)  js 让人诟病的这些 feature  1.前言 - 是糟粕还是feature?这要取决于对于它的认识和使用.用的好就是 feature,用得不好,可能就不单单是糟粕,还会要留在公司加班的.所以为了更加好的利用隐式转化,今天我们要好好的认识它. - 而大部分的觉得 js 混乱的原因,也是由于它的想对于静态语言的不确定性. - 下面我就一一来解析这些让人疑惑的问题. > Thanks for inve...]]></description>
             <content:encoded><![CDATA[![](https://img2.baidu.com/it/u=139382954,2115973602&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500k)
 
@@ -15578,10 +14605,983 @@ console.log("23" > "3");
             <author>295563358@qq.com (Yoran Wu)</author>
         </item>
         <item>
+            <title><![CDATA[new 的时候都干了什么]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/new 的时候都干了什么</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/new 的时候都干了什么</guid>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
+            <description><![CDATA[new 的时候都干了什么  为什么要有 new 我认为了解一个 api 怎么用之前，更重要的是要知道这个 api 为什么因何而诞生的！ JS 的诞生就是为了快速的解决问题的。所以它的语法很多时候都是为了让用户省心而设计的，比如弱语法，比如这个 new。 <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/36b0879f8da6456c93b5f93f7ff93855tplv-k3u1fbpfcp-watermark.image?" alt="image.png" width="30%" /> 在我平时写的业务中，其实没有创造...]]></description>
+            <content:encoded><![CDATA[# new 的时候都干了什么
+
+## 为什么要有 new
+
+**我认为了解一个 api 怎么用之前，更重要的是要知道这个 api 为什么因何而诞生的！**
+
+JS 的诞生就是为了快速的解决问题的。**所以它的语法很多时候都是为了让用户省心而设计的，比如弱语法，比如这个 new。**
+
+<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/36b0879f8da6456c93b5f93f7ff93855~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" width="30%" />
+
+在我平时写的业务中，其实没有创造大量对象的场景。所以这里以游戏的业务为例子。我记得微信小游戏的 DEMO 就是飞机大战，现在我们给敌机设计它的属性。
+
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a39bf557f998426d9c1a3b915c49614f~tplv-k3u1fbpfcp-zoom-1.image)
+
+对于敌机而言，它有不同的机种，不同的血量，可以发送子弹，可以向屏幕下方移动。在代码中如下：
+
+```js
+const 敌机 = {
+  key: 0001, // 唯一ID
+  机种: 'a', // 非boss
+  攻击范围: 1000,
+  发射: function() {
+    // 发射子弹
+  }，
+  向下移动: function() {
+    // 冲向我方
+  }
+}
+```
+
+这是一辆飞机的对象。但是在飞机大战当中，敌机可是满屏都有的。所以我们需要很多辆这样的飞机：
+
+```js
+const 敌机s = []
+
+for (let i = 0; i< 50; i++) {
+  let 敌机 = {
+    key: '敌机' + i, // 唯一ID
+    机种: '歼20', // 非boss
+    攻击范围: 1000,
+    发射: function() {
+      // 发射子弹
+    }，
+    向下移动: function() {
+      // 冲向我方
+    }
+  }
+  敌机s.push(敌机)
+}
+```
+
+上面对象数组中的发射和向下移动是完全一样的函数 ，但是被创造了 50 遍。机种和攻击范围是固定，只有 key 值各不相同。
+
+所以我们可以有如下的改造：
+
+```js
+const 敌机原型 = {
+  兵种: "歼20",
+  攻击范围: 1000,
+  发射: function() {
+    // 发射子弹
+  }，
+  向下移动: function() {
+    // 冲向我方
+  }
+}
+
+const 敌机s = []
+for(let i = 0; i < 50; i++) {
+  let 敌机 = {
+    key: '敌机' + i,
+  }
+
+  敌机.[[proto]] = 敌机原型
+
+  敌机s.push(敌机)
+}
+```
+
+是不是有点‘构造’函数那个味了？循环里面我们做了两件事情，创建对象，以及处理对象，干了两件事情，敌机的对象也分开来了。有了更好的复用，我们可以使用函数来封装：
+
+```js
+function 敌机(key){
+  var 临时对象 = {}
+
+  临时对象.[[proto]] = 敌机.原型
+
+  临时对象.key = '敌机' + key
+
+  return 临时对象
+}
+
+敌机.原型 = {
+  兵种: "歼20",
+  攻击范围: 1000,
+  发射: function() {
+    // 发射子弹
+  }，
+  向下移动: function() {
+    // 冲向我方
+  }
+}
+```
+
+随后在创建敌机们的时候，可以直接调用上面的函数：
+
+```js
+const 敌机s = [];
+for (let i = 0; i < 100; i++) {
+  敌机s.push(敌机(i));
+}
+```
+
+回到我说的第一句话，**它的语法很多时候都是为了让用户省心而设计的。**
+
+它的这个省心体现在哪里呢？
+
+![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0dc2424447964368be1c666e4b8e4e9f~tplv-k3u1fbpfcp-watermark.image?)
+
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/32e551505a4f40289d238881d8b2fd33~tplv-k3u1fbpfcp-zoom-1.image)
+
+悄悄这位慈祥的老人。他为了让我更快的创建对象，通过一个 `new` 关键字为我们省略了四个步骤！
+
+## 当函数 return 不同类型的时候
+
+通俗的知道了 new 的意义，我们再来看它在这个过程中做了什么就容易很多了。
+
+回想一开始学习 JS 的时候，好好的函数，非要弄一个构造函数的称呼出来。
+
+我第一次看到构造函数的时候，郁闷了好久，为什么函数还分这么类型，匿名函数、立即执行函数、构造函数。
+
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/29546be3880048188b817968dde9421d~tplv-k3u1fbpfcp-zoom-1.image" alt="" width="30%" />
+
+给我造成了多年的记忆负担！函数就是函数，不能因为运行函数的时身边的关键字不一样就给它瞎起名字。
+
+所以就应该是 new 一个函数，而不是 new 一个构造函数。
+
+在 new 的过程中主要就是分为两种情况，根据函数 return 的是基础类型还是引用类型，返回不同的结果。
+
+## return 基础类型
+
+当使用`new`关键字调用一个函数时，函数中 return 的是一个基础类型。JavaScript 引擎将执行以下步骤：
+
+1.  创建一个新的空对象。
+1.  将新创建的对象的原型指向构造函数的原型对象。
+1.  将构造函数的 this 关键字绑定到新创建的对象上。
+1.  执行构造函数中的代码，将属性和方法添加到新的对象中。
+1.  如果构造函数返回一个对象，则返回该对象，否则返回新创建的对象。
+
+下面是一个简单的例子，演示了使用`new`关键字创建对象实例的过程：
+
+```
+// 定义一个构造函数
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+// 在Person的原型对象上添加一个方法
+Person.prototype.sayHello = function() {
+  console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+}
+
+// 使用new关键字创建对象实例
+const person1 = new Person('John', 30);
+
+person1.sayHello(); // 输出: Hello, my name is John and I am 30 years old.
+```
+
+在上面的例子中，我们定义了一个`Person`构造函数，它有两个参数：`name`和`age`。然后，我们在`Person`的原型对象上添加了一个`sayHello`方法，该方法输出一个字符串，包含对象的`name`和`age`属性。最后，我们使用`new`关键字调用`Person`构造函数，并将结果赋值给`person1`变量。最后，我们调用`person1`对象的`sayHello`方法，输出一个字符串。
+
+通过这个例子，我们可以看到，使用`new`关键字创建对象实例时，JavaScript 引擎会将新创建的对象的原型指向构造函数的原型对象，因此我们可以在构造函数的原型对象上定义方法，并在新创建的对象上使用这些方法。
+
+> 众所周知，函数不写 return 的时候，它返回的是 undefined, 也是基础类型
+
+## return 引用类型
+
+return 引用类型就简单很多，return 的对象会直接'覆盖'JS 引擎内部生成的 "this" 对象。如下代码片段：
+
+```js
+function Person(name) {
+  this.name = name;
+  return {
+    name: "Greg",
+  };
+}
+Person.prototype.say = function () {
+  console.log("yoran");
+};
+
+const p = new Person("John");
+console.log(p.name); // Greg
+```
+
+## 总结一下
+
+- new 一个对象的过程
+
+  1.  创建一个空对象
+  1.  给这个空对象添加`__proto__`属性,并指向`prototype`原型对象
+  1.  将 this 的属性绑定到这个对象当中
+  1.  然后`return`这个对象给实例化对象
+
+- `return`的是基本类型和对象会带来不同的效果
+
+  - `return`的是数字的话, 不会有什么变化,直接走以前的
+  - `return`的是对象的话, 会直接覆盖你上面的那一连串骚操作
+
+## 手写一个 new 方法
+
+```js
+function targetFn(name) {
+  this.name = name;
+}
+targetFn.prototype = {
+  aget: 18,
+};
+
+function myNew(fn, ...rest) {
+  const newObj = Object.create(fn.prototype);
+
+  const returnResult = fn.apply(newObj, rest);
+
+  return isObject(returnResult) ? returnResult : newObj;
+}
+
+function isObject(obj) {
+  const target = "[object Object]";
+  return Object.prototype.toString.call(obj) === target;
+}
+```
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
+            <title><![CDATA[parseInt总结]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/parseInt总结</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/parseInt总结</guid>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
+            <description><![CDATA[parseInt 使用总结 parseInt('012', 16)和 parseInt(012, 16)相等吗？ ["10", "10", "10", "10", "10"].map(parseInt)的结果是什么？ 先来一起复习一下parseInt()的基本用法。  1 parseInt()的使用说明 使用参数说明：paraseInt(value: string, radix?: number) > parseInt()是对 Number()很好的补充  1.1 解析数字和字母的混合字符串 当Number()返回的都是NaN的时候，parseInt()有不一样的解析结果。parseInt 会...]]></description>
+            <content:encoded><![CDATA[# parseInt 使用总结
+
+**parseInt('012', 16)和 parseInt(012, 16)相等吗？**
+
+**["10", "10", "10", "10", "10"].map(parseInt)的结果是什么？**
+
+先来一起复习一下`parseInt()`的基本用法。
+
+## 1 parseInt()的使用说明
+
+使用参数说明：**paraseInt(value: string, radix?: number)**
+
+> parseInt()是对 Number()很好的补充
+
+### 1.1 解析数字和字母的混合字符串
+
+当`Number()`返回的都是`NaN`的时候，`parseInt()`有不一样的解析结果。parseInt 会忽略无效字符，如果第一个字符串元素就非数字，那么就返回`NaN`。
+
+```js
+Number("123abc"); // NaN
+Number("123asd1"); // NaN
+Number("ad123"); // NaN
+// -------
+parseInt("123abc"); // 123
+parseInt("123asd1"); // 123
+parseInt("123---8979$$$"); // 123
+parseInt("ad123"); // NaN
+```
+
+### 1.2 用于浮点数的取整:
+
+```js
+console.log(parseInt(11.22)); // 11
+console.log(Number(11.22)); // 11.22
+```
+
+### 1.3 将其他的进制转化为十进制
+
+- 标准格式: **`parseInt(string, radix)`**
+- `radix`: 表示字符串的基数，取值范围是从 2 到 36。16 就表示被解析值是十六进制数。
+- 计算方法：**基数 \* (radix ^ (当前位数 - 1)) 然后依次相加**
+
+如下例子:
+
+```js
+console.log(parseInt(101, 2)); // 5
+console.log(parseInt(123, 5)); // 38
+parseInt("6axxx", 16); // 106
+```
+
+> parseInt('6axxx', 16), 16 进制能够识别 6a，到 x 为止。
+
+其转化的过程如下：
+
+$1\times( 2 ^ 2 ) + 0 \times (2 ^ 1) + 1 \times (2 ^ 0) = 4 + 0 + 1 = 5$
+
+$1 \times (5 ^ 2) + 2 \times (5 ^ 1) + 3 \times (5 ^ 0) = 25 + 10 + 8 = 38$
+
+需要注意的是：
+
+- `radix`的默认值不一定是 10，如果字符串 string 以其它任何值开头，则基数才是 10 (十进制)。
+
+这玩意儿很智能.输入的如果是标准的 16 进制或者 8 进制的话,就可以把`radix`初始化为对应的进制的值。比如说`parseInt(0xfff)` 的结果是 4096，不用放入`radix`值。
+
+但是如果，你后面非要加非 16 进制的制位的话，那还是会按照对应的`radix`来计算。比如`parseInt(012, 3)`是 3 而不是 8。
+
+### 1.4 parseInt 中的隐式转化
+
+parseInt('012', 16)和 parseInt(012, 16)的结果是否一致呢？
+
+我们打印结构如下：
+
+![截屏2023-02-11 00.34.18.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/90be49c2fde944bbba3ef86f3cfd1c4a~tplv-k3u1fbpfcp-watermark.image?)
+
+**前者是 18，后者是 16！**， why?
+
+很简单，其实通过我这个小标题也能够知道原因。因为 parseInt(012, 16)发生了隐式转化。第一参数是`string`类型，而它是`number`类型，构成了隐式转化的条件，触发了`toString()`的规则。
+
+`012.toString()`结果为 10.
+
+所以说，**parseInt(012, 16) = parseInt('10', 16).**
+
+$$
+1 \times(16^1)+0\times(16^0)=16
+$$
+
+## 2. **可以用来取整**
+
+```JavaScript
+console.log(parseInt(1213.22)) // 1213
+console.log(parseInt('1213.22')) // 1213
+console.log(parseInt('-1213.22')) // -1213
+```
+
+上面的过程会经过如下:
+
+1. isNaN 判断他是否是数字,不同的是 isNaN 在如果是数字或者**以数字开头**的字符串的话返回的是`boolean` 类型`true`. 而在 parseInt 中是返回了数字或者到出现除数字之外的字符位置.
+   ```JavaScript
+   console.log(parseInt('123add')) // 123
+   console.log(parseInt('1123.22')) // 1123
+   ```
+   间接的达到了取整数的作用.
+2. 转化为`String`类型.
+
+## 3.**设置当前的的\*\***`String`\***\* 是多少进制的. **
+
+parseInt 标准格式
+
+parseInt(_string_, _radix_);
+
+radix 默认为 10,即 10 进制.
+
+取值范围是从 `2` 到 `36`，表示字符串的基数。例如指定 16 表示被解析值是十六进制数。请注意，
+
+**10 不是默认值！**
+
+```JavaScript
+parseInt('1011', 2) // 11
+parseInt('123', 5) // 38
+```
+
+其他进制转化为十进制的公式
+
+最高位数 _ (radix ^ (当前位置 - 1)) ..... + 最后一位数 _ (radix ^ 0)
+
+从而可以得出
+
+```JavaScript
+1 * (5 ^ 2) + 2 * (5 ^ 1) + 3 * (5 ^ 0) = 38
+```
+
+## 4. 当然也存在不需要填写 radix 就可以得出它是多少进制的情况
+
+```JavaScript
+parseInt('0xfff') // 3095
+```
+
+如上所示,如果输入的是标准的 16 进制的表示法,后面的 radix 是可以省略的.
+
+这也印证了 10 不是默认值！
+
+## 5. 通过经典面试题检查对于它的理解
+
+下面的输出结果是什么？
+
+```js
+["10", "10", "10", "10", "10"].map(parseInt);
+```
+
+我们需要有这么一个认知：
+
+- map 是一个函数
+- map 的的参数有两个，一个函数`callbackFn`，一个可选对象`thisArg`，用于执行前者用作`this`值。
+- map 的的参数函数有三个参数：`currentValue`、`index`、`array`
+- `parseInt`就是一个函数
+
+所以说，什么的题目等于下面代码片段：
+
+```js
+["10", "10", "10", "10", "10"].map((item, index) => {
+  return parseInt(item, index);
+});
+```
+
+由此可得：
+
+```js
+parseInt("10", 0); // 10
+parseInt("10", 1); // NaN
+parseInt("10", 2); // 2
+parseInt("10", 3); // 3
+parseInt("10", 4); // 4
+```
+
+那么我们根据上面的描述，就可以很自然得出`[1, 2, 3, 4].map(parseInt)`的结果。
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
+            <title><![CDATA[再次理解闭包]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/再次理解闭包</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/再次理解闭包</guid>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
+            <description><![CDATA[再次理解闭包  一、为什么重复写闭包 之前也写过关于闭包的文章。使用到了上下文，使用到了[[立即执行函数]]，使用到了 AO、GO，甚至还使用到了[[堆内存]]这一大堆名词来进行解释。 一个月过去之后，自己看都愣半天。啥是堆内存了？AO 和 GO 又是什么玩意儿？ !image.png 用了一些更高深莫测的词汇来解释一个概念，而这些词汇的知识点甚至比当前要解释的概念更复杂。在当前 AI 大行其道的时代，或许写这种基础知识的文章更多的是为了悦己，为的是加深自己对于某个知识点的，而不是装逼的。 通俗易懂才是最重要的。 之前写得还是太复杂了，随着自己的理解加深，重现更新，加深自己的认知。  二、闭包...]]></description>
+            <content:encoded><![CDATA[# 再次理解闭包
+
+## 一、为什么重复写闭包
+
+之前也写过关于闭包的文章。使用到了上下文，使用到了[[立即执行函数]]，使用到了 AO、GO，甚至还使用到了[[堆内存]]这一大堆名词来进行解释。
+一个月过去之后，自己看都愣半天。啥是堆内存了？AO 和 GO 又是什么玩意儿？
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0d17f26cce084569a01c679c8a854c2b~tplv-k3u1fbpfcp-watermark.image?)
+用了一些更高深莫测的词汇来解释一个概念，而这些词汇的知识点甚至比当前要解释的概念更复杂。在当前 AI 大行其道的时代，或许写这种基础知识的文章更多的是为了悦己，为的是加深自己对于某个知识点的，而不是装逼的。
+
+**通俗易懂才是最重要的。**
+
+之前写得还是太复杂了，随着自己的理解加深，重现更新，加深自己的认知。
+
+## 二、闭包是什么
+
+闭包由 closure 翻译而来。
+
+<img width="300" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8c03e70ce92e4d64a23c105b48502da3~tplv-k3u1fbpfcp-watermark.image?"/>
+
+它的含义更多的是闭，而不是包。为什么要提及这一点呢？因为这词语更加准确的翻译应该是**闭合性**，我们在讨论 JS 的闭包的时候，其实是在讨论 JS 中如何实现函数的闭合性的？
+
+换一句话来说，**就是 JS 如何让变量在函数外边如何被调用的**。这个本质依旧是在说[[函数作用域]]。只需要让目标变量的作用域不被销毁，那么你就可以在任何地方访问这个变量。如下图，fn1 想要访问 fn2 内的 a 变量：
+
+![[Pasted image 20250410193451.png]]
+
+> 这里提到的这个变量，一般来说指的不是变量的指，而是这个变量的内存位置。
+
+那么，闭合性在 JS 中是如何表现的呢？实践是唯一真理，直接看下面的闭包的例子，从中总结规律。
+
+**1. 第一段代码，常见的闭包,直接返回一个函数：**
+
+```js
+function foo() {
+  let local = 1;
+  return function () {
+    local++;
+    console.log(local);
+  };
+}
+
+const fn = foo();
+fn(); // 2
+fn(); // 3
+```
+
+**2. 第二段代码，循环赋值 + IIFE:**
+
+```js
+for (var i = 0; i < 10; i++) {
+  (function () {
+    setTimeout(function () {
+      console.log(i); // 10, 10, 10, 10, 10
+    }, 1000);
+  })();
+}
+```
+
+**3. 第三段代码，全局应用函数:**
+
+```js
+function foo() {
+  let local = 1;
+  window.addLocal = function () {
+    local++;
+    console.log(local);
+  };
+}
+addLocal(); // 2
+addLocal(); // 3
+```
+
+**4. 第四段代码，函数返回对象函数：**
+
+```js
+function foo() {
+  let local = 1;
+  function too() {
+    local++;
+    console.log(local);
+  }
+  function eoo() {
+    local++;
+    console.log(local);
+  }
+  return [too, eoo];
+}
+
+const a = foo();
+a[0](); // 2
+a[0](); // 3
+a[1](); // 4
+```
+
+上面段代码都体现了 JS 中函数对于闭合性的实现。局部变量在函数外部依旧可以访问到。通过这四个代码片段，我们找到它们的共性，得出 JS 实现闭合性的最小单位如下：
+
+```js
+let local = 1;
+function foo() {
+  console.log(local);
+}
+```
+
+但是这样看不出它是局部变量，那么我们给它添加上 IIFE：
+
+```js
+(function () {
+  let local = 1;
+  function foo() {
+    console.log(local);
+  }
+})();
+```
+
+由此我们还可以给出一些关于 JS 实现函数闭合性的问题：
+
+1. 不是一定需要 return 一个函数，代码片段 3 和 4 中都没有返回一个函数。
+2. 不是一定需要函数嵌套函数，代码片段 2 中。
+
+## 三、闭包实现的原理
+
+**闭包是 JS 函数作用域的副产品**,所以《高程》上面说了解闭包就要先理解什么是函数作用域。它是 由**函数**和*这个函数可以访问到的变量*这两者构成的。
+
+上面的说到的作用域和垃圾回收机制在其中又有什么作用的呢？
+
+- ​**​[[作用域]]（词法环境）​**​：  
+   JavaScript 闭包的核心机制是 ​**​ 词法作用域 ​**​（Lexical Scope）。当一个函数内部定义了另一个函数，且内部函数引用了外部函数的变量时，内部函数会“记住”它被定义时的词法环境（即外部函数的作用域），即使外部函数已经执行完毕。这是闭包实现的基础。
+- ​**​[[垃圾回收机制​]]**​：  
+   JavaScript 的垃圾回收机制（Garbage Collection）会回收不再被引用的内存。闭包中，如果内部函数仍然持有对外部函数变量的引用，这些变量就不会被回收（即使外部函数已执行完），从而形成闭包。因此，垃圾回收机制间接支持了闭包的存在。
+
+两者缺一不可。
+
+结论：JS 对于函数闭合性的实现是基于作用域和垃圾回收机制相互作用的一个现象。
+
+## 四、在平时工作的时候我们如何应用到闭包
+
+为了能够访问一个变量，我们可以直接让这个变量位于的全局作用域中。我们平时工作中还需要直接使用闭包吗？
+
+答案是需要的。**闭包在我们业务开发中最大的作用就是为了隐藏变量！**，尤其在 vue3 hook 写法的时候，闭包出现的场景更加多，而且也足够安全。
+
+### 场景一：结合 ref 实现 vue hook
+
+​**​1. 实现一个带闭包的 Hook​**​
+
+```ts
+// useCounter.ts
+import { ref } from "vue";
+
+export function useCounter(
+  initialValue: number,
+  options: { min?: number; max?: number }
+) {
+  const { min = -Infinity, max = Infinity } = options;
+
+  // 闭包内部的私有状态（通过 ref 转为响应式）
+  const count = ref(initialValue);
+
+  // 闭包内部方法（直接操作闭包中的 count）
+  const increment = () => {
+    if (count.value < max) count.value++;
+  };
+
+  const decrement = () => {
+    if (count.value > min) count.value--;
+  };
+
+  const reset = () => {
+    count.value = initialValue;
+  };
+
+  // 暴露响应式变量和方法
+  return { count, increment, decrement, reset };
+}
+```
+
+**2. 在组件中使用 Hook**
+
+```vue
+<template>
+  <div>
+    <button @click="decrement">-</button>
+    <span>{{ count }}</span>
+    <button @click="increment">+</button>
+    <button @click="reset">Reset</button>
+  </div>
+</template>
+
+<script setup>
+import { useCounter } from "./useCounter";
+
+// 每次调用 useCounter 会创建一个新的闭包，独立维护 count 状态
+const { count, increment, decrement, reset } = useCounter(0, {
+  min: 0,
+  max: 10,
+});
+</script>
+```
+
+### 场景二：非 ref 本地变量的使用
+
+前端对于接口响应的数据进行缓存：
+
+```ts
+export function useCache<T>() {
+  // 闭包中缓存计算结果
+  let cache: T | null = null;
+
+  const calculate = (data: T) => {
+    if (cache !== null) {
+      console.log("返回缓存结果");
+      return cache;
+    }
+
+    console.log("首次请求");
+    cache = result as T;
+    return result;
+  };
+
+  const clearCache = () => {
+    cache = null;
+  };
+
+  return { calculate, clearCache };
+}
+```
+
+### **总结 ​**​
+
+在 Vue3 的 Hook 写法中，闭包的核心价值：
+
+1. ​**​ 隔离作用域 ​**​：每个 Hook 实例独立维护状态。
+2. ​**​ 封装私有逻辑 ​**​：隐藏内部实现细节，只暴露必要接口。
+3. ​**​ 性能优化 ​**​：通过缓存、防抖/节流等模式减少重复计算或操作。
+
+## 五、为什么都说需要谨慎的使用闭包
+
+百度一下，也不知道谁抄的谁，太多一模一样的文章。而我也是长期这么认为的。
+
+![截屏2023-02-07 00.17.30.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/85910b12a9fd4aa896b5c787b01cb0c7~tplv-k3u1fbpfcp-watermark.image?)
+
+根据我之前写的闭包的文章，闭包长期存在于 GO 当中，自然可能会占用内存，如果数量过多了，不就导致内存泄漏了么？
+
+看起来挺有道理的，这是因为我不懂啥啥叫[[内存泄漏]]而差产生的误解。所以我上网搜索到了如下的回答：
+
+<img width="500" src='https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f9739800df634a3595c75dc227179daa~tplv-k3u1fbpfcp-watermark.image?'/>
+
+<img width="500" src='https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/be8aed0b360d41e1a2a13bf144047e04~tplv-k3u1fbpfcp-watermark.image?'/>
+
+也就是说，对于闭包而言，造成内存泄漏的不是闭包本身，而是 IE 浏览器。
+
+也就是说，只要我在使用闭包的时候，只有主要及时的销毁作用域就可以了。拿 vue3 来举例的话，我们平时都是在 tsx 或者在.vue 组件中引入闭包，那么它就会随着这个组件的销毁而销毁，一般来说是不会产生闭包长期存在于 GO 的现象。
+
+所以平时该用就用，不需要顾虑那么多。
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
+            <title><![CDATA[IIFE]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/IIFE</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/IIFE</guid>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
+            <description><![CDATA[IIFE JavaScript ; (function test() {   var a = 1,     b = 2     console.log(a + b) })() console.log(test) // test 报错,立即执行函数执行完毕之后马上就进行了销毁. const b = (function(){   return 5 }()) // w3c的规范写法, 但是上面那种在写代码过程更加的常用,只要是容易识别 console.log(b) // 函数表达式才能够使用立即执行函数o function test1() {    console.log(1) }() // 报语法...]]></description>
+            <content:encoded><![CDATA[# IIFE
+
+```JavaScript
+
+; (function test() {
+  var a = 1,
+    b = 2
+    console.log(a + b)
+})()
+
+console.log(test) // test 报错,立即执行函数执行完毕之后马上就进行了销毁.
+
+const b = (function(){
+  return 5
+}()) // w3c的规范写法, 但是上面那种在写代码过程更加的常用,只要是容易识别
+
+console.log(b)
+
+// 函数表达式才能够使用立即执行函数o
+function test1() {
+   console.log(1)
+}() // 报语法错误
+
+const c = function test2() {
+  console.log(2)
+ }()
+
+ +function test3() {
+   console.log(3)
+ }()
+
+ 1 && function test3() {
+   console.log(3)
+ }()
+
+ undefined || function test3() {
+   console.log(3)
+ }()
+```
+
+就如《JavaScript 忍者秘籍》中对于`IIFE`的描述一样, 函数表达式 + () = 立即函数.
+
+所以有如下:
+
+```JavaScript
+const a = 1 + function() {return 3} () // 4
+```
+
+**w3c 的推荐写法：**
+
+```JavaScript
+(function(){}())
+```
+
+别的常用的写法：
+
+```JavaScript
+(function(){})()
+```
+
+以及在函数前面加上! && || - + 等符号也可以把函数声明变为函数表达式
+
+利用立即执行函数来解决因为闭包产生的相关问题。
+
+如闭包和循环中的图 1 中：
+
+```JavaScript
+function test() {
+  var arr = []
+
+  for(var i = 0; i < 10; i++) {
+    (function(j){
+      console.log(j) // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+    })(i)
+  }
+
+}
+```
+
+理解执行函数带来的作用域的问题
+
+```JavaScript
+(function fun() {
+    fun = 2
+    console.log(fun) // [Function fun]
+})()
+
+```
+
+> 据说这个的考点不是变量提升
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
+            <title><![CDATA[JavaScript中运算符优先级]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/JavaScript中运算符优先级</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/JavaScript中运算符优先级</guid>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
+            <description><![CDATA[- content   - JavaScript 中运算符优先级的问题？   - 优先级 是 结合的优先级，不是说谁的优先级高就先给谁求值。   - 结合是什么意思呢？可以理解成是加一个括号     <img src="https://pica.zhimg.com/50/v2-b2c09744a0088336494e8d9400d42065720w.jpg?source=1940ef5c" data-rawwidth="294" data-rawheight="60" class="contentimage" width="294"/>     上面的这条表达式，在执行的时候，可以看做是下面这...]]></description>
+            <content:encoded><![CDATA[- content
+
+  - JavaScript 中运算符优先级的问题？
+  - 优先级 是 结合的优先级，不是说谁的优先级高就先给谁求值。
+  - 结合是什么意思呢？可以理解成是加一个括号
+
+    <img src="https://pica.zhimg.com/50/v2-b2c09744a0088336494e8d9400d42065_720w.jpg?source=1940ef5c" data-rawwidth="294" data-rawheight="60" class="content_image" width="294"/>
+
+    上面的这条表达式，在执行的时候，可以看做是下面这样的，加个括号就很容易理解了吧
+
+    <img src="https://pic2.zhimg.com/50/v2-4ec5ec1989d20449e25b0850be0ea68e_720w.jpg?source=1940ef5c" data-rawwidth="313" data-rawheight="57" class="content_image" width="313"/>
+
+  - 可是你不能说加了括号就要先给你求值啊，还是要按照基本法！！！从左往右
+
+  - 这里还有个短路计算的概念， || 操作符左边的是 true 的话，这个表达式的结果就是 true，不管右边的值是 false 还是 true，所以它就不会去求右边的值；&& 正好反过来，详细看文档：
+
+  [ 逻辑运算符 - JavaScript](https://link.zhihu.com/?target=https%3A//developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
+
+  - 如果 fn01() 算出的结果是 true，那整个
+
+    [表达式](https://www.zhihu.com/search?q=%E8%A1%A8%E8%BE%BE%E5%BC%8F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129171248%7D)的结果就是 false，根本不会去求其他的值。
+
+    `false || false && true || true === false || (false && true) || true`
+
+  - 优先级是结合的优先级，不是说谁的优先级高就先给谁求值！！！
+
+  - 再通俗一点，看到谁的优先级高就给它加一个括号，就像这样：
+  - `1 + 2 * 3 === 1 + (2 * 3)`
+
+- Metadata
+  - Author: RednaxelaFX
+  - Link:[(2 条消息) JavaScript 中运算符优先级的问题？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/52116922)
+  - Publisher: [[知乎]]
+  - Date: [[2022-01-06]]
+  - Status: #waiting
+  - Tag:
+- content
+  - 前面的回答都说得挺好了。那我还是来放传送门：
+  - [虚拟机随谈（一）：解释器，树遍历解释器，基于栈与基于寄存器，大杂烩](https://link.zhihu.com/?target=http%3A//rednaxelafx.iteye.com/blog/492667)
+  - 题主要注意区分优先级、结合性、
+  - [求值顺序](https://www.zhihu.com/search?q=%E6%B1%82%E5%80%BC%E9%A1%BA%E5%BA%8F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)三者的区别。
+  - 这三个是不同的概念，却经常被混淆。通过 AST 来看就很容易理解：（假设源码是从左到右输入的）
+  - 所谓优先级，就是不同操作相邻出现时，
+  - [AST 节点](https://www.zhihu.com/search?q=AST%E8%8A%82%E7%82%B9&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)与根的距离的关系。优先级高的操作会更远离根，优先级低的操作会更接近根。为什么？因为整棵 AST 是以后序遍历求值的，显然节点离根越远就越早被求值。
+  - 所谓结合性，就是当同类操作相邻出现时，操作的先后顺序同 AST 节点与根的距离的关系。如果是左结合，则先出现的操作对应的 AST 节点比后出现的操作的节点离根更远；换句话说，先出现的节点会是后出现节点的子节点。
+  - 所谓求值顺序，就是在遍历子节点时的顺序。对二元运算对应的节点来说，先遍历
+  - [左子节点](https://www.zhihu.com/search?q=%E5%B7%A6%E5%AD%90%E8%8A%82%E7%82%B9&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)再遍历右子节点就是从左到右的求值顺序，反之则是从右到左的求值顺序。
+  - 这三个概念与运算的联系都很紧密，但实际描述的是不同的关系。前两者是
+  - [解析器](https://www.zhihu.com/search?q=%E8%A7%A3%E6%9E%90%E5%99%A8&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A129426603%7D)根据语法生成 AST 时就已经决定好的，后者则是解释执行或者生成代码而去遍历 AST 时决定的。
+  - 在没有副作用的环境中，给定优先级与结合性，则无论求值顺序是怎样的都能得到同样的结果；而在有副作用的环境中，求值顺序会影响结果。
+  - 题主可以看看您的代码对应的 AST 长啥样：
+  - [Esprima: Parser](https://link.zhihu.com/?target=http%3A//esprima.org/demo/parse.html)
+  - ，对照上面传送门所说的看看。
+  - 或者这个：
+  - [AST Visualization on browser](https://link.zhihu.com/?target=http%3A//nhiro.org/learn_language/AST-Visualization-on-browser.html)
+  - 对应 console.log(fn01() || fn02() && fn03())，AST 是：
+  - 具体到题主有疑问的那个地方，AST 是这样的：` || / \ fn01() && / \ fn02() fn03()`
+  - 表达式层面上，代码的执行就是后序遍历这棵 AST 而已。
+  - 优先级：在相邻的两个运算符 || 与 && 中，&& 比 || 离 AST 的根更远所以优先级更高
+  - 结合性：这里没有相邻的同优先级运算符所以展现不出 || 与 && 的结合性，虽然它们都是左结合的
+  - 求值顺序：JavaScript 的求值顺序就是从左向右的。对这棵 AST 来说就是在后序遍历时，每个节点的求值过程是先遍历左子树，再遍历右子树，然后对自己求值。
+  - 外加 || 与 && 的短路求值语义，如果左操作数已经足以求出结果则不会对右操作数求值
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
+            <title><![CDATA[generator和iterator]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/generator和iterator</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/JavaScriptCore/generator和iterator</guid>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
+            <description><![CDATA[generator 和 iterator  前言 最近重新现在看红宝书，总算知道为什么迭代器和生成器这两个概念为什么那么难理解了，根本原因是平时直接使用到的机会确实是非常的少，其次就是书上面为了介绍这两个概念使用了非常多的专业的名词来描述，而且相互穿插，能把人看睡着了都。下面简单的描述一下书中的介绍这两个概念的思路。  迭代器导读 在迭代器中，先介绍了迭代，在 ES6 之前 for 和 forEach 两个循环的问题，引出了迭代器模式。接下来就自然的介绍迭代器模式，它包含两个概念： 1. 第一个是可迭代协议，介绍了它具备的能力，以及实现它的必要条件，最后介绍了当前内置的类型都有那些实现了这个可...]]></description>
+            <content:encoded><![CDATA[# generator 和 iterator
+
+## 前言
+
+最近重新现在看红宝书，总算知道为什么迭代器和生成器这两个概念为什么那么难理解了，根本原因是平时直接使用到的机会确实是非常的少，其次就是书上面为了介绍这两个概念使用了非常多的专业的名词来描述，而且相互穿插，能把人看睡着了都。下面简单的描述一下书中的介绍这两个概念的思路。
+
+### 迭代器导读
+
+在迭代器中，先介绍了迭代，在 ES6 之前 for 和 forEach 两个循环的问题，引出了迭代器模式。接下来就自然的介绍迭代器模式，它包含两个概念：
+
+1. 第一个是可迭代协议，介绍了它具备的能力，以及实现它的必要条件，最后介绍了当前内置的类型都有那些实现了这个可迭代协议，并且可以接受这些内置类型的原生语言特使包括那些。
+2. 第二个是迭代器协议，介绍了它的基本概念和基本使用方法。了解了了迭代器的协议之后，也可以称呼它们为迭代器的接口，就介绍了自定义迭代器如何实现和一些细则。
+
+但是关于两个协议的关系和职责范围没有总结出来，导致了我对于他们的关系一直很模糊，经常混淆在一起。总结一下：
+
+| **协议类型 ​**​    | ​**​ 可迭代协议（Iterable Protocol）​**​        | ​**​ 迭代器协议（Iterator Protocol）​**​   |
+| ------------------ | ----------------------------------------------- | ------------------------------------------ |
+| ​**​ 目的 ​**​     | 定义对象如何被迭代（如 `for...of` 遍历）        | 定义如何按顺序访问元素（如 `next()` 方法） |
+| ​**​ 实现方法 ​**​ | 对象需实现 `[Symbol.iterator]()` 方法           | 对象需实现 `next()` 方法                   |
+| ​**​ 返回值 ​**​   | 返回一个 ​**​ 迭代器对象 ​**​（符合迭代器协议） | 返回 `{ value: T, done: boolean }` 对象    |
+| ​**​ 核心作用 ​**​ | ​**​ 声明对象可被迭代 ​**​                      | ​**​ 实际执行迭代过程 ​**​                 |
+
+### 生成器导读
+
+在生成器中，先介绍了生成器的写法，包含的元素和生命周期，存在暂停状态，存在`next()`方法，该方法返回的对象也是包含 done 属性和 value 属性。接下来介绍生成器最重要的组成部分：`yield`，被称为生成器最有用的地方。包括如下内容：
+
+1. 中断执行，异步变为同步的关键
+2.
+
+**生成器和迭代器的关系如下**：
+
+生成器是一种特殊的函数结构，它返回的对象是一个迭代器。生成器函数本质上是 JavaScript 语法规范提供的一种**用户自定义的迭代器工厂函数**。
+
+> 生成器（Generator）**不是基于 ES5 的语法糖**，而是 **ES6（ECMAScript 2015）引入的基础语言规范**，需要 JavaScript 引擎在底层实现支持。
+
+## 资料
+
+- [(1 封私信 / 9 条消息) es6 generator 到底有什么用？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/55810122/answer/1988210728)
+- [Rx.js 思想入门（讲义） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/34481617)
+  - generator 是 ES 对迭代器的实现，迭代器源于设计模式。(这个事关 generator 怎么来的)，我们想知道 generator 有什么的本质其实是了解迭代器有什么作用。
+
+# generator 和 iterator
+
+![[截屏2022-01-30 02.22.26.png]]
+这句感觉啥都没有说. 怎么写法就复杂了,怎么就枯燥了. 复杂体现在哪里?枯燥体现在哪里?如何手抖产生 bug 的.现在的人出教程都这么随意的么?
+
+这个例子出自于《JavaScript 高级程序设计》第五版，是为了说明在迭代器这个规范出来之前 ES 处理迭代的一个历史，有两个阶段，一个如图中使用到 for 循环，另外一个就是 forEach 更加函数式的写法。
+
+for 循环的凡事得出的结论也不是图中的两点，而是：
+
+1. 迭代之前需要事先知道如何使用数据结构。
+2. 遍历顺序并不是数据结构固有的。
+
+## 1.总结一下在此之前的 7 组遍历的方法
+
+- forEach -> 普通的数组遍历
+- map -> 映射, 每一次遍历,返回 bool.来决定当前元素是否纳入新的数组
+- filter -> 过滤, 每一次遍历,返回 bool,来决定当前元素是否纳入新的数组
+- reduce -> 归纳, 每一次遍历,将挡元素收归到容器中
+- reduceRight -> reduce 的反向操作
+- every -> 判定是否所有元素都符合一个条件
+- some -> 判定是否有某一个或多个符合一个条件
+
+> async 是 Generator 的语法糖，在 Generator 基础上封装的
+
+## 2. 手写 iterator
+
+```js
+const arr = ["姓名: 小野", "年龄: 28", "爱好: 我爱JavaScript"];
+function getIterator(arr) {
+  let i = 0;
+  return {
+    next() {
+      return {
+        value: arr[i++],
+        done: i > arr.length,
+      };
+    },
+  };
+}
+
+const iterator = getIterator(arr);
+console.log(iterator.next()); // {value: 姓名: 小野, done: false}
+console.log(iterator.next()); // {value: 年龄: 28, done: false}
+console.log(iterator.next()); // {value: 爱好: 我爱JavaScript, done: false}
+console.log(iterator.next()); // {value: undefined, done: true}
+```
+
+## 3. ES6 提供的 Generator 方法
+
+```js
+function* createIterator(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    yield arr[i];
+  }
+}
+
+const iterator1 = createIterator(arr);
+console.log(iterator.next()); // {value: 姓名: 小野, done: false}
+console.log(iterator.next()); // {value: 年龄: 28, done: false}
+console.log(iterator.next()); // {value: 爱好: 我爱JavaScript, done: false}
+console.log(iterator.next()); // {value: undefined, done: true}
+```
+
+**基本构成就是\* 加上 yield.**
+
+## 4. Generator 实现 async 的写法
+
+大佬写的文章还是不错的 https://juejin.cn/post/6844903599529541645
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
+        <item>
             <title><![CDATA[Java 学习路线-前端功利性]]></title>
             <link>https://wyc7758775.github.io/yoran-secret//posts/Java/Java 学习路线-前端功利性</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret//posts/Java/Java 学习路线-前端功利性</guid>
-            <pubDate>Tue, 26 Aug 2025 13:13:32 GMT</pubDate>
+            <pubDate>Thu, 28 Aug 2025 12:16:47 GMT</pubDate>
             <description><![CDATA[Java 学习路线-前端功利性  符号表 可以通过路线知识点前的表情字符，根据自己的实际情况选择学习： - 🌕 必须学习！！！ - 🌖 非常急着找工作，才可不学；目标大厂，必须学习！ - 🌗 急着找工作的话，可不学；目标大厂，建议学习 - 🌘 时间充足的话，再去学 - ⭐ 表示推荐资源  前言 首先呢，我们要了解 Java 的应用场景和就业方向，看看和自己的学习目的是否一致。 目前，Java 由于其优秀的特性以及火爆的生态，岗位需求量大，是后台开发、安卓开发、大数据开发的主流编程语言，因此学习资源也很丰富，值得学习！  阶段 1：编程语言基础  目标 培养兴趣、快速上手，能运行和编写简...]]></description>
             <content:encoded><![CDATA[# Java 学习路线-前端功利性
 
