@@ -2,6 +2,9 @@
   "name": "font-end",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "main": "index.js",
   "scripts": {
     "blog:dev": "pnpm run -C packages/blog dev",
@@ -15,9 +18,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^2.3.1",
     "@unocss/reset": "^66.4.1",
-    "element-plus": "^2.10.5",
     "github-markdown-css": "^5.8.1",
     "highlight.js": "^11.11.1",
     "markdown-it": "^14.1.0",
@@ -25,9 +26,6 @@
     "vue": "^3.5.13",
     "vue-router": "^4.5.1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@antfu/eslint-config": "^5.2.1",
     "@typescript-eslint/eslint-plugin": "^8.38.0",
