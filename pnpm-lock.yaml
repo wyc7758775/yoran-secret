@@ -8,15 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@element-plus/icons-vue':
-        specifier: ^2.3.1
-        version: 2.3.2(vue@3.5.18(typescript@5.7.3))
       '@unocss/reset':
         specifier: ^66.4.1
         version: 66.4.1
-      element-plus:
-        specifier: ^2.10.5
-        version: 2.10.5(vue@3.5.18(typescript@5.7.3))
       github-markdown-css:
         specifier: ^5.8.1
         version: 5.8.1
