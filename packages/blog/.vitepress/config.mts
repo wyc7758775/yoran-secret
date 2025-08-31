@@ -1,32 +1,31 @@
-import { defineConfig } from "vitepress";
-import UnoCSS from "unocss/vite";
-import sidebar from "./router/sidebar.json";
-import unocssConfig from "./unocss.config.ts";
-import configHead from './configHead.ts'
+import UnoCSS from 'unocss/vite'
+import { defineConfig } from 'vitepress'
 // 导入 RSS 插件
-import rssPlugin from '../../plugin-rss/index.ts';
+import rssPlugin from '../../plugin-rss/index.ts'
+import configHead from './configHead.ts'
 // 导入 HTML Hash 插件
-import htmlHashPlugin from './plugins/html-hash-plugin.ts';
+import sidebar from './router/sidebar.json'
+import unocssConfig from './unocss.config.ts'
 
 // 从 package.json 获取站点信息
 const packageInfo = {
   author: 'Yoran Wu',
-  siteUrl: 'https://wyc7758775.github.io/yoran-secret/' // 替换为你的实际站点URL
-};
+  siteUrl: 'https://wyc7758775.github.io/yoran-secret/', // 替换为你的实际站点URL
+}
 
 export default defineConfig({
-  title: " Yoran Wu",
-  description: " 个人学习总结记录",
-  base: "/yoran-secret/",
+  title: ' Yoran Wu',
+  description: ' 个人学习总结记录',
+  base: '/yoran-secret/',
   head: configHead as any,
   themeConfig: {
     nav: [
-      { text: "Yoran", link: "/" },
-      { text: "Posts", link: sidebar[0].items[0].link },
-      { text: "Observer", link: "/observing" },
-      { text: "Gallery", link: "/gallery" },
+      { text: 'Yoran', link: '/' },
+      { text: 'Posts', link: sidebar[0].items[0].link },
+      { text: 'Observer', link: '/observing' },
+      { text: 'Gallery', link: '/gallery' },
     ],
-    sidebar: sidebar
+    sidebar,
   },
   vite: {
     plugins: [
@@ -38,24 +37,24 @@ export default defineConfig({
         description: '个人学习总结记录',
         author: {
           name: packageInfo.author,
-          email: '295563358@qq.com' // 替换为你的邮箱
+          email: '295563358@qq.com', // 替换为你的邮箱
         },
-        contentDir: 'posts'
-      })
+        contentDir: 'posts',
+      }),
     ],
-    assetsInclude: ["**/assets/**"],
+    assetsInclude: ['**/assets/**'],
     resolve: {
       alias: {
-        "@assets": "/Users/wuyucun/programmer/font-end/packages/blog/assets",
+        '@assets': '/Users/wuyucun/programmer/font-end/packages/blog/assets',
       },
     },
     build: {
       sourcemap: false,
       rollupOptions: {
         output: {
-          assetFileNames: "assets/[name]-[hash][extname]"
+          assetFileNames: 'assets/[name]-[hash][extname]',
         },
-      }
-    }
+      },
+    },
   },
-});
+})
