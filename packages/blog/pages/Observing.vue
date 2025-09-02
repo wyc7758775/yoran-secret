@@ -127,6 +127,7 @@ function otherArticle() {
             <!-- 热门文章1 -->
             <div
               v-for="value in otherArticle()"
+              :key="value.src"
               class="group cursor-pointer"
               @click="navigateToDetail(value)"
             >

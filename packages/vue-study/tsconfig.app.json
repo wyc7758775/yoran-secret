@@ -5,9 +5,9 @@
 
     /* Linting */
     "strict": true,
+    "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/components/ApiExamples/web-worker-test.js", "src/hooks/tree-data-handler.ts", "src/hooks/extend-worker.ts"]

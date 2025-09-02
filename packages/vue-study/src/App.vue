@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ApiExamples from "./components/index.vue";
+import ApiExamples from './components/index.vue'
 </script>
 
 <template>

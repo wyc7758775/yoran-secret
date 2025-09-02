@@ -1,3 +1,9 @@
+<script setup>
+import { ref } from 'vue'
+
+const message = ref('<h2>hello world</h2>')
+</script>
+
 <template>
   <div>
     <p>v-text 指令：{{ message }}</p>
@@ -10,8 +16,3 @@
     </div>
   </div>
 </template>
-<script setup>
-import { ref } from "vue";
-
-const message = ref("<h2>hello world</h2>");
-</script>

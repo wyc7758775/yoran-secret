@@ -1,3 +1,11 @@
+<script setup>
+import { ref } from 'vue'
+import SlotChild from './v-slot-child-demo.vue'
+
+const dynamicSlotName = ref('笑死')
+const dynamicSlotName2 = ref('作用域插槽')
+</script>
+
 <template>
   <div>
     <h1>v-slot 插槽的使用</h1>
@@ -21,7 +29,7 @@
       <h2>2. 具名插槽</h2>
       <p>具名插槽的内容会被渲染到插槽的位置</p>
       <SlotChild>
-        <template v-slot:header>
+        <template #header>
           <div>
             <h3>2.1 带 template 具名插槽的内容1</h3>
           </div>
@@ -32,7 +40,7 @@
       <h2>3. 动态插槽名</h2>
       <p>动态插槽名的内容会被渲染到插槽的位置</p>
       <SlotChild>
-        <template v-slot:[dynamicSlotName]>
+        <template #[dynamicSlotName]>
           <div>
             <h3>3.1 笑死传进来的内容</h3>
           </div>
@@ -49,10 +57,3 @@
     </div>
   </div>
 </template>
-<script setup>
-import { ref } from "vue";
-import SlotChild from "./v-slot-child-demo.vue";
-
-const dynamicSlotName = ref("笑死");
-const dynamicSlotName2 = ref("作用域插槽");
-</script>

@@ -13,7 +13,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.vue",
-    "vue-shim.d.ts",
-    ".vitepress/**/*.ts"
+    ".vitepress/**/*.ts",
+    "../../global.d.ts"
   ]
 }

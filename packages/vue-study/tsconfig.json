@@ -1,13 +1,19 @@
 {
-  "files": [],
   "compilerOptions": {
-    "module": "es2020",
-    "moduleResolution": "node",
-    "target": "es2020",
-    "types": ["node"]
+    "target": "ES2020",
+    "jsx": "preserve",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.vue",
+    ".vitepress/**/*.ts",
+    "../../global.d.ts"
   ]
 }

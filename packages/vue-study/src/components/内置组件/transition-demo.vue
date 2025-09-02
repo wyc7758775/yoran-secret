@@ -1,7 +1,47 @@
+<script setup>
+import { ElButton } from 'element-plus'
+import { ref, Transition, TransitionGroup } from 'vue'
+
+/**
+ * transitionGroup 组件
+ */
+const list = ref([1, 2, 3, 4, 5])
+function add() {
+  list.value.push(list.value.length + 1)
+}
+function remove() {
+  list.value.pop()
+}
+
+/**
+ * transition 组件
+ */
+const show = ref(true)
+function beforeLeave(el) {
+  el.style.color = 'red'
+  console.log('beforeLeave')
+}
+function afterLeave(el) {
+  el.style.color = 'black'
+  console.log('afterLeave')
+}
+function afterEnter(el) {
+  el.style.color = 'black'
+  console.log('afterEnter')
+}
+
+function beforeEnter(el) {
+  el.style.color = 'red'
+  console.log('beforeEnter')
+}
+</script>
+
 <template>
   <div>
     <h2>transition 组件</h2>
-    <el-button @click="show = !show">切换</el-button>
+    <ElButton @click="show = !show">
+      切换
+    </ElButton>
     <Transition
       name="fade"
       @before-enter="beforeEnter"
@@ -14,56 +54,28 @@
       </div>
     </Transition>
     <h2>transitionGroup 组件</h2>
-    <el-button @click="add">添加</el-button>
-    <el-button @click="remove">删除</el-button>
+    <ElButton @click="add">
+      添加
+    </ElButton>
+    <ElButton @click="remove">
+      删除
+    </ElButton>
     <TransitionGroup name="fadeTransform">
-      <div v-for="item in list" :key="item">{{ item }}</div>
+      <div v-for="item in list" :key="item">
+        {{ item }}
+      </div>
     </TransitionGroup>
 
     <Transition name="fadeTransform">
       <div>
-        <div v-for="item in list" :key="item">{{ item }}</div>
+        <div v-for="item in list" :key="item">
+          {{ item }}
+        </div>
       </div>
     </Transition>
   </div>
 </template>
-<script setup>
-import { ref, Transition, TransitionGroup } from "vue";
-import { ElButton } from "element-plus";
 
-/**
- * transitionGroup 组件
- */
-const list = ref([1, 2, 3, 4, 5]);
-const add = () => {
-  list.value.push(list.value.length + 1);
-};
-const remove = () => {
-  list.value.pop();
-};
-
-/**
- * transition 组件
- */
-const show = ref(true);
-const beforeLeave = (el) => {
-  el.style.color = "red";
-  console.log("beforeLeave");
-};
-const afterLeave = (el) => {
-  el.style.color = "black";
-  console.log("afterLeave");
-};
-const afterEnter = (el) => {
-  el.style.color = "black";
-  console.log("afterEnter");
-};
-
-const beforeEnter = (el) => {
-  el.style.color = "red";
-  console.log("beforeEnter");
-};
-</script>
 <style>
 /* 进入阶段：从隐藏到显示 */
 .fade-enter-from {
