@@ -124,7 +124,7 @@ export const useCounterStore = defineStore('counter', () => {
 
 ---
 
-## Part 2: 精心设计的 Pinia 架构实例
+## Part 2: Pinia 项目实践
 
 下面是一个符合企业级应用标准的 Pinia 架构示例：
 
@@ -521,16 +521,3 @@ const handleLogin = async (credentials: LoginCredentials) => {
 }
 </script>
 ```
-
-## 架构设计要点总结
-
-1. **关注点分离**：API 调用与状态管理分离
-2. **类型安全**：完整的 TypeScript 支持
-3. **模块化设计**：按业务功能划分 stores
-4. **错误处理**：统一的错误处理机制
-5. **Store 间通信**：合理地在 actions 中调用其他 stores
-6. **插件系统**：可扩展的插件机制
-7. **持久化策略**：选择性的状态持久化
-8. **初始化流程**：应用启动时的状态初始化
-
-这个架构提供了良好的可维护性、可测试性和可扩展性，适合中大型 Vue.js 项目。

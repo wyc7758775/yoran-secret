@@ -19,10 +19,10 @@ MVC 是 `Model`、`View`、`Controller` 三个的缩写合并而成.
 
 ```js
 (function () {
-  const Model = {};
-  const View = {};
-  const Controller = {};
-})();
+  const Model = {}
+  const View = {}
+  const Controller = {}
+})()
 ```
 
 三者各司其职, 现在添加一些默认相上去,以使它们能够启动.
@@ -59,23 +59,23 @@ MVC 是 `Model`、`View`、`Controller` 三个的缩写合并而成.
 ```js
 const Model = {
   data: {
-    name: "橘子哥哥",
+    name: '橘子哥哥',
     age: 18,
   },
   init() {
     for (let key in this.data) {
       Object.defineProperty(this, key, {
         get() {
-          return this.data[key];
+          return this.data[key]
         },
         set(newValue) {
-          this.data[key] = newValue;
+          this.data[key] = newValue
           // View.render({[key]: newValue})
         },
-      });
+      })
     }
   },
-};
+}
 ```
 
 我们对`Model`来进行初始化,就是为了让外面的可以直接通过`Model.name` 就能够访问到内容的 data 对象中定义的值. 而多出一个 data 来包裹着变量, 主要是为了增加代码的可读性.让数据和方法分离.
@@ -90,7 +90,7 @@ const Model = {
 
 ```js
 const View = {
-  el: "#app",
+  el: '#app',
   template: `
         <div class="box">
              <div class="cal-name">{{ name }}</div>
@@ -106,19 +106,20 @@ const View = {
   render(mutedData) {
     if (!mutedData) {
       this.template = this.template.replace(this.reg, (node, key) => {
-        return model[key.trim()];
-      });
+        return model[key.trim()]
+      })
 
-      const container = document.createElement("div");
-      container.innerHTML = this.template;
-      document.querySelector(this.el).appendChild(container);
-    } else {
+      const container = document.createElement('div')
+      container.innerHTML = this.template
+      document.querySelector(this.el).appendChild(container)
+    }
+    else {
       for (let key in mutedData) {
-        document.querySelector(`.cal-${key}`).textContent = mutedData[key];
+        document.querySelector(`.cal-${key}`).textContent = mutedData[key]
       }
     }
   },
-};
+}
 ```
 
 `el`的命名和作用和`Vue`框架中的保持一致.目的也一目了然.就是把我们要渲染的内容都挂载在 id 为`app`的标签中.
@@ -132,26 +133,26 @@ const View = {
 ```js
 const Controller = {
   init() {
-    const oCalButtons = document.querySelectorAll(".cal-button");
+    const oCalButtons = document.querySelectorAll('.cal-button')
 
     for (let i = 0; i < oCalButtons.length; i++) {
-      btnItem = oCalButtons[i];
-      btnItem.addEventListener("click", this.handleBtnClick, false);
+      btnItem = oCalButtons[i]
+      btnItem.addEventListener('click', this.handleBtnClick, false)
     }
   },
   handleBtnClick(e) {
     switch (e.target.textContent) {
-      case "+":
-        model.age++;
-        break;
-      case "-":
-        model.age--;
-        break;
+      case '+':
+        model.age++
+        break
+      case '-':
+        model.age--
+        break
       default:
-        break;
+        break
     }
   },
-};
+}
 ```
 
 1. `init`绑定上点击事件
@@ -163,33 +164,33 @@ const Controller = {
 ```js
 (function () {
   function init() {
-    model.init();
-    view.render();
-    controller.init();
+    model.init()
+    view.render()
+    controller.init()
   }
 
   const model = {
     data: {
-      name: "橘子哥哥",
+      name: '橘子哥哥',
       age: 19,
     },
     init() {
       for (let key in this.data) {
         Object.defineProperty(this, key, {
           get() {
-            return this.data[key];
+            return this.data[key]
           },
           set(newValue) {
-            this.data[key] = newValue;
-            view.render({ [key]: newValue }); // ❌
+            this.data[key] = newValue
+            view.render({ [key]: newValue }) // ❌
           },
-        });
+        })
       }
     },
-  };
+  }
 
   const view = {
-    el: "#app",
+    el: '#app',
     template: `
 	        <div class="box">
 	          <div class="cal-name">{{ name }}</div>
@@ -205,44 +206,45 @@ const Controller = {
     render(mutedData) {
       if (!mutedData) {
         this.template = this.template.replace(this.reg, (node, key) => {
-          return model[key.trim()];
-        });
-        const container = document.createElement("div");
-        container.innerHTML = this.template;
-        document.querySelector(this.el).appendChild(container);
-      } else {
+          return model[key.trim()]
+        })
+        const container = document.createElement('div')
+        container.innerHTML = this.template
+        document.querySelector(this.el).appendChild(container)
+      }
+      else {
         for (const key in mutedData) {
-          document.querySelector(`.cal-${key}`).textContent = mutedData[key];
+          document.querySelector(`.cal-${key}`).textContent = mutedData[key]
         }
       }
     },
-  };
+  }
 
   const controller = {
     init() {
-      const oCalButtons = document.querySelectorAll(".cal-button");
+      const oCalButtons = document.querySelectorAll('.cal-button')
 
       for (let i = 0; i < oCalButtons.length; i++) {
-        btnItem = oCalButtons[i];
-        btnItem.addEventListener("click", this.handleBtnClick, false);
+        btnItem = oCalButtons[i]
+        btnItem.addEventListener('click', this.handleBtnClick, false)
       }
     },
     handleBtnClick(e) {
       switch (e.target.textContent) {
-        case "+":
-          model.age++;
-          break;
-        case "-":
-          model.age--;
-          break;
+        case '+':
+          model.age++
+          break
+        case '-':
+          model.age--
+          break
         default:
-          break;
+          break
       }
     },
-  };
+  }
 
-  init();
-})();
+  init()
+})()
 ```
 
 整个代码就是很典型的 MVC 结构的代码,在`Model`中定义参数之余,还要监听参数的变化,来进行界面的渲染.根据代码可以得出这样的一张图:
