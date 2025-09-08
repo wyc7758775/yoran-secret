@@ -26,6 +26,7 @@ export default defineConfig({
       { text: 'Gallery', link: '/gallery' },
     ],
     sidebar,
+    socialLinks: [{ icon: 'github', link: 'https://github.com/wyc7758775' }],
   },
   vite: {
     plugins: [
