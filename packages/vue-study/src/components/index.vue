@@ -36,10 +36,26 @@ import ToRawDemo from './进阶性API/toRaw-demo.vue'
 import 'element-plus/dist/index.css'
 
 const activeName = ref('first')
+
+// 注意：这里是基本数据类型的数组，不是对象数组
+const testCount = ref([1, 2, 3, 4])
+
+function deleteTest() {
+  testCount.value.splice(1, 1) // 删除第二个元素
+}
 </script>
 
 <template>
   <h1>Vue3 API 学习示例</h1>
+  <button @click="deleteTest">
+    删除第二个
+  </button>
+
+  <!-- 使用索引作为key - 会有问题 -->
+  <div v-for="(item, index) in testCount" :key="index">
+    <input :placeholder="`输入项目${item}的名称`">
+    <span>值: {{ item }}</span>
+  </div>
   <div id="body" />
   <ElTabs v-model="activeName">
     <ElTabPane label="进阶性API" name="first">
