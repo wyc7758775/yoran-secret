@@ -5,13 +5,13 @@ export default [
     {
       rel: "icon",
       type: "image/svg+xml",
-      href: "/yoran-secret/profile.svg",
+      href: "/yoran-secret/pikachu.svg",
     },
   ],
   [
     "link",
     {
-      rel: "dns-prefetch preload",
+      rel: "dns-prefetch",
       href: "//cdn.jsdelivr.net",
     },
   ],
@@ -20,18 +20,6 @@ export default [
     {
       rel: "stylesheet",
       href: "//cdn.jsdelivr.net/npm/element-plus/dist/index.css",
-    },
-  ],
-  [
-    "script",
-    {
-      src: "//cdn.jsdelivr.net/npm/element-plus",
-    },
-  ],
-  [
-    "script",
-    {
-      src: "//unpkg.com/@element-plus/icons-vue",
     },
   ],
   [

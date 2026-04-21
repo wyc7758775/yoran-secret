@@ -60,3 +60,26 @@ body,
     var(--un-backdrop-opacity) var(--un-backdrop-saturate)
     var(--un-backdrop-sepia);
 }
+
+/* 优化 Posts 侧边栏滚动条 */
+.VPSidebar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--vp-c-divider) transparent;
+}
+
+.VPSidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.VPSidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb {
+  background-color: var(--vp-c-divider);
+  border-radius: 4px;
+}
+
+.dark .VPSidebar::-webkit-scrollbar-thumb {
+  background-color: var(--vp-c-divider-dark-2);
+}

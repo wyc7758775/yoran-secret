@@ -28,6 +28,13 @@ export default defineConfig({
     sidebar,
     socialLinks: [{ icon: 'github', link: 'https://github.com/wyc7758775' }],
   },
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: tag => tag === 'font',
+      },
+    },
+  },
   vite: {
     plugins: [
       UnoCSS(unocssConfig),
