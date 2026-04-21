@@ -2,6 +2,19 @@ import fs from "fs";
 import path from "path";
 import { Feed } from "feed";
 import matter from "gray-matter";
+import { marked } from "marked";
+
+/**
+ * 清理 XML 非法字符
+ * XML 规范不允许以下字符：
+ * U+0000-U+0008, U+000B-U+000C, U+000E-U+001F, U+D800-U+DFFF, U+FFFE-U+FFFF
+ */
+function sanitizeXml(text: string): string {
+  return text.replace(
+    /[\x00-\x08\x0B\x0C\x0E-\x1F\uD800-\uDFFF\uFFFE\uFFFF]/g,
+    ""
+  );
+}
 
 const baseUrl = "https://wyc7758775.github.io/yoran-secret/";
 const authorName = "Yoran";
@@ -42,7 +55,7 @@ interface Article {
  * 输出包接口
  */
 interface OutputBundle {
-  [key: string]: { 
+  [key: string]: {
     type: string;
     name?: string;
     source: string;
@@ -51,21 +64,12 @@ interface OutputBundle {
 }
 
 /**
- * Vite插件接口
- */
-interface VitePlugin {
-  name: string;
-  enforce: string;
-  generateBundle: (options: any, bundle: OutputBundle) => Promise<void>;
-}
-
-/**
  * VitePress RSS 插件
  * 用于生成博客的RSS订阅源
  * @param options 插件配置选项
  * @returns Vite插件对象
  */
-export default function rssPlugin(options: Record<string, any> = {}): VitePlugin {
+export default function rssPlugin(options: Record<string, any> = {}) {
   // 默认配置
   const defaultOptions: Required<RssPluginOptions> = {
     baseUrl,
@@ -86,63 +90,37 @@ export default function rssPlugin(options: Record<string, any> = {}): VitePlugin
 
   const config: Required<RssPluginOptions> = { ...defaultOptions, ...options };
 
+  // 标准化 baseUrl，去除尾部斜杠
+  const normalizedBaseUrl = config.baseUrl.replace(/\/$/, "");
+
   return {
     name: "vitepress-plugin-rss",
-    enforce: "post",
-    async generateBundle(_: any, bundle: OutputBundle): Promise<void> {
-      try {
-        // 创建Feed实例
-        const feed = new Feed({
-          title: config.title,
-          description: config.description,
-          id: config.baseUrl,
-          link: config.baseUrl,
-          language: "zh-CN",
-          image: `${config.baseUrl}/favicon.ico`,
-          favicon: `${config.baseUrl}/favicon.ico`,
-          copyright: `All rights reserved ${new Date().getFullYear()}, ${config.author.name}`,
-          author: config.author,
-        });
+    enforce: "post" as const,
 
-        // 读取所有文章文件
-        const postsDir = path.resolve(process.cwd(), config.contentDir);
-        const articles = await collectArticles(postsDir, config);
-
-        // 按发布日期排序，最新的在前
-        articles.sort((a: Article, b: Article) => b.date.getTime() - a.date.getTime());
-
-        // 添加文章到Feed
-        for (const article of articles) {
-          // 获取文章内容的纯文本摘要（前300个字符）
-          const plainText = article.content
-            .replace(/\[(.+?)\]\(.+?\)/g, "$1") // 移除链接
-            .replace(/[#*_~`]/g, "") // 移除Markdown标记
-            .replace(/\n+/g, " ") // 替换换行符为空格
-            .trim();
-
-          const summary = 
-            plainText.length > 300
-              ? plainText.substring(0, 300) + "..."
-              : plainText;
-
-          // 构建文章链接
-          const articleLink = `${config.baseUrl}${article.link}`;
-
-          // 添加到Feed
-          feed.addItem({
-            title: article.title,
-            id: articleLink,
-            link: articleLink,
-            description: summary,
-            content: article.content,
-            author: [config.author],
-            contributor: [config.author],
-            date: article.date,
-          });
+    async configureServer(server: any) {
+      server.middlewares.use(async (req: any, res: any, next: any) => {
+        const url = req.url || "";
+        // 支持 /rss.xml 和 /yoran-secret/rss.xml 两种路径
+        if (url === "/rss.xml" || url === "/yoran-secret/rss.xml") {
+          try {
+            const rssXml = await generateRssXml(config, normalizedBaseUrl);
+            res.setHeader("Content-Type", "application/rss+xml; charset=utf-8");
+            res.end(rssXml);
+            return;
+          } catch (error: any) {
+            console.error("❌ Failed to serve RSS feed:", error);
+            res.statusCode = 500;
+            res.end("Internal Server Error");
+            return;
+          }
         }
+        next();
+      });
+    },
 
-        // 生成XML格式的RSS
-        const rssXml = feed.rss2();
+    async generateBundle(_: any, bundle: OutputBundle) {
+      try {
+        const rssXml = await generateRssXml(config, normalizedBaseUrl);
 
         // 将RSS内容添加到输出包中
         bundle["rss.xml"] = {
@@ -158,6 +136,69 @@ export default function rssPlugin(options: Record<string, any> = {}): VitePlugin
       }
     },
   };
+}
+
+/**
+ * 生成 RSS XML 字符串
+ */
+async function generateRssXml(
+  config: Required<RssPluginOptions>,
+  normalizedBaseUrl: string
+): Promise<string> {
+  // 创建Feed实例
+  const feed = new Feed({
+    title: config.title,
+    description: config.description,
+    id: normalizedBaseUrl,
+    link: normalizedBaseUrl,
+    language: "zh-CN",
+    image: `${normalizedBaseUrl}/pikachu.svg`,
+    favicon: `${normalizedBaseUrl}/pikachu.svg`,
+    copyright: `All rights reserved ${new Date().getFullYear()}, ${config.author.name}`,
+    author: config.author,
+  });
+
+  // 读取所有文章文件
+  const postsDir = path.resolve(process.cwd(), config.contentDir);
+  const articles = await collectArticles(postsDir, config);
+
+  // 按发布日期排序，最新的在前
+  articles.sort((a: Article, b: Article) => b.date.getTime() - a.date.getTime());
+
+  // 添加文章到Feed
+  for (const article of articles) {
+    // 将 Markdown 转为 HTML
+    const htmlContent = marked.parse(article.content) as string;
+
+    // 获取文章内容的纯文本摘要（前300个字符）
+    const plainText = htmlContent
+      .replace(/<[^>]+>/g, "") // 移除 HTML 标签
+      .replace(/\s+/g, " ") // 合并空白字符
+      .trim();
+
+    const summary =
+      plainText.length > 300
+        ? plainText.substring(0, 300) + "..."
+        : plainText;
+
+    // 构建文章链接（避免双斜杠）
+    const articleLink = `${normalizedBaseUrl}${article.link}`;
+
+    // 添加到Feed
+    feed.addItem({
+      title: article.title,
+      id: articleLink,
+      link: articleLink,
+      description: summary,
+      content: htmlContent,
+      author: [config.author],
+      contributor: [config.author],
+      date: article.date,
+    });
+  }
+
+  // 生成XML格式的RSS并清理非法字符
+  return sanitizeXml(feed.rss2());
 }
 
 /**
@@ -182,8 +223,9 @@ async function collectArticles(dir: string, config: Required<RssPluginOptions>):
         await readDir(fullPath);
       } else if (entry.isFile() && path.extname(entry.name) === ".md") {
         // 读取Markdown文件内容
-        const content = await fs.promises.readFile(fullPath, "utf-8");
-        const { data } = matter(content);
+        const rawContent = await fs.promises.readFile(fullPath, "utf-8");
+        const fileContent = sanitizeXml(rawContent);
+        const { data, content: mdContent } = matter(fileContent);
 
         // 提取文章标题（从文件名或frontmatter中）
         const title = data.title || path.basename(entry.name, ".md");
@@ -191,7 +233,7 @@ async function collectArticles(dir: string, config: Required<RssPluginOptions>):
         // 提取发布日期
         const date = data.date
           ? new Date(data.date)
-          : config.publishedDateExtractor(content);
+          : config.publishedDateExtractor(fileContent);
 
         // 构建文章链接（基于文件路径）
         const relativePath = path.relative(
@@ -205,7 +247,7 @@ async function collectArticles(dir: string, config: Required<RssPluginOptions>):
 
         articles.push({
           title: title as string,
-          content,
+          content: mdContent,
           date,
           link,
         });

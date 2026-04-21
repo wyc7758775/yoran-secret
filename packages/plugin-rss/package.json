@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "feed": "^5.1.0",
-    "gray-matter": "^4.0.3"
+    "gray-matter": "^4.0.3",
+    "marked": "^18.0.2"
   }
 }
