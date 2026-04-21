@@ -1,4 +1,4 @@
-// node_modules/@vue/shared/dist/shared.esm-bundler.js
+// ../../node_modules/.pnpm/@vue+shared@3.5.18/node_modules/@vue/shared/dist/shared.esm-bundler.js
 function makeMap(str) {
   const map2 = /* @__PURE__ */ Object.create(null);
   for (const key of str.split(",")) map2[key] = 1;
@@ -319,7 +319,7 @@ function normalizeCssVarValue(value) {
   return String(value);
 }
 
-// node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js
+// ../../node_modules/.pnpm/@vue+reactivity@3.5.18/node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js
 function warn(msg, ...args) {
   console.warn(`[Vue warn] ${msg}`, ...args);
 }
@@ -1240,13 +1240,7 @@ var MutableReactiveHandler = class extends BaseReactiveHandler {
       }
       if (!isArray(target) && isRef2(oldValue) && !isRef2(value)) {
         if (isOldValueReadonly) {
-          if (true) {
-            warn(
-              `Set operation on key "${String(key)}" failed: target is readonly.`,
-              target[key]
-            );
-          }
-          return true;
+          return false;
         } else {
           oldValue.value = value;
           return true;
@@ -2104,7 +2098,7 @@ function traverse(value, depth = Infinity, seen) {
   return value;
 }
 
-// node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js
+// ../../node_modules/.pnpm/@vue+runtime-core@3.5.18/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js
 var stack = [];
 function pushWarningContext(vnode) {
   stack.push(vnode);
@@ -2589,9 +2583,7 @@ function rerender(id, newRender) {
     }
     instance.renderCache = [];
     isHmrUpdating = true;
-    if (!(instance.job.flags & 8)) {
-      instance.update();
-    }
+    instance.update();
     isHmrUpdating = false;
   });
 }
@@ -3653,7 +3645,7 @@ function setRef(rawRef, oldRawRef, parentSuspense, vnode, isUnmount = false) {
   const refs = owner.refs === EMPTY_OBJ ? owner.refs = {} : owner.refs;
   const setupState = owner.setupState;
   const rawSetupState = toRaw(setupState);
-  const canSetSetupRef = setupState === EMPTY_OBJ ? NO : (key) => {
+  const canSetSetupRef = setupState === EMPTY_OBJ ? () => false : (key) => {
     if (true) {
       if (hasOwn(rawSetupState, key) && !isRef2(rawSetupState[key])) {
         warn$1(
@@ -3666,9 +3658,6 @@ function setRef(rawRef, oldRawRef, parentSuspense, vnode, isUnmount = false) {
     }
     return hasOwn(rawSetupState, key);
   };
-  const canSetRef = (ref22) => {
-    return !knownTemplateRefs.has(ref22);
-  };
   if (oldRef != null && oldRef !== ref2) {
     if (isString(oldRef)) {
       refs[oldRef] = null;
@@ -3676,11 +3665,7 @@ function setRef(rawRef, oldRawRef, parentSuspense, vnode, isUnmount = false) {
         setupState[oldRef] = null;
       }
     } else if (isRef2(oldRef)) {
-      if (canSetRef(oldRef)) {
-        oldRef.value = null;
-      }
-      const oldRawRefAtom = oldRawRef;
-      if (oldRawRefAtom.k) refs[oldRawRefAtom.k] = null;
+      oldRef.value = null;
     }
   }
   if (isFunction(ref2)) {
@@ -3691,7 +3676,7 @@ function setRef(rawRef, oldRawRef, parentSuspense, vnode, isUnmount = false) {
     if (_isString || _isRef) {
       const doSet = () => {
         if (rawRef.f) {
-          const existing = _isString ? canSetSetupRef(ref2) ? setupState[ref2] : refs[ref2] : canSetRef(ref2) || !rawRef.k ? ref2.value : refs[rawRef.k];
+          const existing = _isString ? canSetSetupRef(ref2) ? setupState[ref2] : refs[ref2] : ref2.value;
           if (isUnmount) {
             isArray(existing) && remove(existing, refValue);
           } else {
@@ -3702,11 +3687,8 @@ function setRef(rawRef, oldRawRef, parentSuspense, vnode, isUnmount = false) {
                   setupState[ref2] = refs[ref2];
                 }
               } else {
-                const newVal = [refValue];
-                if (canSetRef(ref2)) {
-                  ref2.value = newVal;
-                }
-                if (rawRef.k) refs[rawRef.k] = newVal;
+                ref2.value = [refValue];
+                if (rawRef.k) refs[rawRef.k] = ref2.value;
               }
             } else if (!existing.includes(refValue)) {
               existing.push(refValue);
@@ -3718,9 +3700,7 @@ function setRef(rawRef, oldRawRef, parentSuspense, vnode, isUnmount = false) {
             setupState[ref2] = value;
           }
         } else if (_isRef) {
-          if (canSetRef(ref2)) {
-            ref2.value = value;
-          }
+          ref2.value = value;
           if (rawRef.k) refs[rawRef.k] = value;
         } else if (true) {
           warn$1("Invalid template ref type:", ref2, `(${typeof ref2})`);
@@ -5318,10 +5298,10 @@ var PublicInstanceProxyHandlers = {
     return true;
   },
   has({
-    _: { data, setupState, accessCache, ctx, appContext, propsOptions, type }
+    _: { data, setupState, accessCache, ctx, appContext, propsOptions }
   }, key) {
-    let normalizedProps, cssModules;
-    return !!(accessCache[key] || data !== EMPTY_OBJ && key[0] !== "$" && hasOwn(data, key) || hasSetupBinding(setupState, key) || (normalizedProps = propsOptions[0]) && hasOwn(normalizedProps, key) || hasOwn(ctx, key) || hasOwn(publicPropertiesMap, key) || hasOwn(appContext.config.globalProperties, key) || (cssModules = type.__cssModules) && cssModules[key]);
+    let normalizedProps;
+    return !!accessCache[key] || data !== EMPTY_OBJ && hasOwn(data, key) || hasSetupBinding(setupState, key) || (normalizedProps = propsOptions[0]) && hasOwn(normalizedProps, key) || hasOwn(ctx, key) || hasOwn(publicPropertiesMap, key) || hasOwn(appContext.config.globalProperties, key);
   },
   defineProperty(target, key, descriptor) {
     if (descriptor.get != null) {
@@ -6607,7 +6587,7 @@ function isExplicable(type) {
 function isBoolean(...args) {
   return args.some((elem) => elem.toLowerCase() === "boolean");
 }
-var isInternalKey = (key) => key === "_" || key === "_ctx" || key === "$stable";
+var isInternalKey = (key) => key === "_" || key === "__" || key === "_ctx" || key === "$stable";
 var normalizeSlotValue = (value) => isArray(value) ? value.map(normalizeVNode) : [normalizeVNode(value)];
 var normalizeSlot = (key, rawSlot, ctx) => {
   if (rawSlot._n) {
@@ -6661,6 +6641,8 @@ var assignSlots = (slots, children, optimized) => {
 var initSlots = (instance, children, optimized) => {
   const slots = instance.slots = createInternalObject();
   if (instance.vnode.shapeFlag & 32) {
+    const cacheIndexes = children.__;
+    if (cacheIndexes) def(slots, "__", cacheIndexes, true);
     const type = children._;
     if (type) {
       assignSlots(slots, children, optimized);
@@ -6720,10 +6702,12 @@ function endMeasure(instance, type) {
   if (instance.appContext.config.performance && isSupported()) {
     const startTag = `vue-${type}-${instance.uid}`;
     const endTag = startTag + `:end`;
-    const measureName = `<${formatComponentName(instance, instance.type)}> ${type}`;
     perf.mark(endTag);
-    perf.measure(measureName, startTag, endTag);
-    perf.clearMeasures(measureName);
+    perf.measure(
+      `<${formatComponentName(instance, instance.type)}> ${type}`,
+      startTag,
+      endTag
+    );
     perf.clearMarks(startTag);
     perf.clearMarks(endTag);
   }
@@ -7953,12 +7937,6 @@ function baseCreateRenderer(options, createHydrationFns) {
           }
         };
         const performLeave = () => {
-          if (el._isLeaving) {
-            el[leaveCbKey](
-              true
-              /* cancelled */
-            );
-          }
           leave(el, () => {
             remove22();
             afterLeave && afterLeave();
@@ -8104,11 +8082,26 @@ function baseCreateRenderer(options, createHydrationFns) {
     if (instance.type.__hmrId) {
       unregisterHMR(instance);
     }
-    const { bum, scope, job, subTree, um, m, a } = instance;
+    const {
+      bum,
+      scope,
+      job,
+      subTree,
+      um,
+      m,
+      a,
+      parent,
+      slots: { __: slotCacheKeys }
+    } = instance;
     invalidateMount(m);
     invalidateMount(a);
     if (bum) {
       invokeArrayFns(bum);
+    }
+    if (parent && isArray(slotCacheKeys)) {
+      slotCacheKeys.forEach((v) => {
+        parent.renderCache[v] = void 0;
+      });
     }
     scope.stop();
     if (job) {
@@ -8121,6 +8114,12 @@ function baseCreateRenderer(options, createHydrationFns) {
     queuePostRenderEffect(() => {
       instance.isUnmounted = true;
     }, parentSuspense);
+    if (parentSuspense && parentSuspense.pendingBranch && !parentSuspense.isUnmounted && instance.asyncDep && !instance.asyncResolved && instance.suspenseId === parentSuspense.pendingId) {
+      parentSuspense.deps--;
+      if (parentSuspense.deps === 0) {
+        parentSuspense.resolve();
+      }
+    }
     if (true) {
       devtoolsComponentRemoved(instance);
     }
@@ -8221,8 +8220,7 @@ function traverseStaticChildren(n1, n2, shallow = false) {
         if (!shallow && c2.patchFlag !== -2)
           traverseStaticChildren(c1, c2);
       }
-      if (c2.type === Text && // avoid cached text nodes retaining detached dom nodes
-      c2.patchFlag !== -1) {
+      if (c2.type === Text) {
         c2.el = c1.el;
       }
       if (c2.type === Comment && !c2.el) {
@@ -10560,7 +10558,7 @@ function isMemoSame(cached, memo) {
   }
   return true;
 }
-var version = "3.5.19";
+var version = "3.5.18";
 var warn2 = true ? warn$1 : NOOP;
 var ErrorTypeStrings = ErrorTypeStrings$1;
 var devtools = true ? devtools$1 : void 0;
@@ -10582,7 +10580,7 @@ var resolveFilter = null;
 var compatUtils = null;
 var DeprecationTypes = null;
 
-// node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js
+// ../../node_modules/.pnpm/@vue+runtime-dom@3.5.18/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js
 var policy = void 0;
 var tt = typeof window !== "undefined" && window.trustedTypes;
 if (tt) {
@@ -12415,7 +12413,7 @@ var initDirectivesForSSR = () => {
   }
 };
 
-// node_modules/vue/dist/vue.runtime.esm-bundler.js
+// ../../node_modules/.pnpm/vue@3.5.18_typescript@5.7.3/node_modules/vue/dist/vue.runtime.esm-bundler.js
 function initDev() {
   {
     initCustomFormatter();
@@ -12433,7 +12431,17 @@ var compile2 = () => {
 };
 
 export {
+  NOOP,
+  hasOwn,
+  isArray,
+  isDate,
+  isFunction,
+  isString,
+  isObject,
+  isPromise,
+  isPlainObject,
   camelize,
+  hyphenate,
   capitalize,
   toHandlerKey,
   normalizeStyle,
@@ -12607,7 +12615,7 @@ export {
 
 @vue/shared/dist/shared.esm-bundler.js:
   (**
-  * @vue/shared v3.5.19
+  * @vue/shared v3.5.18
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
@@ -12615,14 +12623,14 @@ export {
 
 @vue/reactivity/dist/reactivity.esm-bundler.js:
   (**
-  * @vue/reactivity v3.5.19
+  * @vue/reactivity v3.5.18
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
 
 @vue/runtime-core/dist/runtime-core.esm-bundler.js:
   (**
-  * @vue/runtime-core v3.5.19
+  * @vue/runtime-core v3.5.18
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
@@ -12630,7 +12638,7 @@ export {
 
 @vue/runtime-dom/dist/runtime-dom.esm-bundler.js:
   (**
-  * @vue/runtime-dom v3.5.19
+  * @vue/runtime-dom v3.5.18
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
@@ -12638,9 +12646,9 @@ export {
 
 vue/dist/vue.runtime.esm-bundler.js:
   (**
-  * vue v3.5.19
+  * vue v3.5.18
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
 */
-//# sourceMappingURL=chunk-Z2BIJTZ5.js.map
+//# sourceMappingURL=chunk-PVDJIKU6.js.map
