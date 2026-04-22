@@ -2,39 +2,60 @@
   "hash": "373fae44",
   "configHash": "789753c2",
   "lockfileHash": "75333221",
-  "browserHash": "e5551167",
+  "browserHash": "f300e9ad",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.5.18_typescript@5.7.3/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "8a683ea0",
+      "fileHash": "257a42ba",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../../node_modules/.pnpm/@vue+devtools-api@8.0.0/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "56eda03f",
+      "fileHash": "b5383ce8",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../../node_modules/.pnpm/@vueuse+core@13.6.0_vue@3.5.18_typescript@5.7.3_/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "e81f907f",
+      "fileHash": "a3884960",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../../node_modules/.pnpm/element-plus@2.10.5_vue@3.5.18_typescript@5.7.3_/node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "62223c6a",
+      "fileHash": "e1398bfd",
       "needsInterop": false
+    },
+    "@element-plus/icons-vue": {
+      "src": "../../../../../node_modules/.pnpm/@element-plus+icons-vue@2.3.2_vue@3.5.18_typescript@5.7.3_/node_modules/@element-plus/icons-vue/dist/index.js",
+      "file": "@element-plus_icons-vue.js",
+      "fileHash": "990c4ff8",
+      "needsInterop": false
+    },
+    "markdown-it": {
+      "src": "../../../../../node_modules/.pnpm/markdown-it@14.1.0/node_modules/markdown-it/index.mjs",
+      "file": "markdown-it.js",
+      "fileHash": "d80fbb47",
+      "needsInterop": false
+    },
+    "markdown-it-highlightjs": {
+      "src": "../../../../../node_modules/.pnpm/markdown-it-highlightjs@4.2.0/node_modules/markdown-it-highlightjs/index.js",
+      "file": "markdown-it-highlightjs.js",
+      "fileHash": "3ff546d5",
+      "needsInterop": true
     }
   },
   "chunks": {
+    "chunk-ILNDYC6I": {
+      "file": "chunk-ILNDYC6I.js"
+    },
     "chunk-PVDJIKU6": {
       "file": "chunk-PVDJIKU6.js"
     },
-    "chunk-5WRI5ZAA": {
-      "file": "chunk-5WRI5ZAA.js"
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
     }
   }
 }
