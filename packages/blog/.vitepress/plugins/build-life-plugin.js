@@ -1,6 +1,8 @@
 const fsPromises = require('node:fs/promises')
 const path = require('node:path')
 const process = require('node:process')
+const { execSync } = require('node:child_process')
+const matter = require('gray-matter')
 
 const argv = process.argv
 const DEV = 'dev'
@@ -22,6 +24,37 @@ async function getFirstImage(filePath) {
       // 优先返回 Markdown 图片语法匹配结果，若为空则返回 HTML img 标签匹配结果
       return firstImageMatch[1] || firstImageMatch[2]
     }
+  }
+  return null
+}
+
+async function getFrontmatterDate(filePath) {
+  if (filePath.endsWith('.md')) {
+    const fileContent = await fsPromises.readFile(filePath, 'utf-8')
+    const { data } = matter(fileContent)
+    if (data.date) {
+      const d = new Date(data.date)
+      if (!Number.isNaN(d.getTime())) {
+        return d
+      }
+    }
+  }
+  return null
+}
+
+function getGitFirstCommitDate(filePath) {
+  try {
+    const stdout = execSync(
+      `git log --follow --format="%ad" --date=iso -- "${filePath}" | tail -n 1`,
+      { encoding: 'utf-8', cwd: path.resolve(__dirname, '../../..') },
+    )
+    const d = new Date(stdout.trim())
+    if (!Number.isNaN(d.getTime())) {
+      return d
+    }
+  }
+  catch {
+    // 忽略 git 命令失败的情况
   }
   return null
 }
@@ -66,8 +99,10 @@ async function getLifePosts() {
       if (stat.isFile()) {
         // 获取文件名（不包含扩展名）作为 caption
         const caption = path.parse(dirItemPath).name
-        // 获取文件创建时间并格式化
-        const createTime = formatDate(stat.birthtime)
+        // 优先级：frontmatter date > git 首次提交时间 > 文件创建时间
+        const frontmatterDate = await getFrontmatterDate(dirPath)
+        const gitDate = getGitFirstCommitDate(dirPath)
+        const createTime = formatDate(frontmatterDate || gitDate || stat.birthtime)
 
         // 获取文章的第一章图片
         const firstImage = await getFirstImage(dirPath)
