@@ -47,13 +47,13 @@ export default defineConfig({
           name: packageInfo.author,
           email: '295563358@qq.com', // 替换为你的邮箱
         },
-        contentDir: 'posts',
+        contentDir: ['posts', 'life'],
       }),
     ],
     assetsInclude: ['**/assets/**'],
     resolve: {
       alias: {
-        '@assets': '/Users/wuyucun/programmer/font-end/packages/blog/assets',
+        '@assets': new URL('../assets', import.meta.url).pathname,
       },
     },
     build: {

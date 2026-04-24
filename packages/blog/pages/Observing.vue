@@ -1,10 +1,23 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { ElImage } from 'element-plus'
-import ObservingData from '../.vitepress/router/life.js'
+import RawObservingData from '../.vitepress/router/life.js'
 import ObservingVideo from './ObservingVideo.vue'
-import LifeData from '../.vitepress/router/life.js'
+import RawLifeData from '../.vitepress/router/life.js'
 import VideoData from '../.vitepress/router/video-cover.js'
+
+function parseCreateTime(createTime) {
+  const dateStr = createTime.split(' · ')[0]
+  return new Date(dateStr)
+}
+
+const ObservingData = [...RawObservingData].sort((a, b) => {
+  return parseCreateTime(b.createTime) - parseCreateTime(a.createTime)
+})
+
+const LifeData = [...RawLifeData].sort((a, b) => {
+  return parseCreateTime(b.createTime) - parseCreateTime(a.createTime)
+})
 
 const currentView = ref('minimal')
 
@@ -62,26 +75,32 @@ const navigateToDetail = (article) => {
   emits('open', article)
 }
 const defaultImage = 'https://picsum.photos/id/1033/1200/800'
+const baseUrl = import.meta.env.BASE_URL || '/'
+function resolveFirstImage(src) {
+  if (!src) return defaultImage
+  if (/^https?:\/\//.test(src)) return src
+  if (src.startsWith('/')) {
+    const base = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/'
+    return base + src.slice(1)
+  }
+  return src
+}
 const hostArticle = () => {
   return {
     ...ObservingData[0],
-    firstImage: ObservingData[0].firstImage ?? defaultImage,
+    firstImage: resolveFirstImage(ObservingData[0].firstImage),
   }
 }
 const otherHostArticle = () => {
   return ObservingData.slice(1, 5).map(item => ({
     ...item,
-    firstImage:
-      item.firstImage
-      ?? `https://picsum.photos/id/${Math.floor(Math.random() * 1084)}/1200/800`,
+    firstImage: resolveFirstImage(item.firstImage) ?? `https://picsum.photos/id/${Math.floor(Math.random() * 1084)}/1200/800`,
   }))
 }
 const otherArticle = () => {
   return ObservingData.slice(5).map(item => ({
     ...item,
-    firstImage:
-      item.firstImage
-      ?? `https://picsum.photos/id/${Math.floor(Math.random() * 1084)}/1200/800`,
+    firstImage: resolveFirstImage(item.firstImage) ?? `https://picsum.photos/id/${Math.floor(Math.random() * 1084)}/1200/800`,
   }))
 }
 
@@ -102,7 +121,7 @@ const videoArticles = VideoData.map(item => ({
 <template>
   <!-- ===== Classic View (Original) ===== -->
   <div v-if="currentView === 'classic'" class="slide-fade">
-    <div class="max-w-7xl mx-auto">
+    <div class="max-w-5xl mx-auto">
       <!-- 切换 -->
       <div class="observer-header">
         <button class="view-toggle-btn" @click="toggleView">
@@ -368,7 +387,7 @@ const videoArticles = VideoData.map(item => ({
 .observer-section-title {
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   color: var(--vp-c-text-2);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -378,6 +397,7 @@ const videoArticles = VideoData.map(item => ({
   list-style: none;
   padding: 0;
   margin: 0;
+  border-top: none;
 }
 
 .observer-list-item {
@@ -386,6 +406,11 @@ const videoArticles = VideoData.map(item => ({
   padding: 3px 0;
   border-bottom: 1px solid var(--vp-c-divider);
   transition: background-color 0.15s ease;
+}
+
+.observer-list-item:first-child {
+  border-top: none;
+  padding-top: 0;
 }
 
 .observer-list-item:last-child {

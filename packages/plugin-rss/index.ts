@@ -158,9 +158,8 @@ async function generateRssXml(
     author: config.author,
   });
 
-  // 读取所有文章文件
-  const postsDir = path.resolve(process.cwd(), config.contentDir);
-  const articles = await collectArticles(postsDir, config);
+  // 读取所有文章文件（支持多目录）
+  const articles = await collectArticles(config.contentDir, config);
 
   // 按发布日期排序，最新的在前
   articles.sort((a: Article, b: Article) => b.date.getTime() - a.date.getTime());
@@ -207,55 +206,61 @@ async function generateRssXml(
  * @param config 配置对象
  * @returns {Promise<Article[]>} 文章信息数组
  */
-async function collectArticles(dir: string, config: Required<RssPluginOptions>): Promise<Article[]> {
+async function collectArticles(dirs: string | string[], config: Required<RssPluginOptions>): Promise<Article[]> {
   const articles: Article[] = [];
+  const dirList = Array.isArray(dirs) ? dirs : [dirs];
 
-  // 递归读取目录
-  async function readDir(currentDir: string): Promise<void> {
-    const entries = await fs.promises.readdir(currentDir, {
-      withFileTypes: true,
-    });
+  for (const contentDir of dirList) {
+    const postsDir = path.resolve(process.cwd(), contentDir);
 
-    for (const entry of entries) {
-      const fullPath = path.join(currentDir, entry.name);
+    // 递归读取目录
+    async function readDir(currentDir: string): Promise<void> {
+      const entries = await fs.promises.readdir(currentDir, {
+        withFileTypes: true,
+      });
 
-      if (entry.isDirectory()) {
-        await readDir(fullPath);
-      } else if (entry.isFile() && path.extname(entry.name) === ".md") {
-        // 读取Markdown文件内容
-        const rawContent = await fs.promises.readFile(fullPath, "utf-8");
-        const fileContent = sanitizeXml(rawContent);
-        const { data, content: mdContent } = matter(fileContent);
+      for (const entry of entries) {
+        const fullPath = path.join(currentDir, entry.name);
 
-        // 提取文章标题（从文件名或frontmatter中）
-        const title = data.title || path.basename(entry.name, ".md");
+        if (entry.isDirectory()) {
+          await readDir(fullPath);
+        } else if (entry.isFile() && path.extname(entry.name) === ".md") {
+          // 读取Markdown文件内容
+          const rawContent = await fs.promises.readFile(fullPath, "utf-8");
+          const fileContent = sanitizeXml(rawContent);
+          const { data, content: mdContent } = matter(fileContent);
 
-        // 提取发布日期
-        const date = data.date
-          ? new Date(data.date)
-          : config.publishedDateExtractor(fileContent);
+          // 提取文章标题（从文件名或frontmatter中）
+          const title = data.title || path.basename(entry.name, ".md");
 
-        // 构建文章链接（基于文件路径）
-        const relativePath = path.relative(
-          path.resolve(process.cwd(), config.contentDir),
-          fullPath
-        );
-        const link = `/${config.contentDir}/${relativePath.replace(
-          /\.md$/,
-          ""
-        )}`;
+          // 提取发布日期
+          const date = data.date
+            ? new Date(data.date)
+            : config.publishedDateExtractor(fileContent);
 
-        articles.push({
-          title: title as string,
-          content: mdContent,
-          date,
-          link,
-        });
+          // 构建文章链接（基于文件路径）
+          const relativePath = path.relative(
+            path.resolve(process.cwd(), contentDir),
+            fullPath
+          );
+          const link = `/${contentDir}/${relativePath.replace(
+            /\.md$/,
+            ""
+          )}`;
+
+          articles.push({
+            title: title as string,
+            content: mdContent,
+            date,
+            link,
+          });
+        }
       }
     }
+
+    await readDir(postsDir);
   }
 
-  await readDir(dir);
   return articles;
 }
 

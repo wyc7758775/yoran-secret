@@ -102,7 +102,8 @@ async function getLifePosts() {
         // 优先级：frontmatter date > git 首次提交时间 > 文件创建时间
         const frontmatterDate = await getFrontmatterDate(dirPath)
         const gitDate = getGitFirstCommitDate(dirPath)
-        const createTime = formatDate(frontmatterDate || gitDate || stat.birthtime)
+        const dateObj = frontmatterDate || gitDate || stat.birthtime
+        const createTime = formatDate(dateObj)
 
         // 获取文章的第一章图片
         const firstImage = await getFirstImage(dirPath)
@@ -115,6 +116,7 @@ async function getLifePosts() {
           postSummary,
           caption,
           createTime,
+          _sortDate: dateObj.getTime(),
         }
       }
       return null
@@ -124,13 +126,18 @@ async function getLifePosts() {
 
 async function init() {
   const lifeArr = await getLifePosts()
+  const sortedArr = lifeArr
+    .filter(item => item !== null)
+    .sort((a, b) => b._sortDate - a._sortDate)
+    .map(({ _sortDate, ...rest }) => rest)
+
   const outPutFile = `${outPutBasePath()}/life.js`
   const outPutDir = path.dirname(outPutFile)
   await fsPromises.mkdir(outPutDir, { recursive: true })
 
   await fsPromises.writeFile(
     outPutFile,
-    `export default ${JSON.stringify(lifeArr)}`,
+    `export default ${JSON.stringify(sortedArr)}`,
     {
       encoding: 'utf-8',
     },

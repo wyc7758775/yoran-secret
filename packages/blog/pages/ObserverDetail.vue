@@ -98,6 +98,16 @@ const articleSrc = computed(() => {
 })
 
 const { mdRender } = useMdRender()
+const baseUrl = import.meta.env.BASE_URL || '/'
+
+function resolveImagePaths(html: string): string {
+  return html.replace(/<img([^>]*)\ssrc="(\/[^"]*)"/g, (match, attrs, src) => {
+    if (src.startsWith('//')) return match
+    const base = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/'
+    const resolvedSrc = base + src.slice(1)
+    return `<img${attrs} src="${resolvedSrc}"`
+  })
+}
 
 function getFileInfo(src: string) {
   const pathParts = src.split('/')
@@ -142,13 +152,14 @@ async function loadAndRenderMarkdown() {
     const { fileName } = getFileInfo(articleSrc.value)
 
     const markdownFiles = (import.meta as any).glob('../life/*.md', {
-      as: 'raw',
+      query: '?raw',
+      import: 'default',
     })
     const fileKey = getFileKey(markdownFiles)
 
     if (fileKey) {
       const markdownContent = await markdownFiles[fileKey]()
-      renderedContent.value = mdRender(markdownContent)
+      renderedContent.value = resolveImagePaths(mdRender(markdownContent))
     }
     else {
       renderedContent.value = `<p>未找到对应的文章内容: ${fileName}</p>`
