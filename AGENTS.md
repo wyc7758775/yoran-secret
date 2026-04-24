@@ -151,6 +151,7 @@ npx eslint .               # 检查整个工作区
   - gallery 图片存放在 `assets/gallery/`
   - 存在 `import-images.ts` 使用 `import.meta.glob` 做静态导入，以便 Vite 正确打包
   - `resolve-image-url.ts` 处理路径拼接，兼容 `base` 路径
+  - **Obsidian 同步注意**：从 Obsidian 同步笔记到 `life/` 时，笔记中的本地图片必须放在 `public/obsidian-sync/<文章名>/` 目录下，并在 Markdown 中使用 `/obsidian-sync/<文章名>/图片名.png` 的绝对路径引用。**禁止**在 Markdown 中直接写 `/yoran-secret/obsidian-sync/...`（会导致 VitePress 构建时 Rollup 解析失败）。VitePress 会自动在编译时为 `/obsidian-sync/...` 加上 `base` 路径。同步后必须执行 `pnpm run blog:life` 重新生成 `life.js`。
 
 ### Vue Study (`packages/vue-study`)
 

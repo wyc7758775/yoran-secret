@@ -553,7 +553,7 @@ define 是 AMD 规范 RequireJS 实现的具体 API。
 
 引入导出
 
-```.properties
+```js
 // MouseCounterModule.js
 const $ = require('JQuery')
 let numClick = 0
@@ -567,7 +567,7 @@ module.exports = {
 }
 ```
 
-```.properties
+```js
 const MouseCounterModule = require('MouseCounterModule.js')
 MouseCounterModule.countClicks()
 ```

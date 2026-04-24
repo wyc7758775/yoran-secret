@@ -150,7 +150,7 @@ cd ~ && vim .zshrc
 
 然后找到空白地区,键入:
 
-```conf
+```bash
 # neovim
 alias vim='nvim'
 alias vi='nvim'
@@ -272,7 +272,7 @@ draw_bold_text_with_bright_colors: true
 网上说之前说中文输入有问题,我是没有碰到. 而且也是快,没有性能问题. 现在完全作为顶替 iterm2 的存在
 配置文件, 基本使用默认配置,改了如下:
 
-```conf
+```ini
 font_family      BlexMono NF
 adjust_column_width -1
 background_opacity 0.9
