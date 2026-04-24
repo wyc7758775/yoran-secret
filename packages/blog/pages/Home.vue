@@ -72,7 +72,6 @@
 <style scoped>
 .home {
   padding-top: 2rem;
-  font-family: "monospace";
   display: flex;
   flex-direction: wrap;
   align-items: center;
@@ -80,8 +79,6 @@
 }
 .text {
   line-height: 2.2rem;
-  font: 100% / 1.75 iA Quattro, ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, Liberation Mono, Courier New, monospace;
   font-size: 1rem;
 }
 

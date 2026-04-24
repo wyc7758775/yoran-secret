@@ -18,14 +18,25 @@ body,
 }
 
 :root {
-  font-size: 13px;
+  font-size: 15px;
+  --vp-font-family-base:
+    'Outfit', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-/* VitePress 标题样式 */
+html.dark {
+  --vp-font-family-base:
+    'Outfit', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* VitePress 标题样式 — 与全局字体保持一致 */
 .VPNavBarTitle .title {
-  font-family: "Pacifico", serif !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.05em !important;
+  font-family: var(--vp-font-family-base) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
 }
 @media (max-width: 768px) {
   .site-name {
