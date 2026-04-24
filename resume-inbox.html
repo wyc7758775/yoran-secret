@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>简历收件箱</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #eaedf1;
+    color: #1f2329;
+  }
+  .wrap {
+    max-width: 960px;
+    margin: 24px auto;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    overflow: hidden;
+  }
+  /* 顶部栏 */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 18px;
+    border-bottom: 1px solid #e5e6eb;
+    background: #fff;
+  }
+  .topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1d2129;
+  }
+  .topbar-left .cb {
+    width: 16px; height: 16px;
+    cursor: pointer;
+    accent-color: #165dff;
+  }
+  .menu-icon {
+    display: inline-flex; flex-direction: column; gap: 3px; cursor: pointer;
+  }
+  .menu-icon span {
+    display: block; width: 14px; height: 2px; background: #4e5969; border-radius: 1px;
+  }
+  .topbar-center {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 5px 12px;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 13px;
+    color: #4e5969;
+    cursor: pointer;
+  }
+  .btn:hover { background: #f2f3f5; }
+  .btn svg { width: 14px; height: 14px; fill: #4e5969; }
+  .topbar-right {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 13px; color: #4e5969;
+  }
+  .topbar-right .caret { font-size: 10px; }
+  .view-icon {
+    width: 18px; height: 18px;
+    display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 2px;
+    cursor: pointer;
+  }
+  .view-icon i { background: #86909c; border-radius: 1px; }
+
+  /* 列表 */
+  .list { background: #fff; }
+  .group {
+    padding: 6px 18px 4px 52px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #86909c;
+    border-bottom: 1px solid #f0f1f2;
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 8px 18px;
+    border-bottom: 1px solid #f0f1f2;
+    cursor: pointer;
+    transition: background .08s;
+  }
+  .item:hover { background: #f7f8fa; }
+  .item .cb {
+    width: 16px; height: 16px;
+    cursor: pointer;
+    accent-color: #165dff;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+  .env-icon {
+    width: 20px; height: 20px;
+    display: flex; align-items: center; justify-content: center;
+    margin-right: 12px;
+    flex-shrink: 0;
+    color: #f7c948;
+  }
+  .env-icon svg { width: 18px; height: 18px; fill: currentColor; }
+  .content {
+    flex: 1;
+    display: flex;
+    align-items: baseline;
+    min-width: 0;
+    gap: 6px;
+  }
+  .sender {
+    font-size: 14px;
+    color: #1d2129;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .subject {
+    font-size: 14px;
+    color: #1d2129;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .snippet {
+    font-size: 14px;
+    color: #86909c;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    min-width: 60px;
+  }
+  .date {
+    font-size: 13px;
+    color: #86909c;
+    white-space: nowrap;
+    margin-left: 16px;
+    flex-shrink: 0;
+  }
+  .star {
+    width: 18px; height: 18px;
+    margin-left: 12px;
+    flex-shrink: 0;
+    cursor: pointer;
+    color: #c9cdd4;
+  }
+  .star svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.2; }
+
+  /* 未读粗体 */
+  .item.unread .sender,
+  .item.unread .subject { font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="topbar-left">
+      <input type="checkbox" class="cb" id="selAll">
+      <label for="selAll" style="cursor:pointer;">Inbox</label>
+      <div class="menu-icon"><span></span><span></span><span></span></div>
+    </div>
+    <div class="topbar-center">
+      <button class="btn">
+        <svg viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+        Delete
+      </button>
+      <button class="btn">
+        <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        Forward
+      </button>
+      <button class="btn">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        Report Spam
+      </button>
+      <button class="btn">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Mark all as read
+      </button>
+      <button class="btn">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="18" r="2"/></svg>
+        More
+      </button>
+    </div>
+    <div class="topbar-right">
+      <span>86 mails <span class="caret">▾</span></span>
+      <div class="view-icon"><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+
+  <div class="list">
+    <div class="group">Yesterday(9 mails)</div>
+
+    <div class="item unread">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">张伟</span>
+        <span class="subject">求职：前端开发工程师（3年经验，Vue/React）</span>
+        <span class="snippet">大专学历 深圳职业技术学院 计算机应用专业 上家公司做电商后台管理 熟悉Element UI Ant Design 期望薪资12-15k</span>
+      </div>
+      <span class="date">Apr 22 21:03</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item unread">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">王建国</span>
+        <span class="subject">应聘Java后端开发 -  Spring Boot 应用层业务开发</span>
+        <span class="snippet">二本 湖南工程学院 软件工程 3年Java开发 做过订单系统 支付模块 用户中心 熟悉MyBatis Redis RabbitMQ 期望18k</span>
+      </div>
+      <span class="date">Apr 22 20:40</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">李娜</span>
+        <span class="subject">Fw: 简历推荐 - 全栈开发（Node.js+Vue，5年经验）</span>
+        <span class="snippet">Forwarded message From 猎头小周 候选人李娜 武汉理工大学本科 前人人车全栈开发 独立负责过CRM系统 前后端都写</span>
+      </div>
+      <span class="date">Apr 22 15:57</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item unread">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">刘志强</span>
+        <span class="subject">【社招】全栈工程师 -  React + Nest.js 应用开发</span>
+        <span class="snippet">211 西南交通大学 软件工程本科 4年全栈经验 上家做SaaS办公系统 负责租户管理 权限配置 审批流模块 期望25k</span>
+      </div>
+      <span class="date">Apr 22 15:33</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">陈杰</span>
+        <span class="subject">应聘前端开发 - 小程序 + H5 移动端应用</span>
+        <span class="snippet">大专 广东轻工职业技术学院 2年前端经验 做过微信小程序 抖音小程序 公司主要做电商导购 熟悉Taro UniApp 期望10k</span>
+      </div>
+      <span class="date">Apr 22 12:19</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">杨伟杰</span>
+        <span class="subject">Re: 面试反馈 - 杨帆 Java后端</span>
+        <span class="snippet">感谢贵司的安排 二面已通过 期待后续流程 原始邮件 发件人 hr@company.com 主题 面试邀请</span>
+      </div>
+      <span class="date">Apr 22 11:03</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">黄磊</span>
+        <span class="subject">求职：前端开发（Angular + TypeScript，4年经验）</span>
+        <span class="snippet">普通一本 长沙理工大学 计算机科学与技术 做过银行管理系统 保险理赔后台 熟悉RxJS NgRx 期望16k base长沙</span>
+      </div>
+      <span class="date">Apr 22 10:39</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">周文杰</span>
+        <span class="subject">【校招】2026届实习生 - 前端开发（大三）</span>
+        <span class="snippet">985 华南理工大学 软件工程大三 自学前端2年 做过个人博客 仿知乎项目 熟悉Vue3 Vite Pinia 可实习6个月 有转正意愿</span>
+      </div>
+      <span class="date">Apr 22 04:41</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">吴昊</span>
+        <span class="subject">Fw: Fw: 推荐个后端 - Java业务开发，能独立负责模块</span>
+        <span class="snippet">各位好 帮忙转发一下 前同事想回北京发展 技术靠谱 Forwarded message From 李经理 原美团技术组长</span>
+      </div>
+      <span class="date">Apr 22 01:56</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="group">Tue(11 mails)</div>
+
+    <div class="item unread">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">徐鹏飞</span>
+        <span class="subject">应聘Go后端开发工程师 - 应用层业务系统</span>
+        <span class="snippet">二本 桂林电子科技大学 信息管理与信息系统 3年Go开发 做过物流追踪系统 调度系统 熟悉Gin GORM gRPC 期望20k</span>
+      </div>
+      <span class="date">Apr 21</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">孙婷</span>
+        <span class="subject">Re: 简历已更新 - 补充了React Native项目经验</span>
+        <span class="snippet">根据上次沟通 我补充了之前做的社交App项目 请查收 原始邮件 发件人 孙丽 主题 求职 前端工程师</span>
+      </div>
+      <span class="date">Apr 21</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item unread">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">朱志豪</span>
+        <span class="subject">【急】Python后端开发求职 - Flask/FastAPI 业务系统</span>
+        <span class="snippet">大专 河南经贸职业学院 计算机应用 3个月离职期已到 可随时入职 做过内容管理系统 数据分析后台 期望13k base郑州</span>
+      </div>
+      <span class="date">Apr 21</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">王芳</span>
+        <span class="subject">求职：前端开发工程师 - Vue3 + Element Plus 后台系统</span>
+        <span class="snippet">普通一本 河北师范大学 网络工程 4年前端 做过教育管理系统 医院挂号系统 人事考勤系统 期望14k 可考虑二线城市</span>
+      </div>
+      <span class="date">Apr 21</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">刘思琪</span>
+        <span class="subject">Fw: 社招简历 - 刘婷 Java业务开发（供应链金融方向）</span>
+        <span class="snippet">Forwarded message From 猎头Amy 候选人刘婷 南京邮电大学本科 5年Java开发 做过供应链金融系统 核心企业授信 应收账款</span>
+      </div>
+      <span class="date">Apr 21</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">陈静</span>
+        <span class="subject">应聘：前端开发 - 跨境电商独立站（Shopify + React）</span>
+        <span class="snippet">二本 泉州师范学院 计算机 3年前端 上家做跨境电商 负责Shopify主题定制 独立站页面开发 熟悉Liquid GraphQL 期望15k</span>
+      </div>
+      <span class="date">Apr 21</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item unread">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">杨思敏</span>
+        <span class="subject">【转行】销售转前端 - 培训班出身，有3个上线项目</span>
+        <span class="snippet">大专 郑州铁路职业技术学院 原来做销售2年 后报培训班学前端 做过企业官网 商城小程序 后台管理系统 期望8k 接受加班</span>
+      </div>
+      <span class="date">Apr 21</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">黄颖</span>
+        <span class="subject">Re: Re: 关于全栈工程师岗位的沟通</span>
+        <span class="snippet">好的了解了 我这边可以一周内到岗 原始邮件 发件人 黄丽 主题 求职 全栈工程师</span>
+      </div>
+      <span class="date">Apr 21</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">周晓娜</span>
+        <span class="subject">求职：前端开发工程师（React + Next.js，2年经验）</span>
+        <span class="snippet">211 合肥工业大学 软件工程本科 2年前端 做过官网重构 SSR优化 熟悉Tailwind Shadcn UI 期望18k base上海杭州</span>
+      </div>
+      <span class="date">Apr 21</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">吴倩</span>
+        <span class="subject">应聘：Java后端开发 - 医疗信息化/医院HIS系统</span>
+        <span class="snippet">二本 皖南医学院 信息管理与信息系统 4年Java开发 做过挂号系统 电子病历 医保对接 熟悉Spring Cloud Nacos 期望16k</span>
+      </div>
+      <span class="date">Apr 21</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">徐静雯</span>
+        <span class="subject">Fw: 简历投递 - 徐静 前端开发（Vue + 低代码平台）</span>
+        <span class="snippet">Forwarded message From 徐静 3年前端经验 最近1年在低代码平台团队 负责表单引擎 流程设计器 拖拽组件封装</span>
+      </div>
+      <span class="date">Apr 21</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">孙鹏</span>
+        <span class="subject">Re: 二面通过 - 孙鹏 Node.js后端</span>
+        <span class="snippet">周四下午2点没问题 腾讯会议号麻烦发我一下 谢谢 原始邮件 发件人 hr@company.com 主题 二面面试邀请</span>
+      </div>
+      <span class="date">Apr 21</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">李建军</span>
+        <span class="subject">求职：全栈开发（PHP转Node.js + React）</span>
+        <span class="snippet">大专 武汉软件工程职业学院 原来写PHP 2年前转Node.js 做过外卖平台 跑腿系统 熟悉Nest.js TypeORM 期望14k</span>
+      </div>
+      <span class="date">Apr 21</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+
+    <div class="item">
+      <input type="checkbox" class="cb">
+      <div class="env-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="content">
+        <span class="sender">张宇</span>
+        <span class="subject">【实习】2026届暑期实习 - Java后端（应用层开发）</span>
+        <span class="snippet">985 四川大学 软件工程大三 自学Java2年 做过图书管理系统 校园二手交易小程序 熟悉Spring Boot MyBatis 可实习6个月</span>
+      </div>
+      <span class="date">Apr 21</span>
+      <span class="star"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('selAll').addEventListener('change', function(e) {
+    document.querySelectorAll('.item .cb').forEach(cb => cb.checked = e.target.checked);
+  });
+</script>
+</body>
+</html>
