@@ -404,17 +404,13 @@ const videoArticles = VideoData.map(item => ({
   display: flex;
   align-items: baseline;
   padding: 3px 0;
-  border-bottom: 1px solid var(--vp-c-divider);
+  border-top: 1px solid var(--vp-c-divider);
   transition: background-color 0.15s ease;
 }
 
 .observer-list-item:first-child {
   border-top: none;
   padding-top: 0;
-}
-
-.observer-list-item:last-child {
-  border-bottom: none;
 }
 
 .observer-list-item:hover {
