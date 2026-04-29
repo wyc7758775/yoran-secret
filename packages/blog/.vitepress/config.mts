@@ -21,8 +21,8 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Yoran', link: '/' },
-      { text: 'Posts', link: sidebar[0].items[0].link },
       { text: 'Observer', link: '/observing' },
+      { text: 'Posts', link: sidebar[0].items[0].link },
       { text: 'Gallery', link: '/gallery' },
     ],
     sidebar,
