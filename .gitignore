@@ -29,6 +29,9 @@ Thumbs.db
 .env.local
 .env.*.local
 
+# 忽略 VitePress 缓存
+.vitepress/cache/
+
 # 忽略包管理器锁文件（根据需要选择，通常 pnpm-lock.yaml 建议提交）
 # package-lock.json
 # yarn.lock

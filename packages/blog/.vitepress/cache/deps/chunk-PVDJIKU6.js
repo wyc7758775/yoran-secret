@@ -12431,7 +12431,17 @@ var compile2 = () => {
 };
 
 export {
+  NOOP,
+  hasOwn,
+  isArray,
+  isDate,
+  isFunction,
+  isString,
+  isObject,
+  isPromise,
+  isPlainObject,
   camelize,
+  hyphenate,
   capitalize,
   toHandlerKey,
   normalizeStyle,
@@ -12641,4 +12651,4 @@ vue/dist/vue.runtime.esm-bundler.js:
   * @license MIT
   **)
 */
-//# sourceMappingURL=chunk-3GAPVBTG.js.map
+//# sourceMappingURL=chunk-PVDJIKU6.js.map

@@ -2,30 +2,60 @@
   "hash": "3e8fc35b",
   "configHash": "d17dddaf",
   "lockfileHash": "75333221",
-  "browserHash": "2b35cb7a",
+  "browserHash": "4a68725e",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.5.18_typescript@5.7.3/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "efa8e591",
+      "fileHash": "fa2fb002",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../../node_modules/.pnpm/@vue+devtools-api@8.0.0/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "8c2db877",
+      "fileHash": "62b34782",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../../node_modules/.pnpm/@vueuse+core@13.6.0_vue@3.5.18_typescript@5.7.3_/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "b4643d97",
+      "fileHash": "273e30fd",
       "needsInterop": false
+    },
+    "element-plus": {
+      "src": "../../../../../node_modules/.pnpm/element-plus@2.10.5_vue@3.5.18_typescript@5.7.3_/node_modules/element-plus/es/index.mjs",
+      "file": "element-plus.js",
+      "fileHash": "d8d57725",
+      "needsInterop": false
+    },
+    "@element-plus/icons-vue": {
+      "src": "../../../../../node_modules/.pnpm/@element-plus+icons-vue@2.3.2_vue@3.5.18_typescript@5.7.3_/node_modules/@element-plus/icons-vue/dist/index.js",
+      "file": "@element-plus_icons-vue.js",
+      "fileHash": "34eb188e",
+      "needsInterop": false
+    },
+    "markdown-it": {
+      "src": "../../../../../node_modules/.pnpm/markdown-it@14.1.0/node_modules/markdown-it/index.mjs",
+      "file": "markdown-it.js",
+      "fileHash": "57f3f5e9",
+      "needsInterop": false
+    },
+    "markdown-it-highlightjs": {
+      "src": "../../../../../node_modules/.pnpm/markdown-it-highlightjs@4.2.0/node_modules/markdown-it-highlightjs/index.js",
+      "file": "markdown-it-highlightjs.js",
+      "fileHash": "382abb5f",
+      "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-3GAPVBTG": {
-      "file": "chunk-3GAPVBTG.js"
+    "chunk-ILNDYC6I": {
+      "file": "chunk-ILNDYC6I.js"
+    },
+    "chunk-PVDJIKU6": {
+      "file": "chunk-PVDJIKU6.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
     }
   }
 }
