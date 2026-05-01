@@ -40,6 +40,19 @@ const md: ReturnType<typeof MarkdownIt> = new MarkdownIt({
   },
 }).use(hljs);
 
+// 自定义图片渲染：添加模糊过渡容器与懒加载
+const defaultImageRender = md.renderer.rules.image || function (tokens, idx, options, env, self) {
+  return self.renderToken(tokens, idx, options)
+}
+md.renderer.rules.image = function (tokens, idx, options, env, self) {
+  const token = tokens[idx]
+  const existingClass = token.attrGet('class') || ''
+  token.attrSet('class', existingClass ? `${existingClass} md-img` : 'md-img')
+  token.attrSet('loading', 'lazy')
+  const imgHtml = defaultImageRender(tokens, idx, options, env, self)
+  return `<figure class="md-img-wrapper">${imgHtml}</figure>`
+}
+
 // 监听主题变化
 let themeChangeListener: (mutations: MutationRecord[]) => void;
 

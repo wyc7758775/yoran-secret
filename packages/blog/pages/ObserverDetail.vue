@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { Loading } from '@element-plus/icons-vue'
-import { ElIcon, ElImageViewer } from 'element-plus'
+import { ElImageViewer } from 'element-plus'
 import { useData } from 'vitepress'
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
+import ArticleSkeleton from './components/ArticleSkeleton.vue'
 import BackToTop from './components/BackToTop.vue'
 import TocSidebar from './components/TocSidebar.vue'
 import { useNavToStatic } from './hooks/use-nav-to-static'
@@ -171,7 +171,29 @@ async function loadAndRenderMarkdown() {
   }
   finally {
     contentLoading.value = false
+    await nextTick()
+    bindImageLoadEvents()
   }
+}
+
+function bindImageLoadEvents() {
+  if (typeof document === 'undefined')
+    return
+  const images = document.querySelectorAll('.md-img')
+  images.forEach((img) => {
+    const imageEl = img as HTMLImageElement
+    if (imageEl.complete && imageEl.naturalHeight !== 0) {
+      imageEl.classList.add('loaded')
+    }
+    else {
+      imageEl.addEventListener('load', () => {
+        imageEl.classList.add('loaded')
+      }, { once: true })
+      imageEl.addEventListener('error', () => {
+        imageEl.classList.add('loaded')
+      }, { once: true })
+    }
+  })
 }
 
 watch(
@@ -190,11 +212,9 @@ watch(
     >
       <div
         v-if="contentLoading"
-        class="min-h-[60vh] flex justify-center items-center w-full"
+        class="w-full min-h-[100vh] py-6"
       >
-        <ElIcon class="rotate-icon" size="36">
-          <Loading />
-        </ElIcon>
+        <ArticleSkeleton />
       </div>
       <div
         v-else
@@ -215,19 +235,5 @@ watch(
 </template>
 
 <style scoped>
-.rotate-icon {
-  animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* 添加内容区域图片居中样式 */
 </style>
