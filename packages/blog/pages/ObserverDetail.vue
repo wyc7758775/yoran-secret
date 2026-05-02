@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ElImageViewer } from 'element-plus'
-import GiscusComment from './components/GiscusComment.vue'
 import { useData } from 'vitepress'
+import GiscusComment from './components/GiscusComment.vue'
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import ArticleSkeleton from './components/ArticleSkeleton.vue'
 import BackToTop from './components/BackToTop.vue'
@@ -224,6 +224,7 @@ watch(
         @mouseenter="handleMouseEnter"
         v-html="renderedContent"
       />
+      <GiscusComment mapping="url" />
     </div>
   </div>
   <BackToTop />
@@ -233,7 +234,6 @@ watch(
     :url-list="viewerList"
     @close="visibleViewer = false"
   />
-  <GiscusComment mapping="url" />
 </template>
 
 <style scoped>

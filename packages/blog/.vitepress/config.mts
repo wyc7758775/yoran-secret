@@ -25,7 +25,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Yoran', link: '/' },
-      { text: 'Observer', link: '/observing' },
+      { text: 'Observer', link: '/observing', activeMatch: '/observer' },
       { text: 'Posts', link: sidebar[0].items[0].link },
       { text: 'Gallery', link: '/gallery' },
     ],
