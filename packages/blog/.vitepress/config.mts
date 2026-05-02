@@ -19,6 +19,10 @@ export default defineConfig({
   base: '/yoran-secret/',
   head: configHead as any,
   themeConfig: {
+    logo: {
+      src: '/pikachu-logo.svg',
+      alt: 'Yoran',
+    },
     nav: [
       { text: 'Yoran', link: '/' },
       { text: 'Observer', link: '/observing' },
