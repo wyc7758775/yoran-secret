@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ElImageViewer } from 'element-plus'
+import GiscusComment from './components/GiscusComment.vue'
 import { useData } from 'vitepress'
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import ArticleSkeleton from './components/ArticleSkeleton.vue'
@@ -232,6 +233,7 @@ watch(
     :url-list="viewerList"
     @close="visibleViewer = false"
   />
+  <GiscusComment mapping="url" />
 </template>
 
 <style scoped>
