@@ -219,12 +219,16 @@ watch(
       </div>
       <div
         v-else
-        class="md-prose max-w-none prose-sm sm:prose base:text-sm sm:text-base md:text-lg w-full md:w-7/10 prose-img:center"
+        class="w-full md:w-7/10"
         @mouseleave="handleMouseLeave"
         @mouseenter="handleMouseEnter"
-        v-html="renderedContent"
-      />
-      <GiscusComment mapping="url" />
+      >
+        <div
+          class="md-prose max-w-none prose-sm sm:prose base:text-sm sm:text-base md:text-lg prose-img:center"
+          v-html="renderedContent"
+        />
+        <GiscusComment mapping="url" />
+      </div>
     </div>
   </div>
   <BackToTop />
