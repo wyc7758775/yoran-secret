@@ -15,8 +15,7 @@ export default {
     }
   },
   Layout: () => {
-    const layout = DefaultTheme.Layout()
-    return h(layout, null, {
+    return h(DefaultTheme.Layout, null, {
       'doc-after': () => h(GiscusComment, { mapping: 'pathname' }),
     })
   },
