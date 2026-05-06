@@ -14,6 +14,50 @@ const DiaryData = computed(() => {
   })
 })
 
+const pikachuPixels = computed(() => {
+  const grid = [
+    '        BB  BB        ',
+    '       BBBBBBBB       ',
+    '      BYBBBBBBBY      ',
+    '     BYYYYYYYYYYY     ',
+    '    BYYBBYYBBYYYY     ',
+    '    BYYBBYYBBYYYY     ',
+    '    BYYYYYYYYYYYY     ',
+    '     YYRRYYYYRRYY     ',
+    '     YYYYYYYYYYYY     ',
+    '     YYYYYYYYYYYY     ',
+    '      YYYYYYYYYY      ',
+    '      YYYYYYYYYY      ',
+    '     OYYYYYYYYYYO     ',
+    '     OYYYYYYYYYYO     ',
+    '    OOOYYYYYYYYOOO    ',
+    '    OOOYYYYYYYYOOO    ',
+    '     YYYYYYYYYYYY     ',
+    '      YYYYYYYYYY      ',
+    '      YYYYYYYYYY      ',
+    '     OO        OO     ',
+  ]
+  const colors = {
+    B: '#231F20',
+    Y: '#F4DC26',
+    R: '#E84638',
+    O: '#E8A838',
+  }
+  const pixels = []
+  grid.forEach((row, y) => {
+    row.split('').forEach((cell, x) => {
+      if (cell !== ' ') {
+        pixels.push({
+          x: x * 5,
+          y: y * 5,
+          fill: colors[cell],
+        })
+      }
+    })
+  })
+  return pixels
+})
+
 const baseUrl = import.meta.env.BASE_URL || '/'
 function resolveFirstImage(src) {
   if (!src) return ''
@@ -39,7 +83,22 @@ function formatDateForTimeline(createTime) {
 <template>
   <div class="diary-page">
     <div v-if="DiaryData.length === 0" class="diary-empty">
-      <p>还没有日记哦 ~</p>
+      <div class="empty-pikachu">
+        <svg viewBox="0 0 100 100" width="120" height="120">
+          <rect
+            v-for="p in pikachuPixels"
+            :key="`${p.x}-${p.y}`"
+            :x="p.x"
+            :y="p.y"
+            width="5"
+            height="5"
+            :fill="p.fill"
+          />
+        </svg>
+      </div>
+      <p class="empty-text">
+        还没有日记哦 ~
+      </p>
     </div>
 
     <div v-else class="diary-timeline">
@@ -102,6 +161,20 @@ function formatDateForTimeline(createTime) {
 .diary-empty {
   text-align: center;
   padding: 80px 0;
+}
+
+.empty-pikachu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.empty-pikachu svg {
+  display: block;
+  image-rendering: pixelated;
+}
+
+.empty-text {
   color: var(--vp-c-text-2);
   font-size: 14px;
 }
