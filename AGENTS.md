@@ -69,6 +69,7 @@
 │   │   ├── pages/                # 自定义 Vue 页面组件（Home、Gallery、Observing 等）
 │   │   ├── posts/                # 技术博客 Markdown 文章（按目录分类）
 │   │   ├── life/                 # 生活随笔 Markdown 文章
+│   │   ├── diary/                # 日记本 Markdown 文章（时间轴页面数据源）
 │   │   ├── assets/               # 静态资源（gallery 图片、posts 图片）
 │   │   ├── public/               # VitePress public 目录（profile.svg 等）
 │   │   └── index.md              # 博客首页（引入 Home.vue）
@@ -106,8 +107,9 @@ pnpm run blog:build        # 构建博客（输出到 packages/blog/.vitepress/d
 pnpm run blog:router       # 运行 sidebar 构建插件（扫描 posts/ 生成 sidebar.json）
 pnpm run blog:gallery      # 运行 gallery 构建插件（扫描 assets/gallery/ 生成 gallery.js）
 pnpm run blog:life         # 运行 life 构建插件（扫描 life/ 生成 life.js）
+pnpm run blog:diary        # 运行 diary 构建插件（扫描 diary/ 生成 diary.js）
 pnpm run blog:video:cover  # 运行视频封面构建插件（调用 B 站 API 生成 video-cover.js）
-pnpm run blog:plugin       # 依次执行以上全部插件（router + gallery + life + video:cover）
+pnpm run blog:plugin       # 依次执行以上全部插件（router + gallery + life + diary + video:cover）
 
 # --- Vue Study 相关 ---
 pnpm run vs:dev            # 启动 Vue Study 开发服务器（Vite）
