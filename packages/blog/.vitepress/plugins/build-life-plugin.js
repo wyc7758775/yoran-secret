@@ -1,8 +1,13 @@
 const fsPromises = require('node:fs/promises')
 const path = require('node:path')
 const process = require('node:process')
-const { execSync } = require('node:child_process')
-const matter = require('gray-matter')
+const {
+  getFirstImage,
+  getFrontmatterDate,
+  getGitFirstCommitDate,
+  getPostSummary,
+  formatDate,
+} = require('./build-utils')
 
 const argv = process.argv
 const DEV = 'dev'
@@ -12,71 +17,6 @@ const outPutBasePath = () => path.resolve(__dirname, '../router')
 
 const excludeDir = 'temp'
 
-async function getFirstImage(filePath) {
-  if (filePath.endsWith('.md')) {
-    const fileContent = await fsPromises.readFile(filePath, 'utf-8')
-    // 匹配 Markdown 图片语法和 HTML img 标签的 src 属性
-    const firstImageMatch = fileContent.match(
-      /!\[.*?\]\((.*?)\)|<img.*?src=["'](.*?)["']/,
-    )
-
-    if (firstImageMatch) {
-      // 优先返回 Markdown 图片语法匹配结果，若为空则返回 HTML img 标签匹配结果
-      return firstImageMatch[1] || firstImageMatch[2]
-    }
-  }
-  return null
-}
-
-async function getFrontmatterDate(filePath) {
-  if (filePath.endsWith('.md')) {
-    const fileContent = await fsPromises.readFile(filePath, 'utf-8')
-    const { data } = matter(fileContent)
-    if (data.date) {
-      const d = new Date(data.date)
-      if (!Number.isNaN(d.getTime())) {
-        return d
-      }
-    }
-  }
-  return null
-}
-
-function getGitFirstCommitDate(filePath) {
-  try {
-    const stdout = execSync(
-      `git log --follow --format="%ad" --date=iso -- "${filePath}" | tail -n 1`,
-      { encoding: 'utf-8', cwd: path.resolve(__dirname, '../../..') },
-    )
-    const d = new Date(stdout.trim())
-    if (!Number.isNaN(d.getTime())) {
-      return d
-    }
-  }
-  catch {
-    // 忽略 git 命令失败的情况
-  }
-  return null
-}
-async function getPostSummary(filePath) {
-  if (filePath.endsWith('.md')) {
-    const fileContent = await fsPromises.readFile(filePath, 'utf-8')
-    // 匹配h1标签后的普通文本内容，直到下一个标题、空行或文档结束
-    // 正则表达式解释：
-    // ^# .+ 匹配h1标题行
-    // \n+ 匹配一个或多个换行符
-    // ([\s\S]*?) 非贪婪模式匹配任意字符（包括换行符），直到遇到以下情况之一：
-    //   (?=^#|^$|$) 前瞻断言，匹配下一个标题行、空行或文档结束
-    const h1ContentMatch = fileContent.match(/^# .+\n+([\s\S]*?)(?=^#|^$|$)/m)
-    if (h1ContentMatch && h1ContentMatch[1]) {
-      // 去除首尾空白字符
-      const content = h1ContentMatch[1].trim()
-      // 可以选择限制返回内容的长度，以防文本过长
-      return content.length > 200 ? `${content.substring(0, 200)}...` : content
-    }
-  }
-  return null
-}
 async function getLifePosts() {
   const resolvePath = lifePath()
 
@@ -105,7 +45,7 @@ async function getLifePosts() {
         const dateObj = frontmatterDate || gitDate || stat.birthtime
         const createTime = formatDate(dateObj)
 
-        // 获取文章的第一章图片
+        // 获取文章的第一张图片
         const firstImage = await getFirstImage(dirPath)
         // 获取文章中第一个 h1 标签下面的描述
         const postSummary = await getPostSummary(dirPath)
@@ -144,30 +84,3 @@ async function init() {
   )
 }
 init()
-
-// 在文件顶部添加日期格式化函数
-function formatDate(date) {
-  // 月份缩写
-  const months = [
-    'JAN',
-    'FEB',
-    'MAR',
-    'APR',
-    'MAY',
-    'JUN',
-    'JUL',
-    'AUG',
-    'SEP',
-    'OCT',
-    'NOV',
-    'DEC',
-  ]
-
-  const d = new Date(date)
-  const month = months[d.getMonth()]
-  const day = d.getDate()
-  const year = d.getFullYear()
-
-  // 格式化为：DEC 25, 2024 · MARVIX
-  return `${month} ${day}, ${year} · Yoran`
-}
