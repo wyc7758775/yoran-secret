@@ -38,15 +38,6 @@ function formatDateForTimeline(createTime) {
 
 <template>
   <div class="diary-page">
-    <div class="diary-header">
-      <h1 class="diary-title">
-        Diary
-      </h1>
-      <p class="diary-subtitle">
-        记录日常的碎碎念与思考
-      </p>
-    </div>
-
     <div v-if="DiaryData.length === 0" class="diary-empty">
       <p>还没有日记哦 ~</p>
     </div>
@@ -77,7 +68,11 @@ function formatDateForTimeline(createTime) {
                 fit="cover"
                 lazy
                 class="card-image"
-              />
+              >
+                <template #error>
+                  <div class="image-error-placeholder" />
+                </template>
+              </ElImage>
             </div>
             <div class="card-body">
               <h3 class="card-title">
@@ -102,23 +97,6 @@ function formatDateForTimeline(createTime) {
   max-width: 900px;
   margin: 0 auto;
   padding: 24px 24px 96px;
-}
-
-.diary-header {
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-.diary-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: var(--vp-c-text-1);
-}
-
-.diary-subtitle {
-  font-size: 14px;
-  color: var(--vp-c-text-2);
 }
 
 .diary-empty {
@@ -248,6 +226,13 @@ function formatDateForTimeline(createTime) {
   height: 160px;
   object-fit: cover;
   display: block;
+}
+
+.image-error-placeholder {
+  width: 100%;
+  height: 160px;
+  background: var(--vp-c-bg-soft);
+  border-radius: 12px;
 }
 
 .card-title {
