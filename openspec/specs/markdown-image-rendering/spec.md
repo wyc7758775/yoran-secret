@@ -1,5 +1,8 @@
 # Spec: Markdown Image Rendering
 
+## Purpose
+定义 Markdown 文章中图片渲染的行为规范，确保图片加载体验流畅，避免布局偏移（CLS），并提供视觉过渡效果。
+
 ## Requirements
 
 ### Requirement: Markdown 文章图片渲染
