@@ -1,5 +1,6 @@
 ---
 layout: home
+pageClass: diary-page-layout
 ---
 
 <Diary />

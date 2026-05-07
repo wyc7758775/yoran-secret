@@ -3,6 +3,26 @@ body,
   transition: background-color 0.2s ease;
 }
 
+/* 日记页是自定义时间线，不使用 VitePress 文档页默认容器留白 */
+.Layout.diary-page-layout {
+  min-height: 0 !important;
+}
+
+.diary-page-layout .VPContent,
+.diary-page-layout .VPHome,
+.diary-page-layout .VPDoc {
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.diary-page-layout .vp-doc.container {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .slide-fade {
   animation: slide 0.2s ease-in;
 }
