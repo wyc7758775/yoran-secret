@@ -159,27 +159,27 @@ function getLineClampStyle(lines = 3) {
       </div>
 
       <div class="diary-ending" aria-hidden="true">
-        <div class="ending-stream">
-          <span
-            v-for="index in 18"
-            :key="index"
-            class="stream-fragment"
-            :style="{
-              left: `${(index - 1) * 5.8}%`,
-              '--fragment-delay': `${index * -0.42}s`,
-            }"
+        <svg
+          class="ending-script"
+          viewBox="0 0 360 74"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <path
+            class="script-tail"
+            d="M180 0 C180 14 180 20 180 28"
           />
-        </div>
-        <div class="ending-signal">
-          <span
-            v-for="index in 28"
-            :key="index"
-            class="signal-bar"
-            :style="{
-              '--bar-delay': `${index * -0.08}s`,
-            }"
+          <path
+            class="script-line script-line-main"
+            d="M86 44 C124 22 151 61 184 43 C211 28 230 23 251 39 C267 51 286 51 304 39"
           />
-        </div>
+          <path
+            class="script-line script-line-soft"
+            d="M116 53 C139 45 161 52 184 49 C209 46 230 41 253 49"
+          />
+          <circle class="ink-dot ink-dot-1" cx="66" cy="45" r="2.8" />
+          <circle class="ink-dot ink-dot-2" cx="319" cy="35" r="2.2" />
+          <circle class="ink-dot ink-dot-3" cx="284" cy="56" r="1.8" />
+        </svg>
       </div>
     </div>
   </div>
@@ -403,72 +403,71 @@ function getLineClampStyle(lines = 3) {
 }
 
 .diary-ending::after {
-  bottom: 12px;
-  height: 18px;
+  top: 28px;
+  height: 13px;
   opacity: 0.65;
 }
 
-.ending-stream {
-  position: absolute;
-  inset: 10px 0 18px;
-}
-
-.stream-fragment {
-  position: absolute;
-  top: 24px;
-  width: clamp(16px, 4vw, 36px);
-  height: 2px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--vp-c-brand-1) 58%, transparent);
-  box-shadow: 0 0 16px color-mix(in srgb, var(--vp-c-brand-1) 32%, transparent);
-  opacity: 0;
-  transform: translate3d(-24px, 0, 0) rotate(-8deg) scaleX(0.6);
-  animation: stream-drift 6.8s ease-in-out infinite;
-  animation-delay: var(--fragment-delay);
-}
-
-.stream-fragment:nth-child(3n) {
-  top: 36px;
-  background: color-mix(in srgb, #2bb3a3 54%, transparent);
-  box-shadow: 0 0 16px color-mix(in srgb, #2bb3a3 24%, transparent);
-}
-
-.stream-fragment:nth-child(4n) {
-  top: 14px;
-  width: clamp(12px, 2.8vw, 24px);
-  background: color-mix(in srgb, #d8a441 56%, transparent);
-  box-shadow: 0 0 14px color-mix(in srgb, #d8a441 22%, transparent);
-}
-
-.ending-signal {
+.ending-script {
   position: absolute;
   left: 50%;
-  bottom: 4px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 4px;
-  width: min(340px, 72vw);
-  height: 22px;
+  bottom: 0;
+  width: min(360px, 72vw);
+  height: 74px;
+  overflow: visible;
   transform: translateX(-50%);
 }
 
-.signal-bar {
-  width: 3px;
-  height: 6px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--vp-c-text-3) 64%, transparent);
-  transform-origin: center bottom;
-  animation: signal-breathe 1.8s ease-in-out infinite;
-  animation-delay: var(--bar-delay);
+.script-tail,
+.script-line {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.signal-bar:nth-child(4n + 1) {
-  background: color-mix(in srgb, var(--vp-c-brand-1) 48%, transparent);
+.script-tail {
+  --script-length: 32;
+  stroke: color-mix(in srgb, var(--vp-c-divider) 82%, transparent);
+  stroke-width: 1.4;
+  stroke-dasharray: var(--script-length);
+  stroke-dashoffset: var(--script-length);
+  animation: script-draw 4.8s ease-in-out infinite;
 }
 
-.signal-bar:nth-child(4n + 3) {
-  background: color-mix(in srgb, #2bb3a3 42%, transparent);
+.script-line {
+  --script-length: 245;
+  filter: drop-shadow(0 0 9px color-mix(in srgb, var(--vp-c-brand-1) 22%, transparent));
+  stroke-dasharray: var(--script-length);
+  stroke-dashoffset: var(--script-length);
+  animation: script-draw 4.8s ease-in-out infinite;
+}
+
+.script-line-main {
+  stroke: color-mix(in srgb, var(--vp-c-brand-1) 72%, var(--vp-c-text-2));
+  stroke-width: 2.2;
+}
+
+.script-line-soft {
+  stroke: color-mix(in srgb, #2bb3a3 52%, transparent);
+  stroke-width: 1.2;
+  opacity: 0.55;
+  animation-delay: 0.18s;
+}
+
+.ink-dot {
+  fill: color-mix(in srgb, var(--vp-c-brand-1) 62%, var(--vp-c-bg));
+  transform-origin: center;
+  animation: ink-breathe 4.8s ease-in-out infinite;
+}
+
+.ink-dot-2 {
+  fill: color-mix(in srgb, #2bb3a3 56%, var(--vp-c-bg));
+  animation-delay: 0.22s;
+}
+
+.ink-dot-3 {
+  fill: color-mix(in srgb, #d8a441 58%, var(--vp-c-bg));
+  animation-delay: 0.42s;
 }
 
 /* ===== Mobile ===== */
@@ -515,41 +514,41 @@ function getLineClampStyle(lines = 3) {
   overflow: hidden;
 }
 
-@keyframes stream-drift {
+@keyframes script-draw {
   0%,
   100% {
-    opacity: 0;
-    transform: translate3d(-24px, 10px, 0) rotate(-8deg) scaleX(0.58);
+    stroke-dashoffset: var(--script-length);
+    opacity: 0.22;
   }
 
-  20%,
-  70% {
+  22%,
+  72% {
+    stroke-dashoffset: 0;
     opacity: 0.9;
-  }
-
-  50% {
-    transform: translate3d(18px, -8px, 0) rotate(8deg) scaleX(1);
   }
 }
 
-@keyframes signal-breathe {
+@keyframes ink-breathe {
   0%,
   100% {
-    transform: scaleY(0.45);
-    opacity: 0.42;
+    opacity: 0.16;
+    transform: scale(0.72);
   }
 
-  50% {
-    transform: scaleY(1.95);
-    opacity: 0.95;
+  28%,
+  68% {
+    opacity: 0.9;
+    transform: scale(1);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .stream-fragment,
-  .signal-bar {
+  .script-tail,
+  .script-line,
+  .ink-dot {
     animation: none;
-    opacity: 0.55;
+    opacity: 0.62;
+    stroke-dashoffset: 0;
   }
 }
 </style>
