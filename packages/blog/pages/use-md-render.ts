@@ -1,27 +1,52 @@
-import MarkdownIt from "markdown-it";
-import hljs from "markdown-it-highlightjs";
-import "github-markdown-css";
+import MarkdownIt from 'markdown-it'
+import hljs from 'markdown-it-highlightjs'
+import 'github-markdown-css'
+
+function parseObsidianImageSize(altText: string) {
+  const match = altText.trim().match(/^(?:(.*?)\|)?(\d{2,4})(?:\s*[x×]\s*(\d{2,4}))?$/i)
+  if (!match)
+    return null
+
+  const width = Number(match[2])
+  const height = match[3] ? Number(match[3]) : undefined
+  if (!Number.isFinite(width) || width <= 0)
+    return null
+  if (height !== undefined && (!Number.isFinite(height) || height <= 0))
+    return null
+
+  return {
+    alt: (match[1] || '').trim(),
+    width,
+    height,
+  }
+}
+
+function appendStyle(token: any, style: string) {
+  const existingStyle = token.attrGet('style')
+  token.attrSet('style', existingStyle ? `${existingStyle}; ${style}` : style)
+}
 
 // 创建一个函数来动态加载高亮样式
 function loadHighlightStyle(isDark: boolean) {
   // 确保只在客户端环境执行
-  if (typeof document === 'undefined') return;
+  if (typeof document === 'undefined')
+    return
 
   // 清除现有的高亮样式
-  const existingStyle = document.getElementById('highlight-style');
+  const existingStyle = document.getElementById('highlight-style')
   if (existingStyle) {
-    existingStyle.remove();
+    existingStyle.remove()
   }
 
   // 创建新的样式元素
-  const style = document.createElement('link');
-  style.id = 'highlight-style';
-  style.rel = 'stylesheet';
+  const style = document.createElement('link')
+  style.id = 'highlight-style'
+  style.rel = 'stylesheet'
   // 根据主题选择不同的样式
   style.href = isDark
     ? 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css'
-    : 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css';
-  document.head.appendChild(style);
+    : 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css'
+  document.head.appendChild(style)
 }
 
 // 初始化 MarkdownIt 实例（这部分可以在服务器端执行）
@@ -33,12 +58,17 @@ const md: ReturnType<typeof MarkdownIt> = new MarkdownIt({
     if (lang && (hljs as any).getLanguage(lang)) {
       try {
         return `<pre class="hljs"><code>${(hljs as any).highlight(str, { language: lang, ignoreIllegals: true }).value
-          }</code></pre>`;
-      } catch (__) { }
+        }</code></pre>`
+      }
+      catch { }
     }
-    return `<pre class="hljs"><code>${md.utils.escapeHtml(str)}</code></pre>`;
+    return `<pre class="hljs"><code>${md.utils.escapeHtml(str)}</code></pre>`
   },
-}).use(hljs);
+}).use(hljs)
+
+function replaceImageAlt(imgHtml: string, alt: string) {
+  return imgHtml.replace(/\salt="[^"]*"/, ` alt="${md.utils.escapeHtml(alt)}"`)
+}
 
 // 自定义图片渲染：添加模糊过渡容器与懒加载
 const defaultImageRender = md.renderer.rules.image || function (tokens, idx, options, env, self) {
@@ -47,45 +77,69 @@ const defaultImageRender = md.renderer.rules.image || function (tokens, idx, opt
 md.renderer.rules.image = function (tokens, idx, options, env, self) {
   const token = tokens[idx]
   const existingClass = token.attrGet('class') || ''
+  const imageSize = parseObsidianImageSize(token.content || token.attrGet('alt') || '')
+
   token.attrSet('class', existingClass ? `${existingClass} md-img` : 'md-img')
   token.attrSet('loading', 'lazy')
-  const imgHtml = defaultImageRender(tokens, idx, options, env, self)
-  return `<figure class="md-img-wrapper">${imgHtml}</figure>`
+
+  if (imageSize) {
+    const imageStyle = [
+      'width: 100%',
+      'max-width: 100%',
+      imageSize.height ? `height: ${imageSize.height}px` : '',
+      imageSize.height ? 'object-fit: contain' : '',
+    ].filter(Boolean).join('; ')
+    appendStyle(token, imageStyle)
+
+    if (imageSize.alt) {
+      token.attrSet('alt', imageSize.alt)
+    }
+  }
+
+  const imgHtml = imageSize
+    ? replaceImageAlt(defaultImageRender(tokens, idx, options, env, self), imageSize.alt)
+    : defaultImageRender(tokens, idx, options, env, self)
+  const wrapperStyle = imageSize
+    ? ` style="max-width: ${imageSize.width}px${imageSize.height ? `; min-height: ${imageSize.height}px` : ''}"`
+    : ''
+  const wrapperClass = imageSize ? 'md-img-wrapper md-img-wrapper--sized' : 'md-img-wrapper'
+
+  return `<figure class="${wrapperClass}"${wrapperStyle}>${imgHtml}</figure>`
 }
 
 // 监听主题变化
-let themeChangeListener: (mutations: MutationRecord[]) => void;
+let themeChangeListener: (mutations: MutationRecord[]) => void
 
 // 创建一个 composable 函数来提供主题感知的渲染功能
 export default function useMdRender() {
   // 只在客户端环境初始化主题监听
   if (typeof document !== 'undefined' && !themeChangeListener) {
     // 初始化时加载默认主题样式
-    const isDark = document.documentElement.classList.contains('dark');
-    loadHighlightStyle(isDark);
+    const isDark = document.documentElement.classList.contains('dark')
+    loadHighlightStyle(isDark)
 
     themeChangeListener = (mutations: MutationRecord[]) => {
       mutations.forEach((mutation) => {
         if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-          const isDark = document.documentElement.classList.contains('dark');
-          loadHighlightStyle(isDark);
+          const isDark = document.documentElement.classList.contains('dark')
+          loadHighlightStyle(isDark)
         }
-      });
-    };
+      })
+    }
 
     // 添加 MutationObserver 来监听主题变化
-    const observer = new MutationObserver(themeChangeListener);
+    const observer = new MutationObserver(themeChangeListener)
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ['class'],
-    });
+    })
   }
 
   const mdRender = (markdownContent: string) => {
-    return (md as any).render(markdownContent);
+    return (md as any).render(markdownContent)
   }
 
   return {
-    mdRender
+    mdRender,
   }
 }

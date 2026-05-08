@@ -119,14 +119,20 @@ html.dark {
 .md-img-wrapper {
   position: relative;
   width: 100%;
+  max-width: 100%;
   min-height: 200px;
   background-color: var(--vp-c-bg-soft, #f5f5f5);
   border-radius: 8px;
   overflow: hidden;
-  margin: 1rem 0;
+  margin: 1rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.md-img-wrapper--sized {
+  width: 100%;
+  min-height: auto;
 }
 
 .dark .md-img-wrapper {
