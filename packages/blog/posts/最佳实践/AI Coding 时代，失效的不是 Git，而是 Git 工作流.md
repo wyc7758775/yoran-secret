@@ -356,9 +356,13 @@ Change-Set: <本组变更的短标识，可选>
 1. 检查当前分支；如果在 `main` / `master` / `release` 上，先创建新分支，分支名使用 `codex/<简短任务名>`
 2. 分批提交后推送新分支：`git push -u origin <branch-name>`
 3. 生成 Change Report 作为 PR body
-4. 如果本机安装了 GitHub CLI 且已登录，执行：
+4. 如果本机安装了 GitHub CLI、已登录，并且当前登录账号明确就是目标仓库账号，执行：
    `gh pr create --base main --head <branch-name> --title "<简短标题>" --body-file <临时 PR 描述文件>`
-5. 如果没有 `gh`，输出 GitHub Compare URL 和完整 PR body，让用户在浏览器创建 PR
+5. 如果没有 `gh`、`gh` 未登录，或用户存在多个 GitHub 账号导致当前登录身份不确定，不要要求用户登录，也不要卡住流程。直接输出 GitHub Compare URL、PR title 和完整 PR body，并明确告诉用户：
+   - PR title 填到 GitHub 的标题输入框
+   - PR body / Change Report 粘贴到 GitHub 的 description 输入框
+   - 这不是让用户自己构思内容，只是因为当前环境无法自动写入 GitHub PR 表单
+6. 如果可以操作浏览器页面，并且用户已经打开 GitHub 创建 PR 页面，优先自动把 PR title 和 PR body 填进网页表单；不能自动填写时，必须给出一段完整、可复制的粘贴包
 
 PR title 使用本次变更的整体意图，不要简单复用某一条 commit message。
 
