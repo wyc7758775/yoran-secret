@@ -30,6 +30,7 @@ const settings = reactive({
   pageMode: 'all',
   pageStart: null,
   pageEnd: null,
+  flatAllZip: false,
 })
 
 const readyFiles = computed(() => pdfFiles.value.filter(isConvertibleFile))
@@ -399,15 +400,37 @@ async function downloadAllZip() {
   if (!convertedFiles.value.length)
     return
 
+  const usedPaths = new Set()
   const entries = convertedFiles.value.flatMap((item) => {
     const folder = sanitizeName(stripPdfExtension(item.name))
     return item.results.map(result => ({
-      path: `${folder}/${result.filename}`,
+      path: createZipPath(settings.flatAllZip ? result.filename : `${folder}/${result.filename}`, usedPaths),
       blob: result.blob,
     }))
   })
 
   await generateZip(entries, 'pdf-images.zip')
+}
+
+function createZipPath(path, usedPaths) {
+  if (!usedPaths.has(path)) {
+    usedPaths.add(path)
+    return path
+  }
+
+  const dotIndex = path.lastIndexOf('.')
+  const base = dotIndex > -1 ? path.slice(0, dotIndex) : path
+  const extension = dotIndex > -1 ? path.slice(dotIndex) : ''
+  let index = 2
+  let nextPath = `${base}-${index}${extension}`
+
+  while (usedPaths.has(nextPath)) {
+    index += 1
+    nextPath = `${base}-${index}${extension}`
+  }
+
+  usedPaths.add(nextPath)
+  return nextPath
 }
 
 async function generateZip(entries, filename) {
@@ -871,6 +894,10 @@ onMounted(() => {
           <ElIcon><Refresh /></ElIcon>
           开始转换
         </button>
+        <label class="zip-layout-toggle" :class="{ disabled: !canDownloadAll }">
+          <input v-model="settings.flatAllZip" type="checkbox" :disabled="!canDownloadAll">
+          <span>同一文件夹</span>
+        </label>
         <button type="button" class="primary-btn" :disabled="!canDownloadAll" @click="downloadAllZip">
           <ElIcon><FolderOpened /></ElIcon>
           全部打包
@@ -1244,6 +1271,32 @@ onMounted(() => {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 8px;
+}
+
+.zip-layout-toggle {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.zip-layout-toggle input {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: #e06c75;
+}
+
+.zip-layout-toggle.disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
 }
 
 .primary-btn,
