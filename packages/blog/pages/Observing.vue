@@ -1,17 +1,19 @@
 <script setup>
-import { computed, ref } from 'vue'
 import { ElImage } from 'element-plus'
-import RawObservingData from '../.vitepress/router/life.js'
-import ObservingVideo from './ObservingVideo.vue'
+import { computed, ref } from 'vue'
 import RawLifeData from '../.vitepress/router/life.js'
 import VideoData from '../.vitepress/router/video-cover.js'
+import ObservingVideo from './ObservingVideo.vue'
+
+// === Classic View Data ===
+const emits = defineEmits(['open'])
 
 function parseCreateTime(createTime) {
   const dateStr = createTime.split(' · ')[0]
   return new Date(dateStr)
 }
 
-const ObservingData = [...RawObservingData].sort((a, b) => {
+const ObservingData = [...RawLifeData].sort((a, b) => {
   return parseCreateTime(b.createTime) - parseCreateTime(a.createTime)
 })
 
@@ -69,35 +71,36 @@ function toggleView() {
   currentView.value = currentView.value === 'minimal' ? 'classic' : 'minimal'
 }
 
-// === Classic View Data ===
-const emits = defineEmits(['open'])
-const navigateToDetail = (article) => {
+function navigateToDetail(article) {
   emits('open', article)
 }
 const defaultImage = 'https://picsum.photos/id/1033/1200/800'
 const baseUrl = import.meta.env.BASE_URL || '/'
+const normalizedBaseUrl = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`
+const toolsLink = `${normalizedBaseUrl}tools`
 function resolveFirstImage(src) {
-  if (!src) return defaultImage
-  if (/^https?:\/\//.test(src)) return src
+  if (!src)
+    return defaultImage
+  if (/^https?:\/\//.test(src))
+    return src
   if (src.startsWith('/')) {
-    const base = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/'
-    return base + src.slice(1)
+    return normalizedBaseUrl + src.slice(1)
   }
   return src
 }
-const hostArticle = () => {
+function hostArticle() {
   return {
     ...ObservingData[0],
     firstImage: resolveFirstImage(ObservingData[0].firstImage),
   }
 }
-const otherHostArticle = () => {
+function otherHostArticle() {
   return ObservingData.slice(1, 5).map(item => ({
     ...item,
     firstImage: resolveFirstImage(item.firstImage) ?? `https://picsum.photos/id/${Math.floor(Math.random() * 1084)}/1200/800`,
   }))
 }
-const otherArticle = () => {
+function otherArticle() {
   return ObservingData.slice(5).map(item => ({
     ...item,
     firstImage: resolveFirstImage(item.firstImage) ?? `https://picsum.photos/id/${Math.floor(Math.random() * 1084)}/1200/800`,
@@ -246,6 +249,12 @@ const videoArticles = VideoData.map(item => ({
 
       <!-- 弹窗视频 -->
       <ObservingVideo />
+
+      <div class="observer-tools-entry classic-tools-entry">
+        <a :href="toolsLink" class="observer-tools-btn">
+          Tools →
+        </a>
+      </div>
     </div>
   </div>
 
@@ -315,6 +324,12 @@ const videoArticles = VideoData.map(item => ({
         </li>
       </ul>
     </section>
+
+    <div class="observer-tools-entry">
+      <a :href="toolsLink" class="observer-tools-btn">
+        Tools →
+      </a>
+    </div>
   </div>
 </template>
 
@@ -445,6 +460,42 @@ const videoArticles = VideoData.map(item => ({
 }
 
 .dark .observer-link:hover {
+  color: #ff9e9e;
+}
+
+.observer-tools-entry {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.classic-tools-entry {
+  margin: 32px 0 72px;
+}
+
+.observer-tools-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 6px 16px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+  color: var(--vp-c-text-2);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.observer-tools-btn:hover {
+  border-color: #e06c75;
+  color: #e06c75;
+}
+
+.dark .observer-tools-btn:hover {
+  border-color: #ff9e9e;
   color: #ff9e9e;
 }
 

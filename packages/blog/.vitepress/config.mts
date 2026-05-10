@@ -59,6 +59,7 @@ export default defineConfig({
     resolve: {
       alias: {
         '@assets': new URL('../assets', import.meta.url).pathname,
+        '@mupdf-wasm?url': `${new URL('../node_modules/mupdf/dist/mupdf-wasm.wasm', import.meta.url).pathname}?url`,
       },
     },
     build: {
