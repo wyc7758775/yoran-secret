@@ -187,6 +187,8 @@ function getLineClampStyle(lines = 3) {
 
 <style scoped>
 .diary-page {
+  box-sizing: border-box;
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
   padding: 24px 24px 0;
@@ -230,19 +232,22 @@ function getLineClampStyle(lines = 3) {
 }
 
 .timeline-item {
+  box-sizing: border-box;
+  width: 100%;
   position: relative;
   display: flex;
   align-items: flex-start;
   margin-bottom: 32px;
 }
 
-.timeline-item.timeline-left {
+.timeline-item.timeline-left,
+.timeline-item.timeline-right {
   flex-direction: row-reverse;
   padding-right: calc(50% + 24px);
 }
 
 .timeline-item.timeline-right {
-  padding-left: calc(50% + 24px);
+  padding-left: 0;
 }
 
 /* ===== Node ===== */
@@ -278,6 +283,7 @@ function getLineClampStyle(lines = 3) {
 /* ===== Card ===== */
 .timeline-card-link {
   display: block;
+  min-width: 0;
   text-decoration: none;
   color: inherit;
   width: 100%;
@@ -298,7 +304,8 @@ function getLineClampStyle(lines = 3) {
 }
 
 /* 聊天气泡小三角 */
-.timeline-left .timeline-card::after {
+.timeline-left .timeline-card::after,
+.timeline-right .timeline-card::after {
   content: '';
   position: absolute;
   right: -8px;
@@ -311,15 +318,8 @@ function getLineClampStyle(lines = 3) {
 }
 
 .timeline-right .timeline-card::after {
-  content: '';
-  position: absolute;
-  left: -8px;
-  top: 16px;
-  width: 0;
-  height: 0;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-right: 8px solid var(--vp-c-bg-soft, #f5f5f5);
+  left: auto;
+  border-right: 0;
 }
 
 .card-image-wrapper {
@@ -367,12 +367,9 @@ function getLineClampStyle(lines = 3) {
   background: var(--vp-c-bg-soft, #2a2a2a);
 }
 
-.dark .timeline-left .timeline-card::after {
-  border-left-color: var(--vp-c-bg-soft, #2a2a2a);
-}
-
+.dark .timeline-left .timeline-card::after,
 .dark .timeline-right .timeline-card::after {
-  border-right-color: var(--vp-c-bg-soft, #2a2a2a);
+  border-left-color: var(--vp-c-bg-soft, #2a2a2a);
 }
 
 /* ===== Ending animation ===== */
@@ -473,6 +470,7 @@ function getLineClampStyle(lines = 3) {
 /* ===== Mobile ===== */
 @media (max-width: 768px) {
   .diary-page {
+    max-width: 100vw;
     padding: 16px 16px 0;
   }
 
@@ -484,7 +482,7 @@ function getLineClampStyle(lines = 3) {
   .timeline-item.timeline-right {
     flex-direction: row;
     padding-left: 44px;
-    padding-right: 0;
+    padding-right: 16px;
   }
 
   .timeline-node {
