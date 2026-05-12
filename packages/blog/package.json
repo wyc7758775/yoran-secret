@@ -14,10 +14,11 @@
     "preview": "vitepress preview",
     "router": "node .vitepress/plugins/build-sidebar-plugin.js",
     "gallery": "node .vitepress/plugins/build-gallery-plugin.js",
-    "life": "node .vitepress/plugins/build-life-plugin.js",
+    "observer": "node .vitepress/plugins/build-observer-plugin.js",
+    "life": "npm run observer",
     "diary": "node .vitepress/plugins/build-diary-plugin.js",
     "video:cover": "node .vitepress/plugins/build-video-cover-plugin.js",
-    "plugin:all": "npm run router && npm run gallery && npm run life && npm run diary && npm run video:cover",
+    "plugin:all": "npm run router && npm run gallery && npm run observer && npm run diary && npm run video:cover",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },

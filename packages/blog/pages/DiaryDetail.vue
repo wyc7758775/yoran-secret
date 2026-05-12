@@ -88,13 +88,18 @@ const articleSrc = computed(() => {
 const { mdRender } = useMdRender()
 const baseUrl = import.meta.env.BASE_URL || '/'
 
-function resolveImagePaths(html: string): string {
-  return html.replace(/<img([^>]*)\ssrc="(\/[^"]*)"/g, (match, attrs, src) => {
-    if (src.startsWith('//')) return match
-    const base = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/'
-    const resolvedSrc = base + src.slice(1)
-    return `<img${attrs} src="${resolvedSrc}"`
-  })
+function resolveBasePaths(html: string): string {
+  const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`
+
+  return html
+    .replace(/<img([^>]*)\ssrc="(\/[^"]*)"/g, (match, attrs, src) => {
+      if (src.startsWith('//')) return match
+      return `<img${attrs} src="${base}${src.slice(1)}"`
+    })
+    .replace(/<a([^>]*)\shref="(\/[^"]*)"/g, (match, attrs, href) => {
+      if (href.startsWith('//')) return match
+      return `<a${attrs} href="${base}${href.slice(1)}"`
+    })
 }
 
 function getFileInfo(src: string) {
@@ -150,7 +155,7 @@ async function loadAndRenderMarkdown() {
 
     if (fileKey) {
       const markdownContent = await markdownFiles[fileKey]()
-      renderedContent.value = resolveImagePaths(mdRender(stripFrontmatter(markdownContent)))
+      renderedContent.value = resolveBasePaths(mdRender(stripFrontmatter(markdownContent)))
     }
     else {
       renderedContent.value = `<p>未找到对应的文章内容: ${fileName}</p>`

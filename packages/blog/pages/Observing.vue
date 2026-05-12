@@ -1,7 +1,7 @@
 <script setup>
 import { ElImage } from 'element-plus'
 import { computed, ref } from 'vue'
-import RawLifeData from '../.vitepress/router/life.js'
+import RawObserverData from '../.vitepress/router/observer.js'
 import VideoData from '../.vitepress/router/video-cover.js'
 import ObservingVideo from './ObservingVideo.vue'
 
@@ -13,11 +13,11 @@ function parseCreateTime(createTime) {
   return new Date(dateStr)
 }
 
-const ObservingData = [...RawLifeData].sort((a, b) => {
+const ObservingData = [...RawObserverData].sort((a, b) => {
   return parseCreateTime(b.createTime) - parseCreateTime(a.createTime)
 })
 
-const LifeData = [...RawLifeData].sort((a, b) => {
+const ObserverData = [...RawObserverData].sort((a, b) => {
   return parseCreateTime(b.createTime) - parseCreateTime(a.createTime)
 })
 
@@ -108,7 +108,7 @@ function otherArticle() {
 }
 
 // === Minimal View Data ===
-const lifeArticles = LifeData.map(item => ({
+const observerArticles = ObserverData.map(item => ({
   date: item.createTime.split(' · ')[0],
   title: item.caption,
   link: `/yoran-secret/observer-detail?src=${encodeURIComponent(item.src)}`,
@@ -134,7 +134,7 @@ const videoArticles = VideoData.map(item => ({
       <div class="container mx-auto mb-10">
         <!-- 页面标题 -->
         <h1 class="text-4xl font-bold mb-8">
-          Life
+          Observer
         </h1>
 
         <!-- 热门文章 -->
@@ -287,14 +287,14 @@ const videoArticles = VideoData.map(item => ({
       <em>Currently based in Shenzhen - last posted recently</em>
     </div>
 
-    <!-- Life -->
+    <!-- Observer -->
     <section class="observer-section">
       <h2 class="observer-section-title">
-        Life
+        Observer
       </h2>
       <ul class="observer-list">
         <li
-          v-for="article in lifeArticles"
+          v-for="article in observerArticles"
           :key="article.link"
           class="observer-list-item"
         >

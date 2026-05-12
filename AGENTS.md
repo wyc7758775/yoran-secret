@@ -55,20 +55,20 @@
 │   │   │   ├── plugins/          # 构建期 Node.js 脚本（CommonJS）
 │   │   │   │   ├── build-sidebar-plugin.js      # 扫描 posts/ 生成 sidebar.json
 │   │   │   │   ├── build-gallery-plugin.js      # 扫描 assets/gallery/ 生成 gallery.js
-│   │   │   │   ├── build-life-plugin.js         # 扫描 life/ 生成 life.js
+│   │   │   │   ├── build-observer-plugin.js     # 扫描 observer/ 生成 observer.js
 │   │   │   │   ├── build-video-cover-plugin.js  # 调用 B 站 API 生成视频封面数据
 │   │   │   │   ├── import-images.ts             # Vite glob 导入 gallery 图片
 │   │   │   │   └── resolve-image-url.ts         # 图片路径处理工具
 │   │   │   ├── router/           # 构建插件生成的路由数据（需提交到仓库）
 │   │   │   │   ├── sidebar.json
 │   │   │   │   ├── gallery.js
-│   │   │   │   ├── life.js
+│   │   │   │   ├── observer.js
 │   │   │   │   ├── video.js
 │   │   │   │   └── video-cover.js
 │   │   │   └── unocss.config.ts  # UnoCSS 配置（shortcuts、presets）
 │   │   ├── pages/                # 自定义 Vue 页面组件（Home、Gallery、Observing 等）
 │   │   ├── posts/                # 技术博客 Markdown 文章（按目录分类）
-│   │   ├── life/                 # 生活随笔 Markdown 文章
+│   │   ├── observer/             # 观察、复盘、读书、生活随笔 Markdown 文章
 │   │   ├── diary/                # 日记本 Markdown 文章（时间轴页面数据源）
 │   │   ├── assets/               # 静态资源（gallery 图片、posts 图片）
 │   │   ├── public/               # VitePress public 目录（profile.svg 等）
@@ -106,10 +106,11 @@ pnpm run blog:dev          # 启动 VitePress 开发服务器
 pnpm run blog:build        # 构建博客（输出到 packages/blog/.vitepress/dist）
 pnpm run blog:router       # 运行 sidebar 构建插件（扫描 posts/ 生成 sidebar.json）
 pnpm run blog:gallery      # 运行 gallery 构建插件（扫描 assets/gallery/ 生成 gallery.js）
-pnpm run blog:life         # 运行 life 构建插件（扫描 life/ 生成 life.js）
+pnpm run blog:observer     # 运行 Observer 构建插件（扫描 observer/ 生成 observer.js）
+pnpm run blog:life         # 兼容别名，等同于 blog:observer
 pnpm run blog:diary        # 运行 diary 构建插件（扫描 diary/ 生成 diary.js）
 pnpm run blog:video:cover  # 运行视频封面构建插件（调用 B 站 API 生成 video-cover.js）
-pnpm run blog:plugin       # 依次执行以上全部插件（router + gallery + life + diary + video:cover）
+pnpm run blog:plugin       # 依次执行以上全部插件（router + gallery + observer + diary + video:cover）
 
 # --- Vue Study 相关 ---
 pnpm run vs:dev            # 启动 Vue Study 开发服务器（Vite）
@@ -119,7 +120,7 @@ pnpm run vs:dev            # 启动 Vue Study 开发服务器（Vite）
 npx eslint .               # 检查整个工作区
 ```
 
-> **重要**：在构建博客之前，必须先运行 `pnpm run blog:plugin` 生成最新的路由数据文件，否则 sidebar、gallery、life 等页面可能显示旧数据。
+> **重要**：在构建博客之前，必须先运行 `pnpm run blog:plugin` 生成最新的路由数据文件，否则 sidebar、gallery、observer 等页面可能显示旧数据。
 
 ---
 
@@ -142,7 +143,7 @@ npx eslint .               # 检查整个工作区
 
 ### 博客 (`packages/blog`)
 
-- **文章管理**：技术文章放在 `posts/<分类>/` 下，生活随笔放在 `life/` 下，均为 Markdown 格式。
+- **文章管理**：技术资料放在 `posts/<分类>/` 下；观点、复盘、读书和生活随笔放在 `observer/` 下，均为 Markdown 格式。
 - **路由生成**：sidebar 不是手写维护的，而是通过 `build-sidebar-plugin.js` 扫描 `posts/` 目录自动生成 `sidebar.json`。
 - **自定义页面**：首页 (`index.md`)、图库页 (`gallery.md`)、观察者页 (`observing.md`) 均使用 VitePress 的 `layout` frontmatter，并在 Markdown 中嵌入自定义 Vue 组件（`pages/*.vue`）。
 - **样式策略**：
@@ -153,7 +154,7 @@ npx eslint .               # 检查整个工作区
   - gallery 图片存放在 `assets/gallery/`
   - 存在 `import-images.ts` 使用 `import.meta.glob` 做静态导入，以便 Vite 正确打包
   - `resolve-image-url.ts` 处理路径拼接，兼容 `base` 路径
-  - **Obsidian 同步注意**：从 Obsidian 同步笔记到 `life/` 时，笔记中的本地图片必须放在 `public/obsidian-sync/<文章名>/` 目录下，并在 Markdown 中使用 `/obsidian-sync/<文章名>/图片名.png` 的绝对路径引用。**禁止**在 Markdown 中直接写 `/yoran-secret/obsidian-sync/...`（会导致 VitePress 构建时 Rollup 解析失败）。VitePress 会自动在编译时为 `/obsidian-sync/...` 加上 `base` 路径。同步后必须执行 `pnpm run blog:life` 重新生成 `life.js`。
+  - **Obsidian 同步注意**：从 Obsidian 同步笔记到 `observer/` 时，笔记中的本地图片必须放在 `public/obsidian-sync/<文章名>/` 目录下，并在 Markdown 中使用 `/obsidian-sync/<文章名>/图片名.png` 的绝对路径引用。**禁止**在 Markdown 中直接写 `/yoran-secret/obsidian-sync/...`（会导致 VitePress 构建时 Rollup 解析失败）。VitePress 会自动在编译时为 `/obsidian-sync/...` 加上 `base` 路径。同步后必须执行 `pnpm run blog:observer` 重新生成 `observer.js`。
 
 ### Vue Study (`packages/vue-study`)
 

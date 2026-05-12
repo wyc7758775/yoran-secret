@@ -1,3 +1,7 @@
+---
+date: 2025-08-21T12:00:00
+---
+
 # 用函数调用的方式来分析 this
 
 > 每个函数都有一个隐式的 `this` 形参。将函数作为方法调用时，这个参数会被设置为用于访问该方法的对象。这和大多数[面向对象语言](https://www.zhihu.com/search?q=%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AF%AD%E8%A8%80&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:%221539325572%22%7D)中的 `this`（或 `self`）含义相同。但是 JavaScript 在「关联到对象的方法」与「独立函数」这两者之间，使用了单一的定义形式。**这使 \*\***`this`\***\* 导致了许多程序员的困惑和 bug。 ——————Brendan Eich(JS 之父)**

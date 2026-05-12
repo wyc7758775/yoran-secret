@@ -154,3 +154,36 @@ html.dark {
   filter: blur(0);
   transform: scale(1);
 }
+
+.md-code-block {
+  position: relative;
+  margin: 16px 0;
+}
+
+.md-code-block pre.hljs {
+  margin: 0;
+  padding: 20px 24px;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.md-copy-code {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  padding: 4px 8px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+  font-size: 12px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.md-copy-code:hover,
+.md-copy-code[data-copied="true"] {
+  color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+}

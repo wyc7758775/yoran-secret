@@ -1,3 +1,7 @@
+---
+date: 2025-08-24T12:00:00
+---
+
 <img width="60%" src="https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/20250824213628776.png" />
 
 ---
@@ -61,7 +65,7 @@ Content-Length: 1234
 **请求头如下：**
 
 ```http
-GET /yoran-secret/observer-detail.html?src=/life/xxxxx.md HTTP/2
+GET /yoran-secret/observer-detail.html?src=/observer/xxxxx.md HTTP/2
 Host: wyc7758775.github.io
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:141.0) Gecko/20100101 Firefox/141.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8

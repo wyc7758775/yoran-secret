@@ -40,14 +40,16 @@ function getPathFromUrl() {
       const pathParts = pathWithoutBase.split('/').filter(Boolean)
 
       const mdIndex = pathParts.findIndex(part => part.includes('.md'))
-      const lifeIndex = pathParts.findIndex(part => part === 'life')
+      const observerIndex = pathParts.findIndex(part => part === 'observer')
+      const legacyLifeIndex = pathParts.findIndex(part => part === 'life')
+      const contentIndex = observerIndex >= 0 ? observerIndex : legacyLifeIndex
 
       let extractedPath = ''
       if (mdIndex >= 0) {
-        extractedPath = pathParts.slice(Math.max(0, lifeIndex)).join('/')
+        extractedPath = pathParts.slice(Math.max(0, contentIndex)).join('/')
       }
-      else if (lifeIndex >= 0) {
-        extractedPath = pathParts.slice(lifeIndex).join('/')
+      else if (contentIndex >= 0) {
+        extractedPath = pathParts.slice(contentIndex).join('/')
       }
 
       // 优先使用URL参数中的src
@@ -101,13 +103,18 @@ const articleSrc = computed(() => {
 const { mdRender } = useMdRender()
 const baseUrl = import.meta.env.BASE_URL || '/'
 
-function resolveImagePaths(html: string): string {
-  return html.replace(/<img([^>]*)\ssrc="(\/[^"]*)"/g, (match, attrs, src) => {
-    if (src.startsWith('//')) return match
-    const base = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/'
-    const resolvedSrc = base + src.slice(1)
-    return `<img${attrs} src="${resolvedSrc}"`
-  })
+function resolveBasePaths(html: string): string {
+  const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`
+
+  return html
+    .replace(/<img([^>]*)\ssrc="(\/[^"]*)"/g, (match, attrs, src) => {
+      if (src.startsWith('//')) return match
+      return `<img${attrs} src="${base}${src.slice(1)}"`
+    })
+    .replace(/<a([^>]*)\shref="(\/[^"]*)"/g, (match, attrs, href) => {
+      if (href.startsWith('//')) return match
+      return `<a${attrs} href="${base}${href.slice(1)}"`
+    })
 }
 
 function getFileInfo(src: string) {
@@ -152,7 +159,7 @@ async function loadAndRenderMarkdown() {
 
     const { fileName } = getFileInfo(articleSrc.value)
 
-    const markdownFiles = (import.meta as any).glob('../life/*.md', {
+    const markdownFiles = (import.meta as any).glob('../observer/*.md', {
       query: '?raw',
       import: 'default',
     })
@@ -160,7 +167,7 @@ async function loadAndRenderMarkdown() {
 
     if (fileKey) {
       const markdownContent = await markdownFiles[fileKey]()
-      renderedContent.value = resolveImagePaths(mdRender(markdownContent))
+      renderedContent.value = resolveBasePaths(mdRender(markdownContent))
     }
     else {
       renderedContent.value = `<p>未找到对应的文章内容: ${fileName}</p>`

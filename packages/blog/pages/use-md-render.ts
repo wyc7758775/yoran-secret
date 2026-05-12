@@ -26,6 +26,52 @@ function appendStyle(token: any, style: string) {
   token.attrSet('style', existingStyle ? `${existingStyle}; ${style}` : style)
 }
 
+function escapeHtml(value: string) {
+  return md.utils.escapeHtml(value)
+}
+
+function escapeAttribute(value: string) {
+  return escapeHtml(value)
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+}
+
+function installCodeCopy() {
+  if (typeof document === 'undefined')
+    return
+
+  if (document.documentElement.dataset.mdCodeCopyReady === 'true')
+    return
+
+  document.documentElement.dataset.mdCodeCopyReady = 'true'
+  document.addEventListener('click', async (event) => {
+    const target = event.target
+    if (!(target instanceof HTMLElement))
+      return
+
+    const button = target.closest<HTMLButtonElement>('.md-copy-code')
+    if (!button)
+      return
+
+    const code = button.dataset.code || ''
+    try {
+      await navigator.clipboard.writeText(code)
+      button.dataset.copied = 'true'
+      button.textContent = '已复制'
+      window.setTimeout(() => {
+        button.dataset.copied = 'false'
+        button.textContent = '复制'
+      }, 1500)
+    }
+    catch {
+      button.textContent = '失败'
+      window.setTimeout(() => {
+        button.textContent = '复制'
+      }, 1500)
+    }
+  })
+}
+
 // 创建一个函数来动态加载高亮样式
 function loadHighlightStyle(isDark: boolean) {
   // 确保只在客户端环境执行
@@ -65,6 +111,22 @@ const md: ReturnType<typeof MarkdownIt> = new MarkdownIt({
     return `<pre class="hljs"><code>${md.utils.escapeHtml(str)}</code></pre>`
   },
 }).use(hljs)
+
+md.renderer.rules.fence = function (tokens, idx) {
+  const token = tokens[idx]
+  const info = token.info ? token.info.trim().split(/\s+/)[0] : ''
+  const langClass = info ? ` language-${escapeAttribute(info)}` : ''
+  const highlighted = info && (hljs as any).getLanguage(info)
+    ? (hljs as any).highlight(token.content, { language: info, ignoreIllegals: true }).value
+    : escapeHtml(token.content)
+
+  return [
+    '<div class="md-code-block">',
+    `<button type="button" class="md-copy-code" data-code="${escapeAttribute(token.content)}" data-copied="false">复制</button>`,
+    `<pre class="hljs"><code class="hljs${langClass}">${highlighted}</code></pre>`,
+    '</div>',
+  ].join('')
+}
 
 function replaceImageAlt(imgHtml: string, alt: string) {
   return imgHtml.replace(/\salt="[^"]*"/, ` alt="${md.utils.escapeHtml(alt)}"`)
@@ -114,6 +176,7 @@ let themeChangeListener: (mutations: MutationRecord[]) => void
 export default function useMdRender() {
   // 只在客户端环境初始化主题监听
   if (typeof document !== 'undefined' && !themeChangeListener) {
+    installCodeCopy()
     // 初始化时加载默认主题样式
     const isDark = document.documentElement.classList.contains('dark')
     loadHighlightStyle(isDark)

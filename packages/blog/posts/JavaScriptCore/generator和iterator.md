@@ -1,3 +1,7 @@
+---
+date: 2025-08-08T12:00:00
+---
+
 # generator 和 iterator
 
 ## 前言

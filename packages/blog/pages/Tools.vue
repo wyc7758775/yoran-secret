@@ -17,8 +17,8 @@ const tools = [
     status: 'Planning',
   },
   {
-    title: 'Life',
-    description: '收纳日常记录、图片和个人工作流相关的工具。',
+    title: 'Observer',
+    description: '收纳观察记录、图片和个人工作流相关的工具。',
     status: 'Planning',
   },
 ]
