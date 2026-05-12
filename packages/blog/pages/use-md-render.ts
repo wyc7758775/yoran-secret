@@ -1,5 +1,6 @@
 import MarkdownIt from 'markdown-it'
-import hljs from 'markdown-it-highlightjs'
+import highlightjs from 'highlight.js'
+import markdownItHighlightjs from 'markdown-it-highlightjs'
 import 'github-markdown-css'
 
 function parseObsidianImageSize(altText: string) {
@@ -101,23 +102,23 @@ const md: ReturnType<typeof MarkdownIt> = new MarkdownIt({
   linkify: true, // 自动转换链接
   typographer: true, // 优化排版
   highlight: (str: string, lang: string) => {
-    if (lang && (hljs as any).getLanguage(lang)) {
+    if (lang && highlightjs.getLanguage(lang)) {
       try {
-        return `<pre class="hljs"><code>${(hljs as any).highlight(str, { language: lang, ignoreIllegals: true }).value
+        return `<pre class="hljs"><code>${highlightjs.highlight(str, { language: lang, ignoreIllegals: true }).value
         }</code></pre>`
       }
       catch { }
     }
     return `<pre class="hljs"><code>${md.utils.escapeHtml(str)}</code></pre>`
   },
-}).use(hljs)
+}).use(markdownItHighlightjs)
 
 md.renderer.rules.fence = function (tokens, idx) {
   const token = tokens[idx]
   const info = token.info ? token.info.trim().split(/\s+/)[0] : ''
   const langClass = info ? ` language-${escapeAttribute(info)}` : ''
-  const highlighted = info && (hljs as any).getLanguage(info)
-    ? (hljs as any).highlight(token.content, { language: info, ignoreIllegals: true }).value
+  const highlighted = info && highlightjs.getLanguage(info)
+    ? highlightjs.highlight(token.content, { language: info, ignoreIllegals: true }).value
     : escapeHtml(token.content)
 
   return [
