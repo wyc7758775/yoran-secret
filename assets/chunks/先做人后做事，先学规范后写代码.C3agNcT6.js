@@ -1,0 +1,1502 @@
+const n=`---
+date: 2025-08-18T12:00:00
+---
+
+# 先做人后做事，先学规范后写代码
+
+## 1. 前言
+
+JS 的使用规范旨在统一团队的代码风格，容易被团队中的任意一人理解，提升被维护性。对于我们这种已经成型的软件而言，是一个提升工作效率瓶颈成本最低，收益最高的方式，没有之一了。
+
+一个良好的代码规范对于应用程序的功能没有直接的影响，但是对于改善源代码的理解是有帮助的。养成一个良好的系统对于软件的开发和维护都是有益的，不仅自己维护起来更加方便，也会让其他读者觉得赏心悦目。
+
+**短期可能会比之前花多一点时间，但是长期来看效率肯定是提升的。节省自己的时间，节省沟通的成本，每一位新入职的新员工都应该先**
+
+> 本文档很多都是基于百度 WEB 前端开发文档，或者阿里前端开发文档
+
+符号说明：
+
+**💪：强制执行**
+
+**💬：建议执行**
+
+## 2. 代码风格
+
+### 2.1 结构（完全基于 Eslint 默认规则）
+
+#### 2.11 缩进
+
+**💬 [建议] 使用 2 个空格作为一个缩进层级，不允许使用 4 个空格**
+
+**说明：** 两个空格，这是谷歌对开源代码的推荐风格。刚开始看是觉得不够层次分明，但看习惯也就好了。用四个的话，删除时退格键地要按好几下，按多了，你就会觉得自己一直是在按空格和删空格，而不是输入代码和改代码。
+
+**💬** **[建议] \\*\\***\`switch\`\\***\\* 下的 \\*\\***\`case\`\\***\\* 和 \\*\\***\`default\`\\***\\* 必须增加一个缩进层级。**
+
+建议不管有没有 default 都需要加上，增加代码的完整性
+
+\`\`\`js
+// good
+switch (variable) {
+  case "1":
+    // do...
+    break;
+  case "2":
+    // do...
+    break;
+  default:
+  // do...
+}
+// bad
+switch (variable) {
+  case "1":
+    // do...
+    break;
+  case "2":
+    // do...
+    break;
+  default:
+  // do...
+}
+\`\`\`
+
+#### 2.12 空格
+
+完全基于 Eslint 的默认规则，希望每个人都能够遵循。而且现在编辑器默认安装的编辑器，右键格式化代码也能够达到同样的目的。
+
+**💪** **[强制]** **二元运算符两侧必须有一个空格，一元运算符和操作对象之间不允许有空格**
+
+\`\`\`js
+let a = !arr.length;
+a++;
+a = b + c;
+\`\`\`
+
+**💪** **[强制]** **用作代码块起始的左花括号 { 前必须有一个空格。**
+
+\`\`\`js
+// good
+if (condition) {
+}
+while (condition) {}
+function funcName() {}
+// bad
+if (condition) {
+}
+while (condition) {}
+function funcName() {}
+\`\`\`
+
+**💪 \\*\\***[强制]\\*\\* **\`if / else / for / while / function / switch / do / try / catch / finally\`\\*\\*** 关键字后，必须有一个空格。\\*\\*
+
+**💪** **[强制]** **在对象创建时，属性中的** **\`:\`** **之后必须有空格，** **\`:\`** **之前不允许有空格。**
+
+\`\`\`js
+// good
+const obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+// bad
+const obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+\`\`\`
+
+**💪 [强制] 函数声明、具名函数表达式、函数调用中，函数名和** **\`(\`** **之间不允许有空格**
+
+\`\`\`js
+// good
+function funcName() {}
+var funcName = function funcName() {};
+funcName();
+// bad
+function funcName() {}
+var funcName = function funcName() {};
+funcName();
+\`\`\`
+
+💪 **[强制]** **在函数调用、函数声明、括号表达式、属性访问、** **\`if / for / while / switch / catch\`** **等语句中， \\*\`()\`和 \`[]\`** **内紧贴括号部分不允许有空格。**
+
+\`\`\`js
+// good
+callFunc(param1, param2, param3);
+
+save(this.list[this.indexes[i]]);
+
+needIncream && (variable += increament);
+
+if (num > list.length) {
+}
+
+while (len--) {}
+// bad
+callFunc(param1, param2, param3);
+
+save(this.list[this.indexes[i]]);
+
+needIncreament && (variable += increament);
+
+if (num > list.length) {
+}
+
+while (len--) {}
+\`\`\`
+
+**💪 [强制] 单行声明的数组与对象，如果包含元素， \`{}\` 和 \`[]\` 内紧贴括号部分不允许包含空格。**
+
+\`\`\`js
+// good
+var arr1 = [];
+var arr2 = [1, 2, 3];
+var obj1 = {};
+var obj2 = { name: "obj" };
+var obj3 = {
+  name: "obj",
+  age: 20,
+  sex: 1,
+};
+// bad
+var arr1 = [];
+var arr2 = [1, 2, 3];
+var obj1 = {};
+var obj2 = { name: "obj" };
+var obj3 = { name: "obj", age: 20, sex: 1 };
+\`\`\`
+
+**💪 [强制 行尾不得有多余的空格**
+
+> 这一点在使用 Eslint 插件的项目新手尤其容易犯的问题，好在 webstorn 编辑器会自动的去除行尾的空格，不用我们做过多的操作
+
+**💪 [强制 行尾不得有多余的空格**
+
+说明：不解释，webstorn 编辑器会自动去除，VsCode 需要安装额外插件
+
+\`\`\`js
+// bad
+const x = y + 5;
+// good
+const x = y + 5;
+\`\`\`
+
+#### 2.13 换行
+
+**💪 [强制] 每个独立语句结束后必须换行**
+
+**💪 [强制] 在文件末尾插入一个空行**
+
+**💪 [强制] 每行不得超过 \\*\\***\`120\`\\***\\* 个字符**
+
+\`\`\`js
+// good
+if (
+  (user.isAuthenticated() &&
+    user.isInRole("admin") &&
+    user.hasAuthority("add-admin")) ||
+  user.hasAuthority("delete-admin")
+) {
+  // Code
+}
+
+var result = number1 + number2 + number3 + number4 + number5;
+
+// bad
+if (
+  (user.isAuthenticated() &&
+    user.isInRole("admin") &&
+    user.hasAuthority("add-admin")) ||
+  user.hasAuthority("delete-admin")
+) {
+  // Code
+}
+
+var result = number1 + number2 + number3 + number4 + number5;
+\`\`\`
+
+> 超长的不可分割的代码允许例外，比如复杂的正则表达式。长字符串不在例外之列。
+
+**💬** **不同行为或逻辑的语句集，使用空行隔开，更易阅读。**
+
+\`\`\`js
+// 仅为按逻辑换行的示例，不代表setStyle的最优实现
+function setStyle(element, property, value) {
+  if (element == null) {
+    return;
+  }
+
+  element.style[property] = value;
+}
+\`\`\`
+
+**💬** **在语句的行长度超过 \\*\\***\`120\`\\***\\* 时，根据逻辑条件合理缩进。**
+
+\`\`\`js
+// 较复杂的逻辑条件组合，将每个条件独立一行，逻辑运算符放置在行首进行分隔，或将部分逻辑按逻辑组合进行分隔。
+// 建议最终将右括号 ) 与左大括号 { 放在独立一行，保证与 \`if\` 内语句块能容易视觉辨识。
+if (
+  (user.isAuthenticated() &&
+    user.isInRole("admin") &&
+    user.hasAuthority("add-admin")) ||
+  user.hasAuthority("delete-admin")
+) {
+  // Code
+}
+
+// 按一定长度截断字符串，并使用 + 运算符进行连接。
+// 分隔字符串尽量按语义进行，如不要在一个完整的名词中间断开。
+// 特别的，对于 HTML 片段的拼接，通过缩进，保持和 HTML 相同的结构。
+let html =
+  "" + // 此处用一个空字符串，以便整个 HTML 片段都在新行严格对齐
+  "<article>" +
+  "<h1>Title here</h1>" +
+  "<p>This is a paragraph</p>" +
+  "<footer>Complete</footer>" +
+  "</article>";
+
+// 也可使用数组来进行拼接，相对 \`+\` 更容易调整缩进。
+let html = [
+  "<article>",
+  "<h1>Title here</h1>",
+  "<p>This is a paragraph</p>",
+  "<footer>Complete</footer>",
+  "</article>",
+];
+html = html.join("");
+
+// 当参数过多时，将每个参数独立写在一行上，并将结束的右括号 ) 独立一行。
+// 所有参数必须增加一个缩进。
+foo(aVeryVeryLongArgument, anotherVeryLongArgument, callback);
+
+// 也可以按逻辑对参数进行组合。
+// 最经典的是 baidu.format 函数，调用时将参数分为“模板”和“数据”两块
+baidu.format(dateFormatTemplate, year, month, date, hour, minute, second);
+
+// 当函数调用时，如果有一个或以上参数跨越多行，应当每一个参数独立一行。
+// 这通常出现在匿名函数或者对象初始化等作为参数时，如 \`setTimeout\` 函数等。
+setTimeout(function () {
+  alert("hello");
+}, 200);
+
+order.data.read(
+  "id=" + me.model.id,
+  function (data) {
+    me.attchToModel(data.result);
+    callback();
+  },
+  300
+);
+
+// 链式调用较长时采用缩进进行调整。
+$("#items").find(".selected").highlight().end();
+
+// 三元运算符由3部分组成，因此其换行应当根据每个部分的长度不同，形成不同的情况。
+let result = thisIsAVeryVeryLongCondition ? resultA : resultB;
+
+let result = condition ? thisIsAVeryVeryLongResult : resultB;
+
+// 数组和对象初始化的混用，严格按照每个对象的 \`{\` 和结束 \`}\` 在独立一行的风格书写。
+let array = [
+  {
+    // ...
+  },
+  {
+    // ...
+  },
+];
+\`\`\`
+
+⬆️ 该例子出自百度开源的文档规范中
+
+**💬** **关于是否应该添加分号**
+
+个人比较同意**尤雨溪**说的。在 2021 年的今天还在加分号都是过于保守的想法且未经深入思考的草率结论。而且现在新出的语言的可加而不加的语言的有很多，Go, Scala, Ruby, Python, Swift, Groovy...等等。不加分号之后，整个页面会清爽感觉很多。而加了分号除了多打一次字符，没有意义。
+
+而且对于 JS 而言会报错的的情况只有当这 5 种\`token，括号，方括号，正则开头的斜杠，加号，减号\`为行首。
+
+1.  正则开头作为行首的情况从来没有见过
+1.  括号为行首的只有在写原生 JS 的时候构建闭包的时候出现，即(function() {})()这种
+1.  方括号作为行首？这又不是 Object-C
+
+综上所述，我们有可能会遇到的情况就是在(function() {})()这种面前加上 **;** 号即可。其他时候都可以去掉分号。一旦习惯了去除了分号，会让整个界面干净整洁很多。百利而无害！
+
+且是否校验分号在 Eslint 中也是一个重要的规范选项。
+
+### 2.2 命名
+
+#### 2.21 文件和文件夹命名
+
+**文件夹** 基本遵循\`Camel命名法\`
+
+**文件**由于 react 主要是 class 为主，所以必定是使用大驼峰命名法。
+
+#### 2.22 基本类型数据命名
+
+💪 **[强制]** **基本遵循** **\`Camel命名法\`**
+
+|                 |                |                  |
+| --------------- | -------------- | ---------------- |
+|                 | Bad            | Good             |
+| **常量**        | taskEvents     | TASK_EVENTS      |
+| **类/构造函数** | task           | Task             |
+| **类型**        | Task、Status   | ITask、EStatus   |
+| **CSS**         | task-page-menu | task-page_menu   |
+| **变量**        | task_list      | taskList         |
+| **i18n**        | taskStatusStop | task_status_stop |
+
+> BEM 命名规范
+
+1.  确保命名语义标准
+1.  严禁使用拼命命名
+1.  严禁使用 flag/ok 等 😠
+1.  长度尽可能不要超过 15 个字符
+1.  类/对象内部命名无需再携带主体
+
+\`\`\`
+class Task {
+  // bad
+  stopTask() {}
+  // good
+  stop() {}
+}
+\`\`\`
+
+#### 2.23 函数命名
+
+- **can** 判断是否可执行某个动作，函数返回一个布尔值。true：可执行；false：不可执行
+- **has** 判断是否含有某个值， 函数返回一个布尔值。- true：含有此值；false：不含有此值
+- **is**： 判断是否为某个值，函数返回一个布尔值。true：为某个值；false：不为某个值
+- **get**： 获取某个之，函数返回一个非布尔值
+- **set**： 设置某个值，无返回值、返回是否设置成功或者返回链式对象 load 加载某些数据,无返回值或者返回是否加载完成的结果
+
+\`\`\`
+// 是否可阅读
+function canRead() {
+ return true
+}
+// 获取名称
+function getName() {
+ return this.name
+}
+\`\`\`
+
+|              |        |
+| ------------ | ------ |
+| 新增         | create |
+| 添加         | add    |
+| 删除         | remove |
+| 修改         | update |
+| 查询（单个） | get    |
+| 查询（多个） | list   |
+| 分页查询     | page   |
+| 统计         | count  |
+
+**💪 [强制] 采用 handle + 'EventName' 的方式命名**
+
+\`\`\`
+<Component onClick={this.handleClick} />
+\`\`\`
+
+**💬** **[建议]** 语义化的命名
+
+\`\`\`
+// good
+int widthInPixels = ...
+
+// bad
+int width = ....; // 宽度以像素为单位
+\`\`\`
+
+#### 2.24 当你实在不知道怎么命名的时候
+
+**💬** **遇到一个实在不知道怎么起名字的时候，我们如果用有道翻译的话，有时候语义不一定会准确。毕竟不是母语。这个时候你可以点击以下网站进行搜索，这个网站出来的结果都是 github 开源项目别人的命名，相对而言可能会更加的规范和准确。**
+[CODELF (unbug.github.io)](https://unbug.github.io/codelf/)
+
+> 由于是国外服务器，所以一开始可能有点小慢，请耐心等待
+
+## 3. 一目了然的目录结构（react 版本）
+
+一个良好的目录结构是可以自解释的。VUE 框架在使用脚手架创建项目的是，已经自动生成了目录结构。而 React 基于了开发更高的自由度，能够随意让开发者自由的组合适合自己的项目的项目结构，本是好意，但是在一个团队中也需要统一起来。
+
+这部分各部门的项目所使用的技术栈是不同的，细分之处可由各部门相关人士进行**合理的**修改
+
+### 3.1 主体目录结构
+
+💪 **[强制]** ** 基本思路是页面功能模块化，可以方便的迁移业务到新的框架中。但是确实现在的项目目录差别大，所以只能在修改需求的时候，进行目录的迁移。**
+
+![截屏2021-12-17 10.27.33.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cefa906612a2462f91c71636c46f263e~tplv-k3u1fbpfcp-watermark.image?)
+
+**说明：**
+
+以功能模块为一个 page，每个 page 中又存在各自的功能模块。
+
+比如 productManage 中，就包含两个相似的功能，货源管理和商品管理，所以在实际界面中不是在同一个页面，但是由于功能是一致的，所以也应该归位同一类。
+
+**api 和 routers**都在由模块中各自定义，然后统一导出。
+
+pages 下的 index.js 可以看情况来定义它的作用。如果是 productManage 的货源管理和商品管理没有统一的入口的话，就是一个导出页面的作用。如果类似 realRstate 房地产这种有一个共同的入口的话，可以放一个指导页。
+
+**renders**是有状态的组件
+
+**components**是无状态组件
+
+**assets**可以包含 images、util.js 等静态的资源
+
+### 3.2 目录结构的命名空间
+
+命名空间脱胎于 CSS，具体可以查看大神 Harry Robert 对于命名空间的介绍
+
+**💬** 目录结构尽量使用命名空间
+
+\`\`\`
+比如说，我要做一个商品管理的功能，那么商品管理中包含了商品列表，商品的新增以及编辑
+\`\`\`
+
+\`\`\`js
+// good
+|__productManage
+    |__ add
+    |__ edite
+    |__ list
+
+// bad
+|__productManage
+    |__ productManageAdd
+    |__ productManageEdite
+    |__ productManageList
+\`\`\`
+
+\`\`\`
+bad中，目录的命名就会很长且不够简洁。所以推荐使用第一种类型。同时，在我们使用对象的时候也可以这么干。
+\`\`\`
+
+\`\`\`
+// good
+const women = {
+   age: 38,
+   name: '大仙'
+}
+
+// bad
+const women = {
+  womenAge: 19,
+  womenName: '黄大仙'
+}
+\`\`\`
+
+> 闭包和 ES6 的 export、import 都是有解决命名冲突的作用，此时不用命名空间何时用？祝同事们都能在完成功能的基础下，写出优雅的代码。
+
+## 4. 类型安全
+
+这个完全抛弃了 JS“灵活”的代码风格，但是确实是肉眼可见的减少很多基本的 BUG，且让接手的人更加好的进行部分的重构。TS 应运而生。
+
+Vue 版本也是可以使用 typescript，早日使用强类型语言对于我们这种业务逻辑相当复杂的项目有一个质的提升。
+
+## 5. 注释
+
+很多书籍和开源的开发文档，甚至网上很多所谓的大神都说不需要注释，一个好的代码时候自带解释的。但是这群在天上的人可能都是生活在母语为英语的国家。
+
+或者团队中的人英语都很牛逼。遗憾的是,国内团队绝大部分英语都很让人拙计的。所以注释是一定要的！
+
+💪 **[强制]文件开头需要添加开发者基本信息**
+
+\`\`\`
+/**
+ * @activeName: 优化
+ * @description: 针对有些接口返回的结构中没有count的情况
+ * @author: 司令总请你吃棒棒糖
+ * @time: 2020-09-22 11:04:52
+ **/
+\`\`\`
+
+> vsCode 搜索 koroFileHeader 插件可以直接达到这样的效果
+> 如何添加自定注释，点击下面链接：
+
+[VsCode 和 WebStorn 自定义修改注释](https://www.wolai.com/bfaoW8feG9iyY8BMNsZjKi)
+
+**💬** **[建议]用代码逻辑去代替注释**
+
+\`\`\`js
+// good
+price = numItems * itemPrice;
+discount = min(5, numItes) * itemPrice * 0.1;
+finalPrice = price - discount;
+
+// bad
+// 从价格中减去折扣
+finalPrice = numItems * itemPrice - min(5, numItems) * itemPrice * 0.1;
+\`\`\`
+
+**💬** **[建议]** **有意义的注释**
+
+- 不要解释你的代码干了什么，解释的是你代码为什么要这么写(**这个的前提是函数方法必须遵循唯一性，不然命名控制不了你函数的作用**)
+- code review 的时候发现的问题或者看代码的人碰到的问题
+- 不要出现下面这样的注释：
+
+\`\`\`js
+// bad
+
+// 获取所有用户
+userService.getAllUsers()
+
+// 如果name 为空时的检查
+if (name.isEmpty()) {...}
+\`\`\`
+
+**💪 [强制]** 双杠注释符号后面一定要加一个空格，在双杠前面加一个空格就可以了。除了它是单独一行
+
+说明：ESlink 规范的标准用法
+
+\`\`\`js
+// good
+let userName = "吴叔叔"; // 是否是吴叔叔
+let storeName = "狗不理哦"; // 狗都不理的包子
+
+// bad
+let userName = "吴叔叔"; //是否是吴叔叔
+let storeName = "狗不理哦"; //狗都不理的包子
+\`\`\`
+
+**💪** **[强制]** **函数/方法注释必须包含函数说明，有参数和返回值时必须使用注释标识**
+
+\`\`\`js
+/**
+ * 函数描述
+ *
+ * @param {string} p1 参数1的说明
+ * @param {string} p2 参数2的说明，比较长
+ *     那就换行了.
+ * @param {number=} p3 参数3的说明（可选）
+ * @return {Object} 返回值描述
+ */
+function foo(p1, p2, p3) {
+  var p3 = p3 || 10;
+  return {
+    p1: p1,
+    p2: p2,
+    p3: p3,
+  };
+}
+\`\`\`
+
+> 有相关的插件,也可以使用 koroFileHeader 达到同样的效果
+
+**💪** **[强制]** **对 Object 中各项的描述， 必须使用 \\*\\***\`@param\`\\***\\* 标识**
+
+\`\`\`js
+/**
+ * 函数描述
+ *
+ * @param {Object} option 参数描述
+ * @param {string} option.url option项描述
+ * @param {string=} option.method option项描述，可选参数
+ */
+function foo(option) {
+  // TODO
+}
+\`\`\`
+
+**💪** **[强制]** **必须使用 \\*\\***\`@event\`\\***\\* 标识事件，事件参数的标识与方法描述的参数标识相同。**
+
+\`\`\`js
+/**
+ * 值变更时触发
+ *
+ * @event Select#change
+ * @param {Object} e e描述
+ * @param {string} e.before before描述
+ * @param {string} e.after after描述
+ */
+this.fire("change", {
+  before: "foo",
+  after: "bar",
+});
+\`\`\`
+
+## 6. 语言特性
+
+这部分基本是在于 ES6 于项目中的应用，咱们的项目绝大部分都是 ES6 语法，但是还有有一些小细节没有使用上，特此列出。
+
+### 6.1 变量
+
+**💪 [强制] var 全部使用 let 来进行定义，引用类型全部使用 const 来进行定义**
+
+\`\`\`js
+let a = "";
+const b = {};
+const c = [];
+\`\`\`
+
+> 使用 const 来定义的引用值类型改变它的元素是没有问题的，直接改变它的指向的话，一样会报错，感兴趣请自行查询脘一峰的《ES6 标准入门》第三版一书
+
+**💪 [强制]每个 let 只能声明一个变量**
+
+说明：不然多了之后很容易混淆
+
+> 如果该页面你的初始化的变量实在是太多了，那么你应该考虑的是如何拆分页面了
+
+\`\`\`js
+// bad
+let a = 1,
+  b = 2,
+  c = 3;
+
+// good
+let a = 1;
+let b = 2;
+let c = 3;
+\`\`\`
+
+**💪 [强制] 变量必须 \\*\\***\`即用即声明\`\\***\\*，不得在函数或其它形式的代码块起始位置统一声明所有变量**
+
+说明：变量声明与使用的距离越远，出现的跨度越大，代码的阅读与维护成本越高。虽然 JavaScript 的变量是函数作用域，还是应该根据编程中的意图，缩小变量出现的距离空间。
+
+**💪 [强制 将所有的 const 和 let 分组**
+
+\`\`\`
+// bad
+let i, len, dragonball,
+items = getItems(),
+goSportsTeam = true
+
+// bad
+let i;
+const items = getItems()
+let dragonball
+const goSportsTeam = true
+let len;
+
+// good
+const goSportsTeam = true
+const items = getItems()
+let dragonball
+let i
+let length
+\`\`\`
+
+### 6.2 条件
+
+**💪 [强制] 在 Equality Expression 中使用类型严格的 \`===\`。仅当判断 \`null\` 或 \`undefined\` 时，允许使用 \`== null\`**
+
+说明：这个问题在很多项目中问题很严重。但是如果看过《Javascript 高级程序设计》《权威指南》中很明确的指出来这一点。在阿里和百度的 JS 开发文档中，这一点是尤其强调的。TS 的大行其道也是由于其带来的强类型。所以使用 === 可以避免等于判断中隐式的类型转换是一件很自然且应该的事情。
+
+> 本质上还是需要类型安全防范
+
+\`\`\`js
+// good
+if (age === 30) {
+}
+
+// bad
+if (age == 30) {
+}
+\`\`\`
+
+**💬 [建议] 尽可能使用简洁的表达式**
+
+\`\`\`js
+// bad
+if (name === "") {
+}
+if (a.length != 0) {
+}
+if (notTrue === false) {
+}
+if (noValue === null || typeof noValue === "undefined") {
+}
+
+// good
+if (!name) {
+}
+if (a.length) {
+}
+if (!notTrue) {
+}
+if (noValue == null) {
+}
+\`\`\`
+
+**💬 [建议] 对于相同变量或表达式的多值条件，用** **\`switch\`** **代替** **\`if\`**
+
+\`\`\`js
+// good
+switch (typeof variable) {
+  case "object":
+    // ......
+    break;
+  case "number":
+  case "boolean":
+  case "string":
+    // ......
+    break;
+}
+
+// bad
+let type = typeof variable;
+if (type === "object") {
+  // ......
+} else if (type === "number" || type === "boolean" || type === "string") {
+  // ......
+}
+\`\`\`
+
+**💬 [建议]** 对于相同变量或表达式的多值条件，用 对象 代替 **\`switch\`**
+
+\`\`\`js
+// good
+const obj = {
+  object: ....,
+  number: ....,
+  boolean: ...,
+  string: ...,
+}
+obj[typeof variable]
+\`\`\`
+
+说明：JS 中一切基于对象的说明从这个角度来说是没有问题的，而且对象的查找也速度也是最快的。
+
+**💬 [建议] if 的嵌套最好不要超过两个，最多两个，你一定有办法来让语句并行**的
+
+**💬 [建议] 使用逻辑运算符代替三元、四元运算符号**
+
+\`\`\`js
+// bad
+let a = aa ? aa : null;
+let b = b && b.name ? b.name : null;
+
+// good
+let a = aa || null;
+let b = (b && b.name) || null;
+\`\`\`
+
+说明：逻辑运算符干净整洁为何不用？|| 遇到一个为真就返回，如果没有真的就返回 null。&& 要一直走到头，如果没有真才返回 null
+
+### 6.3 循环
+
+**💬[建议] 不要在循环体中包含函数表达式，事先将函数提取到循环体外。**
+
+\`\`\`js
+// good
+function clicker() {
+  // ......
+}
+
+for (let i = 0, len = elements.length; i < len; i++) {
+  let element = elements[i];
+  addListener(element, "click", clicker);
+}
+
+// bad
+for (let i = 0, len = elements.length; i < len; i++) {
+  let element = elements[i];
+  addListener(element, "click", function () {});
+}
+\`\`\`
+
+说明：循环体中的函数表达式，运行过程中会生成循环次数个函数对象。
+
+**💬 [建议] 对循环内多次使用的不变值，在循环外用变量缓存。**
+
+\`\`\`js
+// good
+var width = wrap.offsetWidth + "px";
+for (var i = 0, len = elements.length; i < len; i++) {
+  var element = elements[i];
+  element.style.width = width;
+  // ......
+}
+
+// bad
+for (var i = 0, len = elements.length; i < len; i++) {
+  var element = elements[i];
+  element.style.width = wrap.offsetWidth + "px";
+  // ......
+}
+\`\`\`
+
+### 6.4 字符串
+
+**💪 [强制] 使用\`\`来完全代替有插入值的字符串，其他的一贯使用单引号**
+
+说明：\`\`的是 ES6 出来代替单引号和双引号的，除了功能更加强大之外，效率也更高。继续非要使用引号，那么也是要以单引号来代替双引号，因为在浏览器引擎中，双引号解析的时候会比单引号多一步，会造成的性能问题，虽然实际代理的性能提升微不足道，但是这个算是一个程序员的基本素养。
+
+\`\`\`js
+const age = 18;
+// good
+let name = \`吴叔叔今年\${age}了\`;
+const body = "胸";
+
+// bad
+let name = "吴叔叔今年" + age + "了";
+const body = "胸";
+\`\`\`
+
+> 更多的用法自行查看《ES6 标准入门》
+
+### 6.5 数组
+
+**💪 [强制] 遍历数组不使用** **\`for in\`**
+
+说明：数组对象可能存在数字以外的属性, 这种情况下 for in 不会得到正确结果。
+
+**💬 [建议] 使用展开操作符 … 代替 Array.from，来将一个类数组(array-like) 对象转换成数组**
+
+\`\`\`js
+const foo = document.querySelectorAll(".foo");
+// good
+const nodes = Array.from(foo);
+// best
+const nodes = [...foo];
+\`\`\`
+
+**💬 [建议]** **使用数组展开操作符 … 复制数组**
+
+\`\`\`js
+// bad
+const len = items.length;
+const itemsCopy = [];
+let i;
+for (i = 0; i < len; i += 1) {
+  itemsCopy[i] = items[i];
+}
+// good
+const itemsCopy = [...items];
+\`\`\`
+
+**💬 [建议]** **使用数组展开操作符 … 合并数组**
+
+\`\`\`js
+let a = [1];
+let b = [2];
+// bad
+let c = a.concat(b);
+
+// good
+let d = [...a, ...b];
+\`\`\`
+
+### 6.6 函数
+
+**💬 [建议] 一个函数的长度控制在 \\*\\***\`50\`\\***\\* 行以内**
+
+**说明**：将过多的逻辑单元混在一个大函数中，易导致难以维护。一个清晰易懂的函数应该完成单一的逻辑单元。复杂的操作应进一步抽取，通过函数的调用来体现流程。
+
+> 特定算法等不可分割的逻辑允许例外。
+
+\`\`\`js
+function syncViewStateOnUserAction() {
+  if (x.checked) {
+    y.checked = true;
+    z.value = "";
+  } else {
+    y.checked = false;
+  }
+
+  if (a.value) {
+    warning.innerText = "";
+    submitButton.disabled = false;
+  } else {
+    warning.innerText = "Please enter it";
+    submitButton.disabled = true;
+  }
+}
+
+// 直接阅读该函数会难以明确其主线逻辑，因此下方是一种更合理的表达方式：
+
+function syncViewStateOnUserAction() {
+  syncXStateToView();
+  checkAAvailability();
+}
+
+function syncXStateToView() {
+  y.checked = x.checked;
+
+  if (x.checked) {
+    z.value = "";
+  }
+}
+
+function checkAAvailability() {
+  if (a.value) {
+    clearWarnignForA();
+  } else {
+    displayWarningForAMissing();
+  }
+}
+\`\`\`
+
+- 其实就是遵循函数的唯一性，不管你用啥开发语言都需要这东西。
+
+关于函数的唯一性，如何落地，具体请如下查看:
+
+> 关于函数唯一性可以自己搜索学习,掘金不给提供外链
+
+**💬 [建议] 一个函数的**参数在 6 个以内
+
+**说明** 这一点其实有异议。在《代码整洁之道》中，作者建议我们实现函数的科里化，参数最多只能传一个，在阿里的规范中又是 3 个。
+
+**💪 [强制] 使用默认参数语法，而不要使用一个变化的函数参数**
+
+\`\`\`js
+// really bad
+function handleThings(opts) {
+  // 更加糟糕: 如果参数 opts 是 falsy(假值) 的话，它将被设置为一个对象，
+  // 这可能是你想要的，但它可以引起一些小的错误。
+  opts = opts || {};
+  // ...
+}
+// still bad
+function handleThings(opts) {
+  if (opts === void 0) {
+    opts = {};
+  }
+  // ...
+}
+// good
+function handleThings(opts = {}) {
+  // ...
+}
+\`\`\`
+
+尾调用优化的必须性
+
+闭包引起的内存泄露的问题
+
+### 6.7 对象
+
+**💪 [强制]** **使用字面量语法创建对象**eslint: no-new-object
+
+\`\`\`js
+// bad
+const item = new Object();
+// good
+const item = {};
+\`\`\`
+
+**💬 [建议] 当创建带有动态属性名称的对象时使用计算的属性名称**
+
+说明：它们允许你在一个地方定义一个对象的所有属性
+
+\`\`\`js
+function getKey(k) {
+  return \`a key named k\`;
+}
+
+// bad
+const obj = {
+  id: 5,
+  name: "San Francisco",
+};
+obj[getKey("enabled")] = true;
+
+// good
+const obj = {
+  id: 5,
+  name: "San Francisco",
+  [getKey("enabled")]: true,
+};
+\`\`\`
+
+**💬 [建议]** **使用对象属性速记语法**，基于 ES6 对象解构
+
+\`\`\`js
+const lukeSkywalker = "Luke Skywalker";
+// bad
+const obj = {
+  lukeSkywalker: lukeSkywalker,
+};
+// good
+const obj = {
+  lukeSkywalker,
+};
+\`\`\`
+
+> 此处是 ES6 对象的结构
+
+**💬 [建议]** 将速记属性分组写在对象声明的开始处
+
+说明：更容易看出哪些属性在使用速记语法
+
+\`\`\`js
+const anakinSkywalker = "Anakin Skywalker";
+const lukeSkywalker = "Luke Skywalker";
+// bad
+const obj = {
+  episodeOne: 1,
+  twoJediWalkIntoACantina: 2,
+  lukeSkywalker,
+  episodeThree: 3,
+  mayTheFourth: 4,
+  anakinSkywalker,
+};
+// good
+const obj = {
+  lukeSkywalker,
+  anakinSkywalker,
+  episodeOne: 1,
+  twoJediWalkIntoACantina: 2,
+  episodeThree: 3,
+  mayTheFourth: 4,
+};
+\`\`\`
+
+**💬 [建议] 用对象展开操作符浅复制对象，优先于 Object.assign 。使用对象剩余操作符来获得一个省略某些属性的新对象**
+
+\`\`\`js
+// very bad
+const original = { a: 1, b: 2 };
+const copy = Object.assign(original, { c: 3 }); //  \`original\` 是可变的 ಠ_ಠ
+delete copy.a; // so does this
+
+// bad
+const original = { a: 1, b: 2 };
+const copy = Object.assign({}, original, { c: 3 }); // copy => { a: 1, b: 2, c: 3 }
+
+// good
+const original = { a: 1, b: 2 };
+const copy = { ...original, c: 3 }; // copy => { a: 1, b: 2, c: 3 }
+const { a, ...noA } = copy; // noA => { b: 2, c: 3 }
+\`\`\`
+
+### 6.8 **解构 Destructuring**
+
+**💪 [强制] 当访问和使用对象的多个属性时，请使用对象解构**
+
+说明：eslint: prefer-destructuring jscs: requireObjectDestructuring
+
+\`\`\`js
+// bad
+function getFullName(user) {
+  const firstName = user.firstName;
+  const lastName = user.lastName;
+  return \`firstName lastName\`;
+}
+// good
+function getFullName(user) {
+  const { firstName, lastName } = user;
+  return \`firstName lastName\`;
+}
+// best
+function getFullName({ firstName, lastName }) {
+  return \`firstName lastName\`;
+}
+\`\`\`
+
+**💪 [强制] 使用数组解构**
+
+说明：eslint: prefer-destructuring jscs: requireArrayDestructuring
+
+\`\`\`js
+const arr = [1, 2, 3, 4];
+// bad
+const first = arr[0];
+const second = arr[1];
+// good
+const [first, second] = arr;
+\`\`\`
+
+**💪 [强制]** **使用对象解构来实现多个返回值，而不是数组解构**
+
+说明：您可以随着时间的推移添加新的属性或更改排序，而不会改变调用时的位置
+
+\`\`\`js
+// bad
+function processInput(input) {
+  return [left, right, top, bottom];
+}
+// 调用者需要考虑返回数据的顺序
+const [left, __, top] = processInput(input);
+// good
+function processInput(input) {
+  return { left, right, top, bottom };
+}
+// 调用者只选择他们需要的数据
+const { left, top } = processInput(input);
+\`\`\`
+
+## 7. Rreact Native 强相关编码规范
+
+- **相关内容**
+
+  ### 7.1 代码基本规范
+
+  #### 7.11 命名
+
+  **💬 [建议] 包名，文件夹名小写，使用下划线进行分割**
+
+  > 查询了网上开源的项目，包名和文件夹名都是小写，且使用下划线进行分割。但是由于我们所有文件名都是小驼峰命名，所以只能写到哪里改那里，一下内容都是如此。
+
+  **💬 [建议]** 模块使用当前文件名一样的名称，但不推荐使用 index.js 作为入口文件，突出 Page 承担的概念以及对开发 IDE 的适用
+
+\`\`\`
+import DemoPage from './DemoPage/DemoPage'
+\`\`\`
+
+\`\`\`
+该规范出自阿里开放文档中，**模块的入口文件不建议使用index.js**
+\`\`\`
+
+**💬 [建议]** 组件中存在返回 view 的命名 1. 以 render 开头 ❌ 2. 以 view 结尾 ☑️
+
+\`\`\`jsx
+render() {
+  return ()
+}
+renderContent = () => {
+  return (
+    <View />
+  )
+}
+itemView = () => {}
+\`\`\`
+
+#### 7.12 对齐
+
+**💪 [强制] 遵循以下的 JSX 语法缩进/格式。**
+
+\`\`\`jsx
+// bad
+<Demo props1=""
+      props2=""/>
+
+// good 有多行属性，新建一行关闭标签
+<Demo
+    props1=""
+    props2=""
+    />
+
+// 若能直接一行显示的，直接写成一行
+<Demo props1=""/>
+\`\`\`
+
+#### 7.13 单引号还是双引号
+
+**💪 [强制]** ** 对于 JSX 属性值总是使用双引号（""），其他都是用单引号**
+
+\`\`\`jsx
+// bad
+<Demo props=''/>
+
+// good
+<Demo props=""/>
+\`\`\`
+
+#### 7.14 空格
+
+**💪 [强制]** 总是在标签关闭前加一个空格
+
+**💪 [强制]** 不要在 JSX {} 括号内两边都加空格
+
+\`\`\`jsx
+// good
+<Demo />
+
+// good
+<Demo style={baz}>
+\`\`\`
+
+### 7.2 代码顺序
+
+好的顺序，代码清晰，方便查找，提高效率
+
+**💪 [强制]** ** import 顺序一般如下，并且分组**
+
+\`\`\`jsx
+\`1\` React
+
+\`2\` ReactNative
+
+\`3\` 导入第三方组件库
+
+\`4\` 导入自定义组件
+
+\`5\` 导入相对路径文件（图片、公共样式）
+
+\`6\`  const 常量
+
+\`7\` let 变量
+\`\`\`
+
+\`\`\`jsx
+import React, { Component } from "react";
+import { StyleSheet } from "react-native";
+import {} from "ajd-mobile";
+import ReactWeb from "react-native-web";
+import DemoPage from "./DemoPage";
+const PAGE = 1;
+let name = "value";
+\`\`\`
+
+**💪 [强制] 方法的顺序如下**
+
+\`\`\`jsx
+getDefaultProps;
+getInitialState;
+componentWillMount;
+componentDidMount;
+componentWillReceiveProps;
+shouldComponentUpdate;
+componentWillUpdate;
+componentDidUpdate;
+componentWillUnmount;
+
+其他方法;
+
+render;
+\`\`\`
+
+### 7.3 使用对象替代 switch case
+
+\`\`\`
+和6.2中的条件一致。
+
+对象的查找速度在Javascript中是最快的，毋庸置疑。所以才有了new Map()做数据字典的运用。
+\`\`\`
+
+\`\`\`jsx
+// bed
+ renderStatusStamp(status) {
+    switch (status) {
+      case '-1':
+        return <Image source={images.icons.orderStatusCancel} />
+      case '0':
+        return <Image source={images.icons.orderStatus0} />
+      case '1':
+        return <Image source={images.icons.orderStatusWillPay} />
+      case '10':
+        return <Image source={images.icons.orderStatus1} />
+      case '20':
+        return <Image source={images.icons.orderStatus2} />
+      case '30':
+        return <Image source={images.icons.orderStatus3} />
+      case '40':
+        return <Image source={images.icons.orderStatus4} />
+      case '50':
+        return <Image source={images.icons.orderStatus5} />
+      case '60':
+        return <Image source={images.icons.orderStatus6} />
+      case '70':
+        return <Image source={images.icons.orderStatus7} />
+      default:
+        return null
+    }
+  }
+
+// good
+renderStatusStamp(status) {
+    const stampContainer = {
+      '0': <Image source={images.icons.orderStatus0} />,
+      '1': <Image source={images.icons.orderStatusWillPay} />,
+      '10': <Image source={images.icons.orderStatus1} />,
+      '20': <Image source={images.icons.orderStatus2} />,
+      '30': <Image source={images.icons.orderStatus3} />,
+      '40': <Image source={images.icons.orderStatus4} />,
+      '50': <Image source={images.icons.orderStatus5} />,
+      '60': <Image source={images.icons.orderStatus6} />,
+      '70': <Image source={images.icons.orderStatus7} />,
+      '-1': <Image source={images.icons.orderStatusCancel} />,
+    }
+    return stampContainer[status]
+  }
+\`\`\`
+
+### 7.4 PureComponent
+
+当 props 或者 state 改变的时候，会执行 shouldComponentUpdate 方法来判断是否需要重新 render 组建，我们平时在做页面的性能优化的时候，往往也是通过这一步来判断的。Component 默认的 shouldComponentUpdate 返回的是 true，如下：
+
+\`\`\`jsx
+shouldComponentUpdate(nextProps, nextState) {
+  return true;
+}
+\`\`\`
+
+\`\`\`jsx
+而PureComponent的shouldComponentUpdate是这样的：
+\`\`\`
+
+\`\`\`jsx
+if (this._compositeType === CompositeTypes.PureClass) {
+  shouldUpdate =
+    !shallowEqual(prevProps, nextProps) || !shallowEqual(inst.state, nextState);
+}
+\`\`\`
+
+相当于 PureComponent 帮我们判断如果 props 或者 state 没有改变的时候，就不重复 render，这对于纯展示组件，能节省不少比较的工作
+
+### 7.5 React 组件设计原则
+
+\`\`\`
+引用下面这位前端大佬的文章
+\`\`\`
+
+https://juejin.cn/post/6844903609419694093
+
+**💬 [建议]** 多使用 React.Fragment 对组件进行包裹
+
+说明：React 中的一个常见模式是一个组件返回多个元素。Fragments 允许你将子列表分组，而无需向 DOM 添加额外节点
+
+\`\`\`jsx
+render() {
+  return (
+    <React.Fragment>
+      <ChildA />
+      <ChildB />
+      <ChildC />
+    </React.Fragment>
+  )
+}
+\`\`\`
+
+### 7.6 封装与分离
+
+**💪 [强制]** ** 每个组件不应该[SHOULD NOT] 超过 600 行**
+
+\`\`\`
+> 如果时间足够，可以压缩到每个组件300左右的，这个是可行的，只要组件设计得合理
+\`\`\`
+
+**💪 [强制] 每个方法不应该[SHOULD NOT] 超过 40 行**
+
+### 7.7 样式
+
+**💪 [强制]** 项目的通用样式写在项目通用样式类
+
+**💪 [强制]** 模块通用样式写在模块通用样式类中
+
+**💪 [强制]** 文件通用样式写在文件底部的 const styles 中
+
+**💪 [强制]** 独有样式写在行 style 中
+
+**样式和逻辑分离，是 web 前端第一原则**
+
+**说明**：W3C 标准定义 WEB 包含三个层，
+
+- 结构层（HTML）
+- 表现层（CSS）
+- 行为层（Javascript）
+
+提倡“结构、表现、行为，三者分离，互不干涉”的 WEB 页面。即时是在 react 中，结构层已经和行为层放在一起，但是表现层依然不应该和行为层混在一起。
+
+按照 W3C 标准，编写网页时应先考虑结构，之后再结构的基础上添加样式，最后在加上交互行为。
+
+### 7.8 关于组件数组初始化
+
+**💪 [强制]** 变量初始化都在 state 中，要使它立即变化再进行别的操作的话，使用 this.setState({}, () => {}) 的回调来进行操作
+
+说明：来源于阿里 P7 小野森森的开源 RN 项目
+
+\`\`\`jsx
+// bad
+constructor(props) {
+  this.state = {
+  }
+  this.content = '小冷请村叔叔吃麻辣烫'
+}
+
+// good
+constructor(props) {
+  this.state = {
+    content: '小冷请村叔叔吃麻辣烫'
+  }
+}
+\`\`\`
+
+虽然 this 用得很爽，但是在维护的时候，看代码很难找到它的初始值，对于代码的维护还是非常的不易的。
+
+### 7.9 关于数据驱动
+
+现在前端流行的三大框架中，vue 和 react 都是数据驱动型的框架，这个不仅仅是现在，也是未来的的发展方向。
+
+在 MCV 架构中，react 负责额是 V 这部分，和数据驱动在其中的意思，就是界面的渲染是根据你数据的变化而变化的。如下：
+
+\`\`\`jsx
+<React.Fragment>
+  <Text>狗不理</Text>
+  <Text>村叔叔请你吃棒棒糖</Text>
+</React.Fragment>
+\`\`\`
+
+可以变成如下：
+
+\`\`\`jsx
+const array = ['狗不理', '村叔叔请你吃棒棒糖']
+<React.Fragment>
+  {
+    array.map((item, idnex) => {
+      return <Text key={index}>{item}</T
+    })
+  }
+
+</React.Fragment>
+\`\`\`
+
+下面的写法除了更加的切合 react 数据驱动的核心思想之外，view 只用写一遍，样式也只要写一遍，就能够让你专注于处理数据就行。
+
+**💬 [建议]** 书写符合数据驱动思想的代码
+
+## 8. Vue 强相关
+
+**💪 [强制] 组件名应该使用多个单词，命名规范 kebabcase**
+
+> 避免和 HTML 元素相冲突，其不区分大小写的哦
+
+\`\`\`
+// bad
+export default {
+  name: 'Todo'
+}
+
+// good
+export default {
+  name: 'TodoItem'
+}
+\`\`\`
+
+**💪 [强制] 组件文件名的格式 Pascal-case 格式**
+
+\`\`\`
+// bad
+myComponenet.vue
+
+// good
+my-component.vue
+\`\`\`
+
+**💪 [强制] 基础文件名以独特的命名开头，使用完整单词**
+
+默认使用 base 开头，可以考虑使用 zs
+
+\`\`\`
+// bad
+MyButton.vue
+
+// good
+base-button.vue
+
+zs-button.vue
+\`\`\`
+
+**💪 [强制] 有父子关系的组件，子组件以父组件名为前缀名**
+
+父组件： \`todo-list.vue\`
+
+\`\`\`
+// bad
+todoItem.vue
+
+// good
+todo-list-item.vue
+todo-list-button.vue
+\`\`\`
+
+**💪 [强制] Props 定义需要尽可能的详细**
+
+- 使用小驼峰命名
+- 必须制定类型
+- 必须加上注释
+- 必须选择\`require\` 或 \`default\`
+- 根据页面加上 \`validator\` 验证
+
+[HTML 和 CSS 相关规范](https://www.wolai.com/we7DgvRR2h7XUk2tdFuLKk)
+`;export{n as default};
