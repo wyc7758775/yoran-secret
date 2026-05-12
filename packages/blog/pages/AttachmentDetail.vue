@@ -49,6 +49,10 @@ function bindImageLoadEvents() {
   })
 }
 
+function stripFrontmatter(markdownContent: string) {
+  return markdownContent.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '')
+}
+
 async function loadAndRenderMarkdown() {
   try {
     contentLoading.value = true
@@ -64,7 +68,7 @@ async function loadAndRenderMarkdown() {
     }
 
     const markdownContent = await markdownFiles[fileKey]()
-    renderedContent.value = resolveBasePaths(mdRender(markdownContent))
+    renderedContent.value = resolveBasePaths(mdRender(stripFrontmatter(markdownContent)))
   }
   catch (error) {
     console.error('加载附件失败:', error)

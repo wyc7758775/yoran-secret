@@ -146,6 +146,11 @@ function getFileKey(markdownFiles: any) {
 
 const renderedContent = ref('')
 const contentLoading = ref(true)
+
+function stripFrontmatter(markdownContent: string) {
+  return markdownContent.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '')
+}
+
 // 解析和渲染Markdown文件
 async function loadAndRenderMarkdown() {
   if (!articleSrc.value) {
@@ -167,7 +172,7 @@ async function loadAndRenderMarkdown() {
 
     if (fileKey) {
       const markdownContent = await markdownFiles[fileKey]()
-      renderedContent.value = resolveBasePaths(mdRender(markdownContent))
+      renderedContent.value = resolveBasePaths(mdRender(stripFrontmatter(markdownContent)))
     }
     else {
       renderedContent.value = `<p>未找到对应的文章内容: ${fileName}</p>`
