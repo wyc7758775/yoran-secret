@@ -3,7 +3,7 @@ import{_ as f,h as m,c as s,o as n,j as i,G as A,H as _,ag as b,n as T,t as c,e 
 风云变幻，这张图前段时间还是把 CodeX 给踢一脚踢开的，全民都在狂热的吹捧 Claude Code。但是，Claude Code 的最新的模型拉了之后，CodeX 的 GPT 5.5，就可以说吧，在我的推送文流当中，已经超过了Claude Code。
 
 【每天肯定自己的小进步】
-主动去揽活了，这个行为在我的职业生涯上，其实是非常少出现的。我不是一个有野心的人，所以我一般是不会揽活...`,caption:"人是视觉动物",createTime:"MAY 13, 2026 · Yoran"},{src:"/diary/识别意图是做事的第一要义.md",firstImage:"/obsidian-sync/%E8%AF%86%E5%88%AB%E6%84%8F%E5%9B%BE%E6%98%AF%E5%81%9A%E4%BA%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E8%A6%81%E4%B9%89/IMG20260509223621.jpg",previewText:`【封面图】
+主动去揽活了，这个行为在我的职业生涯里其实很少出现。我不是一个特别有野心的人，所以过去一般不会主动把事...`,caption:"人是视觉动物",createTime:"MAY 13, 2026 · Yoran"},{src:"/diary/识别意图是做事的第一要义.md",firstImage:"/obsidian-sync/%E8%AF%86%E5%88%AB%E6%84%8F%E5%9B%BE%E6%98%AF%E5%81%9A%E4%BA%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E8%A6%81%E4%B9%89/IMG20260509223621.jpg",previewText:`【封面图】
 
 很久没有吃那么爽了，但是从北海回来之后，发现内陆的生蚝是真的不怎么样，不过深圳不是沿海城市吗？
 
