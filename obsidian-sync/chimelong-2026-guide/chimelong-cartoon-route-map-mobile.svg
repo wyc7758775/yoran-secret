@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1280" role="img" aria-labelledby="title desc">
+  <title id="title">广州长隆手机竖版卡通路线图</title>
+  <desc id="desc">手机竖屏阅读的广州长隆两日路线图，从汉溪长隆站开始，第一天去野生动物世界和大马戏，第二天在水上乐园与欢乐世界之间二选一，最后返程。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dff8ff" />
+      <stop offset="48%" stop-color="#fff5cc" />
+      <stop offset="100%" stop-color="#e5f7d6" />
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#84d77e" />
+      <stop offset="100%" stop-color="#3fa35b" />
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#91e8ff" />
+      <stop offset="100%" stop-color="#2e97d8" />
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd782" />
+      <stop offset="100%" stop-color="#f27c4a" />
+    </linearGradient>
+    <filter id="shadow" x="-18%" y="-18%" width="136%" height="136%">
+      <feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#1b2c21" flood-opacity=".16" />
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#2b7a4a" />
+    </marker>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#2f84bd" />
+    </marker>
+    <style>
+      .text { font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif; fill: #17251d; }
+      .title { font-size: 42px; font-weight: 900; }
+      .sub { font-size: 21px; fill: #59645c; }
+      .step { font-size: 30px; font-weight: 900; }
+      .name { font-size: 25px; font-weight: 800; }
+      .hint { font-size: 19px; fill: #53645b; }
+      .card { fill: rgba(255,255,255,.94); stroke: rgba(23,37,29,.12); stroke-width: 3; }
+      .route { fill: none; stroke: #2b7a4a; stroke-width: 13; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+      .route-blue { fill: none; stroke: #2f84bd; stroke-width: 11; stroke-dasharray: 20 15; stroke-linecap: round; marker-end: url(#arrowBlue); }
+    </style>
+  </defs>
+
+  <rect width="720" height="1280" rx="36" fill="url(#bg)" />
+  <circle cx="612" cy="80" r="48" fill="#ffdc5d" opacity=".9" />
+  <path d="M0 1060 C110 1000 202 1044 326 1002 C470 952 590 988 720 920 L720 1280 L0 1280 Z" fill="#bfe9ad" opacity=".9" />
+  <path d="M0 1130 C126 1086 246 1130 382 1080 C510 1034 620 1065 720 1016 L720 1280 L0 1280 Z" fill="#8bd178" opacity=".82" />
+
+  <text x="42" y="68" class="text title">广州长隆路线图</text>
+  <text x="44" y="104" class="text sub">手机竖版：一天主线 + 第二天二选一</text>
+
+  <path class="route" d="M360 190 C360 238 360 270 360 312" />
+  <path class="route" d="M360 440 C360 492 360 526 360 570" />
+  <path class="route" d="M360 695 C360 735 360 768 360 808" />
+  <path class="route-blue" d="M360 930 C298 978 260 1025 220 1084" />
+  <path class="route-blue" d="M360 930 C430 976 484 1023 532 1084" />
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="138" width="580" height="132" rx="30" class="card" />
+    <circle cx="130" cy="204" r="38" fill="#6fc6ff" />
+    <rect x="111" y="176" width="38" height="58" rx="8" fill="#fff" />
+    <rect x="118" y="186" width="24" height="8" rx="3" fill="#2f84bd" />
+    <circle cx="122" cy="226" r="4" fill="#2f84bd" />
+    <circle cx="139" cy="226" r="4" fill="#2f84bd" />
+    <text x="190" y="188" class="text step">01 到达</text>
+    <text x="190" y="226" class="text name">汉溪长隆站 E 口</text>
+    <text x="190" y="254" class="text hint">步行到穿梭巴士站，先去主园区</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="318" width="580" height="150" rx="32" fill="url(#green)" />
+    <circle cx="132" cy="392" r="42" fill="#fff5d2" />
+    <path d="M120 392 C124 364 146 350 168 363 C190 376 187 407 166 421 C142 437 118 421 120 392Z" fill="#b7824f" />
+    <circle cx="140" cy="374" r="5" fill="#17251d" />
+    <path d="M164 362 L184 345 L177 374" fill="#b7824f" />
+    <path d="M150 361 L160 332 L169 368" fill="#b7824f" />
+    <text x="205" y="370" class="text step">02 Day 1 上午</text>
+    <text x="205" y="410" class="text name">长隆野生动物世界</text>
+    <text x="205" y="442" class="text hint">小火车 / 缆车 / 熊猫 / 白虎</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="572" width="580" height="118" rx="30" class="card" />
+    <circle cx="132" cy="632" r="34" fill="#ffd66b" />
+    <path d="M116 638 Q132 616 148 638" stroke="#17251d" stroke-width="5" fill="none" stroke-linecap="round" />
+    <path d="M113 654 H154" stroke="#d97128" stroke-width="8" stroke-linecap="round" />
+    <text x="205" y="615" class="text step">03 休整</text>
+    <text x="205" y="654" class="text name">吃饭、补水、换场</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="812" width="580" height="142" rx="32" fill="#f9edf8" stroke="#e78ad9" stroke-width="4" />
+    <path d="M105 923 L166 840 L226 923 Z" fill="#e25b9a" />
+    <path d="M166 840 L190 923 H142 Z" fill="#ffd95a" opacity=".92" />
+    <circle cx="166" cy="826" r="18" fill="#ffd95a" />
+    <text x="260" y="858" class="text step">04 Day 1 晚上</text>
+    <text x="260" y="898" class="text name">广州国际大马戏</text>
+    <text x="260" y="930" class="text hint">工作日 19:30；周末可选 16:30</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="1080" width="292" height="142" rx="30" fill="url(#blue)" />
+    <path d="M75 1170 C104 1140 140 1195 176 1162 C204 1137 238 1160 266 1142" stroke="#fff" stroke-width="11" fill="none" stroke-linecap="round" />
+    <text x="86" y="1126" class="text step">05A</text>
+    <text x="86" y="1163" class="text name">水上乐园</text>
+    <text x="86" y="1195" class="text hint">热天优先</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="386" y="1080" width="292" height="142" rx="30" fill="url(#orange)" />
+    <path d="M420 1188 C454 1126 514 1128 548 1188 C568 1220 620 1198 632 1148" stroke="#7f3fbf" stroke-width="10" fill="none" stroke-linecap="round" />
+    <circle cx="456" cy="1158" r="10" fill="#fff" />
+    <circle cx="550" cy="1188" r="10" fill="#fff" />
+    <text x="435" y="1126" class="text step">05B</text>
+    <text x="435" y="1163" class="text name">欢乐世界</text>
+    <text x="435" y="1195" class="text hint">先查维护</text>
+  </g>
+
+  <rect x="74" y="970" width="572" height="62" rx="20" fill="#fff" opacity=".9" />
+  <circle cx="108" cy="1001" r="12" fill="#2f84bd" />
+  <text x="130" y="1009" class="text hint">第二天按天气、设备开放、体力，在 A / B 里选一个。</text>
+</svg>

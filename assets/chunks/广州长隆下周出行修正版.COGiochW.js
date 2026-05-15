@@ -1,0 +1,183 @@
+const n=`<!-- date: 2026-05-15T12:00:00 -->
+<link rel="stylesheet" href="/obsidian-sync/chimelong-2026-guide/chimelong-guide.css" />
+
+<section class="chimelong-guide">
+<figure class="cl-cover">
+<img src="/obsidian-sync/chimelong-2026-guide/safari-hero.jpg" alt="长隆野生动物世界" />
+</figure>
+<div class="cl-hero">
+<div>
+<p class="cl-eyebrow">信息校准日：2026-05-15 · 目的地：广州长隆旅游度假区</p>
+<h1 class="cl-title">广州长隆下周出行修正版</h1>
+<p class="cl-lead">
+下周按 2026-05-18 到 2026-05-24 处理。旧攻略里最容易过期的是营业时间、夜场、设备检修和大马戏场次，所以这版只保留能落地的安排：野生动物世界打底，晚上接大马戏；第二天在水上乐园和欢乐世界里二选一。
+</p>
+<div class="cl-pills">
+<span class="cl-pill">地铁：3/7 号线汉溪长隆 E 口</span>
+<span class="cl-pill">必带：二代身份证原件</span>
+<span class="cl-pill">最佳组合：动物世界 + 大马戏</span>
+<span class="cl-pill">热天备选：水上乐园</span>
+</div>
+</div>
+</div>
+
+<figure class="cl-route-map">
+<picture>
+<source media="(max-width: 720px)" srcset="/obsidian-sync/chimelong-2026-guide/chimelong-cartoon-route-map-mobile.svg" />
+<img src="/obsidian-sync/chimelong-2026-guide/chimelong-cartoon-route-map.svg" alt="广州长隆两日卡通路线图" />
+</picture>
+<figcaption>路线图按“地铁到达 → Day 1 动物世界 → 休整 → 大马戏 → Day 2 二选一 → 返程”来画，绿色是主线，蓝色虚线是第二天备选线。</figcaption>
+</figure>
+
+<div class="cl-grid" aria-label="长隆园区图片">
+<article class="cl-card">
+<img src="/obsidian-sync/chimelong-2026-guide/safari-hero.jpg" alt="长隆野生动物世界小火车区域" />
+<div class="cl-card-body">
+<h3>野生动物世界</h3>
+<p>适合作为主线。5 月官方营业时间是 09:30-18:00，建议上午进园，先小火车/空中缆车，再慢慢看熊猫、白虎和动物展示。</p>
+</div>
+</article>
+<article class="cl-card">
+<img src="/obsidian-sync/chimelong-2026-guide/circus-hero.jpg" alt="广州长隆国际大马戏" />
+<div class="cl-card-body">
+<h3>广州国际大马戏</h3>
+<p>它不是“顺路看一下”的项目，而是晚上单独留时间。下周工作日 19:30 一场，周末有 16:30 和 19:30 两场。</p>
+</div>
+</article>
+<article class="cl-card">
+<img src="/obsidian-sync/chimelong-2026-guide/water-hero.jpg" alt="长隆水上乐园水上项目" />
+<div class="cl-card-body">
+<h3>水上乐园</h3>
+<p>5 月已开放，常规 10:30-19:00；周五、周六及节假日延长到 20:30，并开放夜场。</p>
+</div>
+</article>
+<article class="cl-card">
+<img src="/obsidian-sync/chimelong-2026-guide/paradise-hero.jpg" alt="长隆欢乐世界过山车" />
+<div class="cl-card-body">
+<h3>欢乐世界</h3>
+<p>下周官方营业时间 10:00-18:00。注意 5 月有多项设备维护，旧攻略里的部分项目可能去不了。</p>
+</div>
+</article>
+</div>
+
+<div class="cl-tabs">
+<input id="cl-tab-1" type="radio" name="cl-tabs" checked />
+<input id="cl-tab-2" type="radio" name="cl-tabs" />
+<input id="cl-tab-3" type="radio" name="cl-tabs" />
+<div class="cl-tab-labels" role="tablist" aria-label="攻略视图">
+<label for="cl-tab-1">修正重点</label>
+<label for="cl-tab-2">两日路线</label>
+<label for="cl-tab-3">出发清单</label>
+</div>
+<div class="cl-panels">
+<section class="cl-panel cl-panel-1">
+<h2 class="cl-section-title">旧攻略需要立刻修正的点</h2>
+<div class="cl-table-wrap">
+<table class="cl-table">
+<thead>
+<tr>
+<th>项目</th>
+<th>最新信息</th>
+<th>我的处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>野生动物世界</td>
+<td>2026-05-05 至 2026-05-31 营业时间为 09:30-18:00；标准票 300 元，儿童/长者票 210 元，青少年/学生票 240 元。</td>
+<td>不要排成“下午才进园”。上午入园，把小火车、缆车和重点动物放前面。</td>
+</tr>
+<tr>
+<td>欢乐世界</td>
+<td>2026-05-06 至 2026-05-31 营业时间为 10:00-18:00；标准票 250 元，儿童/长者票 175 元，青少年/学生票 200 元。</td>
+<td>先查当天设备状态。5 月公告里龙卷风暴、桑巴气球、空中警察、欢乐摩天轮、诡异马戏团等有维护/暂停。</td>
+</tr>
+<tr>
+<td>水上乐园</td>
+<td>4-5 月全日票 10:30-19:00；周五、周六及节假日延长到 20:30，夜场 17:00-20:30 仅这些日期开放。</td>
+<td>如果下周只去工作日，不要按“夜场玩到很晚”来安排行程。</td>
+</tr>
+<tr>
+<td>广州国际大马戏</td>
+<td>2026-05-18 至 05-22 为 19:30 一场；05-23 至 05-24 为 16:30 和 19:30 两场。</td>
+<td>动物世界当天接 19:30 比较顺；周末如果怕太累，选 16:30 场更稳。</td>
+</tr>
+<tr>
+<td>交通</td>
+<td>广州地铁 3/7 号线到汉溪长隆站，E 出口步行约 5 分钟到长隆地铁广场穿梭巴士站。</td>
+<td>住市区也可以地铁直达；如果带行李或多人同行，再比较打车。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="cl-panel cl-panel-2">
+<h2 class="cl-section-title">更稳的两日路线</h2>
+<div class="cl-day">
+<strong>Day 1：野生动物世界 + 广州国际大马戏</strong>
+<span>09:30 前后入园。先小火车/缆车，再看熊猫、白虎和动物展示；16:30 左右出园吃饭、休整；晚上看 19:30 大马戏。这个组合最像“来了一趟长隆”。</span>
+</div>
+<div class="cl-day">
+<strong>Day 2A：水上乐园</strong>
+<span>适合热天、想轻松一点。周五/周六可以玩到 20:30；工作日按 19:00 收尾，不要把晚饭排太晚。</span>
+</div>
+<div class="cl-day">
+<strong>Day 2B：欢乐世界</strong>
+<span>适合过山车和刺激项目。因为 5 月维护项目不少，到园前再看一次官方公告；如果核心设备暂停，就切到水上乐园。</span>
+</div>
+<p class="cl-note">如果只去 1 天：优先选“野生动物世界 + 大马戏”。不要硬塞欢乐世界或水上乐园，否则交通和体力都会被压垮。</p>
+</section>
+
+<section class="cl-panel cl-panel-3">
+<h2 class="cl-section-title">出发前勾一遍</h2>
+<div class="cl-checks">
+<label class="cl-check"><input type="checkbox" />二代身份证原件；线上购票也要按票种和证件入园。</label>
+<label class="cl-check"><input type="checkbox" />轻便雨衣/防晒/驱蚊；广州 5 月湿热，阵雨概率高。</label>
+<label class="cl-check"><input type="checkbox" />水上乐园另带泳衣、防水袋、拖鞋和换洗衣物。</label>
+<label class="cl-check"><input type="checkbox" />大马戏提前选场次；周末双场，工作日通常只看 19:30。</label>
+<label class="cl-check"><input type="checkbox" />前一晚再刷一次官方设备开放公告。</label>
+<label class="cl-check"><input type="checkbox" />如果住在度假区外，确认地铁末班车和回程打车点。</label>
+</div>
+</section>
+</div>
+</div>
+
+<h2 class="cl-section-title">官方当日时间表图片</h2>
+<p class="cl-note">这些是官网 2026-05-15 公告图，适合作为下周出行前的校验模板。真实入园当天仍以长隆当天公告和小程序为准。</p>
+<details class="cl-details">
+<summary>展开：野生动物世界 2026-05-15 营运时间表</summary>
+<div>
+<img src="/obsidian-sync/chimelong-2026-guide/safari-hours-20260515.jpg" alt="广州长隆野生动物世界 2026-05-15 营运时间" />
+</div>
+</details>
+<details class="cl-details">
+<summary>展开：欢乐世界 2026-05-15 设备与演出时间表</summary>
+<div>
+<img src="/obsidian-sync/chimelong-2026-guide/paradise-hours-20260515.jpg" alt="长隆欢乐世界 2026-05-15 设备开放时间" />
+</div>
+</details>
+<details class="cl-details">
+<summary>展开：水上乐园 2026-05-15 设备与表演时间表</summary>
+<div>
+<img src="/obsidian-sync/chimelong-2026-guide/water-hours-20260515.png" alt="长隆水上乐园 2026-05-15 设备开放时间" />
+</div>
+</details>
+
+<div class="cl-source">
+<strong>信息来源：</strong>
+长隆官网
+<a href="https://www.chimelong.com/gz/safaripark/">野生动物世界</a>、
+<a href="https://www.chimelong.com/gz/chimelongparadise/">欢乐世界</a>、
+<a href="https://www.chimelong.com/gz/waterpark/">水上乐园</a>、
+<a href="https://www.chimelong.com/gz/circus/">广州国际大马戏</a>、
+<a href="https://www.chimelong.com/gz/hours/">园区开放时间</a>、
+<a href="https://www.chimelong.com/gz/traffic/type_4.html?tab=1">地铁交通</a>、
+<a href="https://www.chimelong.com/gz/prepared/?from=gz">入园准备</a>。
+时间表图片来自官网 2026-05-15 公告：
+<a href="https://www.chimelong.com/gz/safaripark/news/2240.html">野生动物世界公告</a>、
+<a href="https://www.chimelong.com/gz/chimelongparadise/news/1802.html">欢乐世界公告</a>、
+<a href="https://www.chimelong.com/gz/waterpark/news/2257.html">水上乐园公告</a>。
+</div>
+</section>
+`;export{n as default};
