@@ -3,13 +3,19 @@ const path = require('node:path')
 const { execSync } = require('node:child_process')
 const matter = require('gray-matter')
 
+const supportedArticleExtensions = new Set(['.md', '.html'])
+
+function isSupportedArticleFile(filePath) {
+  return supportedArticleExtensions.has(path.extname(filePath).toLowerCase())
+}
+
 /**
- * 从 Markdown 文件中提取第一张图片的 src
+ * 从日记文件中提取第一张图片的 src
  * @param {string} filePath
  * @returns {Promise<string|null>}
  */
 async function getFirstImage(filePath) {
-  if (filePath.endsWith('.md')) {
+  if (isSupportedArticleFile(filePath)) {
     const fileContent = await fsPromises.readFile(filePath, 'utf-8')
     const firstImageMatch = fileContent.match(
       /!\[.*?\]\((.*?)\)|<img.*?src=["'](.*?)["']/,
@@ -23,16 +29,24 @@ async function getFirstImage(filePath) {
 }
 
 /**
- * 从 Markdown 文件的 frontmatter 中提取 date 字段
+ * 从日记文件中提取 date 字段
  * @param {string} filePath
  * @returns {Promise<Date|null>}
  */
 async function getFrontmatterDate(filePath) {
-  if (filePath.endsWith('.md')) {
+  if (isSupportedArticleFile(filePath)) {
     const fileContent = await fsPromises.readFile(filePath, 'utf-8')
     const { data } = matter(fileContent)
     if (data.date) {
       const d = new Date(data.date)
+      if (!Number.isNaN(d.getTime())) {
+        return d
+      }
+    }
+
+    const commentDateMatch = fileContent.match(/<!--\s*date:\s*([\s\S]*?)\s*-->/i)
+    if (commentDateMatch) {
+      const d = new Date(commentDateMatch[1].trim())
       if (!Number.isNaN(d.getTime())) {
         return d
       }
@@ -71,6 +85,12 @@ function getGitFirstCommitDate(filePath, cwd) {
  */
 function stripMarkdownToPlainText(markdown) {
   return markdown
+    // 移除日记 HTML 元数据
+    .replace(/<!--\s*date:\s*[\s\S]*?-->/gi, '')
+    // 移除 frontmatter
+    .replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '')
+    // 移除 HTML 样式与脚本块，避免 HTML 日记的内联 CSS 污染摘要
+    .replace(/<(style|script)\b[^>]*>[\s\S]*?<\/\1>/gi, '')
     // 移除代码块
     .replace(/```[\s\S]*?```/g, '')
     // 移除行内代码
@@ -97,12 +117,12 @@ function stripMarkdownToPlainText(markdown) {
 }
 
 /**
- * 提取 Markdown 文件的正文纯文本预览（去除 Markdown 语法后前200字符）
+ * 提取日记文件的正文纯文本预览（去除 Markdown/HTML 语法后前200字符）
  * @param {string} filePath
  * @returns {Promise<string|null>}
  */
 async function getPreviewText(filePath) {
-  if (filePath.endsWith('.md')) {
+  if (isSupportedArticleFile(filePath)) {
     const fileContent = await fsPromises.readFile(filePath, 'utf-8')
     const { content } = matter(fileContent)
     const plainText = stripMarkdownToPlainText(content)
@@ -156,5 +176,6 @@ module.exports = {
   stripMarkdownToPlainText,
   getPreviewText,
   getPostSummary,
+  isSupportedArticleFile,
   formatDate,
 }

@@ -6,6 +6,7 @@ const {
   getFrontmatterDate,
   getGitFirstCommitDate,
   getPreviewText,
+  isSupportedArticleFile,
   formatDate,
 } = require('./build-utils')
 
@@ -42,6 +43,10 @@ async function getDiaryPosts() {
         return null
       }
       if (stat.isFile()) {
+        if (!isSupportedArticleFile(dirPath)) {
+          return null
+        }
+
         const caption = path.parse(dirItemPath).name
         const frontmatterDate = await getFrontmatterDate(dirPath)
         const gitDate = getGitFirstCommitDate(dirPath)

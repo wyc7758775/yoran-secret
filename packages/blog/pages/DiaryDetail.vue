@@ -12,6 +12,7 @@ useNavToStatic()
 const { page } = useData()
 
 const pathFromUrl = ref(page.value?.params?.src || '')
+const hasMounted = ref(false)
 
 const visibleViewer = ref(false)
 const viewerList = ref<string[]>([])
@@ -29,11 +30,13 @@ function handleViewerList() {
 }
 
 onMounted(() => {
+  hasMounted.value = true
   getPathFromUrl()
   handleViewerList()
+  loadAndRenderMarkdown()
 })
 
-function getPathFromUrl() {
+function getArticlePathFromLocation() {
   try {
     if (typeof window !== 'undefined') {
       const fullPath = window.location.pathname
@@ -45,11 +48,11 @@ function getPathFromUrl() {
       }
       const pathParts = pathWithoutBase.split('/').filter(Boolean)
 
-      const mdIndex = pathParts.findIndex(part => part.includes('.md'))
+      const articleIndex = pathParts.findIndex(part => /\.(md|html)$/i.test(part))
       const diaryIndex = pathParts.findIndex(part => part === 'diary')
 
       let extractedPath = ''
-      if (mdIndex >= 0) {
+      if (articleIndex >= 0) {
         extractedPath = pathParts.slice(Math.max(0, diaryIndex)).join('/')
       }
       else if (diaryIndex >= 0) {
@@ -61,13 +64,20 @@ function getPathFromUrl() {
         extractedPath = urlParams.get('src') || ''
       }
 
-      if (extractedPath) {
-        pathFromUrl.value = extractedPath
-      }
+      return extractedPath
     }
   }
   catch (error) {
     console.error('解析URL路径失败:', error)
+  }
+
+  return ''
+}
+
+function getPathFromUrl() {
+  const extractedPath = getArticlePathFromLocation()
+  if (extractedPath) {
+    pathFromUrl.value = extractedPath
   }
 }
 
@@ -100,12 +110,16 @@ function resolveBasePaths(html: string): string {
       if (href.startsWith('//')) return match
       return `<a${attrs} href="${base}${href.slice(1)}"`
     })
+    .replace(/<link([^>]*)\shref="(\/[^"]*)"/g, (match, attrs, href) => {
+      if (href.startsWith('//')) return match
+      return `<link${attrs} href="${base}${href.slice(1)}"`
+    })
 }
 
 function getFileInfo(src: string) {
   const pathParts = src.split('/')
   const fileName = pathParts[pathParts.length - 1]
-  const baseName = fileName.replace('.md', '')
+  const baseName = fileName.replace(/\.(md|html)$/i, '')
 
   return {
     fileName,
@@ -131,8 +145,14 @@ function getFileKey(markdownFiles: any) {
 const renderedContent = ref('')
 const contentLoading = ref(true)
 
-function stripFrontmatter(markdownContent: string) {
-  return markdownContent.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '')
+function stripArticleMetadata(articleContent: string) {
+  return articleContent
+    .replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '')
+    .replace(/<!--\s*date:\s*[\s\S]*?-->\r?\n?/, '')
+}
+
+function isHtmlArticle(src: string) {
+  return /\.html$/i.test(src)
 }
 
 async function loadAndRenderMarkdown() {
@@ -147,22 +167,31 @@ async function loadAndRenderMarkdown() {
 
     const { fileName } = getFileInfo(articleSrc.value)
 
-    const markdownFiles = (import.meta as any).glob('../diary/*.md', {
-      query: '?raw',
-      import: 'default',
-    })
-    const fileKey = getFileKey(markdownFiles)
+    const articleFiles = {
+      ...(import.meta as any).glob('../diary/*.md', {
+        query: '?raw',
+        import: 'default',
+      }),
+      ...(import.meta as any).glob('../diary/*.html', {
+        query: '?raw',
+        import: 'default',
+      }),
+    }
+    const fileKey = getFileKey(articleFiles)
 
     if (fileKey) {
-      const markdownContent = await markdownFiles[fileKey]()
-      renderedContent.value = resolveBasePaths(mdRender(stripFrontmatter(markdownContent)))
+      const articleContent = await articleFiles[fileKey]()
+      const contentWithoutMetadata = stripArticleMetadata(articleContent)
+      renderedContent.value = isHtmlArticle(fileName)
+        ? resolveBasePaths(contentWithoutMetadata)
+        : resolveBasePaths(mdRender(contentWithoutMetadata))
     }
     else {
       renderedContent.value = `<p>未找到对应的文章内容: ${fileName}</p>`
     }
   }
   catch (error) {
-    console.error('加载Markdown文件失败:', error)
+    console.error('加载文章文件失败:', error)
     renderedContent.value = `<p>加载文章内容失败: ${error.message}</p>`
   }
   finally {
@@ -195,9 +224,10 @@ function bindImageLoadEvents() {
 watch(
   () => articleSrc.value,
   () => {
-    loadAndRenderMarkdown()
+    if (hasMounted.value) {
+      loadAndRenderMarkdown()
+    }
   },
-  { immediate: true },
 )
 </script>
 
