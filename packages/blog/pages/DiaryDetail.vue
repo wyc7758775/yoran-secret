@@ -100,19 +100,47 @@ const baseUrl = import.meta.env.BASE_URL || '/'
 
 function resolveBasePaths(html: string): string {
   const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`
+  const resolveRootPath = (value: string) => {
+    if (
+      value.startsWith('//')
+      || /^[a-z][a-z\d+.-]*:/i.test(value)
+      || value.startsWith(base)
+    ) {
+      return value
+    }
+
+    if (value.startsWith('/')) {
+      return `${base}${value.slice(1)}`
+    }
+
+    return value
+  }
+  const resolveSrcset = (srcset: string) => {
+    return srcset
+      .split(',')
+      .map((candidate) => {
+        const parts = candidate.trim().split(/\s+/)
+        const src = parts.shift()
+        if (!src)
+          return candidate
+
+        return [resolveRootPath(src), ...parts].join(' ')
+      })
+      .join(', ')
+  }
 
   return html
     .replace(/<img([^>]*)\ssrc="(\/[^"]*)"/g, (match, attrs, src) => {
-      if (src.startsWith('//')) return match
-      return `<img${attrs} src="${base}${src.slice(1)}"`
+      return `<img${attrs} src="${resolveRootPath(src)}"`
     })
     .replace(/<a([^>]*)\shref="(\/[^"]*)"/g, (match, attrs, href) => {
-      if (href.startsWith('//')) return match
-      return `<a${attrs} href="${base}${href.slice(1)}"`
+      return `<a${attrs} href="${resolveRootPath(href)}"`
     })
     .replace(/<link([^>]*)\shref="(\/[^"]*)"/g, (match, attrs, href) => {
-      if (href.startsWith('//')) return match
-      return `<link${attrs} href="${base}${href.slice(1)}"`
+      return `<link${attrs} href="${resolveRootPath(href)}"`
+    })
+    .replace(/<(source|img)([^>]*)\ssrcset="([^"]*)"/g, (match, tag, attrs, srcset) => {
+      return `<${tag}${attrs} srcset="${resolveSrcset(srcset)}"`
     })
 }
 
