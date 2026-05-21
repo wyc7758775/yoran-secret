@@ -1,13 +1,13 @@
-import{_ as f,h as m,c as n,o as s,j as i,G as A,H as _,ag as b,n as T,t as c,e as y,J as u,w as x,k as O,O as I}from"./chunks/framework.JxLoAXVO.js";import{E as F}from"./chunks/index.BLqeT7V9.js";import"./chunks/index.DfCqaEpJ.js";import"./chunks/index.DTEePcrK.js";const k=[{src:"/diary/业务型产品工程师升级路线.html",firstImage:"/obsidian-sync/业务型产品工程师升级路线/study-pulse.gif",previewText:`从前端工程师升级到业务型产品工程师
-    不走 Agent 底层，走业务结果这条路
-    
-      你的主线不是继续横向卷前端框架，也不是硬转模型研究。更合适的路线是：用前端作为入口，补研发流程、架构、业务建模、数据判断和 AI 应用能力，逐渐变成能负责一块业务结果的人。
-    
-
-    
+import{_ as f,h as m,c as n,o as s,j as i,G as A,H as _,ag as b,n as T,t as c,e as y,J as u,w as x,k as O,O as I}from"./chunks/framework.JxLoAXVO.js";import{E as F}from"./chunks/index.BLqeT7V9.js";import"./chunks/index.DfCqaEpJ.js";import"./chunks/index.DTEePcrK.js";const k=[{src:"/diary/业务型产品工程师升级路线.html",firstImage:"/obsidian-sync/业务型产品工程师升级路线/study-pulse.gif",previewText:`12 周低压力升级地图
+      业务型产品工程师升级路线
       
-        最终定位
-        业务型产品工程师。懂产品判断，能写系统，...`,caption:"业务型产品工程师升级路线",createTime:"MAY 21, 2026 · Yoran"},{src:"/diary/广州长隆下周出行修正版.html",firstImage:"/obsidian-sync/chimelong-2026-guide/safari-hero.jpg",previewText:`信息校准日：2026-05-15 · 目的地：广州长隆旅游度假区
+        主线不是继续横向卷前端框架，也不是硬转 Agent 底层。你要用前端作为入口，补研发流程、架构、业务建模、数据判断和 AI 应用，逐步变成能负责业务结果的人。
+      
+      
+        4 次每周学习块
+        45-90 分钟每次即可
+        1 个主线项目
+      ...`,caption:"业务型产品工程师升级路线",createTime:"MAY 21, 2026 · Yoran"},{src:"/diary/广州长隆下周出行修正版.html",firstImage:"/obsidian-sync/chimelong-2026-guide/safari-hero.jpg",previewText:`信息校准日：2026-05-15 · 目的地：广州长隆旅游度假区
 广州长隆下周出行修正版
 
 下周按 2026-05-18 到 2026-05-24 处理。旧攻略里最容易过期的是营业时间、夜场、设备检修和大马戏场次，所以这版只保留能落地的安排：野生动物世界打底，晚上接大马戏；第二天在水上乐园和欢乐世界里二选一。

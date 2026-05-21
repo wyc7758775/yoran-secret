@@ -1,0 +1,375 @@
+const n=`<!-- date: 2026-05-21T12:00:00 -->
+<link rel="stylesheet" href="/obsidian-sync/业务型产品工程师升级路线/roadmap.css" />
+
+<article class="career-map">
+  <section class="cm-hero">
+    <div class="cm-hero-copy">
+      <p class="cm-kicker">12 周低压力升级地图</p>
+      <h1 class="cm-title">业务型产品工程师升级路线</h1>
+      <p class="cm-lead">
+        主线不是继续横向卷前端框架，也不是硬转 Agent 底层。你要用前端作为入口，补研发流程、架构、业务建模、数据判断和 AI 应用，逐步变成能负责业务结果的人。
+      </p>
+      <div class="cm-hero-metrics" aria-label="学习强度">
+        <div><strong>4 次</strong><span>每周学习块</span></div>
+        <div><strong>45-90 分钟</strong><span>每次即可</span></div>
+        <div><strong>1 个</strong><span>主线项目</span></div>
+      </div>
+    </div>
+
+    <aside class="cm-week-zero">
+      <div class="cm-week-zero-head">
+        <span>Week 1</span>
+        <strong>本周只做这 3 件</strong>
+      </div>
+      <ol class="cm-checklist">
+        <li>选一个真实业务需求，别选玩具 demo。</li>
+        <li>写一页技术方案：目标、非目标、模块、接口、异常。</li>
+        <li>画一张业务流程图，标出用户、系统、数据流。</li>
+      </ol>
+      <figure class="cm-hero-visual">
+        <img src="/obsidian-sync/业务型产品工程师升级路线/study-pulse.gif" alt="业务学习节奏动图" />
+      </figure>
+    </aside>
+  </section>
+
+  <section class="cm-section">
+    <div class="cm-section-head">
+      <p class="cm-label">先看总地图</p>
+      <h2>五条能力线，不是五门课</h2>
+      <p>
+        研发流程和架构是主线，业务建模和数据判断负责让你做对事，AI 应用负责放大效率，英文阅读贯穿全程。
+      </p>
+    </div>
+
+    <div class="cm-map">
+      <article class="cm-map-item is-main">
+        <span>01</span>
+        <h3>研发流程 / 架构</h3>
+        <p>从需求拆解到方案、接口、数据模型、权限、日志、交付。</p>
+      </article>
+      <article class="cm-map-item">
+        <span>02</span>
+        <h3>业务建模</h3>
+        <p>用户是谁、流程是什么、成本在哪里、价值怎么产生。</p>
+      </article>
+      <article class="cm-map-item">
+        <span>03</span>
+        <h3>数据判断</h3>
+        <p>SQL、漏斗、留存、转化、Dashboard、问题定位。</p>
+      </article>
+      <article class="cm-map-item">
+        <span>04</span>
+        <h3>AI 业务应用</h3>
+        <p>RAG、Tool Calling、评估、人工审核、成本和失败归因。</p>
+      </article>
+      <article class="cm-map-item is-long">
+        <span>∞</span>
+        <h3>英文阅读</h3>
+        <p>每天小剂量读官方文档、工程博客、README 和设计文档。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="cm-section">
+    <div class="cm-section-head">
+      <p class="cm-label">课程表</p>
+      <h2>12 周，每周只通一关</h2>
+      <p>
+        每周只抓一个主任务，交付一个能看见的产物。没有完成就顺延，不开新坑。
+      </p>
+    </div>
+
+    <div class="cm-levels">
+      <article class="cm-level">
+        <div class="cm-level-week"><span>W1</span></div>
+        <div class="cm-level-main">
+          <p class="cm-level-type">新手村</p>
+          <h3>写第一份技术方案</h3>
+          <p>拿一个真实需求，写清楚背景、目标、非目标、模块边界、接口、异常和验收标准。</p>
+        </div>
+        <div class="cm-level-output">
+          <strong>产物</strong>
+          <span>1 页技术方案 + 1 张流程图</span>
+        </div>
+      </article>
+
+      <article class="cm-level">
+        <div class="cm-level-week"><span>W2</span></div>
+        <div class="cm-level-main">
+          <p class="cm-level-type">新手村</p>
+          <h3>补软件架构基本功</h3>
+          <p>重点看模块复杂度、深模块、API 边界、状态归属。不要追求大而全，先把边界讲清楚。</p>
+        </div>
+        <div class="cm-level-output">
+          <strong>产物</strong>
+          <span>一份模块边界说明 + 一次方案复盘</span>
+        </div>
+      </article>
+
+      <article class="cm-level">
+        <div class="cm-level-week"><span>W3</span></div>
+        <div class="cm-level-main">
+          <p class="cm-level-type">第一关</p>
+          <h3>搭业务系统骨架</h3>
+          <p>建一个小型 B2B SaaS：登录、角色、列表、详情、创建编辑、操作日志。</p>
+        </div>
+        <div class="cm-level-output">
+          <strong>产物</strong>
+          <span>能登录、能创建、能查看详情的系统</span>
+        </div>
+      </article>
+
+      <article class="cm-level">
+        <div class="cm-level-week"><span>W4</span></div>
+        <div class="cm-level-main">
+          <p class="cm-level-type">第一关</p>
+          <h3>补数据库和权限</h3>
+          <p>把用户、角色、资源、操作日志建模出来，补基础权限和异常处理。</p>
+        </div>
+        <div class="cm-level-output">
+          <strong>产物</strong>
+          <span>数据模型图 + 权限矩阵</span>
+        </div>
+      </article>
+
+      <article class="cm-level">
+        <div class="cm-level-week"><span>W5</span></div>
+        <div class="cm-level-main">
+          <p class="cm-level-type">第二关</p>
+          <h3>学 SQL 和指标</h3>
+          <p>只学业务够用的 SQL：筛选、聚合、分组、时间窗口。理解活跃、转化、留存、漏斗。</p>
+        </div>
+        <div class="cm-level-output">
+          <strong>产物</strong>
+          <span>10 条业务 SQL + 1 张指标字典</span>
+        </div>
+      </article>
+
+      <article class="cm-level">
+        <div class="cm-level-week"><span>W6</span></div>
+        <div class="cm-level-main">
+          <p class="cm-level-type">第二关</p>
+          <h3>做业务 Dashboard</h3>
+          <p>不要只画图。要能回答：业务哪里好、哪里坏、下一步该做什么。</p>
+        </div>
+        <div class="cm-level-output">
+          <strong>产物</strong>
+          <span>漏斗 + 留存 + 一页数据结论</span>
+        </div>
+      </article>
+
+      <article class="cm-level">
+        <div class="cm-level-week"><span>W7</span></div>
+        <div class="cm-level-main">
+          <p class="cm-level-type">第三关</p>
+          <h3>拆 5 个竞品</h3>
+          <p>每个竞品只看四件事：用户、核心流程、赚钱方式、关键指标。</p>
+        </div>
+        <div class="cm-level-output">
+          <strong>产物</strong>
+          <span>5 张竞品卡片</span>
+        </div>
+      </article>
+
+      <article class="cm-level">
+        <div class="cm-level-week"><span>W8</span></div>
+        <div class="cm-level-main">
+          <p class="cm-level-type">第三关</p>
+          <h3>做用户访谈和 PRD</h3>
+          <p>访谈 3 个真实用户，写一版 MVP PRD。训练判断什么值得做。</p>
+        </div>
+        <div class="cm-level-output">
+          <strong>产物</strong>
+          <span>3 条访谈记录 + 1 版 PRD</span>
+        </div>
+      </article>
+
+      <article class="cm-level">
+        <div class="cm-level-week"><span>W9</span></div>
+        <div class="cm-level-main">
+          <p class="cm-level-type">第四关</p>
+          <h3>理解 LLM 和 RAG</h3>
+          <p>学 token、context、embedding、RAG、Tool Calling。目标是知道怎么接业务，不卷底层。</p>
+        </div>
+        <div class="cm-level-output">
+          <strong>产物</strong>
+          <span>一张 LLM 应用机制图</span>
+        </div>
+      </article>
+
+      <article class="cm-level">
+        <div class="cm-level-week"><span>W10</span></div>
+        <div class="cm-level-main">
+          <p class="cm-level-type">第四关</p>
+          <h3>给系统加 AI 功能</h3>
+          <p>选一个具体场景：反馈归类、工单摘要、报表解读、客户风险提示。</p>
+        </div>
+        <div class="cm-level-output">
+          <strong>产物</strong>
+          <span>1 个 AI 功能 + 100 条测试样本</span>
+        </div>
+      </article>
+
+      <article class="cm-level">
+        <div class="cm-level-week"><span>W11</span></div>
+        <div class="cm-level-main">
+          <p class="cm-level-type">Boss 关</p>
+          <h3>做评估和失败归因</h3>
+          <p>统计准确率、失败类型、人工审核入口、成本和延迟。把 AI 从 demo 拉回业务。</p>
+        </div>
+        <div class="cm-level-output">
+          <strong>产物</strong>
+          <span>评估表 + 失败案例归因</span>
+        </div>
+      </article>
+
+      <article class="cm-level">
+        <div class="cm-level-week"><span>W12</span></div>
+        <div class="cm-level-main">
+          <p class="cm-level-type">Boss 关</p>
+          <h3>包装完整作品集</h3>
+          <p>讲清楚：发现了什么业务问题，怎么设计方案，怎么实现系统，数据如何验证，AI 如何提效。</p>
+        </div>
+        <div class="cm-level-output">
+          <strong>产物</strong>
+          <span>一篇完整项目案例 + 下一轮计划</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cm-section cm-rhythm-section">
+    <div class="cm-section-head">
+      <p class="cm-label">每周节奏</p>
+      <h2>不用每天上强度，只保留 4 个学习块</h2>
+      <p>
+        这套节奏的核心是低压力、可持续。每天只穿插一个很小的动作，真正推进靠每周 4 个固定学习块。
+      </p>
+    </div>
+
+    <div class="cm-rhythm">
+      <article>
+        <span>01</span>
+        <h3>输入块</h3>
+        <p>读书或官方文档 45 分钟，只记 3 条能马上用的观点。</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>设计块</h3>
+        <p>写方案、画流程图、拆模块边界，不急着开代码。</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>编码块</h3>
+        <p>只推进本周主项目的一个小闭环，别顺手开新坑。</p>
+      </article>
+      <article>
+        <span>04</span>
+        <h3>输出块</h3>
+        <p>写 300 字复盘：我做了什么、卡在哪里、下周怎么改。</p>
+      </article>
+    </div>
+
+    <div class="cm-daily">
+      <strong>每天穿插的小动作</strong>
+      <ul>
+        <li>10 分钟英文文档，只摘 5 个关键词。</li>
+        <li>看到一个需求，顺手写一句“这个需求的业务价值是什么”。</li>
+        <li>遇到一个技术点，记录它影响的是模块边界、数据、权限还是体验。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cm-section">
+    <div class="cm-section-head">
+      <p class="cm-label">书单</p>
+      <h2>书不要堆，按关卡读</h2>
+      <p>
+        每本书都带着当前项目的问题读。读完要落到方案、代码、指标或复盘里。
+      </p>
+    </div>
+
+    <div class="cm-books">
+      <article class="cm-book">
+        <span>先读</span>
+        <h3>A Philosophy of Software Design</h3>
+        <p>对应 W1-W2。补复杂度、模块边界和软件设计品味。</p>
+      </article>
+      <article class="cm-book">
+        <span>再读</span>
+        <h3>Designing Data-Intensive Applications</h3>
+        <p>对应 W3-W4。先读数据模型、可靠性、存储相关章节。</p>
+      </article>
+      <article class="cm-book">
+        <span>数据</span>
+        <h3>Lean Analytics</h3>
+        <p>对应 W5-W6。学会用指标讨论业务，而不是凭感觉争论。</p>
+      </article>
+      <article class="cm-book">
+        <span>产品</span>
+        <h3>The Mom Test</h3>
+        <p>对应 W7-W8。练用户访谈，避免问出只会让自己开心的答案。</p>
+      </article>
+      <article class="cm-book">
+        <span>AI</span>
+        <h3>AI Engineering</h3>
+        <p>对应 W9-W11。理解评估、成本、质量和生产化问题。</p>
+      </article>
+      <article class="cm-book">
+        <span>影响力</span>
+        <h3>The Staff Engineer's Path</h3>
+        <p>对应 W12 之后。学习怎么扩大技术影响力和协作半径。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="cm-section">
+    <div class="cm-section-head">
+      <p class="cm-label">主线项目</p>
+      <h2>只做一个能持续迭代的业务系统</h2>
+      <p>
+        推荐从“客户反馈管理系统”开始。它天然覆盖业务流程、数据分析、权限、AI 总结和作品集叙事。
+      </p>
+    </div>
+
+    <div class="cm-project">
+      <figure>
+        <img src="/obsidian-sync/业务型产品工程师升级路线/study-cover.png" alt="业务型产品工程师路线封面图" />
+      </figure>
+      <div class="cm-project-steps">
+        <article>
+          <span>M1</span>
+          <h3>业务闭环</h3>
+          <p>反馈提交、分派、处理、关闭、操作日志。</p>
+        </article>
+        <article>
+          <span>M2</span>
+          <h3>数据闭环</h3>
+          <p>反馈量、处理时长、分类占比、风险趋势。</p>
+        </article>
+        <article>
+          <span>M3</span>
+          <h3>AI 闭环</h3>
+          <p>自动摘要、归类、优先级建议、周报生成。</p>
+        </article>
+        <article>
+          <span>M4</span>
+          <h3>作品集闭环</h3>
+          <p>把问题、方案、实现、数据验证、AI 提效讲成一个案例。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cm-next">
+    <p class="cm-label">现在就开始</p>
+    <h2>本周最小行动清单</h2>
+    <ol>
+      <li>新建一个项目文档，标题叫“客户反馈管理系统”。</li>
+      <li>写下 3 类用户：提交反馈的人、处理反馈的人、看结果的人。</li>
+      <li>画出第一版流程：提交、分类、分派、处理、关闭。</li>
+      <li>写一页技术方案，周末只复盘这一页。</li>
+    </ol>
+  </section>
+</article>
+`;export{n as default};
