@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+  <rect width="980" height="560" fill="#fbfaf7"/>
+  <text x="48" y="54" font-family="PingFang SC, Arial, sans-serif" font-size="28" font-weight="700" fill="#242424">共享充电宝更常出现的场景</text>
+  <text x="48" y="88" font-family="PingFang SC, Arial, sans-serif" font-size="16" fill="#666">不是单纯看人流，而是看“低电量焦虑”在什么场景下更容易发生。</text>
+
+  <line x1="110" y1="465" x2="870" y2="465" stroke="#333" stroke-width="2"/>
+  <line x1="110" y1="465" x2="110" y2="130" stroke="#333" stroke-width="2"/>
+  <text x="392" y="512" font-family="PingFang SC, Arial, sans-serif" font-size="18" fill="#333">停留时间 / 借用动作成立</text>
+  <text x="24" y="315" transform="rotate(-90 24 315)" font-family="PingFang SC, Arial, sans-serif" font-size="18" fill="#333">手机刚需与低电量焦虑</text>
+
+  <text x="112" y="491" font-family="PingFang SC, Arial, sans-serif" font-size="13" fill="#777">低</text>
+  <text x="848" y="491" font-family="PingFang SC, Arial, sans-serif" font-size="13" fill="#777">高</text>
+  <text x="78" y="466" font-family="PingFang SC, Arial, sans-serif" font-size="13" fill="#777">低</text>
+  <text x="78" y="139" font-family="PingFang SC, Arial, sans-serif" font-size="13" fill="#777">高</text>
+
+  <rect x="585" y="155" width="145" height="54" rx="14" fill="#ffcf56" stroke="#a96a00"/>
+  <text x="624" y="189" font-family="PingFang SC, Arial, sans-serif" font-size="19" font-weight="700" fill="#3a2600">医院</text>
+
+  <rect x="670" y="245" width="145" height="54" rx="14" fill="#ff8a65" stroke="#a13a1d"/>
+  <text x="709" y="279" font-family="PingFang SC, Arial, sans-serif" font-size="19" font-weight="700" fill="#371207">景区</text>
+
+  <rect x="525" y="285" width="145" height="54" rx="14" fill="#7fc8f8" stroke="#266a91"/>
+  <text x="564" y="319" font-family="PingFang SC, Arial, sans-serif" font-size="19" font-weight="700" fill="#062236">商场</text>
+
+  <rect x="430" y="350" width="145" height="54" rx="14" fill="#9be7c3" stroke="#2b7b50"/>
+  <text x="469" y="384" font-family="PingFang SC, Arial, sans-serif" font-size="19" font-weight="700" fill="#10321f">餐饮</text>
+
+  <rect x="350" y="215" width="170" height="54" rx="14" fill="#c8b6ff" stroke="#6750a4"/>
+  <text x="377" y="249" font-family="PingFang SC, Arial, sans-serif" font-size="19" font-weight="700" fill="#28134f">交通枢纽</text>
+
+  <rect x="250" y="390" width="145" height="54" rx="14" fill="#dedbd2" stroke="#777066"/>
+  <text x="289" y="424" font-family="PingFang SC, Arial, sans-serif" font-size="19" font-weight="700" fill="#333">图书馆</text>
+
+  <rect x="170" y="405" width="145" height="54" rx="14" fill="#e8e8e8" stroke="#888"/>
+  <text x="209" y="439" font-family="PingFang SC, Arial, sans-serif" font-size="19" font-weight="700" fill="#333">办公室</text>
+
+  <path d="M572 230 C660 210, 765 235, 820 320" fill="none" stroke="#111" stroke-width="2.5" stroke-dasharray="8 8"/>
+  <text x="665" y="226" font-family="PingFang SC, Arial, sans-serif" font-size="14" fill="#333">高焦虑 + 外出 + 替代方案弱</text>
+
+  <text x="145" y="120" font-family="PingFang SC, Arial, sans-serif" font-size="14" fill="#777">左下角不是没人，而是共享充电宝的必要性弱。</text>
+  <text x="560" y="440" font-family="PingFang SC, Arial, sans-serif" font-size="14" fill="#777">右上区域更容易形成真实借用需求。</text>
+</svg>
