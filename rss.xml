@@ -4,7 +4,7 @@
         <title>Yoran Wu 的博客</title>
         <link>https://wyc7758775.github.io/yoran-secret</link>
         <description>个人学习总结记录</description>
-        <lastBuildDate>Mon, 01 Jun 2026 15:24:17 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 07 Jun 2026 07:20:41 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -14,6 +14,91 @@
             <link>https://wyc7758775.github.io/yoran-secret</link>
         </image>
         <copyright>All rights reserved 2026, Yoran Wu</copyright>
+        <item>
+            <title><![CDATA[一个不太体面的真实想法]]></title>
+            <link>https://wyc7758775.github.io/yoran-secret/observer/一个不太体面的真实想法</link>
+            <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret/observer/一个不太体面的真实想法</guid>
+            <pubDate>Sun, 07 Jun 2026 07:20:41 GMT</pubDate>
+            <description><![CDATA[一个不太体面的真实想法 短期我想保留自己的私域能力，长期团队又必须工程化、制度化。这里面有矛盾，但也不是完全无解。 最后还有一个真实但不太体面的想法。 我现在其实不想把我本地沉淀下来的 skill、rules、路径，全部提供给大家一起用。 这个想法很自私，我知道。 但人就是自私的。以后互联网圈可能会越来越多私域的东西。大家不会再无条件把自己的经验、规则、工具全部喂给 AI、喂给别人。 从个人角度讲，我当然希望自己沉淀得越多，别人犯的错越多，就越能凸显我的能力。 这句话听起来不好听，但它是真实的。 个人和团队之间的矛盾 视角 我真实的想法 个人角度 我想保留自己的私域能力，让自己沉淀得更多，能力...]]></description>
+            <content:encoded><![CDATA[<h1>一个不太体面的真实想法</h1>
+<p><strong>短期我想保留自己的私域能力，长期团队又必须工程化、制度化。这里面有矛盾，但也不是完全无解。</strong></p>
+<p>最后还有一个真实但不太体面的想法。</p>
+<p>我现在其实不想把我本地沉淀下来的 skill、rules、路径，全部提供给大家一起用。</p>
+<p>这个想法很自私，我知道。</p>
+<p>但人就是自私的。以后互联网圈可能会越来越多私域的东西。大家不会再无条件把自己的经验、规则、工具全部喂给 AI、喂给别人。</p>
+<p>从个人角度讲，我当然希望自己沉淀得越多，别人犯的错越多，就越能凸显我的能力。</p>
+<p>这句话听起来不好听，但它是真实的。</p>
+<h2>个人和团队之间的矛盾</h2>
+<table>
+<thead>
+<tr>
+<th>视角</th>
+<th>我真实的想法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>个人角度</strong></td>
+<td>我想保留自己的私域能力，让自己沉淀得更多，能力差距更明显。</td>
+</tr>
+<tr>
+<td><strong>团队角度</strong></td>
+<td>真正要让团队稳定，还是要把 rules 建起来，把 CR 规范同步出去，把边界和验证变成制度。</td>
+</tr>
+</tbody></table>
+<p>所以这里有一个矛盾。</p>
+<p>短期看，我想保留自己的私域能力。</p>
+<p>长期看，团队必须工程化，必须制度化，必须让任何人接手都不至于把系统搞坏。</p>
+<h2>我现在更认可的边界</h2>
+<p>后来我想了一下，这个想法不能简单地说对或者错。</p>
+<p>它很真实，但它只能当情绪，不能当长期策略。</p>
+<p>我不想把自己沉淀下来的东西全部共享出去，这个不丢人。因为这些东西确实是我用时间、错误、复盘换来的。AI 时代，谁能沉淀自己的工作流，谁就会和别人拉开差距。</p>
+<p>但问题是，<strong>不是所有私域能力都适合私藏。</strong></p>
+<p>我现在更愿意把它分成三类：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>我的处理方式</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>可以留在自己手里的东西</strong></td>
+<td>个人判断模型、提问方式、拆需求习惯、审美、产品理解、工具链组合</td>
+<td>这些更像我的手感和经验压缩，就算共享出去，别人也不一定用得好</td>
+</tr>
+<tr>
+<td><strong>不应该私藏的东西</strong></td>
+<td>CR 规则、事故教训、边界清单、测试要求、真实设备验证要求</td>
+<td>这些是团队安全网，不共享的话，别人继续踩坑，最后系统还是会坏</td>
+</tr>
+<tr>
+<td><strong>最值得长期沉淀的东西</strong></td>
+<td>我持续形成新规则、新判断、新工作流的能力</td>
+<td>真正的护城河不是藏起来的 rules，而是我比别人更快形成 rules</td>
+</tr>
+</tbody></table>
+<p>所以更好的做法不是全部共享，也不是全部私藏。</p>
+<p>更好的做法是：<strong>把安全底线制度化，把高级判断留在自己身上。</strong></p>
+<p>也就是说：</p>
+<ol>
+<li>rules、CR 规范、边界清单要同步；</li>
+<li>事故教训要同步；</li>
+<li>能避免团队重复犯错的东西要同步；</li>
+<li>但是我怎么更快发现问题、怎么组合工具、怎么做产品判断，这些可以继续沉淀成我的个人优势。</li>
+</ol>
+<p>这样想以后，我反而没那么纠结了。</p>
+<p>完全私藏，短期可能显得我更强，但长期会让团队继续依赖我、消耗我，甚至最后出问题锅还是会回到我身上。</p>
+<p>全盘共享，我又会觉得自己的优势被稀释。</p>
+<p>所以我现在更认可一个中间态：</p>
+<blockquote>
+<p><strong>共享团队必须知道的底线，保留自己持续进化的判断力。</strong></p>
+</blockquote>
+<p>真正高级的优势，不是“我有一份别人没有的 prompt”，也不是“我藏了一套别人不知道的规则”。</p>
+<p>真正高级的优势应该是：就算我把规则写出来，别人也只是照着做；但我能不断产出新的规则。</p>
+]]></content:encoded>
+            <author>295563358@qq.com (Yoran Wu)</author>
+        </item>
         <item>
             <title><![CDATA[充电宝都在哪里出现？]]></title>
             <link>https://wyc7758775.github.io/yoran-secret/observer/充电宝都在哪里出现？</link>
