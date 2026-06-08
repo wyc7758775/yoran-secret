@@ -2,6 +2,8 @@
 import { ElImageViewer } from 'element-plus'
 import { useData } from 'vitepress'
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
+// @ts-expect-error generated route data has no type declaration
+import RawObserverData from '../.vitepress/router/observer.js'
 import ArticleSkeleton from './components/ArticleSkeleton.vue'
 import BackToTop from './components/BackToTop.vue'
 import GiscusComment from './components/GiscusComment.vue'
@@ -11,9 +13,11 @@ import useMdRender from './use-md-render'
 
 useNavToStatic()
 const { page } = useData()
+const ObserverData = RawObserverData as Array<{ src: string, slug?: string }>
 
 // 使用ref存储路径信息，默认值从page.params获取
 const pathFromUrl = ref(page.value?.params?.src || '')
+const articlePathError = ref('')
 
 const visibleViewer = ref(false)
 const viewerList = ref<string[]>([])
@@ -42,10 +46,29 @@ function scheduleHideToc() {
   }, tocHideDelay)
 }
 
+function getArticleSrcBySlug(slug: string) {
+  return ObserverData.find(article => article.slug === slug)?.src || ''
+}
+
+function escapeHtml(text: string) {
+  return text.replace(/[&<>"']/g, (char) => {
+    const entities: Record<string, string> = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      '\'': '&#39;',
+    }
+
+    return entities[char]
+  })
+}
+
 // 获取路由器上面的链接，由于是通过中文来获取的，所以需要下面一下特殊的处理
 function getPathFromUrl() {
   try {
     if (typeof window !== 'undefined') {
+      articlePathError.value = ''
       const fullPath = window.location.pathname
       const basePath = '/yoran-secret' // 从vitepress配置中获取的base路径
       let pathWithoutBase = fullPath
@@ -70,7 +93,14 @@ function getPathFromUrl() {
 
       // 优先使用URL参数中的src
       const urlParams = new URLSearchParams(window.location.search)
-      if (urlParams.has('src')) {
+      if (urlParams.has('slug')) {
+        const slug = urlParams.get('slug') || ''
+        extractedPath = getArticleSrcBySlug(slug)
+        if (!extractedPath) {
+          articlePathError.value = `未找到对应的文章: ${escapeHtml(slug)}`
+        }
+      }
+      else if (urlParams.has('src')) {
         extractedPath = urlParams.get('src') || ''
       }
 
@@ -177,7 +207,9 @@ function stripFrontmatter(markdownContent: string) {
 // 解析和渲染Markdown文件
 async function loadAndRenderMarkdown() {
   if (!articleSrc.value) {
-    renderedContent.value = '<p>未提供文章路径</p>'
+    renderedContent.value = articlePathError.value
+      ? `<p>${articlePathError.value}</p>`
+      : '<p>未提供文章路径</p>'
     contentLoading.value = false
     return
   }
@@ -198,12 +230,13 @@ async function loadAndRenderMarkdown() {
       renderedContent.value = resolveBasePaths(mdRender(stripFrontmatter(markdownContent)))
     }
     else {
-      renderedContent.value = `<p>未找到对应的文章内容: ${fileName}</p>`
+      renderedContent.value = `<p>未找到对应的文章内容: ${escapeHtml(fileName)}</p>`
     }
   }
   catch (error) {
     console.error('加载Markdown文件失败:', error)
-    renderedContent.value = `<p>加载文章内容失败: ${error.message}</p>`
+    const errorMessage = error instanceof Error ? error.message : String(error)
+    renderedContent.value = `<p>加载文章内容失败: ${escapeHtml(errorMessage)}</p>`
   }
   finally {
     contentLoading.value = false

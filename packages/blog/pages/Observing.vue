@@ -78,6 +78,12 @@ const defaultImage = 'https://picsum.photos/id/1033/1200/800'
 const baseUrl = import.meta.env.BASE_URL || '/'
 const normalizedBaseUrl = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`
 const toolsLink = `${normalizedBaseUrl}tools`
+function createObserverDetailLink(article) {
+  const queryKey = article.slug ? 'slug' : 'src'
+  const queryValue = article.slug || article.src
+
+  return `${normalizedBaseUrl}observer-detail.html?${queryKey}=${encodeURIComponent(queryValue)}`
+}
 function resolveFirstImage(src) {
   if (!src)
     return defaultImage
@@ -111,7 +117,7 @@ function otherArticle() {
 const observerArticles = ObserverData.map(item => ({
   date: item.createTime.split(' · ')[0],
   title: item.caption,
-  link: `/yoran-secret/observer-detail?src=${encodeURIComponent(item.src)}`,
+  link: createObserverDetailLink(item),
 }))
 
 const videoArticles = VideoData.map(item => ({
@@ -142,7 +148,7 @@ const videoArticles = VideoData.map(item => ({
           <div class="lg:w-2/3 cursor-pointer">
             <a
               class="block"
-              :href="`/yoran-secret/observer-detail?src=${hostArticle().src}`"
+              :href="createObserverDetailLink(hostArticle())"
             >
               <div class="group">
                 <div class="relative overflow-hidden rounded-lg">
@@ -175,7 +181,7 @@ const videoArticles = VideoData.map(item => ({
               <a
                 v-for="value in otherHostArticle()"
                 :key="value.src"
-                :href="`/yoran-secret/observer-detail?src=${value.src}`"
+                :href="createObserverDetailLink(value)"
                 class="block"
               >
                 <article
@@ -221,7 +227,7 @@ const videoArticles = VideoData.map(item => ({
               @click="navigateToDetail(value)"
             >
               <a
-                :href="`/yoran-secret/observer-detail?src=${value.src}`"
+                :href="createObserverDetailLink(value)"
                 class="block"
               >
                 <div class="relative overflow-hidden rounded-lg mb-2">
