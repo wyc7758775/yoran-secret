@@ -64,6 +64,47 @@ html.dark {
   }
 }
 
+@media (max-width: 767px) {
+  :root {
+    --vp-nav-screen-bg-color: var(--vp-c-bg);
+  }
+
+  .VPNav {
+    z-index: 1000 !important;
+  }
+
+  .VPNavBar,
+  .VPNavBar.screen-open {
+    background-color: var(--vp-c-bg) !important;
+    border-bottom: 1px solid var(--vp-c-divider);
+  }
+
+  .VPNavScreen {
+    background-color: var(--vp-c-bg) !important;
+  }
+
+  .VPNavBarHamburger {
+    margin-right: 4px;
+    width: 44px !important;
+    height: 44px !important;
+    border: 1px solid var(--vp-c-divider) !important;
+    border-radius: 8px;
+    background-color: var(--vp-c-bg-soft) !important;
+  }
+
+  .VPNavBarHamburger.active {
+    border-color: var(--vp-c-text-1) !important;
+    background-color: var(--vp-c-bg-alt) !important;
+    box-shadow: 0 0 0 2px var(--vp-c-bg) !important;
+  }
+
+  .VPNavBarHamburger.active .top,
+  .VPNavBarHamburger.active .bottom {
+    height: 3px;
+    background-color: var(--vp-c-text-1) !important;
+  }
+}
+
 /* element-plus 样式 覆盖  */
 .el-image-viewer__mask {
   background: transparent !important;

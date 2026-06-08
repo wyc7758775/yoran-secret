@@ -86,11 +86,14 @@ watch(
 
 onMounted(() => {
   if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    handleResize()
     window.addEventListener('resize', handleResize)
   }
 })
 onUnmounted(() => {
-  window.removeEventListener('resize', handleResize)
+  if (typeof window !== 'undefined') {
+    window.removeEventListener('resize', handleResize)
+  }
 })
 
 const isHidden = ref(false)
@@ -191,6 +194,12 @@ function scrollToSection(item: TocItem, event: MouseEvent) {
   transition: right 0.3s ease;
   z-index: 50;
   left: 24px;
+}
+
+@media (max-width: 999px) {
+  .toc-sidebar {
+    display: none !important;
+  }
 }
 
 .toc-content {
