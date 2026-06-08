@@ -21,6 +21,10 @@ const props = defineProps({
     default: false,
   },
 })
+const emit = defineEmits<{
+  (event: 'tocEnter'): void
+  (event: 'tocLeave'): void
+}>()
 
 // 响应式数据
 const tocItems = ref<TocItem[]>([])
@@ -135,6 +139,8 @@ function scrollToSection(item: TocItem, event: MouseEvent) {
     v-show="!isHidden && tocItems.length > 0"
     class="toc-sidebar text-sm"
     :class="{ 'toc-sidebar-dark': isDarkMode }"
+    @mouseenter="emit('tocEnter')"
+    @mouseleave="emit('tocLeave')"
   >
     <div
       class="pl-[10px] pb-[10px] transition-opacity duration-500 ease-in-out text-black-50"

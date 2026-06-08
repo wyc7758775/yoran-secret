@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ElImageViewer } from 'element-plus'
 import { useData } from 'vitepress'
-import GiscusComment from './components/GiscusComment.vue'
-import { computed, nextTick, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import ArticleSkeleton from './components/ArticleSkeleton.vue'
 import BackToTop from './components/BackToTop.vue'
+import GiscusComment from './components/GiscusComment.vue'
 import TocSidebar from './components/TocSidebar.vue'
 import { useNavToStatic } from './hooks/use-nav-to-static'
 import useMdRender from './use-md-render'
@@ -19,11 +19,27 @@ const visibleViewer = ref(false)
 const viewerList = ref<string[]>([])
 
 const isVisibleToc = ref(false)
-function handleMouseLeave() {
-  isVisibleToc.value = false
+const tocHideDelay = 450
+let tocHideTimer: ReturnType<typeof setTimeout> | undefined
+
+function clearTocHideTimer() {
+  if (tocHideTimer) {
+    clearTimeout(tocHideTimer)
+    tocHideTimer = undefined
+  }
 }
-function handleMouseEnter() {
+
+function showToc() {
+  clearTocHideTimer()
   isVisibleToc.value = true
+}
+
+function scheduleHideToc() {
+  clearTocHideTimer()
+  tocHideTimer = setTimeout(() => {
+    isVisibleToc.value = false
+    tocHideTimer = undefined
+  }, tocHideDelay)
 }
 
 // 获取路由器上面的链接，由于是通过中文来获取的，所以需要下面一下特殊的处理
@@ -84,6 +100,10 @@ onMounted(() => {
   handleViewerList()
 })
 
+onUnmounted(() => {
+  clearTocHideTimer()
+})
+
 const articleSrc = computed(() => {
   // 优先使用客户端获取的路径，其次使用page.params
   if (pathFromUrl.value) {
@@ -92,7 +112,6 @@ const articleSrc = computed(() => {
 
   const pageSrc = page.value?.params?.src
   if (pageSrc) {
-    console.log('从page.params获取到src:', pageSrc)
     return pageSrc
   }
 
@@ -108,11 +127,15 @@ function resolveBasePaths(html: string): string {
 
   return html
     .replace(/<img([^>]*)\ssrc="(\/[^"]*)"/g, (match, attrs, src) => {
-      if (src.startsWith('//')) return match
+      if (src.startsWith('//'))
+        return match
+
       return `<img${attrs} src="${base}${src.slice(1)}"`
     })
     .replace(/<a([^>]*)\shref="(\/[^"]*)"/g, (match, attrs, href) => {
-      if (href.startsWith('//')) return match
+      if (href.startsWith('//'))
+        return match
+
       return `<a${attrs} href="${base}${href.slice(1)}"`
     })
 }
@@ -232,8 +255,8 @@ watch(
       <div
         v-else
         class="w-full md:w-7/10"
-        @mouseleave="handleMouseLeave"
-        @mouseenter="handleMouseEnter"
+        @mouseleave="scheduleHideToc"
+        @mouseenter="showToc"
       >
         <div
           class="md-prose max-w-none prose-sm sm:prose base:text-sm sm:text-base md:text-lg prose-img:center"
@@ -244,7 +267,12 @@ watch(
     </div>
   </div>
   <BackToTop />
-  <TocSidebar :is-visible-toc="isVisibleToc" :content="renderedContent" />
+  <TocSidebar
+    :is-visible-toc="isVisibleToc"
+    :content="renderedContent"
+    @toc-enter="showToc"
+    @toc-leave="scheduleHideToc"
+  />
   <ElImageViewer
     v-if="visibleViewer"
     :url-list="viewerList"
