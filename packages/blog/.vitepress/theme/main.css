@@ -80,6 +80,13 @@ html.dark {
   }
 
   .VPNavScreen {
+    position: fixed !important;
+    top: calc(var(--vp-layout-top-height, 0px) + var(--vp-nav-height));
+    right: 0;
+    left: 0;
+    z-index: 999;
+    height: calc(100dvh - var(--vp-layout-top-height, 0px) - var(--vp-nav-height));
+    overflow-y: auto;
     background-color: var(--vp-c-bg) !important;
   }
 
