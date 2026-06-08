@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { ElImageViewer } from 'element-plus'
 import { useData } from 'vitepress'
-import GiscusComment from './components/GiscusComment.vue'
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import ArticleSkeleton from './components/ArticleSkeleton.vue'
 import BackToTop from './components/BackToTop.vue'
+import GiscusComment from './components/GiscusComment.vue'
 import { useNavToStatic } from './hooks/use-nav-to-static'
 import useMdRender from './use-md-render'
 
-useNavToStatic()
+useNavToStatic({ hideOnMobileScroll: true })
 const { page } = useData()
 
 const pathFromUrl = ref(page.value?.params?.src || '')
@@ -48,7 +48,7 @@ function getArticlePathFromLocation() {
       }
       const pathParts = pathWithoutBase.split('/').filter(Boolean)
 
-      const articleIndex = pathParts.findIndex(part => /\.(md|html)$/i.test(part))
+      const articleIndex = pathParts.findIndex(part => /\.(?:md|html)$/i.test(part))
       const diaryIndex = pathParts.findIndex(part => part === 'diary')
 
       let extractedPath = ''
@@ -88,7 +88,6 @@ const articleSrc = computed(() => {
 
   const pageSrc = page.value?.params?.src
   if (pageSrc) {
-    console.log('从page.params获取到src:', pageSrc)
     return pageSrc
   }
 
@@ -147,7 +146,7 @@ function resolveBasePaths(html: string): string {
 function getFileInfo(src: string) {
   const pathParts = src.split('/')
   const fileName = pathParts[pathParts.length - 1]
-  const baseName = fileName.replace(/\.(md|html)$/i, '')
+  const baseName = fileName.replace(/\.(?:md|html)$/i, '')
 
   return {
     fileName,
@@ -176,7 +175,7 @@ const contentLoading = ref(true)
 function stripArticleMetadata(articleContent: string) {
   return articleContent
     .replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '')
-    .replace(/<!--\s*date:\s*[\s\S]*?-->\r?\n?/, '')
+    .replace(/<!--[^\r\n]*date:[\s\S]*?-->\r?\n?/, '')
 }
 
 function isHtmlArticle(src: string) {

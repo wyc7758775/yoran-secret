@@ -2,11 +2,14 @@
 import { nextTick, onMounted, ref, watch } from 'vue'
 import BackToTop from './components/BackToTop.vue'
 import TocSidebar from './components/TocSidebar.vue'
+import { useNavToStatic } from './hooks/use-nav-to-static'
 import useMdRender from './use-md-render'
 
 const props = defineProps<{
   src: string
 }>()
+
+useNavToStatic({ hideOnMobileScroll: true })
 
 const { mdRender } = useMdRender()
 const renderedContent = ref('')
@@ -19,11 +22,15 @@ function resolveBasePaths(html: string): string {
 
   return html
     .replace(/<img([^>]*)\ssrc="(\/[^"]*)"/g, (match, attrs, src) => {
-      if (src.startsWith('//')) return match
+      if (src.startsWith('//'))
+        return match
+
       return `<img${attrs} src="${base}${src.slice(1)}"`
     })
     .replace(/<a([^>]*)\shref="(\/[^"]*)"/g, (match, attrs, href) => {
-      if (href.startsWith('//')) return match
+      if (href.startsWith('//'))
+        return match
+
       return `<a${attrs} href="${base}${href.slice(1)}"`
     })
 }
