@@ -34,3 +34,13 @@ test('mobile fixes stay inside responsive breakpoints', () => {
   assert.doesNotMatch(css, /@media \(min-width:[\s\S]*\.VPNavScreen[\s\S]*background-color: var\(--vp-c-bg\) !important/)
   assert.doesNotMatch(toc, /@media \(min-width:[\s\S]*\.toc-sidebar\s*\{[\s\S]*display: none !important/)
 })
+
+test('mobile detail nav hides while scrolling away from top', () => {
+  const hook = readFileSync('packages/blog/pages/hooks/use-nav-to-static.ts', 'utf8')
+
+  assert.match(hook, /window\.addEventListener\('scroll', applyMobileNavVisibility/)
+  assert.match(hook, /window\.removeEventListener\('scroll', applyMobileNavVisibility/)
+  assert.match(hook, /window\.scrollY <= 8/)
+  assert.match(hook, /navElement\.style\.transform = 'translateY\(-100%\)'/)
+  assert.match(hook, /document\.querySelector\('\.VPNavScreen'\)/)
+})

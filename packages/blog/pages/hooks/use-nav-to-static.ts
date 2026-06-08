@@ -1,6 +1,6 @@
 import { onMounted, onUnmounted } from 'vue'
 
-type StyleKey = 'paddingTop' | 'position' | 'zIndex' | 'top' | 'width'
+type StyleKey = 'paddingTop' | 'position' | 'zIndex' | 'top' | 'width' | 'transform' | 'transition'
 
 function restoreInlineStyles(element: HTMLElement | null, keys: StyleKey[]) {
   if (!element)
@@ -29,12 +29,40 @@ export function useNavToStatic() {
 
     const restoreStyles = [
       restoreInlineStyles(contentElement, ['paddingTop']),
-      restoreInlineStyles(navElement, ['position', 'zIndex', 'top', 'width']),
+      restoreInlineStyles(navElement, [
+        'position',
+        'zIndex',
+        'top',
+        'width',
+        'transform',
+        'transition',
+      ]),
       restoreInlineStyles(docElement, ['paddingTop']),
       restoreInlineStyles(sidebarElement, ['top']),
     ]
 
     const mobileQuery = window.matchMedia('(max-width: 767px)')
+
+    const applyMobileNavVisibility = () => {
+      if (!navElement)
+        return
+
+      if (!mobileQuery.matches) {
+        navElement.style.transform = ''
+        navElement.style.transition = ''
+        return
+      }
+
+      navElement.style.transition = 'transform 0.2s ease'
+
+      const isScreenOpen = Boolean(document.querySelector('.VPNavScreen'))
+      if (isScreenOpen || window.scrollY <= 8) {
+        navElement.style.transform = 'translateY(0)'
+        return
+      }
+
+      navElement.style.transform = 'translateY(-100%)'
+    }
 
     const applyLayout = () => {
       if (contentElement) {
@@ -50,6 +78,7 @@ export function useNavToStatic() {
           ? 'var(--vp-layout-top-height, 0px)'
           : ''
         navElement.style.width = mobileQuery.matches ? '100%' : ''
+        applyMobileNavVisibility()
       }
 
       if (docElement) {
@@ -63,9 +92,11 @@ export function useNavToStatic() {
 
     applyLayout()
     window.addEventListener('resize', applyLayout)
+    window.addEventListener('scroll', applyMobileNavVisibility, { passive: true })
 
     cleanup = () => {
       window.removeEventListener('resize', applyLayout)
+      window.removeEventListener('scroll', applyMobileNavVisibility)
       restoreStyles.forEach(restore => restore())
     }
   })
