@@ -93,10 +93,15 @@ export function useNavToStatic() {
     applyLayout()
     window.addEventListener('resize', applyLayout)
     window.addEventListener('scroll', applyMobileNavVisibility, { passive: true })
+    const navObserver = new MutationObserver(applyMobileNavVisibility)
+    if (navElement) {
+      navObserver.observe(navElement, { childList: true })
+    }
 
     cleanup = () => {
       window.removeEventListener('resize', applyLayout)
       window.removeEventListener('scroll', applyMobileNavVisibility)
+      navObserver.disconnect()
       restoreStyles.forEach(restore => restore())
     }
   })

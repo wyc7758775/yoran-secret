@@ -38,6 +38,9 @@ test('mobile fixes stay inside responsive breakpoints', () => {
 test('mobile detail nav hides while scrolling away from top', () => {
   const hook = readFileSync('packages/blog/pages/hooks/use-nav-to-static.ts', 'utf8')
 
+  assert.match(hook, /const navObserver = new MutationObserver\(applyMobileNavVisibility\)/)
+  assert.match(hook, /navObserver\.observe\(navElement, \{ childList: true \}\)/)
+  assert.match(hook, /navObserver\.disconnect\(\)/)
   assert.match(hook, /window\.addEventListener\('scroll', applyMobileNavVisibility/)
   assert.match(hook, /window\.removeEventListener\('scroll', applyMobileNavVisibility/)
   assert.match(hook, /window\.scrollY <= 8/)
