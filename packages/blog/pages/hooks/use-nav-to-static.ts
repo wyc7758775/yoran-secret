@@ -2,6 +2,10 @@ import { onMounted, onUnmounted } from 'vue'
 
 type StyleKey = 'paddingTop' | 'position' | 'zIndex' | 'top' | 'width' | 'transform' | 'transition'
 
+interface NavToStaticOptions {
+  hideOnMobileScroll?: boolean
+}
+
 function restoreInlineStyles(element: HTMLElement | null, keys: StyleKey[]) {
   if (!element)
     return () => {}
@@ -15,7 +19,7 @@ function restoreInlineStyles(element: HTMLElement | null, keys: StyleKey[]) {
   }
 }
 
-export function useNavToStatic() {
+export function useNavToStatic(options: NavToStaticOptions = {}) {
   let cleanup: (() => void) | undefined
 
   onMounted(() => {
@@ -56,7 +60,7 @@ export function useNavToStatic() {
       navElement.style.transition = 'transform 0.2s ease'
 
       const isScreenOpen = Boolean(document.querySelector('.VPNavScreen'))
-      if (isScreenOpen || window.scrollY <= 8) {
+      if (!options.hideOnMobileScroll || isScreenOpen || window.scrollY <= 8) {
         navElement.style.transform = 'translateY(0)'
         return
       }

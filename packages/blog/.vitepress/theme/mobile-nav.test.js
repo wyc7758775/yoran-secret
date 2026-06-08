@@ -47,3 +47,16 @@ test('mobile detail nav hides while scrolling away from top', () => {
   assert.match(hook, /navElement\.style\.transform = 'translateY\(-100%\)'/)
   assert.match(hook, /document\.querySelector\('\.VPNavScreen'\)/)
 })
+
+test('scroll hiding is enabled only on observer detail', () => {
+  const hook = readFileSync('packages/blog/pages/hooks/use-nav-to-static.ts', 'utf8')
+  const observerDetail = readFileSync('packages/blog/pages/ObserverDetail.vue', 'utf8')
+  const diaryDetail = readFileSync('packages/blog/pages/DiaryDetail.vue', 'utf8')
+  const gallery = readFileSync('packages/blog/pages/Gallery.vue', 'utf8')
+
+  assert.match(hook, /hideOnMobileScroll\?: boolean/)
+  assert.match(hook, /options\.hideOnMobileScroll/)
+  assert.match(observerDetail, /useNavToStatic\(\{ hideOnMobileScroll: true \}\)/)
+  assert.match(diaryDetail, /useNavToStatic\(\)/)
+  assert.match(gallery, /useNavToStatic\(\)/)
+})

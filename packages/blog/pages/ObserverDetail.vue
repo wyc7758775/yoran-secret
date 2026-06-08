@@ -11,7 +11,7 @@ import TocSidebar from './components/TocSidebar.vue'
 import { useNavToStatic } from './hooks/use-nav-to-static'
 import useMdRender from './use-md-render'
 
-useNavToStatic()
+useNavToStatic({ hideOnMobileScroll: true })
 const { page } = useData()
 const ObserverData = RawObserverData as Array<{ src: string, slug?: string }>
 
