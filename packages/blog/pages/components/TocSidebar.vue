@@ -193,6 +193,28 @@ function scrollToSection(item: TocItem, event: MouseEvent) {
   left: 24px;
 }
 
+.toc-content {
+  scrollbar-color: rgba(156, 163, 175, 0.55) transparent;
+  scrollbar-width: thin;
+}
+
+.toc-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.toc-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.toc-content::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.55);
+  border-radius: 999px;
+}
+
+.toc-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(107, 114, 128, 0.7);
+}
+
 .toc-content ul {
   list-style: none;
   padding: 0;
