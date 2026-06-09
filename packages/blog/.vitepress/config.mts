@@ -24,10 +24,8 @@ export default defineConfig({
       alt: 'Yoran',
     },
     nav: [
-      { text: 'Yoran', link: '/' },
       { text: 'Observer', link: '/observing', activeMatch: '/observ' },
       { text: 'Diary', link: '/diary', activeMatch: '/diary' },
-      { text: 'Projects', link: '/projects', activeMatch: '/projects' },
       { text: 'Posts', link: sidebar[0].items[0].link, activeMatch: '/posts' },
       { text: 'Gallery', link: '/gallery' },
     ],

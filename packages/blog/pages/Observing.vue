@@ -78,6 +78,11 @@ const defaultImage = 'https://picsum.photos/id/1033/1200/800'
 const baseUrl = import.meta.env.BASE_URL || '/'
 const normalizedBaseUrl = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`
 const toolsLink = `${normalizedBaseUrl}tools`
+const projectsLink = `${normalizedBaseUrl}projects`
+const observerEntryLinks = [
+  { label: 'Tools', href: toolsLink },
+  { label: 'Project', href: projectsLink },
+]
 function createObserverDetailLink(article) {
   const queryKey = article.slug ? 'slug' : 'src'
   const queryValue = article.slug || article.src
@@ -253,14 +258,19 @@ const videoArticles = VideoData.map(item => ({
         </div>
       </div>
 
+      <nav class="observer-entry-links classic-entry-links" aria-label="Observer related links">
+        <a
+          v-for="item in observerEntryLinks"
+          :key="item.href"
+          :href="item.href"
+          class="observer-entry-link"
+        >
+          {{ item.label }}
+        </a>
+      </nav>
+
       <!-- 弹窗视频 -->
       <ObservingVideo />
-
-      <div class="observer-tools-entry classic-tools-entry">
-        <a :href="toolsLink" class="observer-tools-btn">
-          Tools →
-        </a>
-      </div>
     </div>
   </div>
 
@@ -331,11 +341,17 @@ const videoArticles = VideoData.map(item => ({
       </ul>
     </section>
 
-    <div class="observer-tools-entry">
-      <a :href="toolsLink" class="observer-tools-btn">
-        Tools →
+    <nav class="observer-entry-links" aria-label="Observer related links">
+      <span class="observer-entry-label">More</span>
+      <a
+        v-for="item in observerEntryLinks"
+        :key="item.href"
+        :href="item.href"
+        class="observer-entry-link"
+      >
+        {{ item.label }}
       </a>
-    </div>
+    </nav>
   </div>
 </template>
 
@@ -469,39 +485,47 @@ const videoArticles = VideoData.map(item => ({
   color: #ff9e9e;
 }
 
-.observer-tools-entry {
+.observer-entry-links {
   display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 12px;
   justify-content: center;
-  margin-top: 8px;
+  margin-top: -18px;
+  color: var(--vp-c-text-3);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.6;
 }
 
-.classic-tools-entry {
+.classic-entry-links {
   margin: 32px 0 72px;
 }
 
-.observer-tools-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 34px;
-  padding: 6px 16px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 4px;
-  color: var(--vp-c-text-2);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  font-size: 13px;
-  text-decoration: none;
-  transition: all 0.2s ease;
+.observer-entry-label {
+  color: var(--vp-c-text-3);
 }
 
-.observer-tools-btn:hover {
-  border-color: #e06c75;
+.observer-entry-link {
+  position: relative;
+  color: var(--vp-c-text-2);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.observer-entry-link + .observer-entry-link::before {
+  position: absolute;
+  left: -8px;
+  color: var(--vp-c-divider);
+  content: "/";
+}
+
+.observer-entry-link:hover {
   color: #e06c75;
 }
 
-.dark .observer-tools-btn:hover {
-  border-color: #ff9e9e;
+.dark .observer-entry-link:hover {
   color: #ff9e9e;
 }
 
