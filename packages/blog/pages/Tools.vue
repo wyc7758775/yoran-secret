@@ -7,9 +7,10 @@ const tools = [
     link: '/yoran-secret/tools/pdf-to-images',
   },
   {
-    title: 'Markdown',
-    description: '整理写作、发布和内容处理相关的小工具。',
-    status: 'Planning',
+    title: 'Smart Commit',
+    description: '同步我在 zettlab-mini-nas 中使用的提交与 PR 工作流 skill。',
+    status: 'Ready',
+    link: '/yoran-secret/tools/smart-commit',
   },
   {
     title: 'Frontend',
@@ -17,8 +18,8 @@ const tools = [
     status: 'Planning',
   },
   {
-    title: 'Observer',
-    description: '收纳观察记录、图片和个人工作流相关的工具。',
+    title: 'Markdown',
+    description: '整理写作、发布和内容处理相关的小工具。',
     status: 'Planning',
   },
 ]
