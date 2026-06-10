@@ -4,7 +4,7 @@
         <title>Yoran Wu 的博客</title>
         <link>https://wyc7758775.github.io/yoran-secret</link>
         <description>个人学习总结记录</description>
-        <lastBuildDate>Tue, 09 Jun 2026 03:25:09 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 10 Jun 2026 14:40:22 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -18,7 +18,7 @@
             <title><![CDATA[现在是菜鸟程序员弯道超车的计划吗？]]></title>
             <link>https://wyc7758775.github.io/yoran-secret/observer/现在是菜鸟程序员弯道超车的计划吗？</link>
             <guid isPermaLink="false">https://wyc7758775.github.io/yoran-secret/observer/现在是菜鸟程序员弯道超车的计划吗？</guid>
-            <pubDate>Tue, 09 Jun 2026 03:25:09 GMT</pubDate>
+            <pubDate>Wed, 10 Jun 2026 14:40:22 GMT</pubDate>
             <description><![CDATA[All In AI 开发第一个月 站在 6 月 6 号回头看整个 5 月，包括 6 月初这几天，我感觉这一个月发生了很多事情。真正让我印象深刻的，大概有三四件。 核心判断：AI 压缩了实现时间，但没有压缩责任时间。 这件事其实很有意思。我们全团队开始 All in AI。其实之前大家已经长期用 AI 来做开发了，但这一次不太一样。 0、背景：这次 All in AI 到底发生了什么 这一次不是“大家都用 AI 辅助一下”，而是团队协作方式真的变了。 研发负责人开始承担更多项目经理角色 这一次是研发负责人直接做项目经理，自己负责一个单独模块，而且是主要负责人。开发不只是开发，还要承担一部分产品、...]]></description>
             <content:encoded><![CDATA[<h1>All In AI 开发第一个月</h1>
 <blockquote>
