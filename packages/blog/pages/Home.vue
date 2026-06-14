@@ -1,5 +1,32 @@
+<script setup lang="ts">
+import { onMounted, ref } from 'vue'
+
+const profileImageLoaded = ref(false)
+const profileImageRef = ref<HTMLImageElement | null>(null)
+const loadingProfileImageStyle = {
+  opacity: 0,
+  filter: 'blur(18px)',
+  transform: 'scale(1.03)',
+}
+const loadedProfileImageStyle = {
+  opacity: 1,
+  filter: 'blur(0)',
+  transform: 'scale(1)',
+}
+
+function handleProfileImageLoad() {
+  profileImageLoaded.value = true
+}
+
+onMounted(() => {
+  if (profileImageRef.value?.complete) {
+    handleProfileImageLoad()
+  }
+})
+</script>
+
 <template>
-  <div v-once class="slide-fade flex items-center justify-center">
+  <div class="slide-fade flex items-center justify-center">
     <div class="max-w-[650px]">
       <!-- 姓名 -->
       <div class="max-w-[650px] flex flex-col ml-0">
@@ -13,12 +40,23 @@
 
       <!-- 个人照片 -->
       <div
-        class="max-w-[400px] mx-auto mb-[2rem] overflow-hidden border-4 border-solid border-[#333] dark:border-primary-50"
+        class="profile-photo-frame max-w-[400px] mx-auto mb-[2rem] overflow-hidden border-4 border-solid border-[#333] dark:border-primary-50"
       >
+        <div
+          v-if="!profileImageLoaded"
+          class="profile-photo-skeleton"
+          aria-hidden="true"
+        />
         <img
+          ref="profileImageRef"
           src="https://yoran-images-1256970527.cos.ap-guangzhou.myqcloud.com/handsome.jpg"
           alt="Yoran"
-          class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+          class="profile-photo w-full h-full object-cover"
+          :style="profileImageLoaded ? loadedProfileImageStyle : loadingProfileImageStyle"
+          @load="handleProfileImageLoad"
+          @error="handleProfileImageLoad"
         >
       </div>
 
@@ -91,5 +129,52 @@
 
 .profile-bio p {
   margin-bottom: 1rem;
+}
+
+.profile-photo-frame {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: #f2f2f2;
+}
+
+.profile-photo-skeleton {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 0) 0%, rgb(255 255 255 / 0.7) 50%, rgb(255 255 255 / 0) 100%),
+    linear-gradient(135deg, #e5e7eb 0%, #f6f6f6 45%, #dedede 100%);
+  background-size: 220% 100%, 100% 100%;
+  animation: photo-skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+.profile-photo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  transition:
+    opacity 500ms ease,
+    filter 700ms ease,
+    transform 700ms ease;
+}
+
+.dark .profile-photo-frame {
+  background: #1f2937;
+}
+
+.dark .profile-photo-skeleton {
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 0) 0%, rgb(255 255 255 / 0.13) 50%, rgb(255 255 255 / 0) 100%),
+    linear-gradient(135deg, #1f2937 0%, #2c3544 45%, #161b22 100%);
+  background-size: 220% 100%, 100% 100%;
+}
+
+@keyframes photo-skeleton-shimmer {
+  from {
+    background-position: 120% 0, 0 0;
+  }
+
+  to {
+    background-position: -120% 0, 0 0;
+  }
 }
 </style>
