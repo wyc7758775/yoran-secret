@@ -1,4 +1,4 @@
-import{P as v}from"./chunks/PixelPikachu.CVwbLDp5.js";import{_ as C,h,c as n,o as s,j as i,J as p,ag as f,G as b,H as T,n as I,t as r,e as _,w as x,k as M,O as k}from"./chunks/framework.2EcwYd3P.js";import{E as F}from"./chunks/index.DLAtlOV2.js";import"./chunks/index.CgrIs2yC.js";import"./chunks/index.Brx7IrFy.js";const D=[{src:"/diary/业务型产品工程师升级路线.html",firstImage:"/obsidian-sync/业务型产品工程师升级路线/study-pulse.gif",previewText:`12 周低压力升级地图
+import{P as v}from"./chunks/PixelPikachu.BUW5VEuH.js";import{_ as C,h,c as n,o as s,j as i,J as p,ag as f,G as b,H as T,n as I,t as r,e as _,w as x,k as M,O as k}from"./chunks/framework.2EcwYd3P.js";import{E as F}from"./chunks/index.DLAtlOV2.js";import"./chunks/index.CgrIs2yC.js";import"./chunks/index.Brx7IrFy.js";const D=[{src:"/diary/业务型产品工程师升级路线.html",firstImage:"/obsidian-sync/业务型产品工程师升级路线/study-pulse.gif",previewText:`12 周低压力升级地图
       业务型产品工程师升级路线
       
         主线不是继续横向卷前端框架，也不是硬转 Agent 底层。你要用前端作为入口，补研发流程、架构、业务建模、数据判断和 AI 应用，逐步变成能负责业务结果的人。
