@@ -1,9 +1,10 @@
 <script setup>
 import { ElImage } from 'element-plus'
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 import RawObserverData from '../.vitepress/router/observer.js'
 import VideoData from '../.vitepress/router/video-cover.js'
 import ObservingVideo from './ObservingVideo.vue'
+import PixelPikachu from './PixelPikachu.vue'
 
 // === Classic View Data ===
 const emits = defineEmits(['open'])
@@ -22,50 +23,6 @@ const ObserverData = [...RawObserverData].sort((a, b) => {
 })
 
 const currentView = ref('minimal')
-
-const pikachuPixels = computed(() => {
-  const grid = [
-    '        BB  BB        ',
-    '       BBBBBBBB       ',
-    '      BYBBBBBBBY      ',
-    '     BYYYYYYYYYYY     ',
-    '    BYYBBYYBBYYYY     ',
-    '    BYYBBYYBBYYYY     ',
-    '    BYYYYYYYYYYYY     ',
-    '     YYRRYYYYRRYY     ',
-    '     YYYYYYYYYYYY     ',
-    '     YYYYYYYYYYYY     ',
-    '      YYYYYYYYYY      ',
-    '      YYYYYYYYYY      ',
-    '     OYYYYYYYYYYO     ',
-    '     OYYYYYYYYYYO     ',
-    '    OOOYYYYYYYYOOO    ',
-    '    OOOYYYYYYYYOOO    ',
-    '     YYYYYYYYYYYY     ',
-    '      YYYYYYYYYY      ',
-    '      YYYYYYYYYY      ',
-    '     OO        OO     ',
-  ]
-  const colors = {
-    B: '#231F20',
-    Y: '#F4DC26',
-    R: '#E84638',
-    O: '#E8A838',
-  }
-  const pixels = []
-  grid.forEach((row, y) => {
-    row.split('').forEach((cell, x) => {
-      if (cell !== ' ') {
-        pixels.push({
-          x: x * 5,
-          y: y * 5,
-          fill: colors[cell],
-        })
-      }
-    })
-  })
-  return pixels
-})
 
 function toggleView() {
   currentView.value = currentView.value === 'minimal' ? 'classic' : 'minimal'
@@ -285,17 +242,7 @@ const videoArticles = VideoData.map(item => ({
 
     <!-- 马赛克皮卡丘 -->
     <div class="observer-portrait">
-      <svg viewBox="0 0 100 100" width="100" height="100">
-        <rect
-          v-for="p in pikachuPixels"
-          :key="`${p.x}-${p.y}`"
-          :x="p.x"
-          :y="p.y"
-          width="5"
-          height="5"
-          :fill="p.fill"
-        />
-      </svg>
+      <PixelPikachu :size="100" />
     </div>
 
     <!-- 位置信息 -->
@@ -403,11 +350,6 @@ const videoArticles = VideoData.map(item => ({
   margin-bottom: 24px;
   display: flex;
   justify-content: center;
-}
-
-.observer-portrait svg {
-  display: block;
-  image-rendering: pixelated;
 }
 
 .observer-meta {
