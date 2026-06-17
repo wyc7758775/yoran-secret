@@ -10,45 +10,50 @@ defineProps({
 
 const pikachuPixels = computed(() => {
   const grid = [
-    '.........................',
-    '......BBB................',
-    '......BYYB...............',
-    '.....BBYYYB..............',
-    '.....BYYYYBB......BBB....',
-    '....BBYYYYYB....BBBBB....',
-    '....BYYYYYYBBBBBBYYYBB...',
-    '...BBYYYYYYYYYYYYYYYYB...',
-    '..BBBBB..BYYYYYYYYYYYBB..',
-    '.BBYYYB.BYYYYYYYYYYYYYB..',
-    '.BYYYYBBYYYYBBYYYYBBYYB..',
-    '.BYYYYYYYYYB..BYYB..YYB..',
-    '.BYYYYBYYYYBBYYYYBBYYYB..',
-    '.BBYYYBYYYYYYRRYYYYYYB...',
-    '..BBBBYYYYYRRBBYYRRYYB...',
-    '....BYYYYYYYBBYYRRYYB....',
-    '....BBYYYYYYYYYYYYYBB....',
-    '.....BYYYYYYYYYYYYB......',
-    '....BBYYYYYYYYYYYB.......',
-    '....BYYYYYYYYYYYYBB......',
-    '.....BYYYYYYYYYYYYB......',
-    '......BYYYBYYYBYYB.......',
-    '......BYYB.BYYB.BB.......',
-    '......BBB..BBB...........',
-    '.........................',
+    '...............................',
+    '...............................',
+    '...............................',
+    '...............................',
+    '........BB.....................',
+    '........BBB....................',
+    '........BBYB...................',
+    '.........BYYB.BBBBB............',
+    '.........BYYBBYYYYYBBBBBBB.....',
+    '..........BBYYYYYYYYYYYYBBB....',
+    '..........BYYYYYYYYYYYYYBB.....',
+    '....BBBBB.BYYYYYYYYYYYBB.......',
+    '....BYYYYBYYBBYYYYYBBYYB.......',
+    '....BYYYYBYYBBYYBYYBBYYB.......',
+    '....BYYYYBYRRYYBRBYYRRYB.......',
+    '....BYYYYBYRRYYBRBYYRRYB.......',
+    '....BBBBYYYYYYYYBYYBBYB........',
+    '........BYYYYYYYYYYBYB.........',
+    '........BBYYYYYYYYYBYYB........',
+    '.......BYBBBYYYYYYYYBYB........',
+    '........BYYBYYYYYYYYYYYB.......',
+    '.........BBYYYYYYYYYYYYB.......',
+    '.........BBYYBYYYYYYYYYB.......',
+    '..........BYBYBYYYYYYYB........',
+    '...........BBYBYYBBBYB.........',
+    '.............BBBB..BYB.........',
+    '....................B..........',
+    '...............................',
+    '...............................',
+    '...............................',
+    '...............................',
   ]
   const colors = {
-    B: '#221F20',
-    Y: '#FFE21A',
-    R: '#F04438',
-    O: '#F2AE36',
+    B: '#111111',
+    Y: '#F4D95F',
+    R: '#C84233',
   }
   const pixels = []
   grid.forEach((row, y) => {
     row.split('').forEach((cell, x) => {
       if (cell !== '.') {
         pixels.push({
-          x: x * 4,
-          y: y * 4,
+          x,
+          y,
           fill: colors[cell],
         })
       }
@@ -61,7 +66,7 @@ const pikachuPixels = computed(() => {
 <template>
   <svg
     class="pixel-pikachu"
-    viewBox="0 0 100 100"
+    viewBox="0 0 31 31"
     :width="size"
     :height="size"
     role="img"
@@ -72,8 +77,8 @@ const pikachuPixels = computed(() => {
       :key="`${p.x}-${p.y}`"
       :x="p.x"
       :y="p.y"
-      width="4"
-      height="4"
+      width="1"
+      height="1"
       :fill="p.fill"
     />
   </svg>

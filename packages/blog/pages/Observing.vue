@@ -242,7 +242,7 @@ const videoArticles = VideoData.map(item => ({
 
     <!-- 马赛克皮卡丘 -->
     <div class="observer-portrait">
-      <PixelPikachu :size="100" />
+      <PixelPikachu :size="132" />
     </div>
 
     <!-- 位置信息 -->

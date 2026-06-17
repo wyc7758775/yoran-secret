@@ -49,7 +49,7 @@ function getLineClampStyle(lines = 3) {
   <div class="diary-page">
     <div v-if="DiaryData.length === 0" class="diary-empty">
       <div class="empty-pikachu">
-        <PixelPikachu :size="120" />
+        <PixelPikachu :size="148" />
       </div>
       <p class="empty-text">
         还没有日记哦 ~
