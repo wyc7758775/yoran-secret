@@ -10,26 +10,31 @@ defineProps({
 
 const pikachuPixels = computed(() => {
   const grid = [
-    '.......BB..BB.......',
-    '......BBB..BBB......',
-    '.....BBBYBBYBBB.....',
-    '....BBYYYYYYYYBB....',
-    '...BYYYYYYYYYYYYB...',
-    '...YYYYBBYYBBYYYY...',
-    '..YYYYYBBYYBBYYYYY..',
-    '..YYYYYYYYYYYYYYYY..',
-    '..YYYYRRYYYYRRYYYY..',
-    '...YYYYYYYYYYYYYY...',
-    '...YYYYYYYYYYYYYY...',
-    '....YYYYYYYYYYYY....',
-    '....YYYYYYYYYYYY....',
-    '...OYYYYYYYYYYYYO...',
-    '..OOOYYYYYYYYOOO....',
-    '..OOOYYYYYYYYOOO....',
-    '...YYYYYYYYYYYYYY...',
-    '....YYYYYYYYYYYY....',
-    '....YY........YY....',
-    '...OO..........OO...',
+    '.........................',
+    '......BBB................',
+    '......BYYB...............',
+    '.....BBYYYB..............',
+    '.....BYYYYBB......BBB....',
+    '....BBYYYYYB....BBBBB....',
+    '....BYYYYYYBBBBBBYYYBB...',
+    '...BBYYYYYYYYYYYYYYYYB...',
+    '..BBBBB..BYYYYYYYYYYYBB..',
+    '.BBYYYB.BYYYYYYYYYYYYYB..',
+    '.BYYYYBBYYYYBBYYYYBBYYB..',
+    '.BYYYYYYYYYB..BYYB..YYB..',
+    '.BYYYYBYYYYBBYYYYBBYYYB..',
+    '.BBYYYBYYYYYYRRYYYYYYB...',
+    '..BBBBYYYYYRRBBYYRRYYB...',
+    '....BYYYYYYYBBYYRRYYB....',
+    '....BBYYYYYYYYYYYYYBB....',
+    '.....BYYYYYYYYYYYYB......',
+    '....BBYYYYYYYYYYYB.......',
+    '....BYYYYYYYYYYYYBB......',
+    '.....BYYYYYYYYYYYYB......',
+    '......BYYYBYYYBYYB.......',
+    '......BYYB.BYYB.BB.......',
+    '......BBB..BBB...........',
+    '.........................',
   ]
   const colors = {
     B: '#221F20',
@@ -42,8 +47,8 @@ const pikachuPixels = computed(() => {
     row.split('').forEach((cell, x) => {
       if (cell !== '.') {
         pixels.push({
-          x: x * 5,
-          y: y * 5,
+          x: x * 4,
+          y: y * 4,
           fill: colors[cell],
         })
       }
@@ -67,8 +72,8 @@ const pikachuPixels = computed(() => {
       :key="`${p.x}-${p.y}`"
       :x="p.x"
       :y="p.y"
-      width="5"
-      height="5"
+      width="4"
+      height="4"
       :fill="p.fill"
     />
   </svg>
