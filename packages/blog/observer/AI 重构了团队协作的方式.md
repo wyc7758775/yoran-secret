@@ -1,4 +1,4 @@
-# 现在是新人弯道超车的时机吗？
+# AI 重构了团队协作的方式
 
 > 本文没有实操的干货，只谈宏观的感受
 
@@ -6,7 +6,7 @@
 
 **这一次不是“大家都用 AI 辅助一下”，而是团队协作方式改变。**
 
-![](/obsidian-sync/%E7%8E%B0%E5%9C%A8%E6%98%AF%E8%8F%9C%E9%B8%9F%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BC%AF%E9%81%93%E8%B6%85%E8%BD%A6%E7%9A%84%E6%97%B6%E6%9C%BA%E5%90%97%EF%BC%9F/ai-era-01-collaboration-prototype.png)
+![](/obsidian-sync/AI%20%E9%87%8D%E6%9E%84%E4%BA%86%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E7%9A%84%E6%96%B9%E5%BC%8F/ai-era-01-collaboration-prototype.png)
 
 在去年超级个人，一人公司的概念喧嚣而上，似乎全民进入了一人公司的节奏中，底气就在于对于 AI 的信任，如下面的右边，一个在借助各个 agent 可以把一个公司的各个职能都闭环了。大半年下来，一人公司的狂热降温了很多，毕竟一个人能够干所有事情不以为他每一个都能干到 80 分，一个 80 分的软件不以为着是一个好的产品，一个好的产品也不以为着会带来期望的商业价值。
 
@@ -25,7 +25,7 @@
 5. 开发作为这个项目最终实现漏底，UI 可以直接去修改生产的UI 设计。
 
 > 大厂最消耗时间的事情就是对齐，因为实现的成本低，必须要确保所有的上下游的颗粒度都能够对齐一致
-![](/obsidian-sync/%E7%8E%B0%E5%9C%A8%E6%98%AF%E8%8F%9C%E9%B8%9F%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BC%AF%E9%81%93%E8%B6%85%E8%BD%A6%E7%9A%84%E6%97%B6%E6%9C%BA%E5%90%97%EF%BC%9F/Pasted%20image%2020260623090513.png)
+![](/obsidian-sync/AI%20%E9%87%8D%E6%9E%84%E4%BA%86%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E7%9A%84%E6%96%B9%E5%BC%8F/Pasted%20image%2020260623090513.png)
 
 
 ---
@@ -62,7 +62,7 @@
 
 **现在写代码反而不是最慢的，真正累的是一个人同时要做很多角色。**
 
-![](/obsidian-sync/%E7%8E%B0%E5%9C%A8%E6%98%AF%E8%8F%9C%E9%B8%9F%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BC%AF%E9%81%93%E8%B6%85%E8%BD%A6%E7%9A%84%E6%97%B6%E6%9C%BA%E5%90%97%EF%BC%9F/ai-era-02-too-many-roles.png)
+![](/obsidian-sync/AI%20%E9%87%8D%E6%9E%84%E4%BA%86%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E7%9A%84%E6%96%B9%E5%BC%8F/ai-era-02-too-many-roles.png)
 
 ### 1.1 迭代节奏被压缩了
 
@@ -112,7 +112,7 @@
 
 **AI 让很多环节变快了，但它没有让边界、验证、真实数据这些东西消失。**
 
-![](/obsidian-sync/%E7%8E%B0%E5%9C%A8%E6%98%AF%E8%8F%9C%E9%B8%9F%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BC%AF%E9%81%93%E8%B6%85%E8%BD%A6%E7%9A%84%E6%97%B6%E6%9C%BA%E5%90%97%EF%BC%9F/ai-era-03-estimate-risk-layer.png)
+![](/obsidian-sync/AI%20%E9%87%8D%E6%9E%84%E4%BA%86%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E7%9A%84%E6%96%B9%E5%BC%8F/ai-era-03-estimate-risk-layer.png)
 
 ### 2.1 不能只按测试时间算
 
@@ -160,7 +160,7 @@ AI 的到来既然能够重构团队协作方式，自然也能够重构软件�
 
 **我不是没测试，而是没有测到真实运行时的情况。**
 
-![](/obsidian-sync/%E7%8E%B0%E5%9C%A8%E6%98%AF%E8%8F%9C%E9%B8%9F%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BC%AF%E9%81%93%E8%B6%85%E8%BD%A6%E7%9A%84%E6%97%B6%E6%9C%BA%E5%90%97%EF%BC%9F/ai-era-04-mock-vs-runtime.png)
+![](/obsidian-sync/AI%20%E9%87%8D%E6%9E%84%E4%BA%86%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E7%9A%84%E6%96%B9%E5%BC%8F/ai-era-04-mock-vs-runtime.png)
 
 第二块，是我做的一个功能影响到了 AJ 的功能正常运行，然后他上来质问我。
 
@@ -212,7 +212,7 @@ CR rules 这个随着团队业务的添加，会逐渐的添加，里面除了�
 5. AI 如何保持稳定的 Loop，并且持续的改进？
 6. AI 输出的多个方案，你要能够判断哪一个更加符合现状，判断不了，回到第一个问题，应该喂给他更加多的上下文。
 
-![](/obsidian-sync/%E7%8E%B0%E5%9C%A8%E6%98%AF%E8%8F%9C%E9%B8%9F%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BC%AF%E9%81%93%E8%B6%85%E8%BD%A6%E7%9A%84%E6%97%B6%E6%9C%BA%E5%90%97%EF%BC%9F/ai-era-05-engineering-risk-control.png)
+![](/obsidian-sync/AI%20%E9%87%8D%E6%9E%84%E4%BA%86%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E7%9A%84%E6%96%B9%E5%BC%8F/ai-era-05-engineering-risk-control.png)
 
 不是你会不会写一个 for 循环，不是你会不会写 React，不是你会不会让 AI 生成一段代码。
 
@@ -260,7 +260,7 @@ AI 把写代码的门槛降了，但没有把负责后果的门槛降掉。AI Co
 
 **不需要每个人都走“初级、中级、高级、架构师”那条老路，但也不是会跟 AI 聊天就能写生产代码。**
 
-![](/obsidian-sync/%E7%8E%B0%E5%9C%A8%E6%98%AF%E8%8F%9C%E9%B8%9F%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BC%AF%E9%81%93%E8%B6%85%E8%BD%A6%E7%9A%84%E6%97%B6%E6%9C%BA%E5%90%97%EF%BC%9F/ai-era-06-capability-layers.png)
+![](/obsidian-sync/AI%20%E9%87%8D%E6%9E%84%E4%BA%86%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E7%9A%84%E6%96%B9%E5%BC%8F/ai-era-06-capability-layers.png)
 
 不是每个人都要走以前那条路线：初级、中级、高级、架构师。不是说你不走完这条路，就永远不能写代码。
 
@@ -294,7 +294,7 @@ AI 把写代码的门槛降了，但没有把负责后果的门槛降掉。AI Co
 
 **AI 给的是平均值和模板，人真正的价值是把舵。**
 
-![](/obsidian-sync/%E7%8E%B0%E5%9C%A8%E6%98%AF%E8%8F%9C%E9%B8%9F%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BC%AF%E9%81%93%E8%B6%85%E8%BD%A6%E7%9A%84%E6%97%B6%E6%9C%BA%E5%90%97%EF%BC%9F/ai-era-newbie-no-elevator.png)
+![](/obsidian-sync/AI%20%E9%87%8D%E6%9E%84%E4%BA%86%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E7%9A%84%E6%96%B9%E5%BC%8F/ai-era-newbie-no-elevator.png)
 初级的程序员还有活路吗？我无法从传统的晋升路线给出回答。
 
 > 排除能够走垂直路线的程序员，那些已经不吃码农了。
